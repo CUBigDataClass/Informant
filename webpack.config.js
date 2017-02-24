@@ -13,7 +13,15 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
-      }
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+      },
+      {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader'
+      },
     ]
   },
 };

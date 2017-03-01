@@ -24,13 +24,13 @@ const App = React.createClass({
     //   .append('div')
     //   .html('Hello World!')
 
-    var data = [14, 18, 15, 16, 23, 42, 5, 16, 11, 57];
+    var data = [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2];
 
     d3.select(faux)
     .selectAll("div")
       .data(data)
     .enter().append("div")
-      .style("width", function(d) { return d * 10 + "px"; })
+      .style("width", function(d) { return d * 20 + "px"; })
       .text(function(d) { return d; })
 
 

@@ -19,20 +19,34 @@ const App = React.createClass({
 
   componentDidMount () {
     const faux = this.connectFauxDOM('div.renderedD3', 'chart')
+    //
+    // d3.select(faux)
+    //   .append('div')
+    //   .html('Hello World!')
+
+    var data = [14, 18, 15, 16, 23, 42, 5, 16, 11, 57];
 
     d3.select(faux)
-      .append('div')
-      .html('Hello World!')
+    .selectAll("div")
+      .data(data)
+    .enter().append("div")
+      .style("width", function(d) { return d * 10 + "px"; })
+      .text(function(d) { return d; })
+
+
+
 
     // var data = [4, 8, 15, 16, 23, 42];
 
-    // d3.select(".renderedD3")
-    // .selectAll("div")
-    //   .data(data)
-    // .enter().append("div")
-    //   .style("width", function(d) { return d * 10 + "px"; })
-    //   .text(function(d) { return d; })
-    //   .style("fill", function(d) { return "red"; });
+    // var x = d3.scale.linear().domain([0, d3.max(data)])
+    //     .range([0, 420]);
+    //
+    // d3.select(".chart")
+    //   .selectAll("div")
+    //     .data(data)
+    //   .enter().append("div")
+    //     .style("width", function(d) { return x(d) + "px"; })
+    //     .text(function(d) { return d; });
 
     this.animateFauxDOM(800)
   },
@@ -40,17 +54,9 @@ const App = React.createClass({
   render () {
     return (
       <div>
-        <h2>Here is some fancy data:</h2>
+        <h2>Informant</h2>
         <div className='renderedD3'>
           {this.state.chart}
-        </div>
-        <div className="chart">
-          <div style={{width: "40px"}}>4</div>
-          <div style={{width: "80px"}}>8</div>
-          <div style={{width: "150px"}}>15</div>
-          <div style={{width: "160px"}}>16</div>
-          <div style={{width: "230px"}}>23</div>
-          <div style={{width: "420px"}}>42</div>
         </div>
       </div>
     )

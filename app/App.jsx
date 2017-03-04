@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import * as d3 from 'd3'
@@ -63,4 +62,4 @@ const App = React.createClass({
   }
 })
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+module.exports = App;

@@ -1,6 +1,6 @@
 #Informant
 
-![Informant Logo](./informant_1.svg)
+![Informant Logo](informant_1.svg)
 
 A barometer of vox populi opinions on companies. 
 

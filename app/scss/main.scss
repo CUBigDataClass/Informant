@@ -1,9 +1,11 @@
 @import "./chart.scss";
 
 $font-stack: Futura, Helvetica, sans-serif;
+$bg-color: #FFFFFF;
+$pale-color: #f9f6ef;
 
 body {
-  background-color: #f9f6ef;
+  background-color: $bg-color;
 }
 
 h2 {
@@ -16,4 +18,11 @@ p {
   position: absolute;
   color: blue;
   font-size: 1em;
+}
+
+img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 15%;
 }

@@ -54,6 +54,7 @@ const App = React.createClass({
     return (
       <div>
         <h2>Informant</h2>
+        <img src={'./informant_1.svg'} alt={'informant'}/>
         <div className='renderedD3'>
           {this.state.chart}
         </div>

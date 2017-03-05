@@ -1,6 +1,6 @@
 #Informant
 
-<img src="https://github.com/CUBigDataClass/blob/dev/Informant/informant_1.svg" width="400">
+<img src="https://github.com/CUBigDataClass/Informant/blob/dev/informant_1.svg" width="400">
 
 
 A barometer of vox populi opinions on companies. 

@@ -2,8 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
-import * as d3 from 'd3'
-import Faux from 'react-faux-dom'
+import * as d3 from 'd3';
+import Faux from 'react-faux-dom';
+import InfoStory from './InfoStory.jsx';
 
 const App = React.createClass({
   mixins: [
@@ -13,51 +14,20 @@ const App = React.createClass({
 
   getInitialState () {
     return {
-      chart: 'loading...'
+      data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2]
     }
   },
+  updateData() {
 
-  componentDidMount () {
-    const faux = this.connectFauxDOM('div.renderedD3', 'chart')
-    //
-    // d3.select(faux)
-    //   .append('div')
-    //   .html('Hello World!')
-
-    var data = [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2];
-
-    d3.select(faux)
-    .selectAll("div")
-      .data(data)
-    .enter().append("div")
-      .style("width", function(d) { return d * 20 + "px"; })
-      .text(function(d) { return d; })
-
-
-
-
-    // var data = [4, 8, 15, 16, 23, 42];
-
-    // var x = d3.scale.linear().domain([0, d3.max(data)])
-    //     .range([0, 420]);
-    //
-    // d3.select(".chart")
-    //   .selectAll("div")
-    //     .data(data)
-    //   .enter().append("div")
-    //     .style("width", function(d) { return x(d) + "px"; })
-    //     .text(function(d) { return d; });
-
-    this.animateFauxDOM(800)
+    this.state.data = [0, 1, 15, 16, 23, 42, 5, 16, 11, 57, 0, 2];
+    this.forceUpdate();
   },
 
   render () {
     return (
       <div>
         <h2>Informant</h2>
-        <div className='renderedD3'>
-          {this.state.chart}
-        </div>
+        <InfoStory data={this.state.data} updateData={this.state.updateData}/>
       </div>
     )
   }

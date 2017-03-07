@@ -12,16 +12,22 @@ var GraphView = React.createClass({
       chart: 'loading ....'
     }
   },
-  componentDidMount(){
+  updateGraph(data) {
     const faux = this.connectFauxDOM('div.renderedD3', 'chart')
       d3.select(faux)
       .selectAll("div")
-        .data(this.props.data)
+        .data(data)
       .enter().append("div")
         .style("width", function(d) { return d * 20 + "px"; })
         .text(function(d) { return d; })
 
-      this.animateFauxDOM(800)
+      this.animateFauxDOM(0)
+  },
+  componentDidMount(){
+    this.updateGraph(this.props.data)
+  },
+  componentWillReceiveProps(newProps) {
+    this.updateGraph(newProps.data)
   },
   render(){
     return (
@@ -29,8 +35,6 @@ var GraphView = React.createClass({
         <div className='renderedD3'>
           {this.state.chart}
         </div>
-        <button onClick={this.props.updateData}>
-        </button>
       </div>
     );
   }

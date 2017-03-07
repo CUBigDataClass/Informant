@@ -23,7 +23,8 @@
   "homepage": "https://github.com/CUBigDataClass/Informant#readme",
   "dependencies": {
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-mixin": "^2.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",

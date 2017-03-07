@@ -9,7 +9,7 @@ class InfoStory extends React.Component{
   render(){
     return (
       <div>
-      <GraphView data={this.props.data} updateData={this.props.updateData}/>
+      <GraphView data={this.props.data}/>
       <TextSectionContainer/>
       </div>
     );

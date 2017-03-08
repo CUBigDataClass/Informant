@@ -1,0 +1,27 @@
+$navbar-font-stack: Futura, Helvetica, sans-serif;
+$navbar-bg-color: #907474;
+.Navbar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 10vh;
+  position: fixed;
+  background: $navbar-bg-color;
+  padding: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-left: 10vw;
+
+  p {
+  margin:0;
+  padding:0;
+  }
+
+  h1 {
+    font-family: $navbar-font-stack;
+    font-size: 1em;
+    font-weight: 100;
+  }
+}

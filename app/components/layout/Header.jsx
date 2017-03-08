@@ -4,10 +4,12 @@ import Navbar from './Navbar.jsx';
 class Header extends React.Component {
   render() {
     return (
-      <h1>
-        Header
-        <Navbar/>
-      </h1>
+      <div className={'Header'}>
+        <h1>
+          Informant
+          <Navbar/>
+        </h1>
+      </div>
       );
   }
 }

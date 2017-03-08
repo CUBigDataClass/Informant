@@ -27895,18 +27895,33 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var App = _react2.default.createClass({
   displayName: 'App',
-
-  mixins: [_reactFauxDom2.default.mixins.core, _reactFauxDom2.default.mixins.anim],
-
   getInitialState: function getInitialState() {
     return {
       data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2]
     };
   },
   updateData: function updateData() {
-
-    this.state.data = [0, 1, 15, 16, 23, 42, 5, 16, 11, 57, 0, 2];
-    this.forceUpdate();
+    this.setState({
+      data: [1, 1, 1, 1, 2, 4, 1, 1, 1, 5, 5, 2]
+    });
+  },
+  incrementData: function incrementData() {
+    this.setState(function (prevState, props) {
+      return {
+        data: prevState.data.map(function (i) {
+          return i + 1;
+        })
+      };
+    });
+  },
+  decrementData: function decrementData() {
+    this.setState(function (prevState, props) {
+      return {
+        data: prevState.data.map(function (i) {
+          return i - 1;
+        })
+      };
+    });
   },
   render: function render() {
     return _react2.default.createElement(
@@ -27918,7 +27933,22 @@ var App = _react2.default.createClass({
         'Informant'
       ),
       _react2.default.createElement('img', { src: './informant_1.svg', alt: 'informant' }),
-      _react2.default.createElement(_InfoStory2.default, { data: this.state.data, updateData: this.state.updateData }),
+      _react2.default.createElement(_InfoStory2.default, { data: this.state.data }),
+      _react2.default.createElement(
+        'button',
+        { onClick: this.updateData },
+        'Update Data'
+      ),
+      _react2.default.createElement(
+        'button',
+        { onClick: this.decrementData },
+        '-'
+      ),
+      _react2.default.createElement(
+        'button',
+        { onClick: this.incrementData },
+        '+'
+      ),
       _react2.default.createElement(
         'div',
         { className: 'renderedD3' },
@@ -28042,15 +28072,21 @@ var GraphView = _react2.default.createClass({
       chart: 'loading ....'
     };
   },
-  componentDidMount: function componentDidMount() {
+  updateGraph: function updateGraph(data) {
     var faux = this.connectFauxDOM('div.renderedD3', 'chart');
-    d3.select(faux).selectAll("div").data(this.props.data).enter().append("div").style("width", function (d) {
+    d3.select(faux).selectAll("div").data(data).enter().append("div").style("width", function (d) {
       return d * 20 + "px";
     }).text(function (d) {
       return d;
     });
 
-    this.animateFauxDOM(800);
+    this.animateFauxDOM(0);
+  },
+  componentDidMount: function componentDidMount() {
+    this.updateGraph(this.props.data);
+  },
+  componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+    this.updateGraph(newProps.data);
   },
   render: function render() {
     return _react2.default.createElement(
@@ -28060,8 +28096,7 @@ var GraphView = _react2.default.createClass({
         'div',
         { className: 'renderedD3' },
         this.state.chart
-      ),
-      _react2.default.createElement('button', { onClick: this.props.updateData })
+      )
     );
   }
 });
@@ -28185,7 +28220,7 @@ var InfoStory = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement(_GraphView2.default, { data: this.props.data, updateData: this.props.updateData }),
+        _react2.default.createElement(_GraphView2.default, { data: this.props.data }),
         _react2.default.createElement(_TextSectionContainer2.default, null)
       );
     }

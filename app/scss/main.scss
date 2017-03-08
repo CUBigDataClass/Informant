@@ -1,4 +1,7 @@
 @import "./chart.scss";
+@import "./components/Header.scss";
+@import "./components/Footer.scss";
+@import "./components/Navbar.scss";
 
 $font-stack: Futura, Helvetica, sans-serif;
 $bg-color: #FFFFFF;
@@ -6,6 +9,8 @@ $pale-color: #f9f6ef;
 
 body {
   background-color: $bg-color;
+  margin:0;
+  padding:0;
 }
 
 h2 {
@@ -15,8 +20,7 @@ h2 {
 }
 
 p {
-  position: absolute;
-  color: blue;
+  color: black;
   font-size: 1em;
 }
 
@@ -25,4 +29,8 @@ img {
     right: 0;
     top: 0;
     width: 15%;
+}
+
+.renderedD3 {
+    margin-top: 15vh;
 }

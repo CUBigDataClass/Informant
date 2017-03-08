@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
+import Header from './components/layout/Header.jsx';
+import Footer from './components/layout/Footer.jsx';
 import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
-import InfoStory from './InfoStory.jsx';
+import InfoStory from './components/InfoStory.jsx';
 
 var App = React.createClass({
   getInitialState() {
@@ -33,7 +33,7 @@ var App = React.createClass({
   render() {
     return (
       <div>
-        <h2>Informant</h2>
+      <Header/>
 
         <img src={'./informant_1.svg'} alt={'informant'}/>
         <InfoStory data={this.state.data}/>
@@ -43,6 +43,7 @@ var App = React.createClass({
         <div className='renderedD3'>
           {this.state.chart}
         </div>
+      <Footer/>
       </div>
     )
   }

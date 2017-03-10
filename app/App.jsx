@@ -12,8 +12,11 @@ var App = React.createClass({
     }
   },
   updateData() {
-    this.setState({
-            data: [1, 1, 1, 1, 2, 4, 1, 1, 1, 5, 5, 2]
+
+    this.setState((prevState, props) => {
+          return {
+            data : prevState.data.map((i) => Math.floor(Math.random() * 55))
+          }
         });
   },
   incrementData() {

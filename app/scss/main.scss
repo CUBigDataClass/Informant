@@ -2,6 +2,9 @@
 @import "./components/Header.scss";
 @import "./components/Footer.scss";
 @import "./components/Navbar.scss";
+@import './components/Panel.scss';
+@import './components/Logo.scss';
+@import './components/controlPanel.scss';
 
 $font-stack: Futura, Helvetica, sans-serif;
 $bg-color: #FFFFFF;
@@ -33,4 +36,6 @@ img {
 
 .renderedD3 {
     margin-top: 15vh;
+    margin-left: 16vw;
+    width: 69vw;
 }

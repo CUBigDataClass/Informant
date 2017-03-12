@@ -1,0 +1,21 @@
+$panel-font-stack: Futura, Helvetica, sans-serif;
+$panel-text-color: #d0d0d6;
+
+.Panel {
+    width: 15vw;
+    background: #18181f;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+
+    p {
+      font-family: $panel-font-stack;
+      color: $panel-text-color;
+      padding: 1vw;
+      font-size: 0.7em;
+    }
+
+    .panelStories {
+      margin-top: 33.33vh;
+    }
+}

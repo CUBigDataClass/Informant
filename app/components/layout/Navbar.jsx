@@ -2,9 +2,11 @@ import React from 'react';
 
 class Navbar extends React.Component {
   render() {
+    var companies = ['Apple', 'Google', 'Twitter', 'Facebook']
+
     return (
       <div className={'Navbar'}>
-      <p>Navbar</p>
+      {companies.map((name, i) =>  <button className={'navBarButton'}>{name}</button>)}
       </div>
     )
   }

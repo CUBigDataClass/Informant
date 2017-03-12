@@ -18,7 +18,7 @@ var GraphView = React.createClass({
       .selectAll("div")
         .data(data)
       .enter().append("div")
-        .style("width", function(d) { return d * 20 + "px"; })
+        .style("width", function(d) { return d * 10 + "px"; })
         .text(function(d) { return d; })
 
       this.animateFauxDOM(0)

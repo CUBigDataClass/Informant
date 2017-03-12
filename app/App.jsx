@@ -4,6 +4,7 @@ import Footer from './components/layout/Footer.jsx';
 import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 import InfoStory from './components/InfoStory.jsx';
+import Panel from './components/layout/Panel.jsx';
 
 var App = React.createClass({
   getInitialState() {
@@ -36,17 +37,19 @@ var App = React.createClass({
   render() {
     return (
       <div>
-      <Header/>
-
-        <img src={'./informant_1.svg'} alt={'informant'}/>
+        <Header/>
         <InfoStory data={this.state.data}/>
-        <button onClick={this.updateData}>Update Data</button>
-        <button onClick={this.decrementData}>-</button>
-        <button onClick={this.incrementData}>+</button>
-        <div className='renderedD3'>
-          {this.state.chart}
+        <div className={'controlPanel'}>
+          <button onClick={this.updateData}>Update Data</button>
+          <button onClick={this.decrementData}>-</button>
+          <button onClick={this.incrementData}>+</button>
         </div>
-      <Footer/>
+        <div className='renderedD3'>
+        {this.state.chart}
+        </div>
+        <Panel orientation={'left'}/>
+        <Panel orientation={'right'}/>
+        <Footer/>
       </div>
     )
   }

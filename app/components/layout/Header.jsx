@@ -7,8 +7,8 @@ class Header extends React.Component {
       <div className={'Header'}>
         <h1>
           Informant
-          <Navbar/>
         </h1>
+        <Navbar/>
       </div>
       );
   }

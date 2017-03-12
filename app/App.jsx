@@ -5,6 +5,7 @@ import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 import InfoStory from './components/InfoStory.jsx';
 import Panel from './components/layout/Panel.jsx';
+// import TweepyText from './components/layout/TweepyText.jsx';
 
 var App = React.createClass({
   getInitialState() {
@@ -35,6 +36,7 @@ var App = React.createClass({
         });
   },
   render() {
+    var str = <li>Hello.</li>;
     return (
       <div>
         <Header/>

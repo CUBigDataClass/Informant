@@ -1,10 +1,12 @@
 @import "./chart.scss";
+@import './helpers/Transform_Mixins.scss';
 @import "./components/Header.scss";
 @import "./components/Footer.scss";
 @import "./components/Navbar.scss";
 @import './components/Panel.scss';
 @import './components/Logo.scss';
 @import './components/controlPanel.scss';
+@import './components/TweepyText.scss';
 
 $font-stack: Futura, Helvetica, sans-serif;
 $bg-color: #FFFFFF;

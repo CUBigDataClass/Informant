@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Testing &mdash; Apache Cassandra Documentation v3.10</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Apache Cassandra Documentation v3.10" href="../index.html"/>
+        <link rel="up" title="Cassandra Development" href="index.html"/>
+        <link rel="next" title="Contributing Code Changes" href="patches.html"/>
+        <link rel="prev" title="Building and IDE Integration" href="ide.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Apache Cassandra</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing.html">Installing Cassandra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/configuring.html">Configuring Cassandra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/querying.html">Inserting and querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/drivers.html">Client drivers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/dynamo.html">Dynamo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/storage_engine.html">Storage Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/guarantees.html">Guarantees</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_modeling/index.html">Data Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cql/index.html">The Cassandra Query Language (CQL)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cql/definitions.html">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/types.html">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/ddl.html">Data Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/dml.html">Data Manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/indexes.html">Secondary Indexes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/mvs.html">Materialized Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/json.html">JSON Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/triggers.html">Triggers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/appendices.html">Appendices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/changes.html">Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuring Cassandra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/cassandra_config_file.html">Cassandra Configuration File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operating/index.html">Operating Cassandra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operating/snitch.html">Snitch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/topo_changes.html">Adding, replacing, moving and removing nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/repair.html">Repair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/read_repair.html">Read repair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/hints.html">Hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/compaction.html">Compaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/bloom_filters.html">Bloom Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/compression.html">Compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/cdc.html">Change Data Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/backups.html">Backups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/bulk_loading.html">Bulk Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/metrics.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/hardware.html">Hardware Choices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Cassandra Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/cqlsh.html">cqlsh: the CQL shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/nodetool.html">Nodetool</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Cassandra Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ide.html">Building and IDE Integration</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="patches.html">Contributing Code Changes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code_style.html">Code Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_review.html">Review Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_commit.html">How-to Commit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-can-t-i-set-listen-address-to-listen-on-0-0-0-0-all-my-addresses">Why can&#8217;t I set <code class="docutils literal"><span class="pre">listen_address</span></code> to listen on 0.0.0.0 (all my addresses)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-ports-does-cassandra-use">What ports does Cassandra use?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-happens-to-existing-data-in-my-cluster-when-i-add-new-nodes">What happens to existing data in my cluster when I add new nodes?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#i-delete-data-from-cassandra-but-disk-usage-stays-the-same-what-gives">I delete data from Cassandra, but disk usage stays the same. What gives?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-does-nodetool-ring-only-show-one-entry-even-though-my-nodes-logged-that-they-see-each-other-joining-the-ring">Why does nodetool ring only show one entry, even though my nodes logged that they see each other joining the ring?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#can-i-change-the-replication-factor-a-a-keyspace-on-a-live-cluster">Can I change the replication factor (a a keyspace) on a live cluster?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#can-i-store-large-blobs-in-cassandra">Can I Store (large) BLOBs in Cassandra?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#nodetool-says-connection-refused-to-host-127-0-1-1-for-any-remote-host-what-gives">Nodetool says &#8220;Connection refused to host: 127.0.1.1&#8221; for any remote host. What gives?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#will-batching-my-operations-speed-up-my-bulk-load">Will batching my operations speed up my bulk load?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#on-rhel-nodes-are-unable-to-join-the-ring">On RHEL nodes are unable to join the ring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-do-i-unsubscribe-from-the-email-list">How do I unsubscribe from the email list?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-does-top-report-that-cassandra-is-using-a-lot-more-memory-than-the-java-heap-max">Why does top report that Cassandra is using a lot more memory than the Java heap max?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-are-seeds">What are seeds?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#does-single-seed-mean-single-point-of-failure">Does single seed mean single point of failure?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-can-t-i-call-jmx-method-x-on-jconsole">Why can&#8217;t I call jmx method X on jconsole?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-do-i-see-messages-dropped-in-the-logs">Why do I see &#8221;... messages dropped ...&#8221; in the logs?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#cassandra-dies-with-java-lang-outofmemoryerror-map-failed">Cassandra dies with <code class="docutils literal"><span class="pre">java.lang.OutOfMemoryError:</span> <span class="pre">Map</span> <span class="pre">failed</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-happens-if-two-updates-are-made-with-the-same-timestamp">What happens if two updates are made with the same timestamp?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-bootstrapping-a-new-node-fails-with-a-stream-failed-error">Why bootstrapping a new node fails with a &#8220;Stream failed&#8221; error?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contactus.html">Contact us</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contactus.html#mailing-lists">Mailing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contactus.html#irc">IRC</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Apache Cassandra</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Cassandra Development</a> &raquo;</li>
+      
+    <li>Testing</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/development/testing.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="testing">
+<h1>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h1>
+<p>Creating tests is one of the most important and also most difficult parts of developing Cassandra. There are different ways to test your code depending on what you&#8217;re working on.</p>
+<div class="section" id="unit-testing">
+<h2>Unit Testing<a class="headerlink" href="#unit-testing" title="Permalink to this headline">¶</a></h2>
+<p>The most simple way to test code in Cassandra is probably by writing a unit test. Cassandra uses JUnit as a testing framework and test cases can be found in the <code class="docutils literal"><span class="pre">test/unit</span></code> directory. Ideally you’d be able to create a unit test for your implementation that would exclusively cover the class you created (the unit under test). Unfortunately this is not always possible and Cassandra doesn’t have a very mock friendly code base. Often you’ll find yourself in a situation where you have to make use of an embedded Cassandra instance that you’ll be able to interact with in your test. If you want to make use of CQL in your test, you can simply extend CQLTester and use some of the convenient helper methods such as in the following example.</p>
+<div class="highlight-java"><div class="highlight"><pre><span class="nd">@Test</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testBatchAndList</span><span class="o">()</span> <span class="kd">throws</span> <span class="n">Throwable</span>
+<span class="o">{</span>
+   <span class="n">createTable</span><span class="o">(</span><span class="s">&quot;CREATE TABLE %s (k int PRIMARY KEY, l list&lt;int&gt;)&quot;</span><span class="o">);</span>
+   <span class="n">execute</span><span class="o">(</span><span class="s">&quot;BEGIN BATCH &quot;</span> <span class="o">+</span>
+           <span class="s">&quot;UPDATE %1$s SET l = l +[ 1 ] WHERE k = 0; &quot;</span> <span class="o">+</span>
+           <span class="s">&quot;UPDATE %1$s SET l = l + [ 2 ] WHERE k = 0; &quot;</span> <span class="o">+</span>
+           <span class="s">&quot;UPDATE %1$s SET l = l + [ 3 ] WHERE k = 0; &quot;</span> <span class="o">+</span>
+           <span class="s">&quot;APPLY BATCH&quot;</span><span class="o">);</span>
+
+   <span class="n">assertRows</span><span class="o">(</span><span class="n">execute</span><span class="o">(</span><span class="s">&quot;SELECT l FROM %s WHERE k = 0&quot;</span><span class="o">),</span>
+              <span class="n">row</span><span class="o">(</span><span class="n">list</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">)));</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Unit tests can be run from the command line using the <code class="docutils literal"><span class="pre">ant</span> <span class="pre">test</span></code> command, <code class="docutils literal"><span class="pre">ant</span> <span class="pre">test</span> <span class="pre">-Dtest.name=&lt;simple_classname&gt;</span></code> to execute a test suite or <code class="docutils literal"><span class="pre">ant</span> <span class="pre">testsome</span> <span class="pre">-Dtest.name=&lt;FQCN&gt;</span> <span class="pre">-Dtest.methods=&lt;testmethod1&gt;[,testmethod2]</span></code> for individual tests.  For example, to run all test methods in the <code class="docutils literal"><span class="pre">org.apache.cassandra.cql3.SimpleQueryTest</span></code> class, you would run:</p>
+<div class="highlight-none"><div class="highlight"><pre>ant test -Dtest.name=SimpleQueryTest
+</pre></div>
+</div>
+<p>To run only the <code class="docutils literal"><span class="pre">testStaticCompactTables()</span></code> test method from that class, you would run:</p>
+<div class="highlight-none"><div class="highlight"><pre>ant testsome -Dtest.name=org.apache.cassandra.cql3.SimpleQueryTest -Dtest.methods=testStaticCompactTables
+</pre></div>
+</div>
+<div class="section" id="long-running-tests">
+<h3>Long running tests<a class="headerlink" href="#long-running-tests" title="Permalink to this headline">¶</a></h3>
+<p>Test that consume a significant amount of time during execution can be found in the <code class="docutils literal"><span class="pre">test/long</span></code> directory and executed as a regular JUnit test or standalone program. Except for the execution time, there’s nothing really special about them. However, ant will execute tests under <code class="docutils literal"><span class="pre">test/long</span></code> only when using the <code class="docutils literal"><span class="pre">ant</span> <span class="pre">long-test</span></code> target.</p>
+</div>
+</div>
+<div class="section" id="dtests">
+<h2>DTests<a class="headerlink" href="#dtests" title="Permalink to this headline">¶</a></h2>
+<p>One way of doing integration or system testing at larger scale is by using <a class="reference external" href="https://github.com/riptano/cassandra-dtest">dtest</a>, which stands for “Cassandra Distributed Tests”. The idea is to automatically setup Cassandra clusters using various configurations and simulate certain use cases you want to test. This is done using Python scripts and <code class="docutils literal"><span class="pre">ccmlib</span></code> from the <a class="reference external" href="https://github.com/pcmanus/ccm">ccm</a> project. Dtests will setup clusters using this library just as you do running ad-hoc <code class="docutils literal"><span class="pre">ccm</span></code> commands on your local machine. Afterwards dtests will use the <a class="reference external" href="http://datastax.github.io/python-driver/installation.html">Python driver</a> to interact with the nodes, manipulate the file system, analyze logs or mess with individual nodes.</p>
+<p>Using dtests helps us to prevent regression bugs by continually executing tests on the <a class="reference external" href="http://cassci.datastax.com/">CI server</a> against new patches. For frequent contributors, this Jenkins is set up to build branches from their GitHub repositories. It is likely that your reviewer will use this Jenkins instance to run tests for your patch. Read more on the motivation behind the CI server <a class="reference external" href="http://www.datastax.com/dev/blog/cassandra-testing-improvements-for-developer-convenience-and-confidence">here</a>.</p>
+<p>The best way to learn how to write dtests is probably by reading the introduction &#8220;<a class="reference external" href="http://www.datastax.com/dev/blog/how-to-write-a-dtest">How to Write a Dtest</a>&#8221; and by looking at existing, recently updated tests in the project. New tests must follow certain <a class="reference external" href="https://github.com/riptano/cassandra-dtest/blob/master/CONTRIBUTING.md">style conventions</a> that are being checked before accepting contributions. In contrast to Cassandra, dtest issues and pull-requests are managed on github, therefor you should make sure to link any created dtests in your Cassandra ticket and also refer to the ticket number in your dtest PR.</p>
+<p>Creating a good dtest can be tough, but it should not prevent you from submitting patches! Please ask in the corresponding JIRA ticket how to write a good dtest for the patch. In most cases a reviewer or committer will able to support you, and in some cases they may offer to write a dtest for you.</p>
+</div>
+<div class="section" id="performance-testing">
+<h2>Performance Testing<a class="headerlink" href="#performance-testing" title="Permalink to this headline">¶</a></h2>
+<p>Performance tests for Cassandra are a special breed of tests that are not part of the usual patch contribution process. In fact you can contribute tons of patches to Cassandra without ever running performance tests. They are important however when working on performance improvements, as such improvements must be measurable.</p>
+<div class="section" id="cassandra-stress-tool">
+<h3>Cassandra Stress Tool<a class="headerlink" href="#cassandra-stress-tool" title="Permalink to this headline">¶</a></h3>
+<p>TODO: <a class="reference external" href="https://issues.apache.org/jira/browse/CASSANDRA-12365">CASSANDRA-12365</a></p>
+</div>
+<div class="section" id="cstar-perf">
+<h3>cstar_perf<a class="headerlink" href="#cstar-perf" title="Permalink to this headline">¶</a></h3>
+<p>Another tool available on github is <a class="reference external" href="https://github.com/datastax/cstar_perf">cstar_perf</a> that can be used for intensive performance testing in large clusters or locally. Please refer to the project page on how to set it up and how to use it.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="patches.html" class="btn btn-neutral float-right" title="Contributing Code Changes"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ide.html" class="btn btn-neutral" title="Building and IDE Integration"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, The Apache Cassandra team.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

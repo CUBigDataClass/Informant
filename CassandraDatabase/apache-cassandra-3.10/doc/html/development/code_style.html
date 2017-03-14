@@ -1,0 +1,353 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Code Style &mdash; Apache Cassandra Documentation v3.10</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="Apache Cassandra Documentation v3.10" href="../index.html"/>
+        <link rel="up" title="Cassandra Development" href="index.html"/>
+        <link rel="next" title="Review Checklist" href="how_to_review.html"/>
+        <link rel="prev" title="Contributing Code Changes" href="patches.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="fa fa-home"> Apache Cassandra</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/installing.html">Installing Cassandra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/configuring.html">Configuring Cassandra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/querying.html">Inserting and querying</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/drivers.html">Client drivers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture/index.html">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/overview.html">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/dynamo.html">Dynamo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/storage_engine.html">Storage Engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../architecture/guarantees.html">Guarantees</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_modeling/index.html">Data Modeling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cql/index.html">The Cassandra Query Language (CQL)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../cql/definitions.html">Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/types.html">Data Types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/ddl.html">Data Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/dml.html">Data Manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/indexes.html">Secondary Indexes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/mvs.html">Materialized Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/functions.html">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/json.html">JSON Support</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/triggers.html">Triggers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/appendices.html">Appendices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cql/changes.html">Changes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration/index.html">Configuring Cassandra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/cassandra_config_file.html">Cassandra Configuration File</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../operating/index.html">Operating Cassandra</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../operating/snitch.html">Snitch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/topo_changes.html">Adding, replacing, moving and removing nodes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/repair.html">Repair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/read_repair.html">Read repair</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/hints.html">Hints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/compaction.html">Compaction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/bloom_filters.html">Bloom Filters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/compression.html">Compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/cdc.html">Change Data Capture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/backups.html">Backups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/bulk_loading.html">Bulk Loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/metrics.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/security.html">Security</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating/hardware.html">Hardware Choices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/index.html">Cassandra Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools/cqlsh.html">cqlsh: the CQL shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools/nodetool.html">Nodetool</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Cassandra Development</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ide.html">Building and IDE Integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="patches.html">Contributing Code Changes</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Code Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_review.html">Review Checklist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_to_commit.html">How-to Commit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/index.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-can-t-i-set-listen-address-to-listen-on-0-0-0-0-all-my-addresses">Why can&#8217;t I set <code class="docutils literal"><span class="pre">listen_address</span></code> to listen on 0.0.0.0 (all my addresses)?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-ports-does-cassandra-use">What ports does Cassandra use?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-happens-to-existing-data-in-my-cluster-when-i-add-new-nodes">What happens to existing data in my cluster when I add new nodes?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#i-delete-data-from-cassandra-but-disk-usage-stays-the-same-what-gives">I delete data from Cassandra, but disk usage stays the same. What gives?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-does-nodetool-ring-only-show-one-entry-even-though-my-nodes-logged-that-they-see-each-other-joining-the-ring">Why does nodetool ring only show one entry, even though my nodes logged that they see each other joining the ring?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#can-i-change-the-replication-factor-a-a-keyspace-on-a-live-cluster">Can I change the replication factor (a a keyspace) on a live cluster?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#can-i-store-large-blobs-in-cassandra">Can I Store (large) BLOBs in Cassandra?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#nodetool-says-connection-refused-to-host-127-0-1-1-for-any-remote-host-what-gives">Nodetool says &#8220;Connection refused to host: 127.0.1.1&#8221; for any remote host. What gives?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#will-batching-my-operations-speed-up-my-bulk-load">Will batching my operations speed up my bulk load?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#on-rhel-nodes-are-unable-to-join-the-ring">On RHEL nodes are unable to join the ring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#how-do-i-unsubscribe-from-the-email-list">How do I unsubscribe from the email list?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-does-top-report-that-cassandra-is-using-a-lot-more-memory-than-the-java-heap-max">Why does top report that Cassandra is using a lot more memory than the Java heap max?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-are-seeds">What are seeds?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#does-single-seed-mean-single-point-of-failure">Does single seed mean single point of failure?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-can-t-i-call-jmx-method-x-on-jconsole">Why can&#8217;t I call jmx method X on jconsole?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-do-i-see-messages-dropped-in-the-logs">Why do I see &#8221;... messages dropped ...&#8221; in the logs?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#cassandra-dies-with-java-lang-outofmemoryerror-map-failed">Cassandra dies with <code class="docutils literal"><span class="pre">java.lang.OutOfMemoryError:</span> <span class="pre">Map</span> <span class="pre">failed</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#what-happens-if-two-updates-are-made-with-the-same-timestamp">What happens if two updates are made with the same timestamp?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/index.html#why-bootstrapping-a-new-node-fails-with-a-stream-failed-error">Why bootstrapping a new node fails with a &#8220;Stream failed&#8221; error?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../bugs.html">Reporting Bugs and Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contactus.html">Contact us</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contactus.html#mailing-lists">Mailing lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contactus.html#irc">IRC</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Apache Cassandra</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Cassandra Development</a> &raquo;</li>
+      
+    <li>Code Style</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="../_sources/development/code_style.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="code-style">
+<h1>Code Style<a class="headerlink" href="#code-style" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-code-conventions">
+<h2>General Code Conventions<a class="headerlink" href="#general-code-conventions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>The Cassandra project follows <a class="reference external" href="http://java.sun.com/docs/codeconv/html/CodeConvTOC.doc.html">Sun&#8217;s Java coding conventions</a> with an important exception: <code class="docutils literal"><span class="pre">{</span></code> and <code class="docutils literal"><span class="pre">}</span></code> are always placed on a new line</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="exception-handling">
+<h2>Exception handling<a class="headerlink" href="#exception-handling" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Never ever write <code class="docutils literal"><span class="pre">catch</span> <span class="pre">(...)</span> <span class="pre">{}</span></code> or <code class="docutils literal"><span class="pre">catch</span> <span class="pre">(...)</span> <span class="pre">{</span> <span class="pre">logger.error()</span> <span class="pre">}</span></code> merely to satisfy Java&#8217;s compile-time exception checking. Always propagate the exception up or throw <code class="docutils literal"><span class="pre">RuntimeException</span></code> (or, if it &#8220;can&#8217;t happen,&#8221; <code class="docutils literal"><span class="pre">AssertionError</span></code>). This makes the exceptions visible to automated tests.</li>
+<li>Avoid propagating up checked exceptions that no caller handles. Rethrow as <code class="docutils literal"><span class="pre">RuntimeException</span></code> (or <code class="docutils literal"><span class="pre">IOError</span></code>, if that is more applicable).</li>
+<li>Similarly, logger.warn() is often a cop-out: is this an error or not? If it is don&#8217;t hide it behind a warn; if it isn&#8217;t, no need for the warning.</li>
+<li>If you genuinely know an exception indicates an expected condition, it&#8217;s okay to ignore it BUT this must be explicitly explained in a comment.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="boilerplate">
+<h2>Boilerplate<a class="headerlink" href="#boilerplate" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Avoid redundant <code class="docutils literal"><span class="pre">&#64;Override</span></code> annotations when implementing abstract or interface methods.</li>
+<li>Do not implement equals or hashcode methods unless they are actually needed.</li>
+<li>Prefer public final fields to private fields with getters. (But prefer encapsulating behavior in &#8220;real&#8221; methods to either.)</li>
+<li>Prefer requiring initialization in the constructor to setters.</li>
+<li>Avoid redundant <code class="docutils literal"><span class="pre">this</span></code> references to member fields or methods.</li>
+<li>Do not extract interfaces (or abstract classes) unless you actually need multiple implementations of it.</li>
+<li>Always include braces for nested levels of conditionals and loops. Only avoid braces for single level.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="multiline-statements">
+<h2>Multiline statements<a class="headerlink" href="#multiline-statements" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Try to keep lines under 120 characters, but use good judgement &#8211; it&#8217;s better to exceed 120 by a little, than split a line that has no natural splitting points.</li>
+<li>When splitting inside a method call, use one line per parameter and align them, like this:</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>SSTableWriter writer = new SSTableWriter(cfs.getTempSSTablePath(),
+                                         columnFamilies.size(),
+                                         StorageService.getPartitioner());
+</pre></div>
+</div>
+<ul class="simple">
+<li>When splitting a ternary, use one line per clause, carry the operator, and align like this:</li>
+</ul>
+<div class="highlight-none"><div class="highlight"><pre>var = bar == null
+    ? doFoo()
+    : doBar();
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="whitespace">
+<h2>Whitespace<a class="headerlink" href="#whitespace" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Please make sure to use 4 spaces instead of the tab character for all your indentation.</li>
+<li>Many lines in many files have a bunch of trailing whitespace... Please either clean these up in a separate patch, or leave them alone, so that reviewers now and anyone reading code history later doesn&#8217;t have to pay attention to whitespace diffs.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<p>Please observe the following order for your imports:</p>
+<div class="highlight-none"><div class="highlight"><pre>java
+[blank line]
+com.google.common
+org.apache.commons
+org.junit
+org.slf4j
+[blank line]
+everything else alphabetically
+</pre></div>
+</div>
+</div>
+<div class="section" id="format-files-for-ides">
+<h2>Format files for IDEs<a class="headerlink" href="#format-files-for-ides" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>IntelliJ: <a class="reference external" href="https://wiki.apache.org/cassandra/CodeStyle?action=AttachFile&amp;do=view&amp;target=intellij-codestyle.jar">intellij-codestyle.jar</a></li>
+<li>IntelliJ 13: <a class="reference external" href="https://gist.github.com/jdsumsion/9ab750a05c2a567c6afc">gist for IntelliJ 13</a> (this is a work in progress, still working on javadoc, ternary style, line continuations, etc)</li>
+<li>Eclipse (<a class="reference external" href="https://github.com/tjake/cassandra-style-eclipse">https://github.com/tjake/cassandra-style-eclipse</a>)</li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="how_to_review.html" class="btn btn-neutral float-right" title="Review Checklist"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="patches.html" class="btn btn-neutral" title="Contributing Code Changes"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, The Apache Cassandra team.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

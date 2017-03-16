@@ -1,12 +1,40 @@
 $panel-font-stack: Futura, Helvetica, sans-serif;
 $panel-text-color: #d0d0d6;
+$h3-text-color: #746c88;
 
-.Panel {
+.LeftPanel {
     width: 15vw;
-    background: #18181f;
-    height: 100vh;
+    background: transparent;
+    height: 300vh;
     top: 0;
     position: absolute;
+
+    p {
+      font-family: $panel-font-stack;
+      color: $panel-text-color;
+      padding: 1vw;
+      font-size: 0.7em;
+    }
+
+    .panelStories {
+      margin-top: 33.33vh;
+    }
+}
+
+
+.RightPanel {
+    width: 15vw;
+    background: transparent;
+    height: 300vh;
+    top: 0;
+    position: absolute;
+
+    h3 {
+      font-family: $panel-font-stack;
+      color: $h3-text-color;
+      font-size: 12px;
+      font-weight: 100;
+    }
 
     p {
       font-family: $panel-font-stack;

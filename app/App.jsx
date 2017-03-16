@@ -4,7 +4,8 @@ import Footer from './components/layout/Footer.jsx';
 import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 import InfoStory from './components/InfoStory.jsx';
-import Panel from './components/layout/Panel.jsx';
+import LeftPanel from './components/layout/LeftPanel.jsx';
+import RightPanel from './components/layout/RightPanel.jsx';
 // import TweepyText from './components/layout/TweepyText.jsx';
 
 var App = React.createClass({
@@ -40,6 +41,7 @@ var App = React.createClass({
     return (
       <div>
         <Header/>
+        <LeftPanel/>
         <InfoStory data={this.state.data}/>
         <div className={'controlPanel'}>
           <button onClick={this.updateData}>Update Data</button>
@@ -49,8 +51,7 @@ var App = React.createClass({
         <div className='renderedD3'>
         {this.state.chart}
         </div>
-        <Panel orientation={'left'}/>
-        <Panel orientation={'right'}/>
+        <RightPanel/>
         <Footer/>
       </div>
     )

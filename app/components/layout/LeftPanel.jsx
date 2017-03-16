@@ -1,25 +1,19 @@
 import React from 'react';
 import Logo from './Logo.jsx';
 
-class Panel extends React.Component {
+class LeftPanel extends React.Component {
   render() {
 
     var panelStyle;
     var showLogo;
-    if(this.props.orientation == 'left') {
-      panelStyle = {
-        left: '0'
-      }
-      showLogo = false;
-    } else {
-      panelStyle = {
-        right: '0'
-      }
-      showLogo = true;
+    panelStyle = {
+        left: '11.11vw',
+        width: '11.11vw'
     }
+    showLogo = false;
 
     return (
-      <div className={'Panel'} style={panelStyle}>
+      <div className={'LeftPanel'} style={panelStyle}>
         <Logo showLogo={showLogo}/>
         <div className={'panelStories'}>
         <p>Apple this week received mostly negative reviews from most of the popular platforms.</p>
@@ -29,4 +23,4 @@ class Panel extends React.Component {
   }
 }
 
-export default Panel;
+export default LeftPanel;

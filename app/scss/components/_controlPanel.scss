@@ -1,15 +1,17 @@
 $panel-font-stack: Futura, Helvetica, sans-serif;
-$panel-text-color: #d0d0d6;
+$button-text-color: #989191;
 
 .controlPanel {
   margin-left: 10vw;
   margin-left: 16vw;
+  margin-top: 33.33vh;
 
   button {
     font-weight: 600;
-    border: 0.2em solid black;
+    border: 0.2em solid $button-text-color;
+    border-radius: 10px;
     button-radius: 50%;
-    color: #18181f;
+    color: $button-text-color;
     margin-left: 1em;
     background: transparent;
   }

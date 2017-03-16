@@ -41,4 +41,4 @@ class MyListener(StreamListener):
         return True
 
 twitter_stream = Stream(auth, MyListener())
-twitter_stream.filter(track=['Apple'])
+twitter_stream.filter(track=['Google'])

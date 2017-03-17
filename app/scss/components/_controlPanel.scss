@@ -1,18 +1,32 @@
 $panel-font-stack: Futura, Helvetica, sans-serif;
-$button-text-color: #989191;
+$button-text-color: #F0F0F0;
+$button-hover-color: #1C1C1C;
+$button-text-dark-color: #989191;
+$button-hover-dark-color: #f1f1f1;
+
+@import '../helpers/Transform_Mixins.scss';
+@import '../helpers/User_Events.scss';
 
 .controlPanel {
-  margin-left: 10vw;
-  margin-left: 16vw;
+  margin-left: 25vw;
   margin-top: 33.33vh;
+  width: 5vw;
+  height: 720vh;
 
   button {
+    @include css-transition(all, 0.2s, ease-in-out);
     font-weight: 600;
     border: 0.2em solid $button-text-color;
     border-radius: 10px;
     button-radius: 50%;
     color: $button-text-color;
-    margin-left: 1em;
+    margin-top: 5vh;
     background: transparent;
+    @include css-user-select(none);
+    outline: none;
+  }
+
+  button:hover {
+    border: 0.2em solid $button-hover-color;
   }
 }

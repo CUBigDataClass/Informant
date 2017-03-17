@@ -9,7 +9,7 @@ class TextSectionContainer extends React.Component{
     var count = 4;
     var sections = [];
     for(var i = 0; i < count; i++) {
-      sections.push(<TextSection key={i}>{i}</TextSection>);
+      sections.push(<TextSection key={i}>section {i}</TextSection>);
     }
     return (
       <div>

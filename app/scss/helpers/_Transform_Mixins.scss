@@ -12,12 +12,6 @@
   transform-origin: $o;
 }
 
-@mixin css-user-select($n){
-  -webkit-user-select: $n;  /* Chrome all / Safari all */
-  -moz-user-select: $n;     /* Firefox all */
-  -ms-user-select: $n;      /* IE 10+ */
-}
-
 @mixin css-transition($prop, $time, $easing) {
   -webkit-transition: $prop, $time, $easing;
   -moz-transition: $prop, $time, $easing;

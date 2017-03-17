@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './Logo.jsx';
+import TextSectionContainer from './TextSectionContainer.jsx';
 
 class LeftPanel extends React.Component {
   render() {
@@ -17,6 +18,7 @@ class LeftPanel extends React.Component {
         <Logo showLogo={showLogo}/>
         <div className={'panelStories'}>
         <p>Apple this week received mostly negative reviews from most of the popular platforms.</p>
+        <TextSectionContainer/>
         </div>
       </div>
     );

@@ -7,15 +7,21 @@
 @import './components/Logo.scss';
 @import './components/controlPanel.scss';
 @import './components/TweepyText.scss';
+@import './components/_TextSection.scss';
 
 $font-stack: Futura, Helvetica, sans-serif;
-$bg-color: #FFFFFF;
+$bg-color: #1C1C1C;
+$bg-white-color: #FFFFFF;
 $pale-color: #f9f6ef;
 
 body {
   background-color: $bg-color;
   margin:0;
   padding:0;
+}
+
+.Wrapper {
+  margin-top: 10vh;
 }
 
 h2 {
@@ -40,4 +46,8 @@ img {
     position: fixed;
     margin-left: 33.33vw;
     width: 33.33vw;
+}
+
+.LineChanged {
+  @include css-transition(all, 0.5s, ease-in-out);
 }

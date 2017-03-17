@@ -75,6 +75,10 @@ $white-color: #f9f6ef;
   @include css-transition(all, .2s ,ease-in-out);
 }
 
+.renderedD3 rect {
+  @include css-transition(all, .2s ,ease-in-out);
+}
+
 
 .renderedD3 div:hover {
   font: 10px sans-serif;

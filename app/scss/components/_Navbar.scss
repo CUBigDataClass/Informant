@@ -1,15 +1,18 @@
 $navbar-font-stack: Futura, Helvetica, sans-serif;
-$navbar-bg-color: #18181f;
+$navbar-bg-color: #f1f1f1;
+$button-hover-color: #1c1c1c;
+$button-border-color: #f0f0f0;
+$button-text-color: #f0f0f0;
+
+
+@import '../helpers/Transform_Mixins.scss';
+@import '../helpers/User_Events.scss';
 
 .Navbar {
   background: transparent;
-  top: 0;
-
-  p {
-    color: azure;
-    margin:0;
-    padding:0;
-  }
+  top: 10vh;
+  margin-left: 18vw;
+  position: relative;
 
   h1 {
     font-family: $navbar-font-stack;
@@ -18,11 +21,19 @@ $navbar-bg-color: #18181f;
   }
 
   .navBarButton {
+    @include css-transition(all, 0.2s, ease-in-out);
     font-weight: 600;
-    border: 0.2em solid black;
+    border-radius: 10px;
+    border: 0.2em solid $button-border-color;
     button-radius: 50%;
-    color: #18181f;
+    color: $button-text-color;
     margin-left: 1em;
     background: transparent;
+    @include css-user-select(none);
+    outline: none;
+  }
+
+  .navBarButton:hover {
+    border: 0.2em solid $button-hover-color;
   }
 }

@@ -1,8 +1,10 @@
 $header-font-stack: Futura, Helvetica, sans-serif;
+$header-text-color: #afb2bb;
+
+@import '../helpers/User_Events.scss';
 
 .Header {
   width: 70vw;
-  height: 65px;
   margin-left: 15vw;
   margin-top: 2vh;
 
@@ -12,12 +14,16 @@ $header-font-stack: Futura, Helvetica, sans-serif;
   }
 
   h1 {
-    font-family: $header-font-stack;
-    font-size: 1em;
+    @include css-user-select(none);
+    cursor: default;
+    font-family: Baskerville, serif;
+    font-size: 1.5em;
     font-weight: 100;
-    margin:0;
-    padding:0;
-    float: right;
-    margin-right: 1vw;
+    color: $header-text-color;
+    letter-spacing: 10px;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    text-align: center;
   }
 }

@@ -1,9 +1,23 @@
 $footer-font-stack: Futura, Helvetica, sans-serif;
 
 .Footer {
+  height: 10vh;
+  box-shadow: 10px 0px 5px #ababad;
+  background: white;
+  z-index: 999;
+
   h1 {
     font-family: $footer-font-stack;
     font-size: 1em;
     font-weight: 100;
   }
+
+  p {
+    color: #c5c1c1;
+    font-family: Futura, Helvetica, sans-serif;
+    font-weight: 100;
+    padding: 10px;
+    padding-left: 23vw;
+  }
+
 }

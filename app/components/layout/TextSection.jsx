@@ -6,8 +6,10 @@ import Faux from 'react-faux-dom';
 class TextSection extends React.Component{
   render() {
     return (
-      <section>
-      {this.props.children}
+      <section className={'TextSection'}>
+      <p>
+        {this.props.children}
+      </p>
       </section>
     );
   }

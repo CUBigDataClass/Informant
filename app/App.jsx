@@ -6,12 +6,14 @@ import Faux from 'react-faux-dom';
 import InfoStory from './components/InfoStory.jsx';
 import RightPanel from './components/layout/RightPanel.jsx';
 // import TweepyText from './components/layout/TweepyText.jsx';
+var io = require('socket.io-client');
 
 
 var App = React.createClass({
   getInitialState() {
     return {
-      data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2]
+      data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2],
+      tweet: 'N o n e'
     }
   },
   updateData() {
@@ -36,11 +38,30 @@ var App = React.createClass({
           }
         });
   },
+  componentDidMount() {
+    var self = this;
+        // Initialize socket.io
+        var socket = io.connect();
+
+        // On tweet event emission...
+        socket.on('tweet', function (tweetData) {
+          console.log('new tweet!');
+          console.log(tweetData.text);
+
+       self.setState((prevState, props) => {
+               return {
+               tweet: tweetData.text
+             }
+        });
+
+     });
+  },
   render() {
     var str = <li>Hello.</li>;
     return (
       <div className={'Wrapper'}>
         <Header/>
+        <p style={{color: 'white'}}>{this.state.tweet}</p>
         <InfoStory data={this.state.data}/>
         <div className={'controlPanel'}>
           <button onClick={this.updateData}>Update Data</button>

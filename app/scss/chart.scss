@@ -76,7 +76,7 @@ $white-color: #f9f6ef;
 }
 
 .renderedD3 rect {
-  @include css-transition(all, .2s ,ease-in-out);
+  @include css-transition(all, .5s ,ease-in-out);
 }
 
 

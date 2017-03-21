@@ -56,42 +56,122 @@ var LinearGraph = React.createClass({
 
       var r = 10;
 
-      var lines = svg.selectAll("rect")
+      var rects = svg.selectAll("rect")
        .data(data)
        .enter()
        .append("rect")
 
 
-       lines
+       rects
        .attr("x", '250')
        .attr("y", '250')
+       .attr("rx", '4')
+       .attr("ry", '4')
+       .attr('fill', '#FFFFFF')
        .attr("width", function(d, i) {
-         return '0.1';
+         return '5.8';
        })
       .attr("height", function(d, i) {
         return d*5;
       })
        .attr('transform', function(d, i){
-         return 'rotate(' + i*30 + ' 250 250)';
+         return 'rotate(' + i*6 + ' 250 250)';
        })
        .style('stroke','#ffffff')
-       .style('stroke-width', '1px')
+       .style('stroke-width', '0.5px')
 
        svg.append('circle')
        .attr('cx', '50%')
        .attr('cy', '50%')
-       .attr('r', 100)
+       .attr('r', 54)
        .attr('fill', '#1c1c1c')
-       .attr('stroke', '#d0d0d6')
-       .attr('stroke-width', '2px')
+       .attr('stroke', '#ffffff')
+       .attr('stroke-width', '1px')
 
        svg.append('circle')
        .attr('cx', '50%')
        .attr('cy', '50%')
-       .attr('r', 110)
+       .attr('r', 49)
        .attr('fill', 'none')
-       .attr('stroke', '#d0d0d6')
-       .attr('stroke-width', '2px')
+       .attr('stroke', '#ffffff')
+       .attr('stroke-width', '1px')
+
+       svg.append('circle')
+       .attr('cx', '50%')
+       .attr('cy', '50%')
+       .attr('r', 39)
+       .attr('fill', 'none')
+       .attr('stroke', '#ffffff')
+       .attr('stroke-width', '5px')
+
+       svg.append('circle')
+       .attr('cx', '50%')
+       .attr('cy', '50%')
+       .attr('r', 30)
+       .attr('fill', 'none')
+       .attr('stroke', '#ffffff')
+       .attr('stroke-width', '5px')
+
+
+
+//        // define the clipPath
+// svg.append("clipPath")       // define a clip path
+//     .attr("id", "circle-clip") // give the clipPath an ID
+//   .append("circle")          // shape it as an ellipse
+//     .attr("cx", 250)         // position the x-centre
+//     .attr("cy", 250)         // position the y-centre
+//     .attr("r", 70)         // set the x radius
+//
+//
+// // draw clipped path on the screen
+// svg.append("circle")        // attach a rectangle
+//     .attr("x", 125)        // position the left of the rectangle
+//     .attr("y", 75)         // position the top of the rectangle
+//     .attr("r", 400)         // set the x radius
+//     .attr("clip-path", "url(#circle-clip)") // clip the rectangle
+//     .style("fill", "lightgrey")   // fill the clipped path with grey
+
+
+    // svg.append('circle')
+    // .attr('cx', '50%')
+    // .attr('cy', '50%')
+    // .attr("clip-path", "url(#ellipse-clip)") // clip the rectangle
+    // .attr('r', 50)
+    // .attr('fill', '#111111')
+    // .attr('stroke', '#d0d0d6')
+    // .attr('stroke-width', '0.5px')
+    //
+    svg.append('g')
+    .attr('transform', 'translate(235, 240)')
+    .append('path')
+    .attr('d', 'M 50,5 95,97.5 5,97.5 Z')
+    .attr('transform-origin', 'center')
+    .attr('transform', 'scale(0.4) rotate(45, 0, 0)')
+    .attr('fill', '#1c1c1c')
+
+
+     svg.append('circle')
+     .attr('cx', '50%')
+     .attr('cy', '50%')
+     .attr('r', 30)
+     .attr('fill', 'none')
+     .attr('stroke', '#ffffff')
+     .attr('stroke-width', '1px')
+
+
+      svg.append('circle')
+      .attr('cx', '50%')
+      .attr('cy', '50%')
+      .attr('r', 39)
+      .attr('fill', 'none')
+      .attr('stroke', '#ffffff')
+      .attr('stroke-width', '1px')
+
+
+
+
+
+
 
        //  .attr("y2", function(d, i) {
        //    return '' + (350 + d) + '';

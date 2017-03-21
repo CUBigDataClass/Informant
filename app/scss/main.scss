@@ -30,6 +30,16 @@ h2 {
   font-size: 1em;
 }
 
+h4 {
+  font-family: Baskerville, serif;
+  color: white;
+  font-weight: 100;
+  letter-spacing: 10px;
+  font-size: em;
+  font-variant: small-caps;
+  margin-left: 10%;
+}
+
 p {
   color: black;
   font-size: 1em;
@@ -46,6 +56,7 @@ img {
     position: fixed;
     margin-left: 33.33vw;
     width: 33.33vw;
+    top: 11.11vh;
 }
 
 .LineChanged {

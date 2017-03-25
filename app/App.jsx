@@ -13,28 +13,28 @@ var App = React.createClass({
   getInitialState() {
     return {
       data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2],
-      tweet: 'N o n e'
+      tweet: 'Not streaming right now...'
     }
   },
   updateData() {
 
     this.setState((prevState, props) => {
           return {
-            data : prevState.data.map((i) => Math.floor(Math.random() * 55))
+            data : prevState.data.map((i) => Math.floor(Math.random() * 25))
           }
         });
   },
   incrementData() {
     this.setState((prevState, props) => {
             return {
-            data: prevState.data.map((i) => i + 1)
+            data: prevState.data.map((i) => i + 10)
           }
         });
   },
   decrementData() {
     this.setState((prevState, props) => {
             return {
-            data: prevState.data.map((i) => i - 1)
+            data: prevState.data.map((i) => i - 10)
           }
         });
   },
@@ -46,11 +46,20 @@ var App = React.createClass({
         // On tweet event emission...
         socket.on('tweet', function (tweetData) {
           console.log('new tweet!');
-          console.log(tweetData.text);
+          // console.log(tweetData);
+          // console.log(tweetData.followers_count);
+          //favourites_count
+          //followers_count
+          //friends_count
+          //
+          // console.log(self.state.data.map((v) => {tweetData.user.favourites_count}));
+
+
 
        self.setState((prevState, props) => {
                return {
-               tweet: tweetData.text
+               tweet: tweetData.text + " " + tweetData.user.followers_count * 0.0015 + 20,
+               data: prevState.data.map((i) => Math.floor(Math.random() * tweetData.user.followers_count * 0.0015 + 20))
              }
         });
 

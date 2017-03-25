@@ -6,7 +6,9 @@ var whiteColor = '#583535';
 var blackColor = '#1c1c1c';
 var grayColor = '#232f2e';
 
-var LinearGraph = React.createClass({
+
+
+var WaveGraph = React.createClass({
   mixins: [
     Faux.mixins.core,
     Faux.mixins.anim
@@ -81,7 +83,10 @@ var LinearGraph = React.createClass({
        .attr("y", '250')
        .attr("rx", '4')
        .attr("ry", '4')
-       .attr('fill', grayColor)
+       .attr('fill', function(d, i) {
+         const hex = (i*6).toString(16);
+         return '#' + hex + hex + hex;
+       })
        .attr("width", function(d, i) {
          return '4.0';
        })
@@ -93,6 +98,42 @@ var LinearGraph = React.createClass({
        })
        .style('stroke',whiteColor)
        .style('stroke-width', '0px')
+
+      // .attr('cx', function(d, i) {
+      //   return (5*d*Math.cos(30));
+      // })
+      //  .attr('cy', function(d, i) {
+      //    return (5*d*Math.sin(30));
+      //  })
+
+       rectGroups
+       .append('circle')
+       .classed("WaveDots", true)
+       .attr('transform', function(d, i){
+         return 'translate(300, 250) rotate(' + (i*6 + 90) + ' -50 0)';
+       })
+       .attr('cx', function(d, i) {
+         return 5*d;
+       })
+       .attr('r', 5)
+       .attr('fill', function(d, i) {
+         const hex = (i*6).toString(16);
+         return '#' + hex + hex + hex;
+       })
+       .attr('stroke', whiteColor)
+       .attr('stroke-width', '0px')
+
+    //    var line = d3.svg.line()
+    // .interpolate(function(points) { return points.join("A 1,1 0 0 1 "); }) // custom interpolator
+    // .x(function(d) { return x(d.x); })
+    // .y(function(d) { return y(d.y); });
+    //
+    //    rectGroups.append("path")
+    //    .attr("class", "line")
+    //    .attr("d", line);
+
+
+
 
        svg.append('circle')
        .attr('cx', '50%')
@@ -120,7 +161,7 @@ var LinearGraph = React.createClass({
        .attr('stroke-width', '1px')
 
        svg.append('circle')
-       .classed("CoreLevels", true)
+       .classed("OuterCore", true)
        .attr('cx', '50%')
        .attr('cy', '50%')
        .attr('r', 39)
@@ -139,10 +180,11 @@ var LinearGraph = React.createClass({
 
       var width = +svg.attr("width"),
       height = +svg.attr("height"),
-      g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+      g = svg.append("g").attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
 
 
       var background = g.append("path")
+
       .datum({endAngle: tau})
       .style("fill", whiteColor)
       .attr("d", arc);
@@ -152,11 +194,11 @@ var LinearGraph = React.createClass({
       .style("fill", blackColor)
       .attr("d", arc);
 
-      d3.interval(function() {
-        foreground.transition()
-            .duration(1000)
-            .attrTween("d", arcTween(Math.random() * tau));
-      }, 2000);
+      // d3.interval(function() {
+      //   foreground.transition()
+      //       .duration(1000)
+      //       .attrTween("d", arcTween(Math.random() * tau));
+      // }, 2000);
 
 
 
@@ -167,15 +209,6 @@ var LinearGraph = React.createClass({
       // .attr('transform-origin', 'center')
       // .attr('transform', 'scale(0.4) rotate(45, 0, 0)')
       // .attr('fill', '#1c1c1c')
-
-        // svg.append('circle')
-        // .classed("CoreLevels", true)
-        // .attr('cx', '50%')
-        // .attr('cy', '50%')
-        // .attr('r', 39)
-        // .attr('fill', 'none')
-        // .attr('stroke', whiteColor)
-        // .attr('stroke-width', '1px');
 
 
 
@@ -215,4 +248,4 @@ var LinearGraph = React.createClass({
   }
 })
 
-export default LinearGraph;
+export default WaveGraph;

@@ -9,7 +9,7 @@ class TweepyText extends React.Component {
     super(props);
 
     this.state = {
-      text: 'none'
+      text: 'Get request stream not running...'
     };
 
     this.updateText = this.updateText.bind(this);

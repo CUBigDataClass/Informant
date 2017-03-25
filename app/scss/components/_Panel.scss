@@ -1,6 +1,18 @@
-$panel-font-stack: Futura, Helvetica, sans-serif;
+$panel-font-stack: Muli, Futura, Helvetica, sans-serif;
+$panel-section-title-font-stack: Raleway, Futura, Helvetica, sans-serif;
 $panel-text-color: #d0d0d6;
 $h3-text-color: #746c88;
+$p-font-size: 0.9em;
+
+h4 {
+  font-family: $panel-section-title-font-stack;
+  color: white;
+  font-weight: 100;
+  font-size: 1em;
+  text-align: left;
+  margin-left: 0px;
+  padding-left: 10%;
+}
 
 .LeftPanel {
     box-shadow: 2px 10px 10px #070708;
@@ -13,12 +25,12 @@ $h3-text-color: #746c88;
     p {
       font-family: $panel-font-stack;
       color: $panel-text-color;
-      padding: 1vw;
-      font-size: 0.7em;
+      padding: 0.5em;
+      font-size: $p-font-size;
     }
 
     .panelStories {
-      margin-top: 33.33vh;
+      margin-top: 66.66vh;
     }
 }
 
@@ -34,7 +46,7 @@ $h3-text-color: #746c88;
     h3 {
       font-family: $panel-font-stack;
       color: $h3-text-color;
-      font-size: 12px;
+      font-size: 1.5em;
       font-weight: 100;
       padding: 1vw;
     }
@@ -43,7 +55,7 @@ $h3-text-color: #746c88;
       font-family: $panel-font-stack;
       color: $panel-text-color;
       padding: 1vw;
-      font-size: 0.7em;
+      font-size: $p-font-size;
     }
 
     .panelStories {

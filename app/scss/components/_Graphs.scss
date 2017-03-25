@@ -1,0 +1,76 @@
+@import '../helpers/Transform_Mixins.scss';
+
+$first-color: #9bb5b5;
+$second-color: #eadab9;
+$blue-color: #637799;
+$red-color: #e0935c;
+$orange-color: #e0935c;
+$yellow-color: #efce69;
+$black-color: #262522;
+$white-color: #f9f6ef;
+
+
+.renderedD3 div {
+  width: 10%;
+  font: 10px sans-serif;
+  background-color: $first-color;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+  margin-top: 10px;
+  height: 1em;
+  @include css-transition(all, .2s ,ease-in-out);
+}
+
+.renderedD3 rect {
+  @include css-transition(all, 0.9s ,ease-in-out);
+}
+
+.renderedD3 div:hover {
+  font: 10px sans-serif;
+  background-color: $second-color;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  margin-top: 10px;
+  height: 2em;
+  color: black;
+  @include css-transition(all, .2s ,ease-in-out);
+}
+
+
+.renderedD3 {
+    position: fixed;
+    margin-left: 33.33vw;
+    width: 33.33vw;
+    top: 11.11vh;
+}
+
+.LinearReact {
+  @include css-transition(all, 0.9s, ease-in-out);
+}
+
+.WaveDots {
+  @include css-transition(all, 0.9s, ease-in-out);
+}
+
+
+.LinearRect:hover {
+fill: #866351;
+}
+
+.Core {
+@include css-transition(all, 0.9s, ease-in-out);
+}
+
+.Core:hover + .OuterCore {
+@include css-transition(all, 0.5s, ease-in-out);
+/*stroke: #1c1c1c;*/
+stroke-width: 0.0px;
+
+}
+
+.OuterCore {
+  @include css-transition(all, 0.5s, ease-in-out);
+}

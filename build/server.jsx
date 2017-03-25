@@ -2,7 +2,6 @@ var Twitter = require('twitter');
 var express = require('express')
 var path = require('path');
 import React from 'React';
-import ReactDOMStream from "react-dom-stream/server";
 import App from "../app/App.jsx";
 var streamHandler = require('./streamHandler.js');
 

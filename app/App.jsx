@@ -5,6 +5,7 @@ import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 import InfoStory from './components/InfoStory.jsx';
 import RightPanel from './components/layout/RightPanel.jsx';
+import LeftPanel from './components/layout/LeftPanel.jsx';
 // import TweepyText from './components/layout/TweepyText.jsx';
 var io = require('socket.io-client');
 
@@ -13,8 +14,16 @@ var App = React.createClass({
   getInitialState() {
     return {
       data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2],
-      tweet: 'Not streaming right now...'
+      tweet: 'Not streaming right now...',
+      open: false
     }
+  },
+  togglePanel() {
+    this.setState((prevState, props) => {
+          return {
+            open : !prevState.open
+          }
+        });
   },
   updateData() {
 
@@ -66,19 +75,34 @@ var App = React.createClass({
      });
   },
   render() {
+    var slideMenuBar;
+    if(this.state.open) {
+      slideMenuBar = {
+        marginLeft: '0vw'
+      }
+    } else {
+      slideMenuBar = {
+        marginLeft: '15vw'
+      }
+    }
+
     var str = <li>Hello.</li>;
     return (
-      <div className={'Wrapper'}>
-        <Header/>
-        <p style={{color: 'white'}}>{this.state.tweet}</p>
-        <InfoStory data={this.state.data}/>
-        <div className={'controlPanel'}>
-          <button onClick={this.updateData}>Update Data</button>
-          <button onClick={this.decrementData}>-</button>
-          <button onClick={this.incrementData}>+</button>
+      <div className={'App'}>
+        <LeftPanel/>
+        <div className={'MainContainer'} style={slideMenuBar}>
+          <Header/>
+          <button className={'slideMenuBarButton'} onMouseDown={this.togglePanel}>toggle menu bar</button>
+          <p style={{color: 'white'}}>{this.state.tweet}</p>
+          <InfoStory data={this.state.data}/>
+          <div className={'controlPanel'}>
+            <button onClick={this.updateData}><p>Update Data</p></button>
+            <button onClick={this.decrementData}><p>-</p></button>
+            <button onClick={this.incrementData}><p>+</p></button>
+          </div>
+          <RightPanel/>
+          <Footer/>
         </div>
-        <RightPanel/>
-        <Footer/>
       </div>
     )
   }

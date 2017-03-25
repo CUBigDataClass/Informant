@@ -1,23 +1,30 @@
 $navbar-font-stack: Montserrat, Futura, Helvetica, sans-serif;
 $navbar-bg-color: #f1f1f1;
 $button-hover-color: #1c1c1c;
-$button-border-color: #f0f0f0;
-$button-text-color: #f0f0f0;
+$button-border-color: #efdbdb;
+$button-text-color: #efdbdb;
 
 
 @import '../helpers/Transform_Mixins.scss';
 @import '../helpers/User_Events.scss';
 
 .Navbar {
-  background: transparent;
-  top: 10vh;
-  margin-left: 18vw;
-  position: relative;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  position: fixed;
+  padding-top: 1em;
+  height: 3em;
 
   h1 {
     font-family: $navbar-font-stack;
     font-size: 1em;
     font-weight: 100;
+    left: 90vw;
+    top: 1em;
+    position: absolute;
   }
 
   .navBarButton {
@@ -33,7 +40,20 @@ $button-text-color: #f0f0f0;
     outline: none;
   }
 
+  p {
+    color: $button-text-color;
+    font-weight: 600;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
   .navBarButton:hover {
     border: 0.2em solid $button-hover-color;
   }
+
+  .navBarButton:hover > p {
+    @include css-transition(all, 0.2s, ease-in-out);
+    color: $button-hover-color;
+  }
+
 }

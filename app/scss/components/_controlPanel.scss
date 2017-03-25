@@ -29,4 +29,8 @@ $button-hover-dark-color: #f1f1f1;
   button:hover {
     border: 0.2em solid $button-hover-color;
   }
+
+  button:hover > p {
+    color: $button-hover-color;
+  }
 }

@@ -4,6 +4,8 @@ $panel-text-color: #d0d0d6;
 $h3-text-color: #746c88;
 $p-font-size: 0.9em;
 
+@import './helpers/Transform_Mixins.scss';
+
 h4 {
   font-family: $panel-section-title-font-stack;
   color: white;
@@ -15,6 +17,7 @@ h4 {
 }
 
 .LeftPanel {
+    @include css-transition(all, 0.5s, ease-in);
     box-shadow: 2px 10px 10px #070708;
     width: 15vw;
     background: transparent;
@@ -30,13 +33,13 @@ h4 {
     }
 
     .panelStories {
-      margin-top: 66.66vh;
+
     }
 }
 
 
 .RightPanel {
-    box-shadow: 2px 10px 10px #070708;
+    box-shadow: 3px 10px 10px #9b9ba5;
     width: 15vw;
     background: transparent;
     height: 800vh;

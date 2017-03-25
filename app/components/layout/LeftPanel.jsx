@@ -7,10 +7,7 @@ class LeftPanel extends React.Component {
 
     var panelStyle;
     var showLogo;
-    panelStyle = {
-        left: '11.11vw',
-        width: '11.11vw'
-    }
+
     showLogo = false;
 
     return (

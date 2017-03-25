@@ -74,5 +74,5 @@ class TweepyText extends React.Component {
   }
 }
 
-ReactDOM.render(<TweepyText/>, document.getElementById('tweepy'));
+// ReactDOM.render(<TweepyText/>, document.getElementById('tweepy'));
 // export default TweepyText;

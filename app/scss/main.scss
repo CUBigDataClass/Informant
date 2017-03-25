@@ -8,20 +8,40 @@
 @import './components/TweepyText.scss';
 @import './components/TextSection.scss';
 @import './components/_Graphs.scss';
+@import './helpers/Animation_Mixins.scss';
 
 $font-stack: Montserrat, Futura, Helvetica, sans-serif;
 $bg-color: #1C1C1C;
 $bg-white-color: #FFFFFF;
 $pale-color: #f9f6ef;
+$main-container-color: #f7f5f5;
+$menu-bar-button-color: #f7f5f5;
 
 body {
+  @include css-fadein(3s);
   background-color: $bg-color;
   margin:0;
   padding:0;
+  overflow-x:hidden;
 }
 
-.Wrapper {
-  margin-top: 10vh;
+.MainContainer {
+  background: $main-container-color;
+  @include css-transition(all, 0.3s, ease-in);
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+}
+
+.App {
+  display: inline-block;
+}
+
+.slideMenuBarButton {
+  border: none;
+  color: $menu-bar-button-color;
+  outline: none;
+  user-select: none;
 }
 
 h2 {
@@ -36,7 +56,6 @@ p {
 }
 
 img {
-    position: absolute;
     right: 0;
     top: 0;
     width: 15%;

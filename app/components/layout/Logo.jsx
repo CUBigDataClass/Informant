@@ -16,7 +16,7 @@ class Logo extends React.Component {
 
     return (
       <div>
-        <img src={'./informant_1_lightgrey.svg'} style={logoStyle} className={'Logo'} alt={'informant'}/>
+        <img src={'./informant_1.svg'} style={logoStyle} className={'Logo'} alt={'informant'}/>
       </div>
     );
   }

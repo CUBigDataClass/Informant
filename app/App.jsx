@@ -75,24 +75,24 @@ var App = React.createClass({
      });
   },
   render() {
-    var slideMenuBar;
+    var mainContainer = 'MainContainer';
     if(this.state.open) {
-      slideMenuBar = {
-        marginLeft: '0vw'
-      }
+      mainContainer += ' menuBarOpen'
     } else {
-      slideMenuBar = {
-        marginLeft: '15vw'
-      }
+      mainContainer += ' menuBarClose'
     }
 
     var str = <li>Hello.</li>;
     return (
       <div className={'App'}>
         <LeftPanel/>
-        <div className={'MainContainer'} style={slideMenuBar}>
+        <div className={mainContainer}>
           <Header/>
-          <button className={'slideMenuBarButton'} onMouseDown={this.togglePanel}>toggle menu bar</button>
+          <button className={'slideMenuBarButton'} onMouseDown={this.togglePanel}>
+            <div></div>
+            <div></div>
+            <div></div>
+          </button>
           <p style={{color: 'white'}}>{this.state.tweet}</p>
           <InfoStory data={this.state.data}/>
           <div className={'controlPanel'}>

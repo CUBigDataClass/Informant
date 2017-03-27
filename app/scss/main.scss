@@ -33,6 +33,18 @@ body {
   width: 100vw;
 }
 
+.menuBarOpen {
+  margin-left: 0vw;
+}
+
+.menuBarClose {
+  margin-left: 15vw;
+
+  @media all and (max-width: 500px) {
+  margin-left: 80vw;
+  }
+}
+
 .App {
   display: inline-block;
 }
@@ -40,8 +52,17 @@ body {
 .slideMenuBarButton {
   border: none;
   color: $menu-bar-button-color;
+  background: transparent;
   outline: none;
   user-select: none;
+  margin-left: 2vh;
+}
+
+.slideMenuBarButton div {
+  width: 30px;
+  height: 5px;
+  background: #1c1c1c;
+  margin-top: 5px;
 }
 
 h2 {

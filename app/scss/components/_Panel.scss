@@ -1,8 +1,10 @@
-$panel-font-stack: Muli, Futura, Helvetica, sans-serif;
+$panel-font-stack: Roboto, Futura, Helvetica, sans-serif;
 $panel-section-title-font-stack: Raleway, Futura, Helvetica, sans-serif;
 $panel-text-color: #d0d0d6;
 $h3-text-color: #746c88;
-$p-font-size: 0.9em;
+$p-font-size: 1.5vw;
+$li-color: #a56666;
+$mobile-p-font-size: 6.5vw;
 
 @import './helpers/Transform_Mixins.scss';
 
@@ -25,6 +27,8 @@ h4 {
     top: 0;
     position: absolute;
 
+
+
     p {
       font-family: $panel-font-stack;
       color: $panel-text-color;
@@ -32,10 +36,31 @@ h4 {
       font-size: $p-font-size;
     }
 
-    .panelStories {
+    .menuBar {
+      margin-top: 6em;
+      padding-left: 1em;
 
+      li {
+        font-family: $panel-font-stack;
+        font-size: $p-font-size;
+        color: $li-color;
+        list-style-type: none;
+        margin-top: 2vh;
+      }
+    }
+
+    @media all and (max-width: 500px) {
+    width: 80vw;
+    .menuBar {
+        li {
+          font-size: $mobile-p-font-size;
+        }
+      }
     }
 }
+
+
+
 
 
 .RightPanel {

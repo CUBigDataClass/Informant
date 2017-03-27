@@ -12,9 +12,11 @@ class LeftPanel extends React.Component {
 
     return (
       <div className={'LeftPanel'} style={panelStyle}>
-        <Logo showLogo={showLogo}/>
-        <div className={'panelStories'}>
-        <p>Apple this week received mostly negative reviews from most of the popular platforms.</p>
+        <div className={'menuBar'}>
+        <li>Home</li>
+        <li>Top Three Companies</li>
+        <li>About Us</li>
+        <li>Contact Us</li>
         <TextSectionContainer/>
         </div>
       </div>

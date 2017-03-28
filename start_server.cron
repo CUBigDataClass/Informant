@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Start / keep running server.jsx
+ps ax | grep server.jsx | grep -qv grep
+if [ $? -ne 0 ]; then
+  nohup build/server.jsx 2>&1 &
+fi

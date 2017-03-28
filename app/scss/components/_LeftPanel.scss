@@ -1,17 +1,20 @@
-$panel-font-stack: Roboto, Futura, Helvetica, sans-serif;
-$panel-section-title-font-stack: Raleway, Futura, Helvetica, sans-serif;
+$panel-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$panel-story-header-font-stack: 'Roboto', Futura, Helvetica, sans-serif;
+$panel-section-title-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
 $panel-text-color: #d0d0d6;
 $h3-text-color: #746c88;
+$h4-text-color: #ead4d8;
 $p-font-size: 1.5vw;
 $li-color: #a56666;
+$li-hover-color: #b5ae9e;
 $mobile-p-font-size: 6.5vw;
 
 @import './helpers/Transform_Mixins.scss';
 
 h4 {
   font-family: $panel-section-title-font-stack;
-  color: white;
-  font-weight: 100;
+  color: $h4-text-color;
+  font-weight: 400;
   font-size: 1em;
   text-align: left;
   margin-left: 0px;
@@ -41,15 +44,24 @@ h4 {
       padding-left: 1em;
 
       li {
+        @include css-user-select(none);
+        @include css-cursor(default);
+        @include css-transition(all, 0.1s, ease-in-out);
         font-family: $panel-font-stack;
         font-size: $p-font-size;
         color: $li-color;
         list-style-type: none;
         margin-top: 2vh;
       }
+
+      li:hover {
+
+        @include css-transition(all, 0.1s, ease-in-out);
+        color: $li-hover-color;
+      }
     }
 
-    @media all and (max-width: 500px) {
+    @media all and (max-width: 800px) {
     width: 80vw;
     .menuBar {
         li {
@@ -57,36 +69,6 @@ h4 {
         }
       }
     }
-}
 
 
-
-
-
-.RightPanel {
-    box-shadow: 3px 10px 10px #9b9ba5;
-    width: 15vw;
-    background: transparent;
-    height: 800vh;
-    top: 0;
-    position: absolute;
-
-    h3 {
-      font-family: $panel-font-stack;
-      color: $h3-text-color;
-      font-size: 1.5em;
-      font-weight: 100;
-      padding: 1vw;
-    }
-
-    p {
-      font-family: $panel-font-stack;
-      color: $panel-text-color;
-      padding: 1vw;
-      font-size: $p-font-size;
-    }
-
-    .panelStories {
-      margin-top: 33.33vh;
-    }
 }

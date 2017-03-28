@@ -45,6 +45,10 @@ module.exports = {
           test: /\.json$/,
           loader: 'json-loader'
       },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader?name=app/assets/fonts/[name].[ext]'
+      }
     ]
   },
   output: {

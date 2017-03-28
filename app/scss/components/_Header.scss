@@ -1,11 +1,11 @@
-$header-font-stack: Raleway, Futura, Helvetica, sans-serif;
+$header-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
 $header-text-color: #f1b3c0;
 
 @import '../helpers/User_Events.scss';
 
 .Header {
   width: 70vw;
-  margin-top: 4.5em;
+  margin-top: 4.0em;
 
   p {
     margin:0;

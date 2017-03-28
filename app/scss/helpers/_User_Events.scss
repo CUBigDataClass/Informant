@@ -3,3 +3,8 @@
   -moz-user-select: $n;     /* Firefox all */
   -ms-user-select: $n;      /* IE 10+ */
 }
+
+
+@mixin css-cursor($p) {
+  cursor: $p;
+}

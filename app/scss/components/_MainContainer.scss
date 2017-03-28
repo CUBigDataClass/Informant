@@ -1,0 +1,30 @@
+$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$main-container-color: #f7f5f5;
+$live-stream-text-color: #a29393;
+
+.MainContainer {
+  background: $main-container-color;
+  @include css-transition(all, 0.25s, ease-in-cubic);
+  position: relative;
+  display: inline-block;
+  width: 100vw;
+}
+
+.menuBarOpen {
+  margin-left: 15vw;
+  @media all and (max-width: 800px) {
+  margin-left: 80vw;
+  }
+}
+
+.menuBarClose {
+  margin-left: 0vw;
+}
+
+.LiveStream {
+  font-family: $live-stream-font-stack;
+  font-size: 1em;
+  font-weight: 400;
+  color: $live-stream-text-color;
+  margin-left: 1em;
+}

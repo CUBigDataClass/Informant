@@ -1,6 +1,5 @@
 @import '../helpers/Transform_Mixins.scss';
 
-
 $first-color: #9bb5b5;
 $second-color: #eadab9;
 $blue-color: #637799;
@@ -11,11 +10,12 @@ $black-color: #262522;
 $white-color: #f9f6ef;
 
 .renderedD3 {
-
+    position: fixed;
+    margin-left: 15vw;
+    top: 15vh;
 }
 
 .renderedD3 div {
-
   width: 10%;
   font: 10px sans-serif;
   background-color: $first-color;
@@ -45,12 +45,6 @@ $white-color: #f9f6ef;
 }
 
 
-.renderedD3 {
-    position: fixed;
-    margin-left: 33.33vw;
-    width: 33.33vw;
-    top: 11.11vh;
-}
 
 .LinearReact {
   @include css-transition(all, 0.9s, ease-in-out);

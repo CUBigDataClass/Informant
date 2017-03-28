@@ -32,6 +32,13 @@
   transform: scale($t);
 }
 
+@mixin css-transform-translate-x($t) {
+  -ms-transform: translateX($t); /* IE 9 */
+  -webkit-transform: translateX($t); /* Safari */
+  -o-transform: translateX($t);
+  transform: translateX($t);
+}
+
 @mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {
   -ms-transform: scale($s) translateX($tx) translateY($ty); /* IE 9 */
   -webkit-transform: scale($s) translateX($tx), translateY($ty); /* Safari */
@@ -39,12 +46,56 @@
   transform: scale($s) translateX($tx) translateY($ty);
 }
 
-@mixin css-transform-rotate-y($t) {
-  -ms-transform: rotateY($t); /* IE 9 */
-  -webkit-transform: rotateY($t); /* Safari */
-  -o-transform: rotateY($t);
-  transform: rotateY($t);
+@mixin css-transform-rotate-and-translate-down($a, $b) {
+  -ms-transform: translateY($b) rotate($a) ; /* IE 9 */
+  -webkit-transform: translateY($b) rotate($a) ; /* Safari */
+  -o-transform: translateY($b) rotate($a) ;
+  transform: translateY($b) rotate($a) ;
 }
+
+@mixin css-transform-rotate-and-translate-up($a, $b) {
+  -ms-transform: translateY($b) rotate($a) ; /* IE 9 */
+  -webkit-transform: translateY($b) rotate($a) ; /* Safari */
+  -o-transform: translateY($b) rotate($a) ;
+  transform: translateY($b) rotate($a) ;
+}
+
+@mixin css-transform-rotate($a) {
+  -ms-transform: rotate($a); /* IE 9 */
+  -webkit-transform: rotate($a); /* Safari */
+  -o-transform: rotate($a);
+  transform: rotate($a);
+}
+
+@mixin css-transform-rotate-x($a) {
+  -ms-transform: rotateX($a); /* IE 9 */
+  -webkit-transform: rotateX($a); /* Safari */
+  -o-transform: rotateX($a);
+  transform: rotateX($a);
+}
+
+
+@mixin css-transform-rotate-y($a) {
+  -ms-transform: rotateY($a); /* IE 9 */
+  -webkit-transform: rotateY($a); /* Safari */
+  -o-transform: rotateY($a);
+  transform: rotateY($a);
+}
+
+@mixin css-transform-rotate-z($a) {
+  -ms-transform: rotateZ($a); /* IE 9 */
+  -webkit-transform: rotateZ($a); /* Safari */
+  -o-transform: rotateZ($a);
+  transform: rotateZ($a);
+}
+
+@mixin css-transform-squash($a) {
+  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */
+  -webkit-transform: scaleY($a) scaleX($a); /* Safari */
+  -o-transform: scaleY($a) scaleX($a);
+  transform: scaleY($a) scaleX($a);
+}
+
 
 @mixin css-transform-open-book($s, $r, $t) {
   -ms-transform: scale($s) rotateY($r) translateX($t) !important; /* IE 9 */

@@ -2,20 +2,21 @@
 @import "./components/Header.scss";
 @import "./components/Footer.scss";
 @import "./components/Navbar.scss";
-@import './components/Panel.scss';
+@import './components/LeftPanel.scss';
+@import './components/RightPanel.scss';
 @import './components/Logo.scss';
 @import './components/controlPanel.scss';
 @import './components/TweepyText.scss';
 @import './components/TextSection.scss';
 @import './components/_Graphs.scss';
 @import './helpers/Animation_Mixins.scss';
+@import './components/MenuBarIcon.scss';
+@import './components/MainContainer.scss';
 
-$font-stack: Montserrat, Futura, Helvetica, sans-serif;
+$font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
 $bg-color: #1C1C1C;
 $bg-white-color: #FFFFFF;
 $pale-color: #f9f6ef;
-$main-container-color: #f7f5f5;
-$menu-bar-button-color: #f7f5f5;
 
 body {
   @include css-fadein(3s);
@@ -25,44 +26,8 @@ body {
   overflow-x:hidden;
 }
 
-.MainContainer {
-  background: $main-container-color;
-  @include css-transition(all, 0.3s, ease-in);
-  position: relative;
-  display: inline-block;
-  width: 100vw;
-}
-
-.menuBarOpen {
-  margin-left: 0vw;
-}
-
-.menuBarClose {
-  margin-left: 15vw;
-
-  @media all and (max-width: 500px) {
-  margin-left: 80vw;
-  }
-}
-
 .App {
   display: inline-block;
-}
-
-.slideMenuBarButton {
-  border: none;
-  color: $menu-bar-button-color;
-  background: transparent;
-  outline: none;
-  user-select: none;
-  margin-left: 2vh;
-}
-
-.slideMenuBarButton div {
-  width: 30px;
-  height: 5px;
-  background: #1c1c1c;
-  margin-top: 5px;
 }
 
 h2 {
@@ -72,6 +37,7 @@ h2 {
 }
 
 p {
+  font-family: $font-stack;
   color: black;
   font-size: 1em;
 }

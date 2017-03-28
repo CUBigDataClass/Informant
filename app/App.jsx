@@ -8,6 +8,8 @@ import RightPanel from './components/layout/RightPanel.jsx';
 import LeftPanel from './components/layout/LeftPanel.jsx';
 // import TweepyText from './components/layout/TweepyText.jsx';
 var io = require('socket.io-client');
+import Fonts from './assets/styles/global.css';
+import MainContainer from './components/MainContainer.jsx';
 
 
 var App = React.createClass({
@@ -88,18 +90,7 @@ var App = React.createClass({
         <LeftPanel/>
         <div className={mainContainer}>
           <Header/>
-          <button className={'slideMenuBarButton'} onMouseDown={this.togglePanel}>
-            <div></div>
-            <div></div>
-            <div></div>
-          </button>
-          <p style={{color: 'white'}}>{this.state.tweet}</p>
-          <InfoStory data={this.state.data}/>
-          <div className={'controlPanel'}>
-            <button onClick={this.updateData}><p>Update Data</p></button>
-            <button onClick={this.decrementData}><p>-</p></button>
-            <button onClick={this.incrementData}><p>+</p></button>
-          </div>
+          <MainContainer togglePanel={this.togglePanel} tweet={this.state.tweet} open={this.state.open} updateData={this.updateData} incrementData={this.incrementData} decrementData={this.decrementData} data={this.state.data}/>
           <RightPanel/>
           <Footer/>
         </div>

@@ -1,6 +1,6 @@
-$panel-font-stack: Futura, Helvetica, sans-serif;
-$button-text-color: #F0F0F0;
-$button-hover-color: #1C1C1C;
+$panel-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
+$button-text-color: #bbbbbb;
+$button-hover-color: #230c15;
 $button-text-dark-color: #989191;
 $button-hover-dark-color: #f1f1f1;
 
@@ -8,26 +8,30 @@ $button-hover-dark-color: #f1f1f1;
 @import '../helpers/User_Events.scss';
 
 .controlPanel {
-  margin-left: 25vw;
-  margin-top: 33.33vh;
-  width: 5vw;
+  width: 75vw;
   height: 720vh;
 
   button {
+    float:left;
+    margin-left: 1em;
+    font-size: 0.8em;
     @include css-transition(all, 0.2s, ease-in-out);
-    font-weight: 600;
-    border: 0.2em solid $button-text-color;
-    border-radius: 10px;
-    button-radius: 50%;
+    font-weight: 500;
+    border: none;
     color: $button-text-color;
-    margin-top: 5vh;
     background: transparent;
     @include css-user-select(none);
     outline: none;
+
+    p {
+    color: $button-text-color;
+    font-family: $panel-font-stack;
+    font-weight: 500;
+    }
   }
 
   button:hover {
-    border: 0.2em solid $button-hover-color;
+    color: $button-hover-color;
   }
 
   button:hover > p {

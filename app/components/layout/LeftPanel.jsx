@@ -13,8 +13,9 @@ class LeftPanel extends React.Component {
     return (
       <div className={'LeftPanel'} style={panelStyle}>
         <div className={'menuBar'}>
-        <li>Home</li>
-        <li>Top Three Companies</li>
+        <li>Scroll Story</li>
+        <li>Rankings</li>
+        <li>Popular</li>
         <li>About Us</li>
         <li>Contact Us</li>
         <TextSectionContainer/>

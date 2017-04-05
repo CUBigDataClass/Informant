@@ -1,0 +1,41 @@
+$panel-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$panel-story-header-font-stack: 'Roboto', Futura, Helvetica, sans-serif;
+$panel-section-title-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$panel-text-color: #d0d0d6;
+$h3-text-color: #746c88;
+$h4-text-color: #ead4d8;
+$p-font-size: 1.5vw;
+$li-color: #a56666;
+$li-hover-color: #b5ae9e;
+$mobile-p-font-size: 6.5vw;
+
+@import './helpers/Transform_Mixins.scss';
+
+.RightPanel {
+    box-shadow: 3px 10px 10px #9b9ba5;
+    width: 25vw;
+    background: transparent;
+    height: 800vh;
+    top: 0;
+    position: absolute;
+
+    h3 {
+      font-family: $panel-story-header-font-stack;
+      color: $h3-text-color;
+      font-size: 1.5em;
+      font-weight: 100;
+      padding: 1vw;
+    }
+
+    p {
+      font-family: $panel-font-stack;
+      color: $panel-text-color;
+      padding: 1vw;
+      font-size: $p-font-size;
+      font-weight: 300;
+    }
+
+    .panelStories {
+
+    }
+}

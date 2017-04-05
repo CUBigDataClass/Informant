@@ -1,0 +1,136 @@
+@mixin css-linear-gradient($first, $second) {
+  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */
+  background: linear-gradient($first, $second); /* Standard syntax */
+}
+
+@mixin origin($o) {
+  -webkit-transform-origin: $o;
+  -ms-tranform-origin: $o;
+  -moz-transform-origin: $o;
+  -o-transform-origin: $o;
+  transform-origin: $o;
+}
+
+@mixin css-transition($prop, $time, $easing) {
+  -webkit-transition: $prop 0.2s ease-in-out;
+  -moz-transition: $prop, $time, $easing;
+  -ms-transition: $prop, $time, $easing;
+  -o-transition: $prop, $time, $easing;
+  transition: $prop, $time, $easing;
+}
+
+@mixin css-transform-perspective($p) {
+  -ms-transform: perspective($p); /* IE 9 */
+  -moz-transform: perspective($p);
+  -webkit-transform: perspective($p); /* Safari */
+  -o-transform: perspective($p);
+  transform: perspective($p);
+}
+
+@mixin css-transform-scale($t) {
+  -ms-transform: scale($t); /* IE 9 */
+  -moz-transform: scale($t);
+  -webkit-transform: scale($t); /* Safari */
+  -o-transform: scale($t);
+  transform: scale($t);
+}
+
+@mixin css-transform-translate-x($t) {
+  -ms-transform: translate3D($t, 0, 0); /* IE 9 */
+  -moz-transform: translate3D($t, 0, 0);
+  -webkit-transform: translate3D($t, 0, 0); /* Safari */
+  -o-transform: translate3D($t, 0, 0);
+  transform: translate3D($t, 0, 0);
+}
+
+@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {
+  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */
+  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */
+  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */
+  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);
+  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);
+}
+
+@mixin css-transform-rotate-and-translate-down($a, $b) {
+  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */
+  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */
+  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */
+  -o-transform: translate3D(0, $b, 0) rotate($a) ;
+  transform: translate3D(0, $b, 0) rotate($a) ;
+}
+
+@mixin css-transform-rotate-and-translate-up($a, $b) {
+  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */
+  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */
+  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */
+  -o-transform: translate3D(0, $b, 0) rotate($a) ;
+  transform: translate3D(0, $b, 0) rotate($a) ;
+}
+
+@mixin css-transform-rotate($a) {
+  -ms-transform: rotate($a); /* IE 9 */
+  -moz-transform: rotate($a); /* Safari */
+  -webkit-transform: rotate($a); /* Safari */
+  -o-transform: rotate($a);
+  transform: rotate($a);
+}
+
+@mixin css-transform-rotate-x($a) {
+  -ms-transform: rotateX($a); /* IE 9 */
+  -moz-transform: rotateX($a); /* Safari */
+  -webkit-transform: rotateX($a); /* Safari */
+  -o-transform: rotateX($a);
+  transform: rotateX($a);
+}
+
+
+@mixin css-transform-rotate-y($a) {
+  -ms-transform: rotateY($a); /* IE 9 */
+  -moz-transform: rotateY($a); /* Safari */
+  -webkit-transform: rotateY($a); /* Safari */
+  -o-transform: rotateY($a);
+  transform: rotateY($a);
+}
+
+@mixin css-transform-rotate-z($a) {
+  -ms-transform: rotateZ($a); /* IE 9 */
+  -moz-transform: rotateZ($a); /* Safari */
+  -webkit-transform: rotateZ($a); /* Safari */
+  -o-transform: rotateZ($a);
+  transform: rotateZ($a);
+}
+
+@mixin css-transform-squash($a) {
+  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */
+  -moz-transform: scaleY($a) scaleX($a); /* Safari */
+  -webkit-transform: scaleY($a) scaleX($a); /* Safari */
+  -o-transform: scaleY($a) scaleX($a);
+  transform: scaleY($a) scaleX($a);
+}
+
+
+@mixin css-transform-open-book($s, $r, $t) {
+  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */
+  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */
+  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */
+  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;
+  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;
+}
+
+@mixin css-transform-skew-x($transformation) {
+  -ms-transform: skewX($transformation); /* IE 9 */
+  -moz-transform: skewX($transformation);  /* Safari */
+  -webkit-transform: skewX($transformation);  /* Safari */
+  -o-transform: skewX($transformation);
+  transform: skewX($transformation);
+}
+
+@mixin css-transform-skew-y($transformation) {
+  -ms-transform: skewY($transformation); /* IE 9 */
+  -moz-transform: skewY($transformation);  /* Safari */
+  -webkit-transform: skewY($transformation);  /* Safari */
+  -o-transform: skewY($transformation);
+  transform: skewY($transformation);
+}

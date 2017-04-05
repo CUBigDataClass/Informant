@@ -1,0 +1,10 @@
+$logo-font-stack: Futura, Helvetica, sans-serif;
+$logo-text-color: #d0d0d6;
+
+@import '../helpers/Transform_Mixins.scss';
+
+.Logo {
+  @include css-user-select(none);
+  width: 100%;
+  margin-top: 10vh;
+}

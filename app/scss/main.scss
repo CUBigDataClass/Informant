@@ -1,11 +1,33 @@
-@import "./chart.scss";
+@import './helpers/Transform_Mixins.scss';
+@import "./components/Header.scss";
+@import "./components/Footer.scss";
+@import "./components/Navbar.scss";
+@import './components/LeftPanel.scss';
+@import './components/RightPanel.scss';
+@import './components/Logo.scss';
+@import './components/controlPanel.scss';
+@import './components/TweepyText.scss';
+@import './components/TextSection.scss';
+@import './components/_Graphs.scss';
+@import './helpers/Animation_Mixins.scss';
+@import './components/MenuBarIcon.scss';
+@import './components/MainContainer.scss';
 
-$font-stack: Futura, Helvetica, sans-serif;
-$bg-color: #FFFFFF;
+$font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$bg-color: #1C1C1C;
+$bg-white-color: #FFFFFF;
 $pale-color: #f9f6ef;
 
 body {
+  @include css-fadein(3s);
   background-color: $bg-color;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+.App {
+  display: inline-block;
 }
 
 h2 {
@@ -15,13 +37,12 @@ h2 {
 }
 
 p {
-  position: absolute;
-  color: blue;
+  font-family: $font-stack;
+  color: black;
   font-size: 1em;
 }
 
 img {
-    position: absolute;
     right: 0;
     top: 0;
     width: 15%;

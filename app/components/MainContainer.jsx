@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from './layout/Header.jsx';
 import Footer from './layout/Footer.jsx';
-import * as d3 from 'd3';
-import Faux from 'react-faux-dom';
 import InfoStory from './InfoStory.jsx';
 import RightPanel from './layout/RightPanel.jsx';
 import LeftPanel from './layout/LeftPanel.jsx';

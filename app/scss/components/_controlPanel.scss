@@ -9,7 +9,8 @@ $button-hover-dark-color: #f1f1f1;
 
 .controlPanel {
   width: 75vw;
-  height: 720vh;
+  position: fixed;
+  z-index: 99999;
 
   button {
     float:left;

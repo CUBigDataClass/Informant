@@ -9,13 +9,24 @@ $yellow-color: #efce69;
 $black-color: #262522;
 $white-color: #f9f6ef;
 
-.renderedD3 {
-    position: fixed;
-    margin-left: 15vw;
-    top: 15vh;
+.d3container {
+  border-radius: 50%;
 }
 
-.renderedD3 div {
+.graph {
+    position: fixed;
+    width: 75vw;
+    transform: scale(1.0);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    @media all and (max-width: 800px) {
+    transform: scale(0.5);
+    }
+}
+
+.graph div {
   width: 10%;
   font: 10px sans-serif;
   background-color: $first-color;
@@ -28,11 +39,11 @@ $white-color: #f9f6ef;
   @include css-transition(all, .2s ,ease-in-out);
 }
 
-.renderedD3 rect {
+.graph rect {
   @include css-transition(all, 0.9s ,ease-in-out);
 }
 
-.renderedD3 div:hover {
+.graph div:hover {
   font: 10px sans-serif;
   background-color: $second-color;
   text-align: right;
@@ -50,26 +61,32 @@ $white-color: #f9f6ef;
   @include css-transition(all, 0.9s, ease-in-out);
 }
 
-.WaveDots {
+.dots {
   @include css-transition(all, 0.9s, ease-in-out);
+  opacity: 0.0;
 }
 
 
 .LinearRect:hover {
-fill: #866351;
+fill: #c7bca5;
 }
 
-.Core {
+.kernel {
 @include css-transition(all, 0.9s, ease-in-out);
 }
 
-.Core:hover + .OuterCore {
+.kernel:hover + .core {
 @include css-transition(all, 0.5s, ease-in-out);
 /*stroke: #1c1c1c;*/
 stroke-width: 0.0px;
 
 }
 
-.OuterCore {
+.core {
   @include css-transition(all, 0.5s, ease-in-out);
+}
+
+.shell {
+pointer-events: none;
+
 }

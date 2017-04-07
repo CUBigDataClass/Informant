@@ -6,8 +6,8 @@ class Navbar extends React.Component {
 
     return (
       <div className={'Navbar'}>
+        <h1>Informant</h1>
       {companies.map((name, i) =>  <button className={'navBarButton'}><p>{name}</p></button>)}
-      <h1>Informant</h1>
       </div>
     )
   }

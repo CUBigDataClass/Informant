@@ -1,5 +1,5 @@
 $menu-bar-icon-color: #f7f5f5;
-$transition-time: 0.9s;
+$transition-time: 0.7s;
 $transition-prop: transform;
 $transition-easing: ease-in-out;
 
@@ -13,6 +13,7 @@ $transition-easing: ease-in-out;
   outline: none;
   user-select: none;
   margin-left: 2vh;
+  position: fixed;
 }
 
 .slideMenuBarButton:hover > div {

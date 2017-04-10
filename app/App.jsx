@@ -8,7 +8,7 @@ import RightPanel from './components/layout/RightPanel.jsx';
 import LeftPanel from './components/layout/LeftPanel.jsx';
 // import TweepyText from './components/layout/TweepyText.jsx';
 var io = require('socket.io-client');
-import Fonts from './assets/styles/global.css';
+//import Fonts from './assets/styles/global.css';
 import MainContainer from './components/MainContainer.jsx';
 
 

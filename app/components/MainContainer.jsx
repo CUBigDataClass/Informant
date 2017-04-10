@@ -6,7 +6,7 @@ import RightPanel from './layout/RightPanel.jsx';
 import LeftPanel from './layout/LeftPanel.jsx';
 import ControlPanel from './layout/ControlPanel.jsx';
 var io = require('socket.io-client');
-import Fonts from '../assets/styles/global.css';
+//import Fonts from '../assets/styles/global.css';
 
 
 var MainContainer = React.createClass({

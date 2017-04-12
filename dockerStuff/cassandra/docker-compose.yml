@@ -1,0 +1,15 @@
+version: '2'
+services:
+  primary:
+    image: cassandra
+    ports:
+    - "0.0.0.0:9042:9042"
+    volumes:
+    - dbvolume01:/var/lib/cassandra
+  repl:
+    image: cassandra
+    environment:
+      - CASSANDRA_SEEDS=primary
+volumes:
+  dbvolume01: {}
+

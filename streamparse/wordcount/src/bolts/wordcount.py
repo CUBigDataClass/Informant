@@ -25,11 +25,11 @@ class WordCountBolt(Bolt):
     	analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
         sentence = word
         vaderScore = analyzer.polarity_scores(sentence) #Calculate Vader Score
-        textBlobScore = TextBlob(sentence)              #Calculate TextBlob Score
-        avgScore = (vaderScore['compound'] + textBlobScore.sentiment.polarity) /2 #Take the average
+        textBlobScore = TextBlob(sentence).sentiment.polarity              #Calculate TextBlob Score
+        avgScore = (vaderScore['compound'] + textBlobScore) /2 #Take the average
 	
 
-	self.logger.info("Word: %s, Vader Score: %s, TextBlob Score: %s, Combined Score: %s" %(word, str(vaderScore['compound']), str(textBlobScore), str(avgScore)))
+	self.logger.info("Word: %s, Vader Score: %.4f, TextBlob Score: %.4f, Combined Score: %.4f" %(word, vaderScore['compound'], textBlobScore, avgScore))
 
         self.emit([word, self.counter[word]])
 	time.sleep(0.5)

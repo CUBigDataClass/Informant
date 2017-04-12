@@ -35,7 +35,7 @@ Informant aggregates social media data and produces a measure on online company 
 
 ##### Task Cheatsheet
 
-> TODO
+   * 'npm install' - Install all necessary dependencies.
 
 ### Running Informant Locally
 

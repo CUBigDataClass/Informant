@@ -2,6 +2,10 @@ $live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
 $main-container-color: #f7f5f5;
 $live-stream-text-color: #a29393;
 
+.MainContainerWrapper {
+  background: $main-container-color;
+  height: 800vh;
+}
 .MainContainer {
   background: $main-container-color;
   @include css-transition(all, 0.25s, ease-in-cubic);
@@ -22,9 +26,10 @@ $live-stream-text-color: #a29393;
 }
 
 .LiveStream {
-  font-family: $live-stream-font-stack;
+font-family: "Open Sans", Futura, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: 400;
-  color: $live-stream-text-color;
-  margin-left: 1em;
+  color: #a29393;
+  text-align: right;
+  width: 75vw;
 }

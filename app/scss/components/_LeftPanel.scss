@@ -4,22 +4,12 @@ $panel-section-title-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
 $panel-text-color: #d0d0d6;
 $h3-text-color: #746c88;
 $h4-text-color: #ead4d8;
-$p-font-size: 1.5vw;
+$p-font-size: 1em;
 $li-color: #a56666;
 $li-hover-color: #b5ae9e;
 $mobile-p-font-size: 6.5vw;
 
 @import './helpers/Transform_Mixins.scss';
-
-h4 {
-  font-family: $panel-section-title-font-stack;
-  color: $h4-text-color;
-  font-weight: 400;
-  font-size: 1em;
-  text-align: left;
-  margin-left: 0px;
-  padding-left: 10%;
-}
 
 .LeftPanel {
     @include css-transition(all, 0.5s, ease-in);
@@ -28,7 +18,7 @@ h4 {
     background: transparent;
     height: 800vh;
     top: 0;
-    position: absolute;
+    position: fixed;
 
 
 

@@ -6,8 +6,6 @@ var whiteColor = '#583535';
 var blackColor = '#1c1c1c';
 var grayColor = '#232f2e';
 
-
-
 var WaveGraph = React.createClass({
   mixins: [
     Faux.mixins.core,
@@ -240,7 +238,7 @@ var WaveGraph = React.createClass({
   render(){
     return (
       <div>
-        <div className='renderedD3'>
+        <div className='graph'>
           {this.state.chart}
         </div>
       </div>

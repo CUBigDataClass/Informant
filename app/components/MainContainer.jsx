@@ -25,15 +25,15 @@ var MainContainer = React.createClass({
   },
   render() {
     return (
-        <div>
+        <div className={'MainContainerWrapper'}>
           <button className={this.state.style} onMouseDown={this.props.togglePanel}>
             <div id={'topBar'}></div>
             <div id={'middleBar'}></div>
             <div id={'bottomBar'}></div>
           </button>
           <p className={'LiveStream'}>{this.props.tweet}</p>
-          <InfoStory data={this.props.data}/>
           <ControlPanel updateData={this.props.updateData} incrementData={this.props.incrementData} decrementData={this.props.decrementData}/>
+          <InfoStory data={this.props.data}/>
         </div>
     )
   }

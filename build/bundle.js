@@ -39247,60 +39247,14 @@ var WaveGraph = _react2.default.createClass({
     var faux = this.connectFauxDOM('div.renderedD3', 'chart');
 
     var svg = d3.select(faux).append("svg").attr("width", w).attr("height", h);
-    //
-    // var data = [
-    //   {
-    //     x: -21.0,
-    //     y: 1.5,
-    //   },
-    //   {
-    //     x: 17.0,
-    //     y: 1.5,
-    //   },
-    //   {
-    //     x: 17.0,
-    //     y: 7.5,
-    //   },
-    //   {
-    //     x: 4.0,
-    //     y: -15.5,
-    //   },
-    //   {
-    //     x: 21.5,
-    //     y: 2.5,
-    //   },
-    //   {
-    //     x: 2.0,
-    //     y: 10.2,
-    //   },
-    //
-    // ]
-
 
     data = data.map(function (d, i) {
-      var x = d * Math.sin(i * 60);
-      var y = -d * Math.cos(i * 60);
+      var x = d * Math.sin(i * 6);
+      var y = d * Math.cos(i * 6);
       return { x: x, y: y };
     });
 
     var wave = svg.selectAll("g").data(data).enter(); //when u have data but no dom
-
-    //  wave
-    //  .append('circle')
-    //  .classed("dots", true)
-    //  .attr('transform', function(d, i){
-    //    return 'translate(300, 250) rotate(' + (i*6 + 90) + ' -50 0)';
-    //  })
-    //  .attr('cx', function(d, i) {
-    //    return 5*d;
-    //  })
-    //  .attr('r', 5)
-    //  .attr('fill', function(d, i) {
-    //    const hex = (i*6).toString(16);
-    //    return '#' + hex + hex + hex;
-    //  })
-    //  .attr('stroke', 'black')
-    //  .attr('stroke-width', '0px')
 
     wave.append('circle').classed("dots", true).attr('transform', function (d, i) {
       return 'translate(250, 250)';
@@ -39317,10 +39271,13 @@ var WaveGraph = _react2.default.createClass({
       return d.x * 5;
     }).y(function (d) {
       return d.y * 5;
-    }).curve(d3.curveCardinal); //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
-    wave.append("path").attr('transform', function (d, i) {
+    }).curve(d3.curveBasis); //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
+    //one connection
+    svg.append("path").attr('transform', function (d, i) {
       return 'translate(250, 250)';
-    }).attr("d", link(data)).attr("class", "link").attr('stroke', 'grey').attr('fill', 'none').attr('stroke-width', '2px');
+    }).attr("d", function (d, i) {
+      return link(data);
+    }).attr("class", "link").attr('stroke', 'grey').attr('fill', 'none').attr('stroke-width', '2px');
 
     var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
 

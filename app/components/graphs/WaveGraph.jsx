@@ -30,63 +30,16 @@ var WaveGraph = React.createClass({
             .append("svg")
             .attr("width", w)
             .attr("height", h);
-      //
-      // var data = [
-      //   {
-      //     x: -21.0,
-      //     y: 1.5,
-      //   },
-      //   {
-      //     x: 17.0,
-      //     y: 1.5,
-      //   },
-      //   {
-      //     x: 17.0,
-      //     y: 7.5,
-      //   },
-      //   {
-      //     x: 4.0,
-      //     y: -15.5,
-      //   },
-      //   {
-      //     x: 21.5,
-      //     y: 2.5,
-      //   },
-      //   {
-      //     x: 2.0,
-      //     y: 10.2,
-      //   },
-      //
-      // ]
-
 
       data = data.map((d, i) => {
-        const x = d*Math.sin(i*60);
-        const y = -d*Math.cos(i*60);
+        const x = d*Math.sin(i*6);
+        const y = d*Math.cos(i*6);
         return {x,y};
       })
-
 
       var wave = svg.selectAll("g")
        .data(data)
        .enter() //when u have data but no dom
-
-      //  wave
-      //  .append('circle')
-      //  .classed("dots", true)
-      //  .attr('transform', function(d, i){
-      //    return 'translate(300, 250) rotate(' + (i*6 + 90) + ' -50 0)';
-      //  })
-      //  .attr('cx', function(d, i) {
-      //    return 5*d;
-      //  })
-      //  .attr('r', 5)
-      //  .attr('fill', function(d, i) {
-      //    const hex = (i*6).toString(16);
-      //    return '#' + hex + hex + hex;
-      //  })
-      //  .attr('stroke', 'black')
-      //  .attr('stroke-width', '0px')
 
        wave
        .append('circle')
@@ -113,13 +66,16 @@ var WaveGraph = React.createClass({
        var link = d3.line()
                      .x(function(d) { return d.x*5; })
                      .y(function(d) { return d.y*5; })
-                     .curve(d3.curveCardinal) //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
-      wave
+                     .curve(d3.curveBasis) //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
+      //one connection
+      svg
       .append("path")
       .attr('transform', function(d, i){
         return 'translate(250, 250)';
       })
-      .attr("d", link(data))
+      .attr("d", function(d, i) {
+          return link(data);
+      })
       .attr("class", "link")
       .attr('stroke', 'grey')
       .attr('fill', 'none')

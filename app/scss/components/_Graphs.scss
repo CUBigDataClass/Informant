@@ -63,7 +63,10 @@ $white-color: #f9f6ef;
 
 .dots {
   @include css-transition(all, 0.9s, ease-in-out);
-  opacity: 0.0;
+}
+
+.link {
+  @include css-transition(all, 0.9s, ease-in-out);
 }
 
 

@@ -8,7 +8,7 @@ var grayColor = '#232f2e';
 var kernelColor = '#f7f5f5';
 var coreColor = '#0f1f24';
 
-var WaveGraph = React.createClass({
+var DotGraph = React.createClass({
   mixins: [
     Faux.mixins.core,
     Faux.mixins.anim
@@ -23,82 +23,26 @@ var WaveGraph = React.createClass({
     //Width and height
     var w = 500;
     var h = 500;
-
     const faux = this.connectFauxDOM('div.renderedD3', 'chart')
 
       var svg = d3.select(faux)
             .append("svg")
             .attr("width", w)
             .attr("height", h);
-      //
-      // var data = [
-      //   {
-      //     x: -21.0,
-      //     y: 1.5,
-      //   },
-      //   {
-      //     x: 17.0,
-      //     y: 1.5,
-      //   },
-      //   {
-      //     x: 17.0,
-      //     y: 7.5,
-      //   },
-      //   {
-      //     x: 4.0,
-      //     y: -15.5,
-      //   },
-      //   {
-      //     x: 21.5,
-      //     y: 2.5,
-      //   },
-      //   {
-      //     x: 2.0,
-      //     y: 10.2,
-      //   },
-      //
-      // ]
-
-
-      data = data.map((d, i) => {
-        const x = d*Math.sin(i*60);
-        const y = -d*Math.cos(i*60);
-        return {x,y};
-      })
-
 
       var wave = svg.selectAll("g")
        .data(data)
        .enter() //when u have data but no dom
-
-      //  wave
-      //  .append('circle')
-      //  .classed("dots", true)
-      //  .attr('transform', function(d, i){
-      //    return 'translate(300, 250) rotate(' + (i*6 + 90) + ' -50 0)';
-      //  })
-      //  .attr('cx', function(d, i) {
-      //    return 5*d;
-      //  })
-      //  .attr('r', 5)
-      //  .attr('fill', function(d, i) {
-      //    const hex = (i*6).toString(16);
-      //    return '#' + hex + hex + hex;
-      //  })
-      //  .attr('stroke', 'black')
-      //  .attr('stroke-width', '0px')
+       .append("g");
 
        wave
        .append('circle')
        .classed("dots", true)
        .attr('transform', function(d, i){
-         return 'translate(250, 250)';
+         return 'translate(300, 250) rotate(' + (i*6 + 90) + ' -50 0)';
        })
        .attr('cx', function(d, i) {
-         return 5*d.x;
-       })
-       .attr('cy', function(d, i) {
-         return 5*d.y;
+         return 5*d;
        })
        .attr('r', 5)
        .attr('fill', function(d, i) {
@@ -107,25 +51,6 @@ var WaveGraph = React.createClass({
        })
        .attr('stroke', 'black')
        .attr('stroke-width', '0px')
-       .attr('opacity', '0')
-
-
-       var link = d3.line()
-                     .x(function(d) { return d.x*5; })
-                     .y(function(d) { return d.y*5; })
-                     .curve(d3.curveCardinal) //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
-      wave
-      .append("path")
-      .attr('transform', function(d, i){
-        return 'translate(250, 250)';
-      })
-      .attr("d", link(data))
-      .attr("class", "link")
-      .attr('stroke', 'grey')
-      .attr('fill', 'none')
-      .attr('stroke-width', '2px')
-
-
 
        var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
 
@@ -137,6 +62,7 @@ var WaveGraph = React.createClass({
        var width = +svg.attr("width"),
        height = +svg.attr("height"),
        g = svg.append("g").attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
+
 
        var background = g.append("path")
 
@@ -171,4 +97,4 @@ var WaveGraph = React.createClass({
   }
 })
 
-export default WaveGraph;
+export default DotGraph;

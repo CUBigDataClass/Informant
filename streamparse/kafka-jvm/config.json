@@ -1,0 +1,17 @@
+{
+    "topology_specs": "topologies/",
+    "virtualenv_specs": "virtualenvs/",
+    "envs": {
+        "vagrant": {
+            "user": "vagrant",
+            "nimbus": "streamparse-box",
+            "workers": [
+                "streamparse-box"
+            ],
+            "log": {
+                "level": "info"
+            },
+            "virtualenv_root": "/data/virtualenvs"
+        }
+    }
+}

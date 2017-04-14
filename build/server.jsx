@@ -9,7 +9,6 @@ var port = 3333;
 
 var app = express();
 var http = require('http');
-var server = require('http').createServer(app);
 
 
 var client = new Twitter({

@@ -1,0 +1,6 @@
+.DS_Store
+_build
+_resources
+.lein-repl-history
+.vagrant
+logs

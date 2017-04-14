@@ -20,16 +20,16 @@ class WordCountBolt(Bolt):
     def process(self, tup):
 
 	word = tup.values[0]
-        self._increment(word, len(word))
+        #self._increment(word, len(word))
 
     	analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
         sentence = word
         vaderScore = analyzer.polarity_scores(sentence) #Calculate Vader Score
         textBlobScore = TextBlob(sentence).sentiment.polarity              #Calculate TextBlob Score
         avgScore = (vaderScore['compound'] + textBlobScore) /2 #Take the average
-	
+
 
 	self.logger.info("Word: %s, Vader Score: %.4f, TextBlob Score: %.4f, Combined Score: %.4f" %(word, vaderScore['compound'], textBlobScore, avgScore))
 
         self.emit([word, self.counter[word]])
-	time.sleep(0.5)
+	#time.sleep(0.5)

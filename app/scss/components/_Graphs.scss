@@ -15,14 +15,14 @@ $white-color: #f9f6ef;
 
 .graph {
     position: fixed;
-    width: 75vw;
-    transform: scale(1.0);
+    width: 100vw;
+    transform: scale(1.5);
     justify-content: center;
     display: flex;
     align-items: center;
 
     @media all and (max-width: 800px) {
-    transform: scale(0.5);
+    transform: scale(1.0);
     }
 }
 
@@ -92,4 +92,26 @@ stroke-width: 0.0px;
 .shell {
 pointer-events: none;
 
+}
+
+.innerCircle {
+  @include css-transition(all, 0.5s, ease-in-out);
+  transform-origin: center;
+}
+
+.outerCircle {
+  @include css-transition(all, 0.5s, ease-in-out);
+  transform-origin: center;
+}
+
+.innerCircle:hover {
+  @include css-transition(all, 0.5s, ease-in-out);
+  @include css-transform-scale(1.5);
+
+}
+
+.innerCircle:hover ~ .outerCircle {
+  @include css-transition(all, 0.5s, ease-in-out);
+  @include css-transform-scale(0.5);
+  stroke-width: 9px;
 }

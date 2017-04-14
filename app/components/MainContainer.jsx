@@ -9,20 +9,20 @@ var io = require('socket.io-client');
 //import Fonts from '../assets/styles/global.css';
 
 
-var MainContainer = React.createClass({
-  getInitialState() {
-    return {
+class MainContainer extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
       style: 'slideMenuBarButton'
-    }
-  },
+    };
+  }
   componentWillReceiveProps(newProps) {
-    console.log(newProps);
     if(newProps.open) {
       this.state.style += ' clicked';
     } else {
       this.state.style = 'slideMenuBarButton';
     }
-  },
+  }
   render() {
     return (
         <div className={'MainContainerWrapper'}>
@@ -37,6 +37,6 @@ var MainContainer = React.createClass({
         </div>
     )
   }
-});
+}
 
-module.exports = MainContainer;
+export default MainContainer;

@@ -12,43 +12,54 @@ var io = require('socket.io-client');
 import MainContainer from './components/MainContainer.jsx';
 
 
-var App = React.createClass({
-  getInitialState() {
-    return {
-      data: [14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2, 14, 18, 15, 16, 23, 42, 5, 16, 11, 57, 55, 2],
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data: [
+        14, 18, 15, 16, 23,
+        42, 5, 16, 11, 57,
+        55, 2, 14, 18, 15,
+        16, 23, 42, 5, 16,
+        11, 57, 55, 2, 14,
+        18, 15, 16, 23, 42],
       tweet: 'Not streaming right now...',
       open: false
     }
-  },
+    this.togglePanel = this.togglePanel.bind(this);
+    this.updateData = this.updateData.bind(this);
+    this.incrementData = this.incrementData.bind(this);
+    this.decrementData = this.decrementData.bind(this);
+  }
   togglePanel() {
     this.setState((prevState, props) => {
           return {
             open : !prevState.open
           }
         });
-  },
+  }
   updateData() {
-
     this.setState((prevState, props) => {
           return {
-            data : prevState.data.map((i) => Math.floor(Math.random() * 25))
+            data : prevState.data.map((i) => Math.floor(Math.random() * 10 + 10))
           }
         });
-  },
+  }
   incrementData() {
     this.setState((prevState, props) => {
             return {
             data: prevState.data.map((i) => i + 10)
           }
         });
-  },
+  }
   decrementData() {
     this.setState((prevState, props) => {
             return {
             data: prevState.data.map((i) => i - 10)
           }
         });
-  },
+  }
   componentDidMount() {
     var self = this;
         // Initialize socket.io
@@ -56,16 +67,6 @@ var App = React.createClass({
 
         // On tweet event emission...
         socket.on('tweet', function (tweetData) {
-          console.log('new tweet!');
-          // console.log(tweetData);
-          // console.log(tweetData.followers_count);
-          //favourites_count
-          //followers_count
-          //friends_count
-          //
-          // console.log(self.state.data.map((v) => {tweetData.user.favourites_count}));
-
-
 
        self.setState((prevState, props) => {
                return {
@@ -75,7 +76,7 @@ var App = React.createClass({
         });
 
      });
-  },
+  }
   render() {
     var mainContainer = 'MainContainer';
     if(this.state.open) {
@@ -91,12 +92,11 @@ var App = React.createClass({
         <div className={mainContainer}>
           <Header/>
           <MainContainer togglePanel={this.togglePanel} tweet={this.state.tweet} open={this.state.open} updateData={this.updateData} incrementData={this.incrementData} decrementData={this.decrementData} data={this.state.data}/>
-          <RightPanel/>
           <Footer/>
         </div>
       </div>
     )
   }
-});
+}
 
-module.exports = App;
+export default App;

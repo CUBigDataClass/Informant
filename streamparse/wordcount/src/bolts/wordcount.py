@@ -1,35 +1,28 @@
 import os
-import time
-from collections import Counter
 from streamparse import Bolt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
 class WordCountBolt(Bolt):
-    outputs = ['word', 'count']
+    outputs = ['word', 'avgScore', 'average']
 
     def initialize(self, conf, ctx):
-        self.counter = Counter()
-        self.pid = os.getpid()
         self.total = 0
+        self.average = 0
 
-    def _increment(self, word, inc_by):
-        self.counter[word] += inc_by
-        self.total += inc_by
+    def _increment(self, sentiment):
+        oldSum = self.average * self.total
+        self.total += 1
+        self.average = (oldSum + sentiment)/self.total
 
     def process(self, tup):
-
-	word = tup.values[0]
-        #self._increment(word, len(word))
-
-    	analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
-        sentence = word
-        vaderScore = analyzer.polarity_scores(sentence) #Calculate Vader Score
-        textBlobScore = TextBlob(sentence).sentiment.polarity              #Calculate TextBlob Score
+        word = tup.values[0]
+        analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
+        vaderScore = analyzer.polarity_scores(word) #Calculate Vader Score
+        textBlobScore = TextBlob(word).sentiment.polarity #Calculate TextBlob Score
         avgScore = (vaderScore['compound'] + textBlobScore) /2 #Take the average
+        self._increment(avgScore)
 
+        self.logger.info("Tweet: %s, Score: %.4f, Cumulative Score: %.4f" %(word, avgScore, self.average))
 
-	self.logger.info("Word: %s, Vader Score: %.4f, TextBlob Score: %.4f, Combined Score: %.4f" %(word, vaderScore['compound'], textBlobScore, avgScore))
-
-        self.emit([word, self.counter[word]])
-	#time.sleep(0.5)
+        self.emit([word, avgScore, self.average])

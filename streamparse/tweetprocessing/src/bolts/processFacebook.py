@@ -3,7 +3,7 @@ from streamparse import Bolt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
-class ProcessMicrosoft(Bolt):
+class ProcessFacebook(Bolt):
     outputs = ['avgScore', 'average']
 
     def initialize(self, conf, ctx):
@@ -18,7 +18,7 @@ class ProcessMicrosoft(Bolt):
     def process(self, tup):
         tweet = tup.values[0]
         if(tweet is not None):
-            if(("microsoft" in tweet) or ("Microsoft" in tweet)):
+            if(("facebook" in tweet) or ("Facebook" in tweet)):
                 analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
                 vaderScore = analyzer.polarity_scores(tweet) #Calculate Vader Score
                 textBlobScore = TextBlob(tweet).sentiment.polarity #Calculate TextBlob Score

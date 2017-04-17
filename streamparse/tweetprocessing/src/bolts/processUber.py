@@ -17,14 +17,15 @@ class ProcessUber(Bolt):
 
     def process(self, tup):
         tweet = tup.values[0]
-        if(("uber" in tweet) or ("Uber" in tweet)):
-            analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
-            vaderScore = analyzer.polarity_scores(tweet) #Calculate Vader Score
-            textBlobScore = TextBlob(tweet).sentiment.polarity #Calculate TextBlob Score
-            avgScore = (vaderScore['compound'] + textBlobScore) /2 #Take the average
+        if(tweet is not None):
+            if(("uber" in tweet) or ("Uber" in tweet)):
+                analyzer = SentimentIntensityAnalyzer() #Initialize Vader Analyzer
+                vaderScore = analyzer.polarity_scores(tweet) #Calculate Vader Score
+                textBlobScore = TextBlob(tweet).sentiment.polarity #Calculate TextBlob Score
+                avgScore = (vaderScore['compound'] + textBlobScore) /2 #Take the average
 
-            if avgScore != 0.0:
-                self._increment(avgScore)
+                if avgScore != 0.0:
+                    self._increment(avgScore)
 
-            self.logger.info("Tweet Score: %.4f, Cumulative Score: %.4f" %(avgScore, self.average))
-            self.emit([avgScore, self.average])
+                self.logger.info("Tweet Score: %.4f, Cumulative Score: %.4f" %(avgScore, self.average))
+                self.emit([avgScore, self.average])

@@ -14,8 +14,7 @@ var client = new Twitter({
   access_token_secret: 'WRF3D3QsjiOjRS1rTO8Skm2WSyusrxgZl0XEUJ4XP1edb'
 });
 
-
-client.stream('statuses/filter',{ track: 'united'}, function(stream){
+client.stream('statuses/filter',{ track: 'Uber, Microsoft'}, function(stream){
   //streamHandler(stream,io);
   stream.on('data', function(event) {
     //console.log(event.text)

@@ -1,9 +1,8 @@
-from itertools import cycle
 from streamparse import Spout
-from socketIO_client import SocketIO, BaseNamespace
+from socketIO_client import SocketIO
 
-class WordSpout(Spout):
-    outputs = ['word']
+class TweetSpout(Spout):
+    outputs = ['tweet']
 
     def initialize(self, stormconf, context):
         socketIO = SocketIO('localhost', 4000)
@@ -11,5 +10,5 @@ class WordSpout(Spout):
         socketIO.wait()
 
     def on_tweet(self,*args):
-        tweet = args[0].encode('utf-8')
+        tweet = args[0]
         self.emit([tweet])

@@ -4,7 +4,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
 
 class ProcessMicrosoft(Bolt):
-    outputs = ['tweet', 'avgScore', 'average']
+    outputs = ['avgScore', 'average']
 
     def initialize(self, conf, ctx):
         self.total = 0
@@ -22,8 +22,9 @@ class ProcessMicrosoft(Bolt):
             vaderScore = analyzer.polarity_scores(tweet) #Calculate Vader Score
             textBlobScore = TextBlob(tweet).sentiment.polarity #Calculate TextBlob Score
             avgScore = (vaderScore['compound'] + textBlobScore) /2 #Take the average
-            self._increment(avgScore)
 
-            self.logger.info("Tweet: %s, Score: %.4f, Cumulative Score: %.4f" %(tweet, avgScore, self.average))
+            if avgScore != 0.0:
+                self._increment(avgScore)
 
-            self.emit([tweet, avgScore, self.average])
+            self.logger.info("Tweet Score: %.4f, Cumulative Score: %.4f" %(avgScore, self.average))
+            self.emit([avgScore, self.average])

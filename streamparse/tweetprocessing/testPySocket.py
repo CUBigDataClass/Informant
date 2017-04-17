@@ -12,7 +12,7 @@ class Namespace(BaseNamespace):
         print('[Disconnected]')
 
 def on_tweet(*args):
-    print(args[0].encode('utf-8'))
+    print(str(args[0].encode('utf-8')))
 
 socketIO = SocketIO('localhost', 4000, Namespace)
 socketIO.on('tweet', on_tweet)

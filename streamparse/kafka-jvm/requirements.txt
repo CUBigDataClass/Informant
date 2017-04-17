@@ -1,3 +1,0 @@
-streamparse
-kafka-python==0.9.3
-simplejson

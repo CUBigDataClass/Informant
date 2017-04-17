@@ -2,12 +2,8 @@ import React from 'react';
 import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 
-var whiteColor = '#583535';
-var blackColor = '#1c1c1c';
-var grayColor = '#232f2e';
-var kernelColor = '#f7f5f5';
-var coreColor = '#0f1f24';
-
+var color = '#583535';
+var bgColor = '#dbd7d7';
 
 
 var LinearGraph = React.createClass({
@@ -30,10 +26,15 @@ var LinearGraph = React.createClass({
         };
       };
     };
+
+    const companies = this.props.companies;
+
+
     //Width and height
     var w = 500;
     var h = 500;
-    const faux = this.connectFauxDOM('div.renderedD3', 'chart');
+
+    const faux = new Faux.Element('div');
 
       var svg = d3.select(faux)
             .append("svg")
@@ -66,10 +67,58 @@ var LinearGraph = React.createClass({
         return d*5;
       })
        .attr('transform', function(d, i){
-         return 'translate(0, 50) rotate(' + i*6 + ' 250 200)';
+         return 'translate(0, 50) rotate(' + (i*(360.0/data.length)) + ' 250 200)';
        })
-       .style('stroke',whiteColor)
+       .style('stroke',color)
        .style('stroke-width', '0px')
+
+
+
+
+
+
+       function X(d, i) {
+         const inc = 360.0/data.length;
+         const rad = Math.PI/180.0;
+         const x = d*Math.sin(i * inc * rad);
+         return x;
+       }
+
+       function Y(d, i) {
+         const inc = 360.0/data.length;
+         const rad = Math.PI/180.0;
+         const y = d*Math.cos(i * inc * rad);
+         return y;
+       }
+
+
+
+
+       data = data.map((d, i) => {
+         const x = X(d, i);
+         const y = Y(d, i);
+         return {x,y};
+       })
+
+       var newRects = svg.selectAll("g")
+        .data(data)
+        .enter()
+        .append("g");
+
+       newRects
+       .append("g")
+       .classed("textGroup", true)
+       .attr('transform', function(d, i){
+         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+       })
+       .append('text')
+       .html(function(d, i) {
+         return companies[i];
+       })
+       .attr('font-family', 'Futura')
+       .attr('font-size', '15px')
+       .attr('fill', 'white')
+       .classed('companyText', true);
 
 
       var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
@@ -87,19 +136,22 @@ var LinearGraph = React.createClass({
       var background = g.append("path")
 
       .datum({endAngle: tau})
-      .style("fill", coreColor)
+      .style("fill", color)
       .classed('shell', true)
       .attr("d", arc);
 
       var foreground = g.append("path")
-      .datum({endAngle: 0.127 * tau})
-      .style("fill", kernelColor)
+      .datum({endAngle: 0.227 * tau})
+      .style("fill", bgColor)
       .classed('shell', true)
-      .attr('stroke', kernelColor)
+      .attr('stroke', bgColor)
       .attr("d", arc);
 
 
-      this.animateFauxDOM(0)
+      const finalChart = faux.toReact();
+      this.setState({
+        chart: finalChart
+      })
   },
   componentDidMount(){
     this.updateGraph(this.props.data)

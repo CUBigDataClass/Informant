@@ -1,5 +1,3 @@
-@import '../helpers/Transform_Mixins.scss';
-
 $first-color: #9bb5b5;
 $second-color: #eadab9;
 $blue-color: #637799;
@@ -13,46 +11,42 @@ $white-color: #f9f6ef;
   border-radius: 50%;
 }
 
-.graph {
-    position: fixed;
-    width: 100vw;
-    transform: scale(1.5);
-    justify-content: center;
-    display: flex;
-    align-items: center;
-
-    @media all and (max-width: 800px) {
-    transform: scale(1.0);
-    }
+.textGroup {
+  @include css-transition(transform, 0.9s ,ease-in-out);
 }
 
-.graph div {
-  width: 10%;
-  font: 10px sans-serif;
-  background-color: $first-color;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  color: white;
-  margin-top: 10px;
-  height: 1em;
-  @include css-transition(all, .2s ,ease-in-out);
+.companyText {
+  fill: white;
+  @include css-user-select(none);
+  cursor: pointer;
 }
+
+.companyText:hover {
+  fill: black;
+}
+
+.firstWave:hover {
+
+  stroke: red;
+}
+
+.secondWave:hover {
+
+stroke: blue;
+
+}
+
+path {
+  @include css-transition(d, 0.9s ,ease-in-out);
+}
+
+path:hover {
+  stroke: red;
+}
+
 
 .graph rect {
   @include css-transition(all, 0.9s ,ease-in-out);
-}
-
-.graph div:hover {
-  font: 10px sans-serif;
-  background-color: $second-color;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  margin-top: 10px;
-  height: 2em;
-  color: black;
-  @include css-transition(all, .2s ,ease-in-out);
 }
 
 
@@ -65,10 +59,18 @@ $white-color: #f9f6ef;
   @include css-transition(all, 0.9s, ease-in-out);
 }
 
-.link {
-  @include css-transition(all, 0.9s, ease-in-out);
+.dots:hover {
+  fill: #e3a6a6;
+  stroke: #e3a6a6;
 }
 
+.graph {
+@include css-transition(all, 0.5s, ease-in-out);
+}
+
+path {
+@include css-transition(all, 0.5s, ease-in-out);
+}
 
 .LinearRect:hover {
 fill: #c7bca5;
@@ -92,26 +94,4 @@ stroke-width: 0.0px;
 .shell {
 pointer-events: none;
 
-}
-
-.innerCircle {
-  @include css-transition(all, 0.5s, ease-in-out);
-  transform-origin: center;
-}
-
-.outerCircle {
-  @include css-transition(all, 0.5s, ease-in-out);
-  transform-origin: center;
-}
-
-.innerCircle:hover {
-  @include css-transition(all, 0.5s, ease-in-out);
-  @include css-transform-scale(1.5);
-
-}
-
-.innerCircle:hover ~ .outerCircle {
-  @include css-transition(all, 0.5s, ease-in-out);
-  @include css-transform-scale(0.5);
-  stroke-width: 9px;
 }

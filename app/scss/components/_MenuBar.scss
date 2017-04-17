@@ -1,0 +1,93 @@
+$transition-time: 0.2s;
+$transition-prop: transform;
+$transition-easing: ease-in-out;
+$bg-color: #7a6772;
+$menu-button-color: #e09090;
+
+.MenuBar {
+    @include css-transition(all, $transition-time, $transition-easing);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    width: 67vw;
+    background: $bg-color;
+
+    @media all and (max-width: 1200px) {
+    }
+
+    p {
+        z-index: 999999;
+        color: white;
+        font-weight: 900px;
+        padding: 5vh;
+        margin-bottom: 5vh;
+        @include css-user-select(none);
+        cursor: pointer;
+    }
+
+    .smooth-scroll {
+      display: block;
+      position: relative;
+      top: 0;
+      width: 100vw;
+      height: 5vh;
+      background: transparent;
+      z-index: 9999;
+    }
+}
+
+.MenuBarHidden {
+
+  @media all and (min-width: 1200px) {
+
+  }
+}
+
+
+
+
+.menuButton {
+  @include css-transition(all, 0.5s, ease-in-out);
+  border: none;
+    margin: 20px 20px;
+    width: 60px;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    display: block;
+    outline: none;
+    background: transparent;
+    border: 2px solid $menu-button-color;
+
+    @media all and (max-width: 1200px) {
+    }
+
+  p {
+    color: #9a9aa2;
+    padding: 0px;
+    font-weight: 200;
+    margin: 0;
+    padding-left: 50px;
+    text-align: center;
+    white-space: nowrap;
+
+    @media all and (max-width: 1200px) {
+    }
+
+  }
+
+
+}
+
+.menuButton:hover {
+  @include css-transition(all, 0.5s, ease-in-out);
+  border: 2px solid $menu-button-color;
+  border-radius: 10%;
+  background: $menu-button-color;
+  cursor: pointer;
+
+  > p {
+    @include css-transition(all, 0.5s, ease-in-out);
+  }
+}

@@ -1,39 +1,42 @@
-import React from 'react';
-import Header from './layout/Header.jsx';
-import Footer from './layout/Footer.jsx';
-import InfoStory from './InfoStory.jsx';
-import RightPanel from './layout/RightPanel.jsx';
-import LeftPanel from './layout/LeftPanel.jsx';
-import ControlPanel from './layout/ControlPanel.jsx';
-var io = require('socket.io-client');
-//import Fonts from '../assets/styles/global.css';
+import React, {Component} from 'react';
+import CompanyContainer from './CompanyContainer.jsx';
+import CompanyFactory from './CompanyFactory.jsx';
+import NavBar from './NavBar.jsx';
+import TopCompanies from './TopCompanies.jsx';
 
 
-class MainContainer extends React.Component {
-  constructor(props){
+class MainContainer extends Component {
+  constructor(props) {
     super(props);
     this.state = {
-      style: 'slideMenuBarButton'
-    };
+      menuBarState: ''
+    }
   }
   componentWillReceiveProps(newProps) {
     if(newProps.open) {
-      this.state.style += ' clicked';
+      this.state.menuBarState = 'MainContainer menuBarOpen';
     } else {
-      this.state.style = 'slideMenuBarButton';
+      this.state.menuBarState = 'MainContainer menuBarClose';
     }
   }
   render() {
+    var self = this;
+
     return (
-        <div className={'MainContainerWrapper'}>
-          <button className={this.state.style} onMouseDown={this.props.togglePanel}>
-            <div id={'topBar'}></div>
-            <div id={'middleBar'}></div>
-            <div id={'bottomBar'}></div>
-          </button>
-          <p className={'LiveStream'}>{this.props.tweet}</p>
-          <ControlPanel updateData={this.props.updateData} incrementData={this.props.incrementData} decrementData={this.props.decrementData}/>
-          <InfoStory data={this.props.data}/>
+        <div className={this.state.menuBarState}>
+          <NavBar infos={this.props.infos} companies={this.props.companies} open={this.props.open}/>
+
+          <CompanyContainer>
+            <div className={'Section'} id={this.props.id}>
+                <TopCompanies data={this.props.data} companies={this.props.companies}/>
+              </div>
+          </CompanyContainer>
+
+          <CompanyContainer>
+            {this.props.companies.map((v, i) => (
+              <CompanyFactory companies={this.props.companies} data={this.props.data} id={self.props.infos[i].title} key={i} info={self.props.infos[i]}/>
+            ))}
+          </CompanyContainer>
         </div>
     )
   }

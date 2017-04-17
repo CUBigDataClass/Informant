@@ -1,36 +1,39 @@
-import React from 'react';
-import Header from './components/layout/Header.jsx';
-import Footer from './components/layout/Footer.jsx';
-import * as d3 from 'd3';
-import Faux from 'react-faux-dom';
-import InfoStory from './components/InfoStory.jsx';
-import RightPanel from './components/layout/RightPanel.jsx';
-import LeftPanel from './components/layout/LeftPanel.jsx';
-// import TweepyText from './components/layout/TweepyText.jsx';
-var io = require('socket.io-client');
-//import Fonts from './assets/styles/global.css';
+import React, {Component} from 'react';
 import MainContainer from './components/MainContainer.jsx';
+import SectionsData from './info/companies.json';
+var SmoothScroll = require('./components/SmoothScroll.js');
+import MenuBar from './components/MenuBar.jsx';
+import MenuBarIcon from './components/MenuBarIcon.jsx';
+var io = require('socket.io-client');
 
-
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
-    super(props)
-
+    super(props);
+    const N = SectionsData.length;
+    const companies = SectionsData.map((section, i) => {
+      return section.title;
+    });
     this.state = {
+      companies: companies,
+      infos: 'loading...',
+      open: false,
+      MenuBarIconStyle: 'MenuBarIcon',
       data: [
-        14, 18, 15, 16, 23,
-        42, 5, 16, 11, 57,
-        55, 2, 14, 18, 15,
-        16, 23, 42, 5, 16,
-        11, 57, 55, 2, 14,
-        18, 15, 16, 23, 42],
-      tweet: 'Not streaming right now...',
-      open: false
-    }
+        5, 6, 8, 1, 11, 14,
+        5, 6, 8, 1
+      ]
+    };
     this.togglePanel = this.togglePanel.bind(this);
+    this.closeMenuBar = this.closeMenuBar.bind(this);
     this.updateData = this.updateData.bind(this);
-    this.incrementData = this.incrementData.bind(this);
-    this.decrementData = this.decrementData.bind(this);
+
+  }
+  updateData() {
+    this.setState((prevState, props) => {
+          return {
+            data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10))
+          }
+        });
   }
   togglePanel() {
     this.setState((prevState, props) => {
@@ -39,64 +42,45 @@ class App extends React.Component {
           }
         });
   }
-  updateData() {
-    this.setState((prevState, props) => {
-          return {
-            data : prevState.data.map((i) => Math.floor(Math.random() * 10 + 10))
-          }
-        });
-  }
-  incrementData() {
-    this.setState((prevState, props) => {
-            return {
-            data: prevState.data.map((i) => i + 10)
-          }
-        });
-  }
-  decrementData() {
-    this.setState((prevState, props) => {
-            return {
-            data: prevState.data.map((i) => i - 10)
-          }
-        });
+  closeMenuBar() {
+    this.setState({
+      open: false
+    })
   }
   componentDidMount() {
-    var self = this;
-        // Initialize socket.io
-        var socket = io.connect();
+    // Initialize socket.io
+    var socket = io.connect();
 
-        // On tweet event emission...
-        socket.on('tweet', function (tweetData) {
+    // On tweet event emission...
+    socket.on('tweet', function (tweetData) {
 
-       self.setState((prevState, props) => {
-               return {
-               tweet: tweetData.text + " " + tweetData.user.followers_count * 0.0015 + 20,
-               data: prevState.data.map((i) => Math.floor(Math.random() * tweetData.user.followers_count * 0.0015 + 20))
-             }
-        });
+    this.setState((prevState, props) => {
+        return {
+        tweet: tweetData.text + " " + tweetData.user.followers_count * 0.0015 + 20,
+        data: prevState.data.map((i) => Math.floor(Math.random() * tweetData.user.followers_count * 0.0015 + 20))
+        }
+      });
+    });
 
-     });
+    this.setState({
+      infos: SectionsData
+    });
   }
   render() {
-    var mainContainer = 'MainContainer';
-    if(this.state.open) {
-      mainContainer += ' menuBarOpen'
-    } else {
-      mainContainer += ' menuBarClose'
-    }
+    var self = this;
 
-    var str = <li>Hello.</li>;
     return (
-      <div className={'App'}>
-        <LeftPanel/>
-        <div className={mainContainer}>
-          <Header/>
-          <MainContainer togglePanel={this.togglePanel} tweet={this.state.tweet} open={this.state.open} updateData={this.updateData} incrementData={this.incrementData} decrementData={this.decrementData} data={this.state.data}/>
-          <Footer/>
-        </div>
+      <div>
+      <button className={'updateButton'} onMouseDown={this.updateData}>Update Data!</button>
+      <div className={'wrapper'}>
+
+          <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
+          <MenuBar infos={this.state.infos} companies={this.state.companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
+          <MainContainer data={this.state.data} infos={this.state.infos} companies={this.state.companies} togglePanel={this.togglePanel} open={this.state.open}/>
       </div>
-    )
+    </div>);
   }
 }
+
 
 export default App;

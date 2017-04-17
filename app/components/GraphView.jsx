@@ -8,7 +8,7 @@ import DotGraph from './graphs/DotGraph.jsx';
 class GraphView extends React.Component {
   render() {
     return (
-      <WaveGraph data={this.props.data}/>
+      <WaveGraph data={this.props.data} companies={this.props.companies}/>
     );
   }
 }

@@ -1,3 +1,5 @@
+$g-time: 0.4s;
+
 @mixin css-linear-gradient($first, $second) {
   background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */
@@ -14,11 +16,57 @@
 }
 
 @mixin css-transition($prop, $time, $easing) {
-  -webkit-transition: $prop 0.2s ease-in-out;
+  -webkit-transition: $prop 0.5s ease-in-out;
   -moz-transition: $prop, $time, $easing;
   -ms-transition: $prop, $time, $easing;
   -o-transition: $prop, $time, $easing;
   transition: $prop, $time, $easing;
+
+  @media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px) {
+  -webkit-transition: -webkit-transform $g-time ease-out;
+  }
+
+  @media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px) {
+  -webkit-transition: -webkit-transform $g-time ease-out;
+}
+
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
+-webkit-transition: -webkit-transform $g-time ease-out;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+-webkit-transition: -webkit-transform $g-time ease-out;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1){
+-webkit-transition: -webkit-transform $g-time ease-out;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+-webkit-transition: -webkit-transform $g-time ease-out;
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+-webkit-transition: -webkit-transform $g-time ease-out;
+}
+
 }
 
 @mixin css-transform-perspective($p) {
@@ -43,6 +91,7 @@
   -webkit-transform: translate3D($t, 0, 0); /* Safari */
   -o-transform: translate3D($t, 0, 0);
   transform: translate3D($t, 0, 0);
+
 }
 
 @mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {
@@ -59,6 +108,22 @@
   -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */
   -o-transform: translate3D(0, $b, 0) rotate($a) ;
   transform: translate3D(0, $b, 0) rotate($a) ;
+}
+
+@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {
+  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */
+  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */
+  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */
+  -o-transform: translate3D($c, $b, 0) rotate($a) ;
+  transform: translate3D($c, $b, 0) rotate($a) ;
+}
+
+@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {
+  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */
+  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */
+  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */
+  -o-transform: translate3D($c, $b, 0) rotate($a) ;
+  transform: translate3D($c, $b, 0) rotate($a) ;
 }
 
 @mixin css-transform-rotate-and-translate-up($a, $b) {

@@ -1,49 +1,67 @@
-@import './helpers/Transform_Mixins.scss';
-@import "./components/Header.scss";
-@import "./components/Footer.scss";
-@import "./components/Navbar.scss";
-@import './components/LeftPanel.scss';
-@import './components/RightPanel.scss';
-@import './components/Logo.scss';
-@import './components/controlPanel.scss';
-@import './components/TweepyText.scss';
-@import './components/TextSection.scss';
-@import './components/_Graphs.scss';
-@import './helpers/Animation_Mixins.scss';
-@import './components/MenuBarIcon.scss';
-@import './components/MainContainer.scss';
+$p-color: #111111;
+$h1-color: #ca9191;
+$bg-color: #f1f1f1;
+$font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
+$p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
 
-$font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
-$bg-color: #1C1C1C;
-$bg-white-color: #FFFFFF;
-$pale-color: #f9f6ef;
+@import './helpers/Animation_Mixins.scss';
+@import './helpers/Transform_Mixins.scss';
+@import './helpers/Display.scss';
+@import './helpers/User_Events.scss';
+
+@import './components/Section.scss';
+@import './components/Subsection.scss';
+@import './components/MenuBarIcon.scss';
+@import './components/MenuBar.scss';
+@import './components/MainContainer.scss';
+@import './components/NavBar.scss';
+
+@import './components/companies/Company.scss';
+@import './components/_Graphs.scss';
 
 body {
+  margin: 0;
+  padding: 0;
+  background: $bg-color;
   @include css-fadein(3s);
-  background-color: $bg-color;
-  margin:0;
-  padding:0;
-}
-
-.App {
-  display: inline-block;
+  width: 100%;
   overflow-x:hidden;
-}
 
-h2 {
-  font-family: $font-stack;
-  font-weight: 100;
-  font-size: 1em;
-}
 
-p {
-  font-family: $font-stack;
-  color: black;
-  font-size: 1em;
-}
 
-img {
-    right: 0;
+  h1 {
+    font-family: $font-stack;
+    color: $h1-color;
+    text-align: center;
+    font-weight: 200;
+  }
+
+  p {
+    font-family: $p-font-stack;
+    color: $p-color;
+    font-weight: 200;
+  }
+
+  .wrapper {
+    overflow-x:hidden;
+
+  }
+
+  @media all and (max-width: 1200px) {
+
+  }
+
+  .updateButton {
+    border: none;
+    width: 10vw;
+    height: 10vh;
+    position: fixed;
+    background: #ff7970;
+    color: white;
     top: 0;
-    width: 15%;
+    right: 0;
+    z-index: 9999999999;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
 }

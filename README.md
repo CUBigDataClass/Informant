@@ -10,7 +10,7 @@
 
 ### Informant Summary
 
-<img src="https://github.com/CUBigDataClass/Informant/blob/dev/informant_1.svg" width="400">
+<img src="https://github.com/CUBigDataClass/Informant/blob/dev/app/assets/informant_black.svg" width="400">
 
 A web presence barometer visualizing popular sentiment on top companies.
 

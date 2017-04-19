@@ -6,14 +6,6 @@
         animation: fadein $t;
 }
 
-@mixin css-graph-fadein($t, $d) {
--webkit-animation: fadein $t ease-out $d; /* Safari, Chrome and Opera > 12.1 */
-   -moz-animation: fadein $t ease-out $d; /* Firefox < 16 */
-    -ms-animation: fadein $t ease-out $d; /* Internet Explorer */
-     -o-animation: fadein $t ease-out $d; /* Opera < 12.1 */
-        animation: fadein $t ease-out $d;
-}
-
 
 @keyframes fadein {
     from { opacity: 0; }

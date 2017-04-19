@@ -2,232 +2,203 @@ import React from 'react';
 import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 
-var whiteColor = '#583535';
-var blackColor = '#1c1c1c';
-var grayColor = '#232f2e';
+var color = '#583535';
+var bgColor = '#dbd7d7';
 
 var WaveGraph = React.createClass({
   mixins: [
     Faux.mixins.core,
     Faux.mixins.anim
   ],
-  getInitialState() {
+  getInitialState: function() {
     return {
       chart: 'loading ....'
     }
   },
-  updateGraph(data) {
-    function arcTween(newAngle) {
-      return function(d) {
-        var interpolate = d3.interpolate(d.endAngle, newAngle);
-        return function(t) {
-          d.endAngle = interpolate(t);
-          return arc(d);
-        };
-      };
-    };
+  updateGraph: function(data) {
+
     //Width and height
     var w = 500;
     var h = 500;
-    const faux = this.connectFauxDOM('div.renderedD3', 'chart')
 
-    // var chart = d3.select(Faux.createElement('svg'))
-    //       .attr('width', w)
-    //       .attr('height', h)
-    //       .attr("fill", "yellow")
+    const companies = this.props.companies;
 
-    // var svg = d3.select("faux")
-		// 				.append("svg")
-		// 				.attr("width", w)
-		// 				.attr("height", h);
-    //
-    //
-    // var circles = svg.selectAll("circle")
-		// 	    .data(data)
-		// 	    .enter()
-		// 	    .append("circle");
-    //
-    // circles.attr("r", function(d) {
-		// 				return d;
-		// 		   })
-		// 		   .attr("stroke", "black")
-		// 		   .attr("stroke-width", function(d) {
-		// 				return d/2;
-		// 		   });
-
-      // d3.select(faux)
-      // .selectAll("div")
-      //   .data(data)
-      // .enter().append("div")
-      //   .style("width", function(d) { return d * 10 + "px"; })
-      //   .text(function(d) { return d; })
+    // const faux = this.connectFauxDOM('div.renderedD3', 'chart');
+    const faux = new Faux.Element('div');
 
       var svg = d3.select(faux)
             .append("svg")
             .attr("width", w)
-            .attr("height", h);
+            .attr("height", h)
+            .classed('svgContainer', true);
 
-      var r = 10;
+      // var data2 = data.map((i) => Math.floor(Math.random() * 10 + 10))
 
-      var rectGroups = svg.selectAll("g")
-       .data(data)
-       .enter()
-       .append("g")
+      function X(d, i) {
+        const inc = 360.0/data.length;
+        const rad = Math.PI/180.0;
+        const x = d*Math.sin(i * inc * rad);
+        return x;
+      }
 
-       rectGroups
-       .append('rect')
-       .classed("LinearRect", true)
-       .attr("x", '250')
-       .attr("y", '250')
-       .attr("rx", '4')
-       .attr("ry", '4')
-       .attr('fill', function(d, i) {
-         const hex = (i*6).toString(16);
-         return '#' + hex + hex + hex;
-       })
-       .attr("width", function(d, i) {
-         return '4.0';
-       })
-      .attr("height", function(d, i) {
-        return d*5;
+      function Y(d, i) {
+        const inc = 360.0/data.length;
+        const rad = Math.PI/180.0;
+        const y = d*Math.cos(i * inc * rad);
+        return y;
+      }
+
+      data = data.map((d, i) => {
+        const x = X(d, i);
+        const y = Y(d, i);
+        return {x,y};
       })
-       .attr('transform', function(d, i){
-         return 'translate(0, 50) rotate(' + i*6 + ' 250 200)';
-       })
-       .style('stroke',whiteColor)
-       .style('stroke-width', '0px')
 
-      // .attr('cx', function(d, i) {
-      //   return (5*d*Math.cos(30));
+      // data2 = data2.map((d, i) => {
+      //   const x = X(d, i);
+      //   const y = Y(d, i);
+      //   return {x,y};
       // })
-      //  .attr('cy', function(d, i) {
-      //    return (5*d*Math.sin(30));
+
+      var wave = svg.selectAll("g")
+       .data(data)
+       .enter() //when u have data but no dom
+
+      //  wave
+      //  .append('circle')
+      //  .classed("dots", true)
+      //  .attr('transform', function(d, i){
+      //    return 'translate(250, 250)';
       //  })
+      //  .attr('cx', function(d, i) {
+      //    return 4.5*d.x;
+      //  })
+      //  .attr('cy', function(d, i) {
+      //    return 4.5*d.y;
+      //  })
+      //  .attr('r', 10)
+      //  .attr('fill', function(d, i) {
+      //   //  const hex = (i*6).toString(16);
+      //   //  return '#' + hex + hex + hex;
+      //   return 'white';
+      //  })
+      //  .attr('stroke', 'white')
+      //  .attr('stroke-width', '20px')
+      //  .attr('opacity', '1')
+      //  .attr('z-index', '99999');
 
-       rectGroups
-       .append('circle')
-       .classed("WaveDots", true)
-       .attr('transform', function(d, i){
-         return 'translate(300, 250) rotate(' + (i*6 + 90) + ' -50 0)';
+
+
+       var link = d3.line()
+                     .x(function(d) { return d.x*5; })
+                     .y(function(d) { return d.y*5; })
+                     .curve(d3.curveBasisClosed) //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
+                     //curveBasisClosed,
+
+      //first wave
+      svg
+      .append("path")
+      .attr('transform', function(d, i){
+        return 'translate(250, 250)';
+      })
+      .attr("d", function(d, i) {
+          return link(data);
+      })
+      .attr("class", "link")
+      .attr('stroke', color)
+      .attr('fill', 'none')
+      .attr('stroke-width', '2px')
+      .classed('firstWave', true)
+
+      //second wave
+      // svg
+      // .append("path")
+      // .attr('transform', function(d, i){
+      //   return 'translate(250, 250)';
+      // })
+      // .attr("d", function(d, i) {
+      //     return link(data2);
+      // })
+      // .attr("class", "link")
+      // .attr('stroke', color)
+      // .attr('fill', 'none')
+      // .attr('stroke-width', '2px')
+      // .classed('secondWave', true);
+
+      wave
+      .append("g")
+      .classed("textGroup", true)
+      .attr('transform', function(d, i){
+        return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+      })
+      .append('text')
+      .html(function(d, i) {
+        return companies[i];
+      })
+      .attr('font-family', 'Futura')
+      .attr('font-size', '15px')
+      .attr('fill', 'white')
+      .classed('companyText', true);
+
+
+
+      svg.append('circle')
+      .classed('innerCircle', true)
+      .attr('cx', '50%')
+      .attr('cy', '50%')
+      .attr('r', 40)
+      .attr('fill', 'transparent')
+      .attr('stroke', color)
+      .attr('stroke-width', '3px')
+
+
+      //innerCircle is after outerCircle for hover events
+      svg.append('circle')
+      .classed('outerCircle', true)
+      .attr('cx', '50%')
+      .attr('cy', '50%')
+      .attr('r', 60)
+      .attr('fill', 'none')
+      .attr('stroke', color)
+      .attr('stroke-width', '3px')
+
+
+
+       var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
+
+       var arc = d3.arc()
+       .innerRadius(10)
+       .outerRadius(15)
+       .startAngle(0);
+
+       var width = +svg.attr("width"),
+       height = +svg.attr("height"),
+       g = svg.append("g").attr('transform', function(d, i){
+         return 'translate(250, 250)';
        })
-       .attr('cx', function(d, i) {
-         return 5*d;
-       })
-       .attr('r', 5)
-       .attr('fill', function(d, i) {
-         const hex = (i*6).toString(16);
-         return '#' + hex + hex + hex;
-       })
-       .attr('stroke', whiteColor)
-       .attr('stroke-width', '0px')
 
-    //    var line = d3.svg.line()
-    // .interpolate(function(points) { return points.join("A 1,1 0 0 1 "); }) // custom interpolator
-    // .x(function(d) { return x(d.x); })
-    // .y(function(d) { return y(d.y); });
-    //
-    //    rectGroups.append("path")
-    //    .attr("class", "line")
-    //    .attr("d", line);
+       var background = g.append("path")
+
+       .datum({endAngle: tau})
+       .style("fill", color)
+       .classed('shell', true)
+       .attr("d", arc);
+
+
+       var foreground = g.append("path")
+       .datum({endAngle: 0.227 * tau})
+       .style("fill", bgColor)
+       .classed('shell', true)
+       .attr('stroke', bgColor)
+       .attr("d", arc);
 
 
 
 
-       svg.append('circle')
-       .attr('cx', '50%')
-       .attr('cy', '50%')
-       .attr('r', 66)
-       .attr('fill', 'none')
-       .attr('stroke', whiteColor)
-       .attr('stroke-width', '1.5px')
-
-       svg.append('circle')
-       .attr('cx', '50%')
-       .attr('cy', '50%')
-       .attr('r', 72)
-       .attr('fill', 'none')
-       .attr('stroke', whiteColor)
-       .attr('stroke-width', '1.5px')
-
-       svg.append('circle')
-       .classed("Core", true)
-       .attr('cx', '50%')
-       .attr('cy', '50%')
-       .attr('r', 30)
-       .attr('fill', '#1c1c1c')
-       .attr('stroke', whiteColor)
-       .attr('stroke-width', '1px')
-
-       svg.append('circle')
-       .classed("OuterCore", true)
-       .attr('cx', '50%')
-       .attr('cy', '50%')
-       .attr('r', 39)
-       .attr('fill', 'none')
-       .attr('stroke', whiteColor)
-       .attr('stroke-width', '5px')
-
-      //  .classed("CorePath", true)
-
-      var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
-
-      var arc = d3.arc()
-      .innerRadius(15)
-      .outerRadius(35)
-      .startAngle(0);
-
-      var width = +svg.attr("width"),
-      height = +svg.attr("height"),
-      g = svg.append("g").attr("transform", "translate(" + w / 2 + "," + h / 2 + ")");
-
-
-      var background = g.append("path")
-
-      .datum({endAngle: tau})
-      .style("fill", whiteColor)
-      .attr("d", arc);
-
-      var foreground = g.append("path")
-      .datum({endAngle: 0.127 * tau})
-      .style("fill", blackColor)
-      .attr("d", arc);
-
-      // d3.interval(function() {
-      //   foreground.transition()
-      //       .duration(1000)
-      //       .attrTween("d", arcTween(Math.random() * tau));
-      // }, 2000);
-
-
-
-      // svg.append('g')
-      // .attr('transform', 'translate(235, 240)')
-      // .append('path')
-      // .attr('d', 'M 50,5 95,97.5 5,97.5 Z')
-      // .attr('transform-origin', 'center')
-      // .attr('transform', 'scale(0.4) rotate(45, 0, 0)')
-      // .attr('fill', '#1c1c1c')
-
-
-
- //
- // var lineData = [ { "x": 1,   "y": 5},  { "x": 20,  "y": 20},
- //                  { "x": 40,  "y": 10}, { "x": 60,  "y": 40},
- //                  { "x": 80,  "y": 5},  { "x": 100, "y": 60}];
-//
- // var lineFunction = d3.svg.line()
- //                          .x(function(d) { return d.x; })
- //                          .y(function(d) { return d.y; })
- //                         .interpolate("linear");
-//
-// //The line SVG Path we draw
-// var lineGraph = svg.append("path")
-//                             .attr("d", lineFunction(lineData))
-//                             .attr("stroke", "blue")
-//                             .attr("stroke-width", 2)
-//                             .attr("fill", "none");
-
-      this.animateFauxDOM(0)
+      const finalChart = faux.toReact();
+      this.setState({
+        chart: finalChart
+      })
   },
   componentDidMount(){
     this.updateGraph(this.props.data)

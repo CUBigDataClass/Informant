@@ -33,9 +33,11 @@ Informant aggregates social media data and produces a measure on online company 
 
 > TODO
 
-##### Task Cheatsheet
+### Task Cheatsheet
 
    * 'npm install' - Install all necessary dependencies.
+   * 'npm install -g babel-cli' - Installs babel-node command
+   * 'babel-node server.jsx' - Render front-end statically with express, and run a socket server that emits sentiment data for front-end
 
 ### Running Informant Locally
 

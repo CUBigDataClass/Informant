@@ -1,5 +1,5 @@
 """
-Word count topology
+Tweet Sentiment Processing topology
 """
 
 from streamparse import Grouping, Topology

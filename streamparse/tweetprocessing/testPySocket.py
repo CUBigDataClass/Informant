@@ -1,4 +1,5 @@
 from socketIO_client import SocketIO, BaseNamespace
+from gevent import monkey
 
 class Namespace(BaseNamespace):
 
@@ -12,8 +13,9 @@ class Namespace(BaseNamespace):
         print('[Disconnected]')
 
 def on_tweet(*args):
-    print(str(args[0].encode('utf-8')))
+    if args[0] is not None:
+        print(str(args[0].encode('utf-8')))
 
-socketIO = SocketIO('localhost', 4000, Namespace)
+socketIO = SocketIO('localhost', 3333, Namespace)
 socketIO.on('tweet', on_tweet)
 socketIO.wait()

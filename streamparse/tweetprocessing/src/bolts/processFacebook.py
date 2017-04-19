@@ -10,6 +10,7 @@ class ProcessFacebook(Bolt):
         self.total = 0
         self.average = 0
 
+
     def _increment(self, sentiment):
         oldSum = self.average * self.total
         self.total += 1

@@ -18,7 +18,6 @@ var client = new Twitter({
   access_token_secret: 'WRF3D3QsjiOjRS1rTO8Skm2WSyusrxgZl0XEUJ4XP1edb'
 });
 
-var tweet = 'none';
 
 app.use(express.static('.'));
 
@@ -29,6 +28,8 @@ var server = http.createServer(app).listen(port, function() {
 
 var io = require('socket.io').listen(server);
 
-client.stream('statuses/filter',{ track: 'Apple'}, function(stream){
-  streamHandler(stream,io);
+client.stream('statuses/filter',{ track: 'Amazon, Apple, Facebook, Google, Lyft, Microsoft, Twitter, Uber'}, function(stream){
+  stream.on('data', function(data) {
+          io.emit('tweet', data.text);
+  });
 });

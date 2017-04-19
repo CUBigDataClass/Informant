@@ -30,8 +30,7 @@ class NavBar extends React.Component {
     return (
       <div className={this.state.NavBarStyle}>
           {this.props.companies.map((v, i) => (
-            <SmoothScroll key={i} type={'navButton'} section={self.props.infos[i].title}>
-              <p key={'p' + i}>{self.props.infos[i].title}</p>
+            <SmoothScroll key={i} className={'nav-bar-item'} section={self.props.infos[i].title} text={self.props.infos[i].title}>
             </SmoothScroll>
           ))}
 

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import GraphView from './GraphView.jsx';
 var SmoothScroll = require('./SmoothScroll.js');
 
-var Company = React.createClass({
+class Company extends Component {
   render() {
 
     var index = 0;
@@ -17,15 +17,12 @@ var Company = React.createClass({
 
           <div className={'images'}>
           <div className={'logo'}></div>
-          <div className={'background_image'}>
-            <div className={'foreground_image'}>
+          <div className={'section-title'}>
               <h1>{this.props.title}</h1>
-
               <p>{this.props.text}</p>
-            </div>
           </div>
-          <SmoothScroll className={'StartContainer'} section={this.props.title}>
-            <div className={'Start'}>
+          <SmoothScroll section={this.props.title}>
+            <div>
               <p>😊</p>
             </div>
           </SmoothScroll>
@@ -34,6 +31,6 @@ var Company = React.createClass({
         </div>
     )
   }
-});
+};
 
-module.exports = Company;
+export default Company;

@@ -5,6 +5,7 @@ var SmoothScroll = require('./components/SmoothScroll.js');
 import MenuBar from './components/MenuBar.jsx';
 import MenuBarIcon from './components/MenuBarIcon.jsx';
 var io = require('socket.io-client');
+import NavBar from './components/NavBar.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -71,6 +72,8 @@ class App extends Component {
 
     return (
       <div>
+        <NavBar infos={this.state.infos} companies={this.state.companies} open={this.state.open}/>
+
       <button className={'updateButton'} onMouseDown={this.updateData}>Update Data!</button>
       <div className={'wrapper'}>
 

@@ -475,7 +475,7 @@ module.exports = ExecutionEnvironment;
 "use strict";
 
 
-module.exports = __webpack_require__(267);
+module.exports = __webpack_require__(268);
 
 
 /***/ }),
@@ -2553,7 +2553,7 @@ module.exports = DOMProperty;
 
 
 
-var ReactRef = __webpack_require__(288);
+var ReactRef = __webpack_require__(289);
 
 /**
  * Helper to call ReactRef.attachRefs with this composite component, split out
@@ -2847,7 +2847,7 @@ var keys = __webpack_require__(165);
 var hasBinary = __webpack_require__(91);
 var sliceBuffer = __webpack_require__(139);
 var after = __webpack_require__(138);
-var utf8 = __webpack_require__(324);
+var utf8 = __webpack_require__(325);
 
 var base64encoder;
 if (global && global.ArrayBuffer) {
@@ -3834,10 +3834,10 @@ var smoothScroll = {
 };
 
 var SmoothScroll = React.createClass({
-    displayName: "SmoothScroll",
+    displayName: 'SmoothScroll',
 
     render: function render() {
-        return React.createElement("div", { className: "smooth-scroll" }, React.createElement("div", { className: this.props.className, style: this.props.style, onMouseDown: this.handleSectionClick }, this.props.children));
+        return React.createElement('div', { className: 'smooth-scroll' }, React.createElement('div', { className: 'smooth-scroll-container ' + this.props.className, style: this.props.style, onMouseDown: this.handleSectionClick }, React.createElement('p', null, this.props.text)));
     },
 
     handleSectionClick: function handleSectionClick() {
@@ -3893,7 +3893,7 @@ module.exports = emptyObject;
 
 
 var EventPluginRegistry = __webpack_require__(100);
-var EventPluginUtils = __webpack_require__(264);
+var EventPluginUtils = __webpack_require__(265);
 var ReactErrorUtils = __webpack_require__(113);
 
 var accumulateInto = __webpack_require__(122);
@@ -21261,7 +21261,7 @@ module.exports = keyMirror;
 var EventConstants = __webpack_require__(12);
 var EventPluginHub = __webpack_require__(23);
 var EventPluginRegistry = __webpack_require__(100);
-var ReactEventEmitterMixin = __webpack_require__(281);
+var ReactEventEmitterMixin = __webpack_require__(282);
 var ReactPerf = __webpack_require__(9);
 var ViewportMetrics = __webpack_require__(121);
 
@@ -22127,7 +22127,7 @@ module.exports = setInnerHTML;
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(315);
+exports = module.exports = __webpack_require__(316);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -22724,9 +22724,9 @@ exports.decode = function(qs){
 /***/ (function(module, exports, __webpack_require__) {
 
 var Element = __webpack_require__(95)
-var Window = __webpack_require__(249)
-var core = __webpack_require__(251)
-var anim = __webpack_require__(250)
+var Window = __webpack_require__(250)
+var core = __webpack_require__(252)
+var anim = __webpack_require__(251)
 
 var ReactFauxDOM = {
   Element: Element,
@@ -22875,7 +22875,7 @@ module.exports = CallbackQueue;
 var DOMProperty = __webpack_require__(16);
 var ReactPerf = __webpack_require__(9);
 
-var quoteAttributeValueForBrowser = __webpack_require__(311);
+var quoteAttributeValueForBrowser = __webpack_require__(312);
 var warning = __webpack_require__(3);
 
 // Simplified subset
@@ -23978,7 +23978,7 @@ module.exports = getIteratorFn;
 
 
 
-var ReactCompositeComponent = __webpack_require__(270);
+var ReactCompositeComponent = __webpack_require__(271);
 var ReactEmptyComponent = __webpack_require__(111);
 var ReactNativeComponent = __webpack_require__(117);
 
@@ -24814,10 +24814,10 @@ module.exports = validateDOMNesting;
  * Module dependencies.
  */
 
-var debug = __webpack_require__(317)('socket.io-parser');
-var json = __webpack_require__(243);
+var debug = __webpack_require__(318)('socket.io-parser');
+var json = __webpack_require__(244);
 var Emitter = __webpack_require__(155);
-var binary = __webpack_require__(316);
+var binary = __webpack_require__(317);
 var isBuf = __webpack_require__(130);
 
 /**
@@ -26434,14 +26434,14 @@ module.exports = function parseuri(str) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(5)
-var styleAttr = __webpack_require__(321)
-var querySelectorAll = __webpack_require__(245)
+var styleAttr = __webpack_require__(322)
+var querySelectorAll = __webpack_require__(246)
 var camelCase = __webpack_require__(96)
-var isString = __webpack_require__(253)
-var isUndefined = __webpack_require__(254)
-var assign = __webpack_require__(252)
+var isString = __webpack_require__(254)
+var isUndefined = __webpack_require__(255)
+var assign = __webpack_require__(253)
 var mapValues = __webpack_require__(97)
-var styleCamelCase = __webpack_require__(255)
+var styleCamelCase = __webpack_require__(256)
 
 function Element (nodeName, parentNode) {
   this.nodeName = nodeName
@@ -26998,7 +26998,7 @@ module.exports = CSSProperty;
 
 
 
-var Danger = __webpack_require__(261);
+var Danger = __webpack_require__(262);
 var ReactMultiChildUpdateTypes = __webpack_require__(116);
 var ReactPerf = __webpack_require__(9);
 
@@ -28468,7 +28468,7 @@ var ReactUpdates = __webpack_require__(10);
 var ReactVersion = __webpack_require__(52);
 
 var findDOMNode = __webpack_require__(53);
-var renderSubtreeIntoContainer = __webpack_require__(312);
+var renderSubtreeIntoContainer = __webpack_require__(313);
 var warning = __webpack_require__(3);
 
 ReactDefaultInjection.inject();
@@ -28980,27 +28980,27 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var BeforeInputEventPlugin = __webpack_require__(257);
-var ChangeEventPlugin = __webpack_require__(259);
-var ClientReactRootIndex = __webpack_require__(260);
-var DefaultEventPluginOrder = __webpack_require__(262);
-var EnterLeaveEventPlugin = __webpack_require__(263);
+var BeforeInputEventPlugin = __webpack_require__(258);
+var ChangeEventPlugin = __webpack_require__(260);
+var ClientReactRootIndex = __webpack_require__(261);
+var DefaultEventPluginOrder = __webpack_require__(263);
+var EnterLeaveEventPlugin = __webpack_require__(264);
 var ExecutionEnvironment = __webpack_require__(4);
-var HTMLDOMPropertyConfig = __webpack_require__(266);
-var ReactBrowserComponentMixin = __webpack_require__(268);
+var HTMLDOMPropertyConfig = __webpack_require__(267);
+var ReactBrowserComponentMixin = __webpack_require__(269);
 var ReactComponentBrowserEnvironment = __webpack_require__(48);
 var ReactDefaultBatchingStrategy = __webpack_require__(108);
-var ReactDOMComponent = __webpack_require__(272);
+var ReactDOMComponent = __webpack_require__(273);
 var ReactDOMTextComponent = __webpack_require__(107);
-var ReactEventListener = __webpack_require__(282);
-var ReactInjection = __webpack_require__(283);
+var ReactEventListener = __webpack_require__(283);
+var ReactInjection = __webpack_require__(284);
 var ReactInstanceHandles = __webpack_require__(20);
 var ReactMount = __webpack_require__(6);
-var ReactReconcileTransaction = __webpack_require__(287);
-var SelectEventPlugin = __webpack_require__(293);
-var ServerReactRootIndex = __webpack_require__(294);
-var SimpleEventPlugin = __webpack_require__(295);
-var SVGDOMPropertyConfig = __webpack_require__(292);
+var ReactReconcileTransaction = __webpack_require__(288);
+var SelectEventPlugin = __webpack_require__(294);
+var ServerReactRootIndex = __webpack_require__(295);
+var SimpleEventPlugin = __webpack_require__(296);
+var SVGDOMPropertyConfig = __webpack_require__(293);
 
 var alreadyInjected = false;
 
@@ -29055,7 +29055,7 @@ function inject() {
   if (process.env.NODE_ENV !== 'production') {
     var url = ExecutionEnvironment.canUseDOM && window.location.href || '';
     if (/[?&]react_perf\b/.test(url)) {
-      var ReactDefaultPerf = __webpack_require__(279);
+      var ReactDefaultPerf = __webpack_require__(280);
       ReactDefaultPerf.start();
     }
   }
@@ -29571,7 +29571,7 @@ module.exports = ReactErrorUtils;
 
 
 
-var ReactDOMSelection = __webpack_require__(276);
+var ReactDOMSelection = __webpack_require__(277);
 
 var containsNode = __webpack_require__(71);
 var focusNode = __webpack_require__(72);
@@ -29701,7 +29701,7 @@ module.exports = ReactInputSelection;
 
 
 
-var adler32 = __webpack_require__(304);
+var adler32 = __webpack_require__(305);
 
 var TAG_END = /\/?>/;
 
@@ -31221,7 +31221,7 @@ function on (obj, ev, fn) {
 
 var parser = __webpack_require__(64);
 var Emitter = __webpack_require__(129);
-var toArray = __webpack_require__(322);
+var toArray = __webpack_require__(323);
 var on = __webpack_require__(127);
 var bind = __webpack_require__(66);
 var debug = __webpack_require__(39)('socket.io-client:socket');
@@ -32196,7 +32196,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MainContainer = __webpack_require__(144);
+var _MainContainer = __webpack_require__(145);
 
 var _MainContainer2 = _interopRequireDefault(_MainContainer);
 
@@ -32204,13 +32204,17 @@ var _companies = __webpack_require__(242);
 
 var _companies2 = _interopRequireDefault(_companies);
 
-var _MenuBar = __webpack_require__(145);
+var _MenuBar = __webpack_require__(146);
 
 var _MenuBar2 = _interopRequireDefault(_MenuBar);
 
-var _MenuBarIcon = __webpack_require__(146);
+var _MenuBarIcon = __webpack_require__(147);
 
 var _MenuBarIcon2 = _interopRequireDefault(_MenuBarIcon);
+
+var _NavBar = __webpack_require__(148);
+
+var _NavBar2 = _interopRequireDefault(_NavBar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32222,7 +32226,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var SmoothScroll = __webpack_require__(21);
 
-var io = __webpack_require__(313);
+var io = __webpack_require__(314);
 
 var App = function (_Component) {
   _inherits(App, _Component);
@@ -32308,6 +32312,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
+        _react2.default.createElement(_NavBar2.default, { infos: this.state.infos, companies: this.state.companies, open: this.state.open }),
         _react2.default.createElement(
           'button',
           { className: 'updateButton', onMouseDown: this.updateData },
@@ -32500,6 +32505,12 @@ _reactDom2.default.render(_react2.default.createElement(_App2.default, null), do
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
@@ -32510,32 +32521,44 @@ var _GraphView2 = _interopRequireDefault(_GraphView);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 var SmoothScroll = __webpack_require__(21);
 
-var Company = _react2.default.createClass({
-  displayName: 'Company',
-  render: function render() {
+var Company = function (_Component) {
+  _inherits(Company, _Component);
 
-    var index = 0;
-    if (this.props.index + 1 == null) {
-      index = this.props.index;
-    } else {
-      index = this.props.index + 1;
-    }
+  function Company() {
+    _classCallCheck(this, Company);
 
-    return _react2.default.createElement(
-      'div',
-      { id: this.props.title, className: 'Company' },
-      _react2.default.createElement(
+    return _possibleConstructorReturn(this, (Company.__proto__ || Object.getPrototypeOf(Company)).apply(this, arguments));
+  }
+
+  _createClass(Company, [{
+    key: 'render',
+    value: function render() {
+
+      var index = 0;
+      if (this.props.index + 1 == null) {
+        index = this.props.index;
+      } else {
+        index = this.props.index + 1;
+      }
+
+      return _react2.default.createElement(
         'div',
-        { className: 'images' },
-        _react2.default.createElement('div', { className: 'logo' }),
+        { id: this.props.title, className: 'Company' },
         _react2.default.createElement(
           'div',
-          { className: 'background_image' },
+          { className: 'images' },
+          _react2.default.createElement('div', { className: 'logo' }),
           _react2.default.createElement(
             'div',
-            { className: 'foreground_image' },
+            { className: 'section-title' },
             _react2.default.createElement(
               'h1',
               null,
@@ -32546,28 +32569,32 @@ var Company = _react2.default.createClass({
               null,
               this.props.text
             )
-          )
-        ),
-        _react2.default.createElement(
-          SmoothScroll,
-          { className: 'StartContainer', section: this.props.title },
+          ),
           _react2.default.createElement(
-            'div',
-            { className: 'Start' },
+            SmoothScroll,
+            { section: this.props.title },
             _react2.default.createElement(
-              'p',
+              'div',
               null,
-              '\uD83D\uDE0A'
+              _react2.default.createElement(
+                'p',
+                null,
+                '\uD83D\uDE0A'
+              )
             )
           )
-        )
-      ),
-      _react2.default.createElement(_GraphView2.default, { data: this.props.data, companies: this.props.companies })
-    );
-  }
-});
+        ),
+        _react2.default.createElement(_GraphView2.default, { data: this.props.data, companies: this.props.companies })
+      );
+    }
+  }]);
 
-module.exports = Company;
+  return Company;
+}(_react.Component);
+
+;
+
+exports.default = Company;
 
 /***/ }),
 /* 142 */
@@ -32690,6 +32717,96 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
+var _GraphView = __webpack_require__(65);
+
+var _GraphView2 = _interopRequireDefault(_GraphView);
+
+var _intro = __webpack_require__(243);
+
+var _intro2 = _interopRequireDefault(_intro);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SmoothScroll = __webpack_require__(21);
+
+var Intro = function (_React$Component) {
+  _inherits(Intro, _React$Component);
+
+  function Intro() {
+    _classCallCheck(this, Intro);
+
+    return _possibleConstructorReturn(this, (Intro.__proto__ || Object.getPrototypeOf(Intro)).apply(this, arguments));
+  }
+
+  _createClass(Intro, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'Intro' },
+        _react2.default.createElement(
+          'h1',
+          null,
+          _intro2.default[0].title
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'text-block' },
+          _react2.default.createElement(
+            'div',
+            { className: 'description-block' },
+            _react2.default.createElement(
+              'p',
+              null,
+              'What is Informant?'
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              _intro2.default[0].subtitle
+            )
+          )
+        ),
+        _react2.default.createElement(SmoothScroll, { className: 'begin-item', section: 'CompaniesGraph', text: 'Begin' }),
+        _react2.default.createElement(
+          'div',
+          { id: 'CompaniesGraph' },
+          _react2.default.createElement(_GraphView2.default, { data: this.props.data, companies: this.props.companies })
+        )
+      );
+    }
+  }]);
+
+  return Intro;
+}(_react2.default.Component);
+
+;
+
+exports.default = Intro;
+
+/***/ }),
+/* 145 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
 var _CompanyContainer = __webpack_require__(142);
 
 var _CompanyContainer2 = _interopRequireDefault(_CompanyContainer);
@@ -32698,13 +32815,9 @@ var _CompanyFactory = __webpack_require__(143);
 
 var _CompanyFactory2 = _interopRequireDefault(_CompanyFactory);
 
-var _NavBar = __webpack_require__(147);
+var _Intro = __webpack_require__(144);
 
-var _NavBar2 = _interopRequireDefault(_NavBar);
-
-var _TopCompanies = __webpack_require__(148);
-
-var _TopCompanies2 = _interopRequireDefault(_TopCompanies);
+var _Intro2 = _interopRequireDefault(_Intro);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32747,16 +32860,7 @@ var MainContainer = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: this.state.menuBarState },
-        _react2.default.createElement(_NavBar2.default, { infos: this.props.infos, companies: this.props.companies, open: this.props.open }),
-        _react2.default.createElement(
-          _CompanyContainer2.default,
-          null,
-          _react2.default.createElement(
-            'div',
-            { className: 'Section', id: this.props.id },
-            _react2.default.createElement(_TopCompanies2.default, { data: this.props.data, companies: this.props.companies })
-          )
-        ),
+        _react2.default.createElement(_Intro2.default, { data: this.props.data, companies: this.props.companies }),
         _react2.default.createElement(
           _CompanyContainer2.default,
           null,
@@ -32774,7 +32878,7 @@ var MainContainer = function (_Component) {
 exports.default = MainContainer;
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32845,13 +32949,9 @@ var MenuBar = function (_React$Component) {
         { className: this.state.MenuBarStyle },
         this.props.companies.map(function (v, i) {
           return _react2.default.createElement(
-            _SmoothScroll2.default,
-            { key: i, type: 'menuButton', section: self.props.infos[i].title },
-            _react2.default.createElement(
-              'p',
-              { onMouseDown: _this2.props.closeMenuBar, key: 'p' + i },
-              self.props.infos[i].title
-            )
+            'div',
+            { onMouseDown: _this2.props.closeMenuBar },
+            _react2.default.createElement(_SmoothScroll2.default, { className: 'menu-bar-item', key: i, type: 'menuButton', section: self.props.infos[i].title, text: self.props.infos[i].title })
           );
         })
       );
@@ -32864,7 +32964,7 @@ var MenuBar = function (_React$Component) {
 exports.default = MenuBar;
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32946,7 +33046,7 @@ var MenuBarIcon = function (_Component) {
 exports.default = MenuBarIcon;
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33015,15 +33115,7 @@ var NavBar = function (_React$Component) {
         'div',
         { className: this.state.NavBarStyle },
         this.props.companies.map(function (v, i) {
-          return _react2.default.createElement(
-            _SmoothScroll2.default,
-            { key: i, type: 'navButton', section: self.props.infos[i].title },
-            _react2.default.createElement(
-              'p',
-              { key: 'p' + i },
-              self.props.infos[i].title
-            )
-          );
+          return _react2.default.createElement(_SmoothScroll2.default, { key: i, className: 'nav-bar-item', section: self.props.infos[i].title, text: self.props.infos[i].title });
         })
       );
     }
@@ -33033,74 +33125,6 @@ var NavBar = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = NavBar;
-
-/***/ }),
-/* 148 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _GraphView = __webpack_require__(65);
-
-var _GraphView2 = _interopRequireDefault(_GraphView);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var SmoothScroll = __webpack_require__(21);
-
-var Company = _react2.default.createClass({
-  displayName: 'Company',
-  render: function render() {
-    return _react2.default.createElement(
-      'div',
-      { id: 'TopCompanies', className: 'Company' },
-      _react2.default.createElement(
-        'div',
-        { className: 'images' },
-        _react2.default.createElement('div', { className: 'logo' }),
-        _react2.default.createElement(
-          'div',
-          { className: 'background_image' },
-          _react2.default.createElement(
-            'div',
-            { className: 'foreground_image' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Informant'
-            ),
-            _react2.default.createElement(
-              'p',
-              null,
-              'What is Informant?'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          SmoothScroll,
-          { className: 'StartContainer', section: 'Apple' },
-          _react2.default.createElement(
-            'div',
-            { className: 'Start' },
-            _react2.default.createElement(
-              'p',
-              null,
-              'Begin your journey'
-            )
-          )
-        )
-      ),
-      _react2.default.createElement(_GraphView2.default, { data: this.props.data, companies: this.props.companies })
-    );
-  }
-});
-
-module.exports = Company;
 
 /***/ }),
 /* 149 */
@@ -33987,7 +34011,7 @@ exports = module.exports = __webpack_require__(67)();
 
 
 // module
-exports.push([module.i, "@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n.Section {\n  background-color: #dbd7d7;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center; }\n  .Section h1 {\n    text-align: center; }\n  .Section p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center; }\n\n.MenuBarIcon {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  border: none;\n  color: #f7f5f5;\n  background: transparent;\n  outline: none;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  z-index: -10;\n  display: block; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .MenuBarIcon {\n      z-index: 99999; } }\n\n.MenuBarIcon:hover > div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.1s, ease;\n  -ms-transition: all, 1.1s, ease;\n  -o-transition: all, 1.1s, ease;\n  transition: all, 1.1s, ease;\n  background: #bca293; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease;\n  -ms-transition: all, 1.5s, ease;\n  -o-transition: all, 1.5s, ease;\n  transition: all, 1.5s, ease;\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon:hover > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon:hover > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon:hover > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.clicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  /* Safari */\n  -webkit-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  /* Safari */\n  -o-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  transform: translate3D(25vw, 10px, 0) rotate(45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #topBar {\n      -ms-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      /* Safari */\n      -webkit-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      /* Safari */\n      -o-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      transform: translate3D(75vw, 10px, 0) rotate(45deg); } }\n\n.clicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -webkit-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -o-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  transform: translate3D(25vw, -10px, 0) rotate(-45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #bottomBar {\n      -ms-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -webkit-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -o-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      transform: translate3D(75vw, -10px, 0) rotate(-45deg); } }\n\n.clicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(25vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(25vw, 0, 0);\n  -webkit-transform: translate3D(25vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(25vw, 0, 0);\n  transform: translate3D(25vw, 0, 0);\n  opacity: 0; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #middleBar {\n      -ms-transform: translate3D(75vw, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, 0, 0);\n      -webkit-transform: translate3D(75vw, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(75vw, 0, 0);\n      transform: translate3D(75vw, 0, 0); } }\n\n.unclicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0);\n  opacity: 1; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.2s, ease-in-out;\n  -ms-transition: all, 0.2s, ease-in-out;\n  -o-transition: all, 0.2s, ease-in-out;\n  transition: all, 0.2s, ease-in-out;\n  position: fixed;\n  top: 0;\n  height: 100vh;\n  left: 0;\n  width: 67vw;\n  background: #7a6772; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .MenuBar p {\n    z-index: 999999;\n    color: white;\n    font-weight: 900px;\n    padding: 5vh;\n    margin-bottom: 5vh;\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer; }\n  .MenuBar .smooth-scroll {\n    display: block;\n    position: relative;\n    top: 0;\n    width: 100vw;\n    height: 5vh;\n    background: transparent;\n    z-index: 9999; }\n\n.menuButton {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  border: none;\n  margin: 20px 20px;\n  width: 60px;\n  border-radius: 100%;\n  width: 20px;\n  height: 20px;\n  display: block;\n  outline: none;\n  background: transparent;\n  border: 2px solid #e09090; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menuButton p {\n    color: #9a9aa2;\n    padding: 0px;\n    font-weight: 200;\n    margin: 0;\n    padding-left: 50px;\n    text-align: center;\n    white-space: nowrap; }\n\n.menuButton:hover {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  border: 2px solid #e09090;\n  border-radius: 10%;\n  background: #e09090;\n  cursor: pointer; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menuButton:hover > p {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MainContainer {\n  background: #f7f5f5;\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  position: relative;\n  width: 100%;\n  overflow-x: hidden;\n  /*-webkit-overflow-scrolling: touch;*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .MainContainer {\n      z-index: 9999; } }\n\n.MainContainer:hover {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menuBarOpen {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .menuBarOpen {\n      -ms-transform: translate3D(25vw, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(25vw, 0, 0);\n      -webkit-transform: translate3D(25vw, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(25vw, 0, 0);\n      transform: translate3D(25vw, 0, 0); } }\n  @media all and (max-width: 800px) {\n    .menuBarOpen {\n      -ms-transform: translate3D(75vw, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, 0, 0);\n      -webkit-transform: translate3D(75vw, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(75vw, 0, 0);\n      transform: translate3D(75vw, 0, 0); } }\n\n.menuBarClose {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, linear;\n  -ms-transition: transform, 0.35s, linear;\n  -o-transition: transform, 0.35s, linear;\n  transition: transform, 0.35s, linear;\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.NavBar {\n  top: 0;\n  height: 8vh;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1; }\n  @media all and (max-width: 1200px) {\n    .NavBar {\n      display: none; } }\n  .NavBar .smooth-scroll {\n    display: flex;\n    justify-content: space-around;\n    align-items: flex-start;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999; }\n    .NavBar .smooth-scroll p {\n      -webkit-touch-callout: none;\n      /* iOS Safari */\n      -webkit-user-select: none;\n      /* Safari */\n      -khtml-user-select: none;\n      /* Konqueror HTML */\n      -moz-user-select: none;\n      /* Firefox */\n      -ms-user-select: none;\n      /* Internet Explorer/Edge */\n      user-select: none;\n      /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n      -webkit-tap-highlight-color: transparent;\n      cursor: pointer;\n      font-weight: 400;\n      color: #ac6e6e;\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .smooth-scroll p:hover {\n      color: #070505; }\n    @media all and (max-width: 1200px) {\n      .NavBar .smooth-scroll {\n        z-index: -1; } }\n  .NavBar .navButton {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: none;\n    margin: 20px 20px;\n    width: 12em;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: flex;\n    justify-content: center;\n    outline: none;\n    background: transparent;\n    border: 2px solid #e09090; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .navButton {\n        margin: 20px 20px; } }\n    .NavBar .navButton p {\n      color: #9a9aa2;\n      padding: 1em;\n      font-weight: 200;\n      text-align: center; }\n      @media all and (max-width: 1200px) {\n        .NavBar .navButton p {\n          position: absolute;\n          color: #9a9aa2;\n          margin: 0;\n          margin-left: 3em;\n          left: 0;\n          padding: 0; } }\n  .NavBar .navButton:hover {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: 2px solid #e09090;\n    border-radius: 10%;\n    background: #e09090;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .navButton:hover > p {\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.Company .Start {\n  width: 350px;\n  background-color: #faa187;\n  max-width: 50%;\n  border-radius: 8px; }\n\n.Company p {\n  color: black;\n  font-weight: 300;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent; }\n\n.Company .StartContainer {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  margin-top: 50vh;\n  z-index: 99; }\n\n.Company .images {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.Company .background_image {\n  width: 30%;\n  height: 33.33vh;\n  padding: 10px;\n  background-color: #ca9191;\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  @media all and (max-width: 800px) {\n    .Company .background_image {\n      width: 100%;\n      left: -3vw; } }\n\n.Company .foreground_image {\n  width: 100%;\n  height: 33.33vh;\n  top: 10vw;\n  background-color: #dbd7d7; }\n  @media all and (max-width: 800px) {\n    .Company .foreground_image {\n      width: 100vw; } }\n\n.d3container {\n  border-radius: 50%; }\n\n.textGroup {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.9s, ease-in-out;\n  -ms-transition: transform, 0.9s, ease-in-out;\n  -o-transition: transform, 0.9s, ease-in-out;\n  transition: transform, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.companyText {\n  fill: white;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer; }\n\n.companyText:hover {\n  fill: black; }\n\n.firstWave:hover {\n  stroke: red; }\n\n.secondWave:hover {\n  stroke: blue; }\n\npath {\n  -webkit-transition: d 0.5s ease-in-out;\n  -moz-transition: d, 0.9s, ease-in-out;\n  -ms-transition: d, 0.9s, ease-in-out;\n  -o-transition: d, 0.9s, ease-in-out;\n  transition: d, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\npath:hover {\n  stroke: red; }\n\n.graph rect {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearReact {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6; }\n\n.graph {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\npath {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearRect:hover {\n  fill: #c7bca5; }\n\n.kernel {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.kernel:hover + .core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  /*stroke: #1c1c1c;*/\n  stroke-width: 0.0px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.shell {\n  pointer-events: none; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f1f1f1;\n  -webkit-animation: fadein 3s;\n  /* Safari, Chrome and Opera > 12.1 */\n  -moz-animation: fadein 3s;\n  /* Firefox < 16 */\n  -ms-animation: fadein 3s;\n  /* Internet Explorer */\n  -o-animation: fadein 3s;\n  /* Opera < 12.1 */\n  animation: fadein 3s;\n  width: 100%;\n  overflow-x: hidden; }\n  body h1 {\n    font-family: \"Montserrat\", Futura, Helvetica, sans-serif;\n    color: #ca9191;\n    text-align: center;\n    font-weight: 200; }\n  body p {\n    font-family: \"Montserrat\", Futura, Helvetica, sans-serif;\n    color: #111111;\n    font-weight: 200; }\n  body .wrapper {\n    overflow-x: hidden; }\n  body .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: transparent; }\n", "", {"version":3,"sources":["/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Animation_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Section.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBarIcon.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Transform_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_User_Events.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MainContainer.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_NavBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/companies/_Company.scss","/Users/josecanizares/Desktop/Informant/app/scss/main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Graphs.scss"],"names":[],"mappings":"AASA;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,kBAAkB;AAClB;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,qCAAqC;AACrC;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,uBAAuB;AACvB;EACI;IAAO,WAAU,EAAK;EACtB;IAAO,WAAU,EAAK,EAAA;;AAG1B,kBAAkB;AAClB;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AC7BrB;EACE,0BAJqB;EAKrB,UAAS;EACT,YAAW;EACX,cAAa;EACb,cAAa;EACb,8BAA6B;EAC7B,oBAAmB,EAapB;EApBD;IAUI,mBAAkB,EACnB;EAXH;IAcI,yDAAwD;IACxD,eAAc;IACd,iBAAgB;IAChB,YAAW;IACX,mBAAkB,EACnB;;ACdH;ECOE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAUtB,aAAY;EACZ,eAd2B;EAe3B,wBAAuB;EACvB,cAAa;EEfb,4BFgB6B;EEhBF,gBAAgB;EAC3C,0BFe6B;EEfJ,YAAY;EACpC,yBFc4B;EEdJ,oBAAoB;EAC1C,uBFa0B;EEbJ,aAAa;EAClC,sBFYyB;EEZJ,4BAA4B;EAC7C,kBFWqB;EEXJ;gEACqC;EAC9D,yCAA0C;EFU1C,gBAAe;EACf,kBAAiB;EACjB,gBAAe;EACf,OAAM;EACN,aAAY;EACZ,eAAc,EAKf;ECJC;IDbF;MCgBE,oDAAsD,EDCvD,EAAA;ECEC;IDnBF;MCsBE,oDAAsD,EDLvD,EAAA;ECQD;IDzBA;MC4BA,oDAAsD,EDXrD,EAAA;ECcD;ID/BA;MCmCA,oDAAsD,EDlBrD,EAAA;ECqBD;IDtCA;MC0CA,oDAAsD,EDzBrD,EAAA;EC4BD;ID7CA;MCiDA,oDAAsD,EDhCrD,EAAA;ECmCD;IDpDA;MCuDA,oDAAsD,EDtCrD,EAAA;EAHC;IAdF;MAeI,eAAc,EAEjB,EAAA;;AAED;ECZE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA6BtB,oBAAmB,EACpB;ECTC;IDMF;MCHE,oDAAsD,EDMvD,EAAA;ECHC;IDAF;MCGE,oDAAsD,EDAvD,EAAA;ECGD;IDNA;MCSA,oDAAsD,EDNrD,EAAA;ECSD;IDZA;MCgBA,oDAAsD,EDbrD,EAAA;ECgBD;IDnBA;MCuBA,oDAAsD,EDpBrD,EAAA;ECuBD;ID1BA;MC8BA,oDAAsD,ED3BrD,EAAA;EC8BD;IDjCA;MCoCA,oDAAsD,EDjCrD,EAAA;;AAED;ECjBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAkCtB,YAAW;EACX,YAAW;EACX,oBAAmB;EACnB,gBAAe,EAChB;ECjBC;IDWF;MCRE,oDAAsD,EDcvD,EAAA;ECXC;IDKF;MCFE,oDAAsD,EDQvD,EAAA;ECLD;IDDA;MCIA,oDAAsD,EDErD,EAAA;ECCD;IDPA;MCWA,oDAAsD,EDLrD,EAAA;ECQD;IDdA;MCkBA,oDAAsD,EDZrD,EAAA;ECeD;IDrBA;MCyBA,oDAAsD,EDnBrD,EAAA;ECsBD;ID5BA;MC+BA,oDAAsD,EDzBrD,EAAA;;AAED;ECzBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA0CtB,gEAAgE;EAChE,kEAAkE,EACnE;ECvBC;IDmBF;MChBE,oDAAsD,EDoBvD,EAAA;ECjBC;IDaF;MCVE,oDAAsD,EDcvD,EAAA;ECXD;IDOA;MCJA,oDAAsD,EDQrD,EAAA;ECLD;IDCA;MCGA,oDAAsD,EDCrD,EAAA;ECED;IDNA;MCUA,oDAAsD,EDNrD,EAAA;ECSD;IDbA;MCiBA,oDAAsD,EDbrD,EAAA;ECgBD;IDpBA;MCuBA,oDAAsD,EDnBrD,EAAA;;AAED;EC/BE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAgDtB,gEAAgE;EAChE,kEAAkE,EAEnE;EC9BC;IDyBF;MCtBE,oDAAsD,ED2BvD,EAAA;ECxBC;IDmBF;MChBE,oDAAsD,EDqBvD,EAAA;EClBD;IDaA;MCVA,oDAAsD,EDerD,EAAA;ECZD;IDOA;MCHA,oDAAsD,EDQrD,EAAA;ECLD;IDAA;MCIA,oDAAsD,EDCrD,EAAA;ECED;IDPA;MCWA,oDAAsD,EDNrD,EAAA;ECSD;IDdA;MCiBA,oDAAsD,EDZrD,EAAA;;AAED;ECtCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAuDtB,8CAA8C;EAC9C,qCAAqC,EACtC;ECpCC;IDgCF;MC7BE,oDAAsD,EDiCvD,EAAA;EC9BC;ID0BF;MCvBE,oDAAsD,ED2BvD,EAAA;ECxBD;IDoBA;MCjBA,oDAAsD,EDqBrD,EAAA;EClBD;IDcA;MCVA,oDAAsD,EDcrD,EAAA;ECXD;IDOA;MCHA,oDAAsD,EDOrD,EAAA;ECJD;IDAA;MCIA,oDAAsD,EDArD,EAAA;ECGD;IDPA;MCUA,oDAAsD,EDNrD,EAAA;;AAED;EC5CE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EC8GtB,wDAAgD;EAAG,UAAU;EAC7D,yDAAiD;EAAG,YAAY;EAChE,4DAAoD;EAAG,YAAY;EACnE,uDAA+C;EAC/C,oDAA4C,EDjD7C;EC5CC;IDsCF;MCnCE,oDAAsD,EDyCvD,EAAA;ECtCC;IDgCF;MC7BE,oDAAsD,EDmCvD,EAAA;EChCD;ID0BA;MCvBA,oDAAsD,ED6BrD,EAAA;EC1BD;IDoBA;MChBA,oDAAsD,EDsBrD,EAAA;ECnBD;IDaA;MCTA,oDAAsD,EDerD,EAAA;ECZD;IDMA;MCFA,oDAAsD,EDQrD,EAAA;ECLD;IDDA;MCIA,oDAAsD,EDErD,EAAA;EAHC;IAHF;MCmDE,wDAAgD;MAAG,UAAU;MAC7D,yDAAiD;MAAG,YAAY;MAChE,4DAAoD;MAAG,YAAY;MACnE,uDAA+C;MAC/C,oDAA4C,EDjD7C,EAAA;;AAED;ECpDE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECsHtB,0DAAgD;EAAG,UAAU;EAC7D,2DAAiD;EAAG,YAAY;EAChE,8DAAoD;EAAG,YAAY;EACnE,yDAA+C;EAC/C,sDAA4C,EDjD7C;ECpDC;ID8CF;MC3CE,oDAAsD,EDiDvD,EAAA;EC9CC;IDwCF;MCrCE,oDAAsD,ED2CvD,EAAA;ECxCD;IDkCA;MC/BA,oDAAsD,EDqCrD,EAAA;EClCD;ID4BA;MCxBA,oDAAsD,ED8BrD,EAAA;EC3BD;IDqBA;MCjBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDcA;MCVA,oDAAsD,EDgBrD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;EAHC;IAHF;MCmDE,0DAAgD;MAAG,UAAU;MAC7D,2DAAiD;MAAG,YAAY;MAChE,8DAAoD;MAAG,YAAY;MACnE,yDAA+C;MAC/C,sDAA4C,EDjD7C,EAAA;;AAED;EC5DE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuKtB,mCAAoC;EAAE,UAAU;EAChD,oCAAqC;EAAE,YAAY;EACnD,uCAAwC;EAAE,YAAY;EACtD,kCAAmC;EACnC,+BAAgC;EAtFhC,uCAAoC;EAAE,UAAU;EAChD,wCAAqC;EACrC,2CAAwC;EAAE,YAAY;EACtD,sCAAmC;EACnC,mCAAgC;EDPhC,WAAU,EACX;EC9DC;IDsDF;MCnDE,oDAAsD,ED2DvD,EAAA;ECxDC;IDgDF;MC7CE,oDAAsD,EDqDvD,EAAA;EClDD;ID0CA;MCvCA,oDAAsD,ED+CrD,EAAA;EC5CD;IDoCA;MChCA,oDAAsD,EDwCrD,EAAA;ECrCD;ID6BA;MCzBA,oDAAsD,EDiCrD,EAAA;EC9BD;IDsBA;MClBA,oDAAsD,ED0BrD,EAAA;ECvBD;IDeA;MCZA,oDAAsD,EDoBrD,EAAA;EAJC;IAJF;MCUE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EDNjC,EAAA;;AAED;ECtEE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EC8GtB,qDAAgD;EAAG,UAAU;EAC7D,sDAAiD;EAAG,YAAY;EAChE,yDAAoD;EAAG,YAAY;EACnE,oDAA+C;EAC/C,iDAA4C,ED1B7C;ECnEC;IDgEF;MC7DE,oDAAsD,EDgEvD,EAAA;EC7DC;ID0DF;MCvDE,oDAAsD,ED0DvD,EAAA;ECvDD;IDoDA;MCjDA,oDAAsD,EDoDrD,EAAA;ECjDD;ID8CA;MC1CA,oDAAsD,ED6CrD,EAAA;EC1CD;IDuCA;MCnCA,oDAAsD,EDsCrD,EAAA;ECnCD;IDgCA;MC5BA,oDAAsD,ED+BrD,EAAA;EC5BD;IDyBA;MCtBA,oDAAsD,EDyBrD,EAAA;;AAED;EC3EE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECsHtB,qDAAgD;EAAG,UAAU;EAC7D,sDAAiD;EAAG,YAAY;EAChE,yDAAoD;EAAG,YAAY;EACnE,oDAA+C;EAC/C,iDAA4C,ED7B7C;ECxEC;IDqEF;MClEE,oDAAsD,EDqEvD,EAAA;EClEC;ID+DF;MC5DE,oDAAsD,ED+DvD,EAAA;EC5DD;IDyDA;MCtDA,oDAAsD,EDyDrD,EAAA;ECtDD;IDmDA;MC/CA,oDAAsD,EDkDrD,EAAA;EC/CD;ID4CA;MCxCA,oDAAsD,ED2CrD,EAAA;ECxCD;IDqCA;MCjCA,oDAAsD,EDoCrD,EAAA;ECjCD;ID8BA;MC3BA,oDAAsD,ED8BrD,EAAA;;AAED;EChFE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuKtB,mCAAoC;EAAE,UAAU;EAChD,oCAAqC;EAAE,YAAY;EACnD,uCAAwC;EAAE,YAAY;EACtD,kCAAmC;EACnC,+BAAgC;EAtFhC,sCAAoC;EAAE,UAAU;EAChD,uCAAqC;EACrC,0CAAwC;EAAE,YAAY;EACtD,qCAAmC;EACnC,kCAAgC;EDUhC,WAAU,EACX;EC/EC;ID0EF;MCvEE,oDAAsD,ED4EvD,EAAA;ECzEC;IDoEF;MCjEE,oDAAsD,EDsEvD,EAAA;ECnED;ID8DA;MC3DA,oDAAsD,EDgErD,EAAA;EC7DD;IDwDA;MCpDA,oDAAsD,EDyDrD,EAAA;ECtDD;IDiDA;MC7CA,oDAAsD,EDkDrD,EAAA;EC/CD;ID0CA;MCtCA,oDAAsD,ED2CrD,EAAA;ECxCD;IDmCA;MChCA,oDAAsD,EDqCrD,EAAA;;AGjGD;EFYE,yCAA0C;EAC1C,wCEjB6B;EFkB7B,uCElB6B;EFmB7B,sCEnB6B;EFoB7B,mCEpB6B;EAM3B,gBAAe;EACf,OAAM;EACN,cAAa;EACb,QAAO;EACP,YAAW;EACX,oBAVc,EAkCjB;EFbC;IElBF;MFqBE,oDAAsD,EEUvD,EAAA;EFPC;IExBF;MF2BE,oDAAsD,EEIvD,EAAA;EFDD;IE9BA;MFiCA,oDAAsD,EEFrD,EAAA;EFKD;IEpCA;MFwCA,oDAAsD,EETrD,EAAA;EFYD;IE3CA;MF+CA,oDAAsD,EEhBrD,EAAA;EFmBD;IElDA;MFsDA,oDAAsD,EEvBrD,EAAA;EF0BD;IEzDA;MF4DA,oDAAsD,EE7BrD,EAAA;EA/BD;IAaQ,gBAAe;IACf,aAAY;IACZ,mBAAkB;IAClB,aAAY;IACZ,mBAAkB;IDtBxB,4BCuBmC;IDvBR,gBAAgB;IAC3C,0BCsBmC;IDtBV,YAAY;IACpC,yBCqBkC;IDrBV,oBAAoB;IAC1C,uBCoBgC;IDpBV,aAAa;IAClC,sBCmB+B;IDnBV,4BAA4B;IAC7C,kBCkB2B;IDlBV;gEACqC;IAC9D,yCAA0C;ICiBpC,gBAAe,EAClB;EApBL;IAuBM,eAAc;IACd,mBAAkB;IAClB,OAAM;IACN,aAAY;IACZ,YAAW;IACX,wBAAuB;IACvB,cAAa,EACd;;AAaL;EF/BE,yCAA0C;EAC1C,wCE+B8C;EF9B9C,uCE8B8C;EF7B9C,sCE6B8C;EF5B9C,mCE4B8C;EAC9C,aAAY;EACV,kBAAiB;EACjB,YAAW;EACX,oBAAmB;EACnB,YAAW;EACX,aAAY;EACZ,eAAc;EACd,cAAa;EACb,wBAAuB;EACvB,0BAxDuB,EA4E1B;EFxDC;IEyBF;MFtBE,oDAAsD,EEqDvD,EAAA;EFlDC;IEmBF;MFhBE,oDAAsD,EE+CvD,EAAA;EF5CD;IEaA;MFVA,oDAAsD,EEyCrD,EAAA;EFtCD;IEOA;MFHA,oDAAsD,EEkCrD,EAAA;EF/BD;IEAA;MFIA,oDAAsD,EE2BrD,EAAA;EFxBD;IEPA;MFWA,oDAAsD,EEoBrD,EAAA;EFjBD;IEdA;MFiBA,oDAAsD,EEcrD,EAAA;EA/BD;IAiBI,eAAc;IACd,aAAY;IACZ,iBAAgB;IAChB,UAAS;IACT,mBAAkB;IAClB,mBAAkB;IAClB,oBAAmB,EAKpB;;AAKH;EFhEE,yCAA0C;EAC1C,wCEgE8C;EF/D9C,uCE+D8C;EF9D9C,sCE8D8C;EF7D9C,mCE6D8C;EAC9C,0BAhFyB;EAiFzB,mBAAkB;EAClB,oBAlFyB;EAmFzB,gBAAe,EAKhB;EFpEC;IE0DF;MFvDE,oDAAsD,EEiEvD,EAAA;EF9DC;IEoDF;MFjDE,oDAAsD,EE2DvD,EAAA;EFxDD;IE8CA;MF3CA,oDAAsD,EEqDrD,EAAA;EFlDD;IEwCA;MFpCA,oDAAsD,EE8CrD,EAAA;EF3CD;IEiCA;MF7BA,oDAAsD,EEuCrD,EAAA;EFpCD;IE0BA;MFtBA,oDAAsD,EEgCrD,EAAA;EF7BD;IEmBA;MFhBA,oDAAsD,EE0BrD,EAAA;EAVD;IFhEE,yCAA0C;IAC1C,wCEuEgD;IFtEhD,uCEsEgD;IFrEhD,sCEqEgD;IFpEhD,mCEoEgD,EAC/C;IFnED;ME0DF;QFvDE,oDAAsD,EEgErD,EAAA;IF7DD;MEoDF;QFjDE,oDAAsD,EE0DrD,EAAA;IFvDH;ME8CA;QF3CA,oDAAsD,EEoDnD,EAAA;IFjDH;MEwCA;QFpCA,oDAAsD,EE6CnD,EAAA;IF1CH;MEiCA;QF7BA,oDAAsD,EEsCnD,EAAA;IFnCH;ME0BA;QFtBA,oDAAsD,EE+BnD,EAAA;IF5BH;MEmBA;QFhBA,oDAAsD,EEyBnD,EAAA;;AClFH;EACE,oBAT4B;EHiB5B,+CAA0C;EAC1C,wEGd+C;EHe/C,uEGf+C;EHgB/C,sEGhB+C;EHiB/C,mEGjB+C;EAO/C,mBAAkB;EAClB,YAAW;EACX,mBAAiB;EACjB,sCAAsC,EAMvC;EHGC;IGfF;MHkBE,oDAAsD,EGNvD,EAAA;EHSC;IGrBF;MHwBE,oDAAsD,EGZvD,EAAA;EHeD;IG3BA;MH8BA,oDAAsD,EGlBrD,EAAA;EHqBD;IGjCA;MHqCA,oDAAsD,EGzBrD,EAAA;EH4BD;IGxCA;MH4CA,oDAAsD,EGhCrD,EAAA;EHmCD;IG/CA;MHmDA,oDAAsD,EGvCrD,EAAA;EH0CD;IGtDA;MHyDA,oDAAsD,EG7CrD,EAAA;EAJC;IARF;MASI,cAAa,EAGhB,EAAA;;AAED;EHLE,+CAA0C;EAC1C,wEGd+C;EHe/C,uEGf+C;EHgB/C,sEGhB+C;EHiB/C,mEGjB+C,EAoBhD;EHDC;IGDF;MHIE,oDAAsD,EGFvD,EAAA;EHKC;IGPF;MHUE,oDAAsD,EGRvD,EAAA;EHWD;IGbA;MHgBA,oDAAsD,EGdrD,EAAA;EHiBD;IGnBA;MHuBA,oDAAsD,EGrBrD,EAAA;EHwBD;IG1BA;MH8BA,oDAAsD,EG5BrD,EAAA;EH+BD;IGjCA;MHqCA,oDAAsD,EGnCrD,EAAA;EHsCD;IGxCA;MH2CA,oDAAsD,EGzCrD,EAAA;;AAED;EHTE,+CAA0C;EAC1C,wEGd+C;EHe/C,uEGf+C;EHgB/C,sEGhB+C;EHiB/C,mEGjB+C,EA8BhD;EHXC;IGGF;MHAE,oDAAsD,EGQvD,EAAA;EHLC;IGHF;MHME,oDAAsD,EGEvD,EAAA;EHCD;IGTA;MHYA,oDAAsD,EGJrD,EAAA;EHOD;IGfA;MHmBA,oDAAsD,EGXrD,EAAA;EHcD;IGtBA;MH0BA,oDAAsD,EGlBrD,EAAA;EHqBD;IG7BA;MHiCA,oDAAsD,EGzBrD,EAAA;EH4BD;IGpCA;MHuCA,oDAAsD,EG/BrD,EAAA;EANC;IAFF;MH6DE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EGzDjC,EAAA;EAHG;IALJ;MH6DE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EGzDjC,EAAA;;AAED;EHnBE,+CAA0C;EAC1C,0CGmBkE;EHlBlE,yCGkBkE;EHjBlE,wCGiBkE;EHhBlE,qCGgBkE;EHkDlE,sCAAoC;EAAE,UAAU;EAChD,uCAAqC;EACrC,0CAAwC;EAAE,YAAY;EACtD,qCAAmC;EACnC,kCAAgC,EGjDjC;EHnBC;IGaF;MHVE,oDAAsD,EGgBvD,EAAA;EHbC;IGOF;MHJE,oDAAsD,EGUvD,EAAA;EHPD;IGCA;MHEA,oDAAsD,EGIrD,EAAA;EHDD;IGLA;MHSA,oDAAsD,EGHrD,EAAA;EHMD;IGZA;MHgBA,oDAAsD,EGVrD,EAAA;EHaD;IGnBA;MHuBA,oDAAsD,EGjBrD,EAAA;EHoBD;IG1BA;MH6BA,oDAAsD,EGvBrD,EAAA;;ACvCD;EACE,OAAM;EACN,YANU;EAOV,cAAa;EACb,QAAO;EACP,cAAa;EACb,oBAAmB,EAwFpB;EAvFC;IAPF;MAQI,cAAa,EAsFhB,EAAA;EA9FD;IAaI,cAAa;IACb,8BAA6B;IAC7B,wBAAuB;IACvB,mBAAkB;IAClB,OAAM;IACN,YAAW;IACX,YAAW;IACX,oBAAmB;IACnB,cAAa,EAkBd;IAvCH;MHHE,4BG2BiC;MH3BN,gBAAgB;MAC3C,0BG0BiC;MH1BR,YAAY;MACpC,yBGyBgC;MHzBR,oBAAoB;MAC1C,uBGwB8B;MHxBR,aAAa;MAClC,sBGuB6B;MHvBR,4BAA4B;MAC7C,kBGsByB;MHtBR;gEACqC;MAC9D,yCAA0C;MGqBtC,gBAAe;MACf,iBAAgB;MAChB,eA9Bc;MJiBlB,yCAA0C;MAC1C,wCIakD;MJZlD,uCIYkD;MJXlD,sCIWkD;MJVlD,mCIUkD,EAC/C;MJTH;QIpBF;UJuBE,oDAAsD,EIMnD,EAAA;MJHH;QI1BF;UJ6BE,oDAAsD,EIAnD,EAAA;MJGL;QIhCA;UJmCA,oDAAsD,EINjD,EAAA;MJSL;QItCA;UJ0CA,oDAAsD,EIbjD,EAAA;MJgBL;QI7CA;UJiDA,oDAAsD,EIpBjD,EAAA;MJuBL;QIpDA;UJwDA,oDAAsD,EI3BjD,EAAA;MJ8BL;QI3DA;UJ8DA,oDAAsD,EIjCjD,EAAA;IA7BL;MAgCM,eAlCe,EAmChB;IAGD;MApCJ;QAqCM,YAAW,EAEd,EAAA;EAvCH;IJcE,yCAA0C;IAC1C,wCI8BgD;IJ7BhD,uCI6BgD;IJ5BhD,sCI4BgD;IJ3BhD,mCI2BgD;IAC9C,aAAY;IACV,kBAAiB;IACjB,YAAW;IACX,oBAAmB;IACnB,YAAW;IACX,aAAY;IACZ,cAAa;IACb,wBAAuB;IACvB,cAAa;IACb,wBAAuB;IACvB,0BAdsB,EAsCzB;IJ5DD;MIpBF;QJuBE,oDAAsD,EIyDrD,EAAA;IJtDD;MI1BF;QJ6BE,oDAAsD,EImDrD,EAAA;IJhDH;MIhCA;QJmCA,oDAAsD,EI6CnD,EAAA;IJ1CH;MItCA;QJ0CA,oDAAsD,EIsCnD,EAAA;IJnCH;MI7CA;QJiDA,oDAAsD,EI+BnD,EAAA;IJ5BH;MIpDA;QJwDA,oDAAsD,EIwBnD,EAAA;IJrBH;MI3DA;QJ8DA,oDAAsD,EIkBnD,EAAA;IAtBG;MA1DN;QA2DQ,kBAAiB,EAqBtB,EAAA;IAhFH;MA+DI,eAAc;MACd,aAAY;MACZ,iBAAgB;MAChB,mBAAkB,EAWjB;MATC;QApEN;UAqEQ,mBAAkB;UAClB,eAAc;UACd,UAAS;UACT,iBAAgB;UAChB,QAAM;UACN,WAAU,EAGb,EAAA;EA7EL;IJcE,yCAA0C;IAC1C,wCIoEgD;IJnEhD,uCImEgD;IJlEhD,sCIkEgD;IJjEhD,mCIiEgD;IAC9C,0BA1CwB;IA2CxB,mBAAkB;IAClB,oBA5CwB;IA6CxB,gBAAe,EAKhB;IJxED;MIpBF;QJuBE,oDAAsD,EIqErD,EAAA;IJlED;MI1BF;QJ6BE,oDAAsD,EI+DrD,EAAA;IJ5DH;MIhCA;QJmCA,oDAAsD,EIyDnD,EAAA;IJtDH;MItCA;QJ0CA,oDAAsD,EIkDnD,EAAA;IJ/CH;MI7CA;QJiDA,oDAAsD,EI2CnD,EAAA;IJxCH;MIpDA;QJwDA,oDAAsD,EIoCnD,EAAA;IJjCH;MI3DA;QJ8DA,oDAAsD,EI8BnD,EAAA;IA5FH;MJcE,yCAA0C;MAC1C,wCI2EkD;MJ1ElD,uCI0EkD;MJzElD,sCIyEkD;MJxElD,mCIwEkD,EAC/C;MJvEH;QIpBF;UJuBE,oDAAsD,EIoEnD,EAAA;MJjEH;QI1BF;UJ6BE,oDAAsD,EI8DnD,EAAA;MJ3DL;QIhCA;UJmCA,oDAAsD,EIwDjD,EAAA;MJrDL;QItCA;UJ0CA,oDAAsD,EIiDjD,EAAA;MJ9CL;QI7CA;UJiDA,oDAAsD,EI0CjD,EAAA;MJvCL;QIpDA;UJwDA,oDAAsD,EImCjD,EAAA;MJhCL;QI3DA;UJ8DA,oDAAsD,EI6BjD,EAAA;;AC1FL;EAEI,aAAY;EACZ,0BAAyB;EACzB,eAAc;EACd,mBAAkB,EACnB;;AANH;EASI,aAAY;EACZ,iBAAgB;EJdlB,4BIe+B;EJfJ,gBAAgB;EAC3C,0BIc+B;EJdN,YAAY;EACpC,yBIa8B;EJbN,oBAAoB;EAC1C,uBIY4B;EJZN,aAAa;EAClC,sBIW2B;EJXN,4BAA4B;EAC7C,kBIUuB;EJVN;gEACqC;EAC9D,yCAA0C,EISzC;;AAZH;EAgBI,cAAa;EACb,wBAAuB;EACvB,oBAAmB;EACnB,iBAAgB;EAChB,YAAW,EACZ;;AArBH;EAwBI,cAAa;EACb,wBAAuB;EACvB,oBAAmB,EACpB;;AA3BH;EA8BM,WAAU;EACV,gBAAe;EACf,cAAa;EACb,0BCrCmB;EDsCnB,mBAAkB;EAClB,cAAa;EACb,wBAAuB;EACvB,oBAAmB,EAMtB;EAJG;IAvCN;MAwCQ,YAAW;MACX,WAAU,EAEf,EAAA;;AA3CH;EA8CM,YAAW;EACX,gBAAe;EACf,UAAS;EACT,0BApDY,EA0Df;EAHG;IApDN;MAqDQ,aAAY,EAEjB,EAAA;;AEnDH;EACE,mBAAkB,EACnB;;AAED;EPKE,+CAA0C;EAC1C,8COLoD;EPMpD,6CONoD;EPOpD,4COPoD;EPQpD,yCORoD,EACrD;EPSC;IOXF;MPcE,oDAAsD,EOZvD,EAAA;EPeC;IOjBF;MPoBE,oDAAsD,EOlBvD,EAAA;EPqBD;IOvBA;MP0BA,oDAAsD,EOxBrD,EAAA;EP2BD;IO7BA;MPiCA,oDAAsD,EO/BrD,EAAA;EPkCD;IOpCA;MPwCA,oDAAsD,EOtCrD,EAAA;EPyCD;IO3CA;MP+CA,oDAAsD,EO7CrD,EAAA;EPgDD;IOlDA;MPqDA,oDAAsD,EOnDrD,EAAA;;AAED;EACE,YAAW;ENjBX,4BMkB6B;ENlBF,gBAAgB;EAC3C,0BMiB6B;ENjBJ,YAAY;EACpC,yBMgB4B;ENhBJ,oBAAoB;EAC1C,uBMe0B;ENfJ,aAAa;EAClC,sBMcyB;ENdJ,4BAA4B;EAC7C,kBMaqB;ENbJ;gEACqC;EAC9D,yCAA0C;EMY1C,gBAAe,EAChB;;AAED;EACE,YAAW,EACZ;;AAED;EAEE,YAAW,EACZ;;AAED;EAEA,aAAY,EAEX;;AAED;EPpBE,uCAA0C;EAC1C,sCOoB4C;EPnB5C,qCOmB4C;EPlB5C,oCOkB4C;EPjB5C,iCOiB4C,EAC7C;EPhBC;IOcF;MPXE,oDAAsD,EOavD,EAAA;EPVC;IOQF;MPLE,oDAAsD,EOOvD,EAAA;EPJD;IOEA;MPCA,oDAAsD,EOCrD,EAAA;EPED;IOJA;MPQA,oDAAsD,EONrD,EAAA;EPSD;IOXA;MPeA,oDAAsD,EObrD,EAAA;EPgBD;IOlBA;MPsBA,oDAAsD,EOpBrD,EAAA;EPuBD;IOzBA;MP4BA,oDAAsD,EO1BrD,EAAA;;AAED;EACE,YAAW,EACZ;;AAGD;EP7BE,yCAA0C;EAC1C,wCO6B8C;EP5B9C,uCO4B8C;EP3B9C,sCO2B8C;EP1B9C,mCO0B8C,EAC/C;EPzBC;IOuBF;MPpBE,oDAAsD,EOsBvD,EAAA;EPnBC;IOiBF;MPdE,oDAAsD,EOgBvD,EAAA;EPbD;IOWA;MPRA,oDAAsD,EOUrD,EAAA;EPPD;IOKA;MPDA,oDAAsD,EOGrD,EAAA;EPAD;IOFA;MPMA,oDAAsD,EOJrD,EAAA;EPOD;IOTA;MPaA,oDAAsD,EOXrD,EAAA;EPcD;IOhBA;MPmBA,oDAAsD,EOjBrD,EAAA;;AAID;EPnCE,yCAA0C;EAC1C,wCOmC8C;EPlC9C,uCOkC8C;EPjC9C,sCOiC8C;EPhC9C,mCOgC8C,EAC/C;EP/BC;IO6BF;MP1BE,oDAAsD,EO4BvD,EAAA;EPzBC;IOuBF;MPpBE,oDAAsD,EOsBvD,EAAA;EPnBD;IOiBA;MPdA,oDAAsD,EOgBrD,EAAA;EPbD;IOWA;MPPA,oDAAsD,EOSrD,EAAA;EPND;IOIA;MPAA,oDAAsD,EOErD,EAAA;EPCD;IOHA;MPOA,oDAAsD,EOLrD,EAAA;EPQD;IOVA;MPaA,oDAAsD,EOXrD,EAAA;;AAED;EPvCE,yCAA0C;EAC1C,wCOuC8C;EPtC9C,uCOsC8C;EPrC9C,sCOqC8C;EPpC9C,mCOoC8C,EAC/C;EPnCC;IOiCF;MP9BE,oDAAsD,EOgCvD,EAAA;EP7BC;IO2BF;MPxBE,oDAAsD,EO0BvD,EAAA;EPvBD;IOqBA;MPlBA,oDAAsD,EOoBrD,EAAA;EPjBD;IOeA;MPXA,oDAAsD,EOarD,EAAA;EPVD;IOQA;MPJA,oDAAsD,EOMrD,EAAA;EPHD;IOCA;MPGA,oDAAsD,EODrD,EAAA;EPID;IONA;MPSA,oDAAsD,EOPrD,EAAA;;AAED;EACE,cAAa;EACb,gBAAe,EAChB;;AAED;EPhDE,yCAA0C;EAC1C,wCOgD4C;EP/C5C,uCO+C4C;EP9C5C,sCO8C4C;EP7C5C,mCO6C4C,EAC7C;EP5CC;IO0CF;MPvCE,oDAAsD,EOyCvD,EAAA;EPtCC;IOoCF;MPjCE,oDAAsD,EOmCvD,EAAA;EPhCD;IO8BA;MP3BA,oDAAsD,EO6BrD,EAAA;EP1BD;IOwBA;MPpBA,oDAAsD,EOsBrD,EAAA;EPnBD;IOiBA;MPbA,oDAAsD,EOerD,EAAA;EPZD;IOUA;MPNA,oDAAsD,EOQrD,EAAA;EPLD;IOGA;MPAA,oDAAsD,EOErD,EAAA;;AAED;EPpDE,yCAA0C;EAC1C,wCOoD4C;EPnD5C,uCOmD4C;EPlD5C,sCOkD4C;EPjD5C,mCOiD4C,EAC7C;EPhDC;IO8CF;MP3CE,oDAAsD,EO6CvD,EAAA;EP1CC;IOwCF;MPrCE,oDAAsD,EOuCvD,EAAA;EPpCD;IOkCA;MP/BA,oDAAsD,EOiCrD,EAAA;EP9BD;IO4BA;MPxBA,oDAAsD,EO0BrD,EAAA;EPvBD;IOqBA;MPjBA,oDAAsD,EOmBrD,EAAA;EPhBD;IOcA;MPVA,oDAAsD,EOYrD,EAAA;EPTD;IOOA;MPJA,oDAAsD,EOMrD,EAAA;;AAED;EACA,cAAa,EACZ;;AAED;EP5DE,yCAA0C;EAC1C,wCO4D4C;EP3D5C,uCO2D4C;EP1D5C,sCO0D4C;EPzD5C,mCOyD4C,EAC7C;EPxDC;IOsDF;MPnDE,oDAAsD,EOqDvD,EAAA;EPlDC;IOgDF;MP7CE,oDAAsD,EO+CvD,EAAA;EP5CD;IO0CA;MPvCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOoCA;MPhCA,oDAAsD,EOkCrD,EAAA;EP/BD;IO6BA;MPzBA,oDAAsD,EO2BrD,EAAA;EPxBD;IOsBA;MPlBA,oDAAsD,EOoBrD,EAAA;EPjBD;IOeA;MPZA,oDAAsD,EOcrD,EAAA;;AAED;EPhEE,yCAA0C;EAC1C,wCOgE4C;EP/D5C,uCO+D4C;EP9D5C,sCO8D4C;EP7D5C,mCO6D4C;EAC9C,oBAAoB;EACpB,oBAAmB,EAElB;EP/DC;IO0DF;MPvDE,oDAAsD,EO4DvD,EAAA;EPzDC;IOoDF;MPjDE,oDAAsD,EOsDvD,EAAA;EPnDD;IO8CA;MP3CA,oDAAsD,EOgDrD,EAAA;EP7CD;IOwCA;MPpCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOiCA;MP7BA,oDAAsD,EOkCrD,EAAA;EP/BD;IO0BA;MPtBA,oDAAsD,EO2BrD,EAAA;EPxBD;IOmBA;MPhBA,oDAAsD,EOqBrD,EAAA;;AAED;EPvEE,yCAA0C;EAC1C,wCOuE8C;EPtE9C,uCOsE8C;EPrE9C,sCOqE8C;EPpE9C,mCOoE8C,EAC/C;EPnEC;IOiEF;MP9DE,oDAAsD,EOgEvD,EAAA;EP7DC;IO2DF;MPxDE,oDAAsD,EO0DvD,EAAA;EPvDD;IOqDA;MPlDA,oDAAsD,EOoDrD,EAAA;EPjDD;IO+CA;MP3CA,oDAAsD,EO6CrD,EAAA;EP1CD;IOwCA;MPpCA,oDAAsD,EOsCrD,EAAA;EPnCD;IOiCA;MP7BA,oDAAsD,EO+BrD,EAAA;EP5BD;IO0BA;MPvBA,oDAAsD,EOyBrD,EAAA;;AAED;EACA,qBAAoB,EAEnB;;AD3ED;EACE,UAAS;EACT,WAAU;EACV,oBAtBuB;ETDzB,6BSwBwB;ETxBM,qCAAqC;EAChE,0BSuBqB;ETvBM,kBAAkB;EAC5C,yBSsBoB;ETtBM,uBAAuB;EAChD,wBSqBmB;ETrBM,kBAAkB;EACxC,qBSoBgB;EACtB,YAAW;EACX,mBAAiB,EAuClB;EA7CD;IAWI,yDA7B2D;IA8B3D,eAhCqB;IAiCrB,mBAAkB;IAClB,iBAAgB,EACjB;EAfH;IAkBI,yDAnC6D;IAoC7D,eAxCoB;IAyCpB,iBAAgB,EACjB;EArBH;IAwBI,mBAAiB,EAElB;EA1BH;IAiCI,aAAY;IACZ,YAAW;IACX,aAAY;IACZ,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,OAAM;IACN,SAAQ;IACR,oBAAmB;IACnB,cAAa;IACb,yCAA0C,EAC3C","file":"main.scss","sourcesContent":["@mixin css-fadein($t) {\n-webkit-animation: fadein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: fadein $t; /* Firefox < 16 */\n    -ms-animation: fadein $t; /* Internet Explorer */\n     -o-animation: fadein $t; /* Opera < 12.1 */\n        animation: fadein $t;\n}\n\n\n@keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n","\n\n\n$section-color: #dbd7d7;\n$p-section-color: #111111;\n\n.Section {\n  background-color: $section-color;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n\n  h1 {\n    text-align: center;\n  }\n\n  p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center;\n  }\n}\n","$menu-bar-icon-color: #f7f5f5;\n$transition-time: 0.7s;\n$transition-prop: all;\n$transition-easing: ease;\n$g-time: 0.75s;\n$right-transition: 25vw;\n$mobile-right-transition: 75vw;\n\n@import '../helpers/Transform_Mixins.scss';\n\n\n.MenuBarIcon {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  border: none;\n  color: $menu-bar-icon-color;\n  background: transparent;\n  outline: none;\n  @include css-user-select(none);\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  z-index: -10;\n  display: block;\n\n  @media all and (max-width: 1200px) {\n    z-index: 99999;\n  }\n}\n\n.MenuBarIcon:hover > div {\n  @include css-transition($transition-prop, 1.1s, $transition-easing);\n  background: #bca293;\n}\n\n.MenuBarIcon div {\n  @include css-transition($transition-prop, 1.5s, $transition-easing);\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px;\n}\n\n.MenuBarIcon:hover > #topBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/\n}\n\n.MenuBarIcon:hover > #bottomBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/\n\n}\n\n.MenuBarIcon:hover > #middleBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/\n}\n\n.clicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x($right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n  }\n  opacity: 0;\n}\n\n.unclicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x(0vw);\n  opacity: 1;\n}\n","$g-time: 0.4s;\n\n@mixin css-linear-gradient($first, $second) {\n  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */\n  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */\n  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */\n  background: linear-gradient($first, $second); /* Standard syntax */\n}\n\n@mixin origin($o) {\n  -webkit-transform-origin: $o;\n  -ms-tranform-origin: $o;\n  -moz-transform-origin: $o;\n  -o-transform-origin: $o;\n  transform-origin: $o;\n}\n\n@mixin css-transition($prop, $time, $easing) {\n  -webkit-transition: $prop 0.5s ease-in-out;\n  -moz-transition: $prop, $time, $easing;\n  -ms-transition: $prop, $time, $easing;\n  -o-transition: $prop, $time, $easing;\n  transition: $prop, $time, $easing;\n\n  @media only screen\nand (min-device-width : 320px)\nand (max-device-width : 568px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n  }\n\n  @media only screen\nand (min-device-width : 414px)\nand (max-device-width : 736px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 375px)\nand (max-device-width : 667px) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1){\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 2) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n}\n\n@mixin css-transform-perspective($p) {\n  -ms-transform: perspective($p); /* IE 9 */\n  -moz-transform: perspective($p);\n  -webkit-transform: perspective($p); /* Safari */\n  -o-transform: perspective($p);\n  transform: perspective($p);\n}\n\n@mixin css-transform-scale($t) {\n  -ms-transform: scale($t); /* IE 9 */\n  -moz-transform: scale($t);\n  -webkit-transform: scale($t); /* Safari */\n  -o-transform: scale($t);\n  transform: scale($t);\n}\n\n@mixin css-transform-translate-x($t) {\n  -ms-transform: translate3D($t, 0, 0); /* IE 9 */\n  -moz-transform: translate3D($t, 0, 0);\n  -webkit-transform: translate3D($t, 0, 0); /* Safari */\n  -o-transform: translate3D($t, 0, 0);\n  transform: translate3D($t, 0, 0);\n\n}\n\n@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {\n  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */\n  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n}\n\n@mixin css-transform-rotate-and-translate-down($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate($a) {\n  -ms-transform: rotate($a); /* IE 9 */\n  -moz-transform: rotate($a); /* Safari */\n  -webkit-transform: rotate($a); /* Safari */\n  -o-transform: rotate($a);\n  transform: rotate($a);\n}\n\n@mixin css-transform-rotate-x($a) {\n  -ms-transform: rotateX($a); /* IE 9 */\n  -moz-transform: rotateX($a); /* Safari */\n  -webkit-transform: rotateX($a); /* Safari */\n  -o-transform: rotateX($a);\n  transform: rotateX($a);\n}\n\n\n@mixin css-transform-rotate-y($a) {\n  -ms-transform: rotateY($a); /* IE 9 */\n  -moz-transform: rotateY($a); /* Safari */\n  -webkit-transform: rotateY($a); /* Safari */\n  -o-transform: rotateY($a);\n  transform: rotateY($a);\n}\n\n@mixin css-transform-rotate-z($a) {\n  -ms-transform: rotateZ($a); /* IE 9 */\n  -moz-transform: rotateZ($a); /* Safari */\n  -webkit-transform: rotateZ($a); /* Safari */\n  -o-transform: rotateZ($a);\n  transform: rotateZ($a);\n}\n\n@mixin css-transform-squash($a) {\n  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */\n  -moz-transform: scaleY($a) scaleX($a); /* Safari */\n  -webkit-transform: scaleY($a) scaleX($a); /* Safari */\n  -o-transform: scaleY($a) scaleX($a);\n  transform: scaleY($a) scaleX($a);\n}\n\n\n@mixin css-transform-open-book($s, $r, $t) {\n  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */\n  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n}\n\n@mixin css-transform-skew-x($transformation) {\n  -ms-transform: skewX($transformation); /* IE 9 */\n  -moz-transform: skewX($transformation);  /* Safari */\n  -webkit-transform: skewX($transformation);  /* Safari */\n  -o-transform: skewX($transformation);\n  transform: skewX($transformation);\n}\n\n@mixin css-transform-skew-y($transformation) {\n  -ms-transform: skewY($transformation); /* IE 9 */\n  -moz-transform: skewY($transformation);  /* Safari */\n  -webkit-transform: skewY($transformation);  /* Safari */\n  -o-transform: skewY($transformation);\n  transform: skewY($transformation);\n}\n","@mixin css-user-select($n){\n  -webkit-touch-callout: $n; /* iOS Safari */\n  -webkit-user-select: $n; /* Safari */\n   -khtml-user-select: $n; /* Konqueror HTML */\n     -moz-user-select: $n; /* Firefox */\n      -ms-user-select: $n; /* Internet Explorer/Edge */\n          user-select: $n; /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n}\n","$transition-time: 0.2s;\n$transition-prop: transform;\n$transition-easing: ease-in-out;\n$bg-color: #7a6772;\n$menu-button-color: #e09090;\n\n.MenuBar {\n    @include css-transition(all, $transition-time, $transition-easing);\n    position: fixed;\n    top: 0;\n    height: 100vh;\n    left: 0;\n    width: 67vw;\n    background: $bg-color;\n\n    @media all and (max-width: 1200px) {\n    }\n\n    p {\n        z-index: 999999;\n        color: white;\n        font-weight: 900px;\n        padding: 5vh;\n        margin-bottom: 5vh;\n        @include css-user-select(none);\n        cursor: pointer;\n    }\n\n    .smooth-scroll {\n      display: block;\n      position: relative;\n      top: 0;\n      width: 100vw;\n      height: 5vh;\n      background: transparent;\n      z-index: 9999;\n    }\n}\n\n.MenuBarHidden {\n\n  @media all and (min-width: 1200px) {\n\n  }\n}\n\n\n\n\n.menuButton {\n  @include css-transition(all, 0.5s, ease-in-out);\n  border: none;\n    margin: 20px 20px;\n    width: 60px;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: block;\n    outline: none;\n    background: transparent;\n    border: 2px solid $menu-button-color;\n\n    @media all and (max-width: 1200px) {\n    }\n\n  p {\n    color: #9a9aa2;\n    padding: 0px;\n    font-weight: 200;\n    margin: 0;\n    padding-left: 50px;\n    text-align: center;\n    white-space: nowrap;\n\n    @media all and (max-width: 1200px) {\n    }\n\n  }\n\n\n}\n\n.menuButton:hover {\n  @include css-transition(all, 0.5s, ease-in-out);\n  border: 2px solid $menu-button-color;\n  border-radius: 10%;\n  background: $menu-button-color;\n  cursor: pointer;\n\n  > p {\n    @include css-transition(all, 0.5s, ease-in-out);\n  }\n}\n","$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;\n$main-container-color: #f7f5f5;\n$live-stream-text-color: #a29393;\n$transition-time: 0.35s;\n$transition-prop: transform;\n$transition-easing: cubic-bezier(.94,.06,.32,.95);\n$right-transition: 25vw;\n$mobile-right-transition: 75vw;\n\n.MainContainer {\n  background: $main-container-color;\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  position: relative;\n  width: 100%;\n  overflow-x:hidden;\n  /*-webkit-overflow-scrolling: touch;*/\n\n  @media all and (max-width: 1200px) {\n    z-index: 9999;\n  }\n\n}\n\n.MainContainer:hover {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n}\n\n.menuBarOpen {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @media all and (max-width: 1200px) {\n  @include css-transform-translate-x($right-transition);\n  }\n    @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n    }\n}\n\n.menuBarClose {\n  @include css-transition($transition-prop, $transition-time, linear);\n  @include css-transform-translate-x(0vw);\n  @media all and (max-width: 1200px) {\n\n  }\n}\n","$height: 8vh;\n$text-color: #ac6e6e;\n$hover-color: #070505;\n\n.NavBar {\n  top: 0;\n  height: $height;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1;\n  @media all and (max-width: 1200px) {\n    display: none;\n  }\n\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: space-around;\n    align-items: flex-start;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n\n    p {\n      @include css-user-select(none);\n      cursor: pointer;\n      font-weight: 400;\n      color: $text-color;\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n\n    p:hover {\n      color: $hover-color;\n    }\n\n\n    @media all and (max-width: 1200px) {\n      z-index: -1;\n    }\n  }\n\n\n  $nav-button-color: #e09090;\n\n  .navButton {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: none;\n      margin: 20px 20px;\n      width: 12em;\n      border-radius: 100%;\n      width: 20px;\n      height: 20px;\n      display: flex;\n      justify-content: center;\n      outline: none;\n      background: transparent;\n      border: 2px solid $nav-button-color;\n\n      @media all and (max-width: 1200px) {\n        margin: 20px 20px;\n      }\n\n    p {\n    color: #9a9aa2;\n    padding: 1em;\n    font-weight: 200;\n    text-align: center;\n\n      @media all and (max-width: 1200px) {\n        position: absolute;\n        color: #9a9aa2;\n        margin: 0;\n        margin-left: 3em;\n        left:0;\n        padding: 0;\n      }\n\n    }\n\n\n  }\n\n  .navButton:hover {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: 2px solid $nav-button-color;\n    border-radius: 10%;\n    background: $nav-button-color;\n    cursor: pointer;\n\n    > p {\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n  }\n\n}\n\n.NavBarHidden {\n  @media all and (max-width: 1200px) {\n  }\n}\n","$section-color: #f1f1f1;\n$start-button-color: #faa187;\n$fg-color: #dbd7d7;\n$bg-color: #ffffff;\n\n.Company {\n  .Start {\n    width: 350px;\n    background-color: #faa187;\n    max-width: 50%;\n    border-radius: 8px;\n  }\n\n  p {\n    color: black;\n    font-weight: 300;\n    @include css-user-select(none);\n  }\n\n\n  .StartContainer {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    margin-top: 50vh;\n    z-index: 99;\n  }\n\n  .images {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .background_image {\n      width: 30%;\n      height: 33.33vh;\n      padding: 10px;\n      background-color: $global-h1-color;\n      position: absolute;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n\n      @media all and (max-width: 800px) {\n        width: 100%;\n        left: -3vw;\n      }\n  }\n\n  .foreground_image {\n      width: 100%;\n      height: 33.33vh;\n      top: 10vw;\n      background-color: $fg-color;\n\n\n      @media all and (max-width: 800px) {\n        width: 100vw;\n      }\n  }\n}\n","$global-p-color: #111111;\n$global-h1-color: #ca9191;\n$global-bg-color: #f1f1f1;\n$global-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;\n$global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;\n\n@import './helpers/Animation_Mixins.scss';\n@import './helpers/Transform_Mixins.scss';\n@import './helpers/Display.scss';\n@import './helpers/User_Events.scss';\n\n@import './components/Section.scss';\n@import './components/Subsection.scss';\n@import './components/MenuBarIcon.scss';\n@import './components/MenuBar.scss';\n@import './components/MainContainer.scss';\n@import './components/NavBar.scss';\n\n@import './components/companies/Company.scss';\n@import './components/_Graphs.scss';\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: $global-bg-color;\n  @include css-fadein(3s);\n  width: 100%;\n  overflow-x:hidden;\n\n\n\n  h1 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 200;\n  }\n\n  p {\n    font-family: $global-p-font-stack;\n    color: $global-p-color;\n    font-weight: 200;\n  }\n\n  .wrapper {\n    overflow-x:hidden;\n\n  }\n\n  @media all and (max-width: 1200px) {\n\n  }\n\n  .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n  }\n}\n","$first-color: #9bb5b5;\n$second-color: #eadab9;\n$blue-color: #637799;\n$red-color: #e0935c;\n$orange-color: #e0935c;\n$yellow-color: #efce69;\n$black-color: #262522;\n$white-color: #f9f6ef;\n\n.d3container {\n  border-radius: 50%;\n}\n\n.textGroup {\n  @include css-transition(transform, 0.9s ,ease-in-out);\n}\n\n.companyText {\n  fill: white;\n  @include css-user-select(none);\n  cursor: pointer;\n}\n\n.companyText:hover {\n  fill: black;\n}\n\n.firstWave:hover {\n\n  stroke: red;\n}\n\n.secondWave:hover {\n\nstroke: blue;\n\n}\n\npath {\n  @include css-transition(d, 0.9s ,ease-in-out);\n}\n\npath:hover {\n  stroke: red;\n}\n\n\n.graph rect {\n  @include css-transition(all, 0.9s ,ease-in-out);\n}\n\n\n\n.LinearReact {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6;\n}\n\n.graph {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\npath {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\n.LinearRect:hover {\nfill: #c7bca5;\n}\n\n.kernel {\n@include css-transition(all, 0.9s, ease-in-out);\n}\n\n.kernel:hover + .core {\n@include css-transition(all, 0.5s, ease-in-out);\n/*stroke: #1c1c1c;*/\nstroke-width: 0.0px;\n\n}\n\n.core {\n  @include css-transition(all, 0.5s, ease-in-out);\n}\n\n.shell {\npointer-events: none;\n\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n.Section {\n  background-color: #dbd7d7;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center; }\n  .Section h1 {\n    text-align: center; }\n  .Section p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center; }\n\n.MenuBarIcon {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  border: none;\n  color: #f7f5f5;\n  background: transparent;\n  outline: none;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  z-index: -10;\n  display: block; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .MenuBarIcon {\n      z-index: 99999; } }\n\n.MenuBarIcon:hover > div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.1s, ease;\n  -ms-transition: all, 1.1s, ease;\n  -o-transition: all, 1.1s, ease;\n  transition: all, 1.1s, ease;\n  background: #bca293; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease;\n  -ms-transition: all, 1.5s, ease;\n  -o-transition: all, 1.5s, ease;\n  transition: all, 1.5s, ease;\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon:hover > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon:hover > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBarIcon:hover > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBarIcon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.clicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  /* Safari */\n  -webkit-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  /* Safari */\n  -o-transform: translate3D(25vw, 10px, 0) rotate(45deg);\n  transform: translate3D(25vw, 10px, 0) rotate(45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #topBar {\n      -ms-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      /* Safari */\n      -webkit-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      /* Safari */\n      -o-transform: translate3D(75vw, 10px, 0) rotate(45deg);\n      transform: translate3D(75vw, 10px, 0) rotate(45deg); } }\n\n.clicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -webkit-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -o-transform: translate3D(25vw, -10px, 0) rotate(-45deg);\n  transform: translate3D(25vw, -10px, 0) rotate(-45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #bottomBar {\n      -ms-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -webkit-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -o-transform: translate3D(75vw, -10px, 0) rotate(-45deg);\n      transform: translate3D(75vw, -10px, 0) rotate(-45deg); } }\n\n.clicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(25vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(25vw, 0, 0);\n  -webkit-transform: translate3D(25vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(25vw, 0, 0);\n  transform: translate3D(25vw, 0, 0);\n  opacity: 0; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #middleBar {\n      -ms-transform: translate3D(75vw, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, 0, 0);\n      -webkit-transform: translate3D(75vw, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(75vw, 0, 0);\n      transform: translate3D(75vw, 0, 0); } }\n\n.unclicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0);\n  opacity: 1; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MenuBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.2s, ease-in-out;\n  -ms-transition: all, 0.2s, ease-in-out;\n  -o-transition: all, 0.2s, ease-in-out;\n  transition: all, 0.2s, ease-in-out;\n  position: fixed;\n  top: 0;\n  height: 100vh;\n  left: 0;\n  width: 100vw;\n  background: #7a6772; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MenuBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .MenuBar p {\n    z-index: 999999;\n    color: white;\n    font-weight: 900px;\n    padding: 5vh;\n    margin-bottom: 5vh;\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer; }\n  .MenuBar .smooth-scroll {\n    display: block;\n    position: relative;\n    top: 0;\n    width: 100vw;\n    height: 5vh;\n    background: transparent;\n    z-index: 9999; }\n\n.menu-bar-item {\n  text-align: left; }\n\n.menuButton {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  border: none;\n  margin: 20px 20px;\n  width: 60px;\n  border-radius: 100%;\n  width: 20px;\n  height: 20px;\n  display: block;\n  outline: none;\n  background: transparent;\n  border: 2px solid #e09090; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuButton {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menuButton p {\n    color: #9a9aa2;\n    padding: 0px;\n    font-weight: 200;\n    margin: 0;\n    padding-left: 50px;\n    text-align: center;\n    white-space: nowrap; }\n\n.menuButton:hover {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  border: 2px solid #e09090;\n  border-radius: 10%;\n  background: #e09090;\n  cursor: pointer; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuButton:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menuButton:hover > p {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .menuButton:hover > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.MainContainer {\n  background: #f7f5f5;\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  position: relative;\n  width: 100%;\n  overflow-x: hidden;\n  /*-webkit-overflow-scrolling: touch;*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MainContainer {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .MainContainer {\n      z-index: 9999; } }\n\n.MainContainer:hover {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .MainContainer:hover {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menuBarOpen {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: transform, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuBarOpen {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .menuBarOpen {\n      -ms-transform: translate3D(25vw, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(25vw, 0, 0);\n      -webkit-transform: translate3D(25vw, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(25vw, 0, 0);\n      transform: translate3D(25vw, 0, 0); } }\n  @media all and (max-width: 800px) {\n    .menuBarOpen {\n      -ms-transform: translate3D(75vw, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(75vw, 0, 0);\n      -webkit-transform: translate3D(75vw, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(75vw, 0, 0);\n      transform: translate3D(75vw, 0, 0); } }\n\n.menuBarClose {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.35s, linear;\n  -ms-transition: transform, 0.35s, linear;\n  -o-transition: transform, 0.35s, linear;\n  transition: transform, 0.35s, linear;\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menuBarClose {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: 8vh;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1; }\n  @media all and (max-width: 1200px) {\n    .NavBar {\n      display: none; } }\n  .NavBar .nav-bar-item {\n    text-align: center; }\n  .NavBar .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.35s, ease-in-out;\n    -ms-transition: all, 0.35s, ease-in-out;\n    -o-transition: all, 0.35s, ease-in-out;\n    transition: all, 0.35s, ease-in-out;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .smooth-scroll p {\n      -webkit-touch-callout: none;\n      /* iOS Safari */\n      -webkit-user-select: none;\n      /* Safari */\n      -khtml-user-select: none;\n      /* Konqueror HTML */\n      -moz-user-select: none;\n      /* Firefox */\n      -ms-user-select: none;\n      /* Internet Explorer/Edge */\n      user-select: none;\n      /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n      -webkit-tap-highlight-color: transparent;\n      cursor: pointer;\n      font-weight: 400;\n      color: #ac6e6e;\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.35s, ease-in-out;\n      -ms-transition: all, 0.35s, ease-in-out;\n      -o-transition: all, 0.35s, ease-in-out;\n      transition: all, 0.35s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .smooth-scroll {\n        z-index: -1; } }\n  .NavBar .smooth-scroll:hover {\n    background: #ffbb98; }\n  .NavBar .smooth-scroll:hover p {\n    color: #ffffff; }\n  .NavBar .navButton {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: none;\n    margin: 20px 20px;\n    width: 12em;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: flex;\n    justify-content: center;\n    outline: none;\n    background: transparent;\n    border: 2px solid #e09090; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .navButton {\n        margin: 20px 20px; } }\n    .NavBar .navButton p {\n      color: #9a9aa2;\n      padding: 1em;\n      font-weight: 200;\n      text-align: center; }\n      @media all and (max-width: 1200px) {\n        .NavBar .navButton p {\n          position: absolute;\n          color: #9a9aa2;\n          margin: 0;\n          margin-left: 3em;\n          left: 0;\n          padding: 0; } }\n  .NavBar .navButton:hover {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: 2px solid #e09090;\n    border-radius: 10%;\n    background: #e09090;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .navButton:hover > p {\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.smooth-scroll .smooth-scroll-container {\n  width: 100%;\n  height: 8vh; }\n\n.Intro {\n  height: 200vh;\n  background: #dbd7d7;\n  padding-top: 25vh; }\n  .Intro p {\n    text-align: center;\n    width: 100%; }\n  .Intro .text-block {\n    width: 100%;\n    height: 50vh;\n    position: relative;\n    display: flex;\n    justify-content: center;\n    align-items: center; }\n  .Intro .description-block {\n    width: 50vw; }\n  .Intro .smooth-scroll {\n    display: flex;\n    justify-content: center; }\n  .Intro .smooth-scroll-container {\n    width: 10vw;\n    cursor: pointer;\n    -webkit-tap-highlight-color: transparent; }\n    @media all and (max-width: 1200px) {\n      .Intro .smooth-scroll-container {\n        width: 33.33vw; } }\n  .Intro .begin-item {\n    background: #ff7970;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    z-index: 9999999;\n    border-radius: 5px; }\n    .Intro .begin-item p {\n      color: white; }\n  .Intro #CompaniesGraph {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start; }\n\n.Company p {\n  color: black;\n  font-weight: 300;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent; }\n\n.Company .images {\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.Company .section-title {\n  width: 50vw;\n  border-top: 3px solid white;\n  border-bottom: 3px solid white;\n  display: block; }\n\n.graph {\n  display: flex;\n  justify-content: center;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.d3container {\n  border-radius: 50%; }\n\n.textGroup {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.9s, ease-in-out;\n  -ms-transition: transform, 0.9s, ease-in-out;\n  -o-transition: transform, 0.9s, ease-in-out;\n  transition: transform, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.companyText {\n  fill: white;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer; }\n\n.companyText:hover {\n  fill: black; }\n\n.firstWave:hover {\n  stroke: red; }\n\n.secondWave:hover {\n  stroke: blue; }\n\npath {\n  -webkit-transition: d 0.5s ease-in-out;\n  -moz-transition: d, 0.9s, ease-in-out;\n  -ms-transition: d, 0.9s, ease-in-out;\n  -o-transition: d, 0.9s, ease-in-out;\n  transition: d, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\npath:hover {\n  stroke: red; }\n\n.graph rect {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearReact {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6; }\n\npath {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearRect:hover {\n  fill: #c7bca5; }\n\n.kernel {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.kernel:hover + .core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  /*stroke: #1c1c1c;*/\n  stroke-width: 0.0px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.shell {\n  pointer-events: none; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: #f1f1f1;\n  -webkit-animation: fadein 3s;\n  /* Safari, Chrome and Opera > 12.1 */\n  -moz-animation: fadein 3s;\n  /* Firefox < 16 */\n  -ms-animation: fadein 3s;\n  /* Internet Explorer */\n  -o-animation: fadein 3s;\n  /* Opera < 12.1 */\n  animation: fadein 3s;\n  width: 100%;\n  overflow-x: hidden; }\n  body h1 {\n    font-family: \"Montserrat\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 200; }\n  body p {\n    font-family: \"Montserrat\", Futura, Helvetica, sans-serif;\n    color: #916969;\n    font-weight: 300; }\n  body .wrapper {\n    overflow-x: hidden; }\n  body .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: transparent; }\n", "", {"version":3,"sources":["/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Animation_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Section.scss","/Users/josecanizares/Desktop/Informant/app/scss/main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBarIcon.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Transform_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_User_Events.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MainContainer.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_NavBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_SmoothScroll.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Intro.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Company.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Graphs.scss"],"names":[],"mappings":"AASA;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,kBAAkB;AAClB;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,qCAAqC;AACrC;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,uBAAuB;AACvB;EACI;IAAO,WAAU,EAAK;EACtB;IAAO,WAAU,EAAK,EAAA;;AAG1B,kBAAkB;AAClB;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;ACnCrB;EACE,0BCIqB;EDHrB,UAAS;EACT,YAAW;EACX,cAAa;EACb,cAAa;EACb,8BAA6B;EAC7B,oBAAmB,EAapB;EApBD;IAUI,mBAAkB,EACnB;EAXH;IAcI,yDAAwD;IACxD,eAAc;IACd,iBAAgB;IAChB,YAAW;IACX,mBAAkB,EACnB;;AERH;ECOE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAUtB,aAAY;EACZ,eAd2B;EAe3B,wBAAuB;EACvB,cAAa;EEfb,4BFgB6B;EEhBF,gBAAgB;EAC3C,0BFe6B;EEfJ,YAAY;EACpC,yBFc4B;EEdJ,oBAAoB;EAC1C,uBFa0B;EEbJ,aAAa;EAClC,sBFYyB;EEZJ,4BAA4B;EAC7C,kBFWqB;EEXJ;gEACqC;EAC9D,yCAA0C;EFU1C,gBAAe;EACf,kBAAiB;EACjB,gBAAe;EACf,OAAM;EACN,aAAY;EACZ,eAAc,EAKf;ECJC;IDbF;MCgBE,oDAAsD,EDCvD,EAAA;ECEC;IDnBF;MCsBE,oDAAsD,EDLvD,EAAA;ECQD;IDzBA;MC4BA,oDAAsD,EDXrD,EAAA;ECcD;ID/BA;MCmCA,oDAAsD,EDlBrD,EAAA;ECqBD;IDtCA;MC0CA,oDAAsD,EDzBrD,EAAA;EC4BD;ID7CA;MCiDA,oDAAsD,EDhCrD,EAAA;ECmCD;IDpDA;MCuDA,oDAAsD,EDtCrD,EAAA;EAHC;IAdF;MAeI,eAAc,EAEjB,EAAA;;AAED;ECZE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA6BtB,oBAAmB,EACpB;ECTC;IDMF;MCHE,oDAAsD,EDMvD,EAAA;ECHC;IDAF;MCGE,oDAAsD,EDAvD,EAAA;ECGD;IDNA;MCSA,oDAAsD,EDNrD,EAAA;ECSD;IDZA;MCgBA,oDAAsD,EDbrD,EAAA;ECgBD;IDnBA;MCuBA,oDAAsD,EDpBrD,EAAA;ECuBD;ID1BA;MC8BA,oDAAsD,ED3BrD,EAAA;EC8BD;IDjCA;MCoCA,oDAAsD,EDjCrD,EAAA;;AAED;ECjBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAkCtB,YAAW;EACX,YAAW;EACX,oBAAmB;EACnB,gBAAe,EAChB;ECjBC;IDWF;MCRE,oDAAsD,EDcvD,EAAA;ECXC;IDKF;MCFE,oDAAsD,EDQvD,EAAA;ECLD;IDDA;MCIA,oDAAsD,EDErD,EAAA;ECCD;IDPA;MCWA,oDAAsD,EDLrD,EAAA;ECQD;IDdA;MCkBA,oDAAsD,EDZrD,EAAA;ECeD;IDrBA;MCyBA,oDAAsD,EDnBrD,EAAA;ECsBD;ID5BA;MC+BA,oDAAsD,EDzBrD,EAAA;;AAED;ECzBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA0CtB,gEAAgE;EAChE,kEAAkE,EACnE;ECvBC;IDmBF;MChBE,oDAAsD,EDoBvD,EAAA;ECjBC;IDaF;MCVE,oDAAsD,EDcvD,EAAA;ECXD;IDOA;MCJA,oDAAsD,EDQrD,EAAA;ECLD;IDCA;MCGA,oDAAsD,EDCrD,EAAA;ECED;IDNA;MCUA,oDAAsD,EDNrD,EAAA;ECSD;IDbA;MCiBA,oDAAsD,EDbrD,EAAA;ECgBD;IDpBA;MCuBA,oDAAsD,EDnBrD,EAAA;;AAED;EC/BE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAgDtB,gEAAgE;EAChE,kEAAkE,EAEnE;EC9BC;IDyBF;MCtBE,oDAAsD,ED2BvD,EAAA;ECxBC;IDmBF;MChBE,oDAAsD,EDqBvD,EAAA;EClBD;IDaA;MCVA,oDAAsD,EDerD,EAAA;ECZD;IDOA;MCHA,oDAAsD,EDQrD,EAAA;ECLD;IDAA;MCIA,oDAAsD,EDCrD,EAAA;ECED;IDPA;MCWA,oDAAsD,EDNrD,EAAA;ECSD;IDdA;MCiBA,oDAAsD,EDZrD,EAAA;;AAED;ECtCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAuDtB,8CAA8C;EAC9C,qCAAqC,EACtC;ECpCC;IDgCF;MC7BE,oDAAsD,EDiCvD,EAAA;EC9BC;ID0BF;MCvBE,oDAAsD,ED2BvD,EAAA;ECxBD;IDoBA;MCjBA,oDAAsD,EDqBrD,EAAA;EClBD;IDcA;MCVA,oDAAsD,EDcrD,EAAA;ECXD;IDOA;MCHA,oDAAsD,EDOrD,EAAA;ECJD;IDAA;MCIA,oDAAsD,EDArD,EAAA;ECGD;IDPA;MCUA,oDAAsD,EDNrD,EAAA;;AAED;EC5CE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EC8GtB,wDAAgD;EAAG,UAAU;EAC7D,yDAAiD;EAAG,YAAY;EAChE,4DAAoD;EAAG,YAAY;EACnE,uDAA+C;EAC/C,oDAA4C,EDjD7C;EC5CC;IDsCF;MCnCE,oDAAsD,EDyCvD,EAAA;ECtCC;IDgCF;MC7BE,oDAAsD,EDmCvD,EAAA;EChCD;ID0BA;MCvBA,oDAAsD,ED6BrD,EAAA;EC1BD;IDoBA;MChBA,oDAAsD,EDsBrD,EAAA;ECnBD;IDaA;MCTA,oDAAsD,EDerD,EAAA;ECZD;IDMA;MCFA,oDAAsD,EDQrD,EAAA;ECLD;IDDA;MCIA,oDAAsD,EDErD,EAAA;EAHC;IAHF;MCmDE,wDAAgD;MAAG,UAAU;MAC7D,yDAAiD;MAAG,YAAY;MAChE,4DAAoD;MAAG,YAAY;MACnE,uDAA+C;MAC/C,oDAA4C,EDjD7C,EAAA;;AAED;ECpDE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECsHtB,0DAAgD;EAAG,UAAU;EAC7D,2DAAiD;EAAG,YAAY;EAChE,8DAAoD;EAAG,YAAY;EACnE,yDAA+C;EAC/C,sDAA4C,EDjD7C;ECpDC;ID8CF;MC3CE,oDAAsD,EDiDvD,EAAA;EC9CC;IDwCF;MCrCE,oDAAsD,ED2CvD,EAAA;ECxCD;IDkCA;MC/BA,oDAAsD,EDqCrD,EAAA;EClCD;ID4BA;MCxBA,oDAAsD,ED8BrD,EAAA;EC3BD;IDqBA;MCjBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDcA;MCVA,oDAAsD,EDgBrD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;EAHC;IAHF;MCmDE,0DAAgD;MAAG,UAAU;MAC7D,2DAAiD;MAAG,YAAY;MAChE,8DAAoD;MAAG,YAAY;MACnE,yDAA+C;MAC/C,sDAA4C,EDjD7C,EAAA;;AAED;EC5DE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuKtB,mCAAoC;EAAE,UAAU;EAChD,oCAAqC;EAAE,YAAY;EACnD,uCAAwC;EAAE,YAAY;EACtD,kCAAmC;EACnC,+BAAgC;EAtFhC,uCAAoC;EAAE,UAAU;EAChD,wCAAqC;EACrC,2CAAwC;EAAE,YAAY;EACtD,sCAAmC;EACnC,mCAAgC;EDPhC,WAAU,EACX;EC9DC;IDsDF;MCnDE,oDAAsD,ED2DvD,EAAA;ECxDC;IDgDF;MC7CE,oDAAsD,EDqDvD,EAAA;EClDD;ID0CA;MCvCA,oDAAsD,ED+CrD,EAAA;EC5CD;IDoCA;MChCA,oDAAsD,EDwCrD,EAAA;ECrCD;ID6BA;MCzBA,oDAAsD,EDiCrD,EAAA;EC9BD;IDsBA;MClBA,oDAAsD,ED0BrD,EAAA;ECvBD;IDeA;MCZA,oDAAsD,EDoBrD,EAAA;EAJC;IAJF;MCUE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EDNjC,EAAA;;AAED;ECtEE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EC8GtB,qDAAgD;EAAG,UAAU;EAC7D,sDAAiD;EAAG,YAAY;EAChE,yDAAoD;EAAG,YAAY;EACnE,oDAA+C;EAC/C,iDAA4C,ED1B7C;ECnEC;IDgEF;MC7DE,oDAAsD,EDgEvD,EAAA;EC7DC;ID0DF;MCvDE,oDAAsD,ED0DvD,EAAA;ECvDD;IDoDA;MCjDA,oDAAsD,EDoDrD,EAAA;ECjDD;ID8CA;MC1CA,oDAAsD,ED6CrD,EAAA;EC1CD;IDuCA;MCnCA,oDAAsD,EDsCrD,EAAA;ECnCD;IDgCA;MC5BA,oDAAsD,ED+BrD,EAAA;EC5BD;IDyBA;MCtBA,oDAAsD,EDyBrD,EAAA;;AAED;EC3EE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECsHtB,qDAAgD;EAAG,UAAU;EAC7D,sDAAiD;EAAG,YAAY;EAChE,yDAAoD;EAAG,YAAY;EACnE,oDAA+C;EAC/C,iDAA4C,ED7B7C;ECxEC;IDqEF;MClEE,oDAAsD,EDqEvD,EAAA;EClEC;ID+DF;MC5DE,oDAAsD,ED+DvD,EAAA;EC5DD;IDyDA;MCtDA,oDAAsD,EDyDrD,EAAA;ECtDD;IDmDA;MC/CA,oDAAsD,EDkDrD,EAAA;EC/CD;ID4CA;MCxCA,oDAAsD,ED2CrD,EAAA;ECxCD;IDqCA;MCjCA,oDAAsD,EDoCrD,EAAA;ECjCD;ID8BA;MC3BA,oDAAsD,ED8BrD,EAAA;;AAED;EChFE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuKtB,mCAAoC;EAAE,UAAU;EAChD,oCAAqC;EAAE,YAAY;EACnD,uCAAwC;EAAE,YAAY;EACtD,kCAAmC;EACnC,+BAAgC;EAtFhC,sCAAoC;EAAE,UAAU;EAChD,uCAAqC;EACrC,0CAAwC;EAAE,YAAY;EACtD,qCAAmC;EACnC,kCAAgC;EDUhC,WAAU,EACX;EC/EC;ID0EF;MCvEE,oDAAsD,ED4EvD,EAAA;ECzEC;IDoEF;MCjEE,oDAAsD,EDsEvD,EAAA;ECnED;ID8DA;MC3DA,oDAAsD,EDgErD,EAAA;EC7DD;IDwDA;MCpDA,oDAAsD,EDyDrD,EAAA;ECtDD;IDiDA;MC7CA,oDAAsD,EDkDrD,EAAA;EC/CD;ID0CA;MCtCA,oDAAsD,ED2CrD,EAAA;ECxCD;IDmCA;MChCA,oDAAsD,EDqCrD,EAAA;;AGjGD;EFYE,yCAA0C;EAC1C,wCEjB6B;EFkB7B,uCElB6B;EFmB7B,sCEnB6B;EFoB7B,mCEpB6B;EAM3B,gBAAe;EACf,OAAM;EACN,cAAa;EACb,QAAO;EACP,aAAY;EACZ,oBAVc,EAkCjB;EFbC;IElBF;MFqBE,oDAAsD,EEUvD,EAAA;EFPC;IExBF;MF2BE,oDAAsD,EEIvD,EAAA;EFDD;IE9BA;MFiCA,oDAAsD,EEFrD,EAAA;EFKD;IEpCA;MFwCA,oDAAsD,EETrD,EAAA;EFYD;IE3CA;MF+CA,oDAAsD,EEhBrD,EAAA;EFmBD;IElDA;MFsDA,oDAAsD,EEvBrD,EAAA;EF0BD;IEzDA;MF4DA,oDAAsD,EE7BrD,EAAA;EA/BD;IAaQ,gBAAe;IACf,aAAY;IACZ,mBAAkB;IAClB,aAAY;IACZ,mBAAkB;IDtBxB,4BCuBmC;IDvBR,gBAAgB;IAC3C,0BCsBmC;IDtBV,YAAY;IACpC,yBCqBkC;IDrBV,oBAAoB;IAC1C,uBCoBgC;IDpBV,aAAa;IAClC,sBCmB+B;IDnBV,4BAA4B;IAC7C,kBCkB2B;IDlBV;gEACqC;IAC9D,yCAA0C;ICiBpC,gBAAe,EAClB;EApBL;IAuBM,eAAc;IACd,mBAAkB;IAClB,OAAM;IACN,aAAY;IACZ,YAAW;IACX,wBAAuB;IACvB,cAAa,EACd;;AAWL;EACE,iBAAgB,EACjB;;AAGD;EFlCE,yCAA0C;EAC1C,wCEkC8C;EFjC9C,uCEiC8C;EFhC9C,sCEgC8C;EF/B9C,mCE+B8C;EAC9C,aAAY;EACV,kBAAiB;EACjB,YAAW;EACX,oBAAmB;EACnB,YAAW;EACX,aAAY;EACZ,eAAc;EACd,cAAa;EACb,wBAAuB;EACvB,0BA3DuB,EA+E1B;EF3DC;IE4BF;MFzBE,oDAAsD,EEwDvD,EAAA;EFrDC;IEsBF;MFnBE,oDAAsD,EEkDvD,EAAA;EF/CD;IEgBA;MFbA,oDAAsD,EE4CrD,EAAA;EFzCD;IEUA;MFNA,oDAAsD,EEqCrD,EAAA;EFlCD;IEGA;MFCA,oDAAsD,EE8BrD,EAAA;EF3BD;IEJA;MFQA,oDAAsD,EEuBrD,EAAA;EFpBD;IEXA;MFcA,oDAAsD,EEiBrD,EAAA;EA/BD;IAiBI,eAAc;IACd,aAAY;IACZ,iBAAgB;IAChB,UAAS;IACT,mBAAkB;IAClB,mBAAkB;IAClB,oBAAmB,EAKpB;;AAKH;EFnEE,yCAA0C;EAC1C,wCEmE8C;EFlE9C,uCEkE8C;EFjE9C,sCEiE8C;EFhE9C,mCEgE8C;EAC9C,0BAnFyB;EAoFzB,mBAAkB;EAClB,oBArFyB;EAsFzB,gBAAe,EAKhB;EFvEC;IE6DF;MF1DE,oDAAsD,EEoEvD,EAAA;EFjEC;IEuDF;MFpDE,oDAAsD,EE8DvD,EAAA;EF3DD;IEiDA;MF9CA,oDAAsD,EEwDrD,EAAA;EFrDD;IE2CA;MFvCA,oDAAsD,EEiDrD,EAAA;EF9CD;IEoCA;MFhCA,oDAAsD,EE0CrD,EAAA;EFvCD;IE6BA;MFzBA,oDAAsD,EEmCrD,EAAA;EFhCD;IEsBA;MFnBA,oDAAsD,EE6BrD,EAAA;EAVD;IFnEE,yCAA0C;IAC1C,wCE0EgD;IFzEhD,uCEyEgD;IFxEhD,sCEwEgD;IFvEhD,mCEuEgD,EAC/C;IFtED;ME6DF;QF1DE,oDAAsD,EEmErD,EAAA;IFhED;MEuDF;QFpDE,oDAAsD,EE6DrD,EAAA;IF1DH;MEiDA;QF9CA,oDAAsD,EEuDnD,EAAA;IFpDH;ME2CA;QFvCA,oDAAsD,EEgDnD,EAAA;IF7CH;MEoCA;QFhCA,oDAAsD,EEyCnD,EAAA;IFtCH;ME6BA;QFzBA,oDAAsD,EEkCnD,EAAA;IF/BH;MEsBA;QFnBA,oDAAsD,EE4BnD,EAAA;;ACrFH;EACE,oBAT4B;EHiB5B,+CAA0C;EAC1C,wEGd+C;EHe/C,uEGf+C;EHgB/C,sEGhB+C;EHiB/C,mEGjB+C;EAO/C,mBAAkB;EAClB,YAAW;EACX,mBAAiB;EACjB,sCAAsC,EAMvC;EHGC;IGfF;MHkBE,oDAAsD,EGNvD,EAAA;EHSC;IGrBF;MHwBE,oDAAsD,EGZvD,EAAA;EHeD;IG3BA;MH8BA,oDAAsD,EGlBrD,EAAA;EHqBD;IGjCA;MHqCA,oDAAsD,EGzBrD,EAAA;EH4BD;IGxCA;MH4CA,oDAAsD,EGhCrD,EAAA;EHmCD;IG/CA;MHmDA,oDAAsD,EGvCrD,EAAA;EH0CD;IGtDA;MHyDA,oDAAsD,EG7CrD,EAAA;EAJC;IARF;MASI,cAAa,EAGhB,EAAA;;AAED;EHLE,+CAA0C;EAC1C,wEGd+C;EHe/C,uEGf+C;EHgB/C,sEGhB+C;EHiB/C,mEGjB+C,EAoBhD;EHDC;IGDF;MHIE,oDAAsD,EGFvD,EAAA;EHKC;IGPF;MHUE,oDAAsD,EGRvD,EAAA;EHWD;IGbA;MHgBA,oDAAsD,EGdrD,EAAA;EHiBD;IGnBA;MHuBA,oDAAsD,EGrBrD,EAAA;EHwBD;IG1BA;MH8BA,oDAAsD,EG5BrD,EAAA;EH+BD;IGjCA;MHqCA,oDAAsD,EGnCrD,EAAA;EHsCD;IGxCA;MH2CA,oDAAsD,EGzCrD,EAAA;;AAED;EHTE,+CAA0C;EAC1C,wEGd+C;EHe/C,uEGf+C;EHgB/C,sEGhB+C;EHiB/C,mEGjB+C,EA8BhD;EHXC;IGGF;MHAE,oDAAsD,EGQvD,EAAA;EHLC;IGHF;MHME,oDAAsD,EGEvD,EAAA;EHCD;IGTA;MHYA,oDAAsD,EGJrD,EAAA;EHOD;IGfA;MHmBA,oDAAsD,EGXrD,EAAA;EHcD;IGtBA;MH0BA,oDAAsD,EGlBrD,EAAA;EHqBD;IG7BA;MHiCA,oDAAsD,EGzBrD,EAAA;EH4BD;IGpCA;MHuCA,oDAAsD,EG/BrD,EAAA;EANC;IAFF;MH6DE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EGzDjC,EAAA;EAHG;IALJ;MH6DE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EGzDjC,EAAA;;AAED;EHnBE,+CAA0C;EAC1C,0CGmBkE;EHlBlE,yCGkBkE;EHjBlE,wCGiBkE;EHhBlE,qCGgBkE;EHkDlE,sCAAoC;EAAE,UAAU;EAChD,uCAAqC;EACrC,0CAAwC;EAAE,YAAY;EACtD,qCAAmC;EACnC,kCAAgC,EGjDjC;EHnBC;IGaF;MHVE,oDAAsD,EGgBvD,EAAA;EHbC;IGOF;MHJE,oDAAsD,EGUvD,EAAA;EHPD;IGCA;MHEA,oDAAsD,EGIrD,EAAA;EHDD;IGLA;MHSA,oDAAsD,EGHrD,EAAA;EHMD;IGZA;MHgBA,oDAAsD,EGVrD,EAAA;EHaD;IGnBA;MHuBA,oDAAsD,EGjBrD,EAAA;EHoBD;IG1BA;MH6BA,oDAAsD,EGvBrD,EAAA;;ACtCD;EACE,OAAM;EACN,gBAAe;EACf,aAAY;EACZ,YATU;EAUV,cAAa;EACb,QAAO;EACP,cAAa;EACb,oBAAmB,EAoGpB;EAnGC;IATF;MAUI,cAAa,EAkGhB,EAAA;EA5GD;IAcI,mBAAkB,EACnB;EAfH;IAmBI,cAAa;IACb,wBAAuB;IACvB,oBAAmB;IACnB,mBAAkB;IAClB,OAAM;IACN,YAAW;IACX,YAAW;IACX,oBAAmB;IACnB,cAAa;IJdf,yCAA0C;IAC1C,yCIciD;IJbjD,wCIaiD;IJZjD,uCIYiD;IJXjD,oCIWiD;IAC/C,gBAAe,EAgBhB;IJ1BD;MInBF;QJsBE,oDAAsD,EIuBrD,EAAA;IJpBD;MIzBF;QJ4BE,oDAAsD,EIiBrD,EAAA;IJdH;MI/BA;QJkCA,oDAAsD,EIWnD,EAAA;IJRH;MIrCA;QJyCA,oDAAsD,EIInD,EAAA;IJDH;MI5CA;QJgDA,oDAAsD,EIHnD,EAAA;IJMH;MInDA;QJuDA,oDAAsD,EIVnD,EAAA;IJaH;MI1DA;QJ6DA,oDAAsD,EIhBnD,EAAA;IA7CH;MHJE,4BGoCiC;MHpCN,gBAAgB;MAC3C,0BGmCiC;MHnCR,YAAY;MACpC,yBGkCgC;MHlCR,oBAAoB;MAC1C,uBGiC8B;MHjCR,aAAa;MAClC,sBGgC6B;MHhCR,4BAA4B;MAC7C,kBG+ByB;MH/BR;gEACqC;MAC9D,yCAA0C;MG8BtC,gBAAe;MACf,iBAAgB;MAChB,eAvCc;MJiBlB,yCAA0C;MAC1C,yCIsBmD;MJrBnD,wCIqBmD;MJpBnD,uCIoBmD;MJnBnD,oCImBmD,EAChD;MJlBH;QInBF;UJsBE,oDAAsD,EIenD,EAAA;MJZH;QIzBF;UJ4BE,oDAAsD,EISnD,EAAA;MJNL;QI/BA;UJkCA,oDAAsD,EIGjD,EAAA;MJAL;QIrCA;UJyCA,oDAAsD,EIJjD,EAAA;MJOL;QI5CA;UJgDA,oDAAsD,EIXjD,EAAA;MJcL;QInDA;UJuDA,oDAAsD,EIlBjD,EAAA;MJqBL;QI1DA;UJ6DA,oDAAsD,EIxBjD,EAAA;IAKD;MA1CJ;QA2CM,YAAW,EAEd,EAAA;EA7CH;IAgDI,oBAnDiB,EAoDlB;EAjDH;IAoDI,eAtDsB,EAuDvB;EArDH;IJaE,yCAA0C;IAC1C,wCI6CgD;IJ5ChD,uCI4CgD;IJ3ChD,sCI2CgD;IJ1ChD,mCI0CgD;IAC9C,aAAY;IACV,kBAAiB;IACjB,YAAW;IACX,oBAAmB;IACnB,YAAW;IACX,aAAY;IACZ,cAAa;IACb,wBAAuB;IACvB,cAAa;IACb,wBAAuB;IACvB,0BAdsB,EAsCzB;IJ3ED;MInBF;QJsBE,oDAAsD,EIwErD,EAAA;IJrED;MIzBF;QJ4BE,oDAAsD,EIkErD,EAAA;IJ/DH;MI/BA;QJkCA,oDAAsD,EI4DnD,EAAA;IJzDH;MIrCA;QJyCA,oDAAsD,EIqDnD,EAAA;IJlDH;MI5CA;QJgDA,oDAAsD,EI8CnD,EAAA;IJ3CH;MInDA;QJuDA,oDAAsD,EIuCnD,EAAA;IJpCH;MI1DA;QJ6DA,oDAAsD,EIiCnD,EAAA;IAtBG;MAxEN;QAyEQ,kBAAiB,EAqBtB,EAAA;IA9FH;MA6EI,eAAc;MACd,aAAY;MACZ,iBAAgB;MAChB,mBAAkB,EAWjB;MATC;QAlFN;UAmFQ,mBAAkB;UAClB,eAAc;UACd,UAAS;UACT,iBAAgB;UAChB,QAAM;UACN,WAAU,EAGb,EAAA;EA3FL;IJaE,yCAA0C;IAC1C,wCImFgD;IJlFhD,uCIkFgD;IJjFhD,sCIiFgD;IJhFhD,mCIgFgD;IAC9C,0BA1CwB;IA2CxB,mBAAkB;IAClB,oBA5CwB;IA6CxB,gBAAe,EAKhB;IJvFD;MInBF;QJsBE,oDAAsD,EIoFrD,EAAA;IJjFD;MIzBF;QJ4BE,oDAAsD,EI8ErD,EAAA;IJ3EH;MI/BA;QJkCA,oDAAsD,EIwEnD,EAAA;IJrEH;MIrCA;QJyCA,oDAAsD,EIiEnD,EAAA;IJ9DH;MI5CA;QJgDA,oDAAsD,EI0DnD,EAAA;IJvDH;MInDA;QJuDA,oDAAsD,EImDnD,EAAA;IJhDH;MI1DA;QJ6DA,oDAAsD,EI6CnD,EAAA;IA1GH;MJaE,yCAA0C;MAC1C,wCI0FkD;MJzFlD,uCIyFkD;MJxFlD,sCIwFkD;MJvFlD,mCIuFkD,EAC/C;MJtFH;QInBF;UJsBE,oDAAsD,EImFnD,EAAA;MJhFH;QIzBF;UJ4BE,oDAAsD,EI6EnD,EAAA;MJ1EL;QI/BA;UJkCA,oDAAsD,EIuEjD,EAAA;MJpEL;QIrCA;UJyCA,oDAAsD,EIgEjD,EAAA;MJ7DL;QI5CA;UJgDA,oDAAsD,EIyDjD,EAAA;MJtDL;QInDA;UJuDA,oDAAsD,EIkDjD,EAAA;MJ/CL;QI1DA;UJ6DA,oDAAsD,EI4CjD,EAAA;;AC9GL;EAKI,YAAW;EACX,YAAW,EACZ;;ACNH;EAEE,cAAa;EAEb,oBRAqB;EQCrB,kBAAiB,EAuDlB;EA5DD;IAQI,mBAAkB;IAClB,YAAW,EACZ;EAVH;IAaI,YAAW;IACX,aAAY;IACZ,mBAAkB;IAClB,cAAa;IACb,wBAAuB;IACvB,oBAAmB,EACpB;EAnBH;IAsBI,YAAW,EACZ;EAvBH;IA0BI,cAAa;IACb,wBAAuB,EACxB;EA5BH;IA+BI,YAAW;IACX,gBAAe;IACf,yCAA0C,EAM3C;IAHC;MApCJ;QAqCM,eAAc,EAEjB,EAAA;EAvCH;IA0CI,oBA3CwB;IA4CxB,cAAa;IACb,wBAAuB;IACvB,oBAAmB;IACnB,iBAAgB;IAChB,mBAAkB,EAMnB;IArDH;MAkDM,aAAY,EACb;EAnDL;IAwDI,cAAa;IACb,wBAAuB;IACvB,wBAAuB,EACxB;;ACtDH;EAEI,aAAY;EACZ,iBAAgB;ENRlB,4BMS+B;ENTJ,gBAAgB;EAC3C,0BMQ+B;ENRN,YAAY;EACpC,yBMO8B;ENPN,oBAAoB;EAC1C,uBMM4B;ENNN,aAAa;EAClC,sBMK2B;ENLN,4BAA4B;EAC7C,kBMIuB;ENJN;gEACqC;EAC9D,yCAA0C,EMGzC;;AALH;EAQI,cAAa;EACb,wBAAuB;EACvB,oBAAmB,EACpB;;AAXH;EAcI,YAAW;EACX,4BAAqC;EACrC,+BAAwC;EACxC,eAAc,EACf;;ACdH;EACI,cAAa;EACb,wBAAuB;ERMzB,yCAA0C;EAC1C,wCQNgD;EROhD,uCQPgD;ERQhD,sCQRgD;ERShD,mCQTgD,EACjD;ERUC;IQdF;MRiBE,oDAAsD,EQbvD,EAAA;ERgBC;IQpBF;MRuBE,oDAAsD,EQnBvD,EAAA;ERsBD;IQ1BA;MR6BA,oDAAsD,EQzBrD,EAAA;ER4BD;IQhCA;MRoCA,oDAAsD,EQhCrD,EAAA;ERmCD;IQvCA;MR2CA,oDAAsD,EQvCrD,EAAA;ER0CD;IQ9CA;MRkDA,oDAAsD,EQ9CrD,EAAA;ERiDD;IQrDA;MRwDA,oDAAsD,EQpDrD,EAAA;;AAGD;EACE,mBAAkB,EACnB;;AAED;ERHE,+CAA0C;EAC1C,8CQGoD;ERFpD,6CQEoD;ERDpD,4CQCoD;ERApD,yCQAoD,EACrD;ERCC;IQHF;MRME,oDAAsD,EQJvD,EAAA;EROC;IQTF;MRYE,oDAAsD,EQVvD,EAAA;ERaD;IQfA;MRkBA,oDAAsD,EQhBrD,EAAA;ERmBD;IQrBA;MRyBA,oDAAsD,EQvBrD,EAAA;ER0BD;IQ5BA;MRgCA,oDAAsD,EQ9BrD,EAAA;ERiCD;IQnCA;MRuCA,oDAAsD,EQrCrD,EAAA;ERwCD;IQ1CA;MR6CA,oDAAsD,EQ3CrD,EAAA;;AAED;EACE,YAAW;EPzBX,4BO0B6B;EP1BF,gBAAgB;EAC3C,0BOyB6B;EPzBJ,YAAY;EACpC,yBOwB4B;EPxBJ,oBAAoB;EAC1C,uBOuB0B;EPvBJ,aAAa;EAClC,sBOsByB;EPtBJ,4BAA4B;EAC7C,kBOqBqB;EPrBJ;gEACqC;EAC9D,yCAA0C;EOoB1C,gBAAe,EAChB;;AAED;EACE,YAAW,EACZ;;AAED;EAEE,YAAW,EACZ;;AAED;EAEA,aAAY,EAEX;;AAED;ER5BE,uCAA0C;EAC1C,sCQ4B4C;ER3B5C,qCQ2B4C;ER1B5C,oCQ0B4C;ERzB5C,iCQyB4C,EAC7C;ERxBC;IQsBF;MRnBE,oDAAsD,EQqBvD,EAAA;ERlBC;IQgBF;MRbE,oDAAsD,EQevD,EAAA;ERZD;IQUA;MRPA,oDAAsD,EQSrD,EAAA;ERND;IQIA;MRAA,oDAAsD,EQErD,EAAA;ERCD;IQHA;MROA,oDAAsD,EQLrD,EAAA;ERQD;IQVA;MRcA,oDAAsD,EQZrD,EAAA;EReD;IQjBA;MRoBA,oDAAsD,EQlBrD,EAAA;;AAED;EACE,YAAW,EACZ;;AAGD;ERrCE,yCAA0C;EAC1C,wCQqC8C;ERpC9C,uCQoC8C;ERnC9C,sCQmC8C;ERlC9C,mCQkC8C,EAC/C;ERjCC;IQ+BF;MR5BE,oDAAsD,EQ8BvD,EAAA;ER3BC;IQyBF;MRtBE,oDAAsD,EQwBvD,EAAA;ERrBD;IQmBA;MRhBA,oDAAsD,EQkBrD,EAAA;ERfD;IQaA;MRTA,oDAAsD,EQWrD,EAAA;ERRD;IQMA;MRFA,oDAAsD,EQIrD,EAAA;ERDD;IQDA;MRKA,oDAAsD,EQHrD,EAAA;ERMD;IQRA;MRWA,oDAAsD,EQTrD,EAAA;;AAID;ER3CE,yCAA0C;EAC1C,wCQ2C8C;ER1C9C,uCQ0C8C;ERzC9C,sCQyC8C;ERxC9C,mCQwC8C,EAC/C;ERvCC;IQqCF;MRlCE,oDAAsD,EQoCvD,EAAA;ERjCC;IQ+BF;MR5BE,oDAAsD,EQ8BvD,EAAA;ER3BD;IQyBA;MRtBA,oDAAsD,EQwBrD,EAAA;ERrBD;IQmBA;MRfA,oDAAsD,EQiBrD,EAAA;ERdD;IQYA;MRRA,oDAAsD,EQUrD,EAAA;ERPD;IQKA;MRDA,oDAAsD,EQGrD,EAAA;ERAD;IQFA;MRKA,oDAAsD,EQHrD,EAAA;;AAED;ER/CE,yCAA0C;EAC1C,wCQ+C8C;ER9C9C,uCQ8C8C;ER7C9C,sCQ6C8C;ER5C9C,mCQ4C8C,EAC/C;ER3CC;IQyCF;MRtCE,oDAAsD,EQwCvD,EAAA;ERrCC;IQmCF;MRhCE,oDAAsD,EQkCvD,EAAA;ER/BD;IQ6BA;MR1BA,oDAAsD,EQ4BrD,EAAA;ERzBD;IQuBA;MRnBA,oDAAsD,EQqBrD,EAAA;ERlBD;IQgBA;MRZA,oDAAsD,EQcrD,EAAA;ERXD;IQSA;MRLA,oDAAsD,EQOrD,EAAA;ERJD;IQEA;MRCA,oDAAsD,EQCrD,EAAA;;AAED;EACE,cAAa;EACb,gBAAe,EAChB;;AAKD;ER3DE,yCAA0C;EAC1C,wCQ2D4C;ER1D5C,uCQ0D4C;ERzD5C,sCQyD4C;ERxD5C,mCQwD4C,EAC7C;ERvDC;IQqDF;MRlDE,oDAAsD,EQoDvD,EAAA;ERjDC;IQ+CF;MR5CE,oDAAsD,EQ8CvD,EAAA;ER3CD;IQyCA;MRtCA,oDAAsD,EQwCrD,EAAA;ERrCD;IQmCA;MR/BA,oDAAsD,EQiCrD,EAAA;ER9BD;IQ4BA;MRxBA,oDAAsD,EQ0BrD,EAAA;ERvBD;IQqBA;MRjBA,oDAAsD,EQmBrD,EAAA;ERhBD;IQcA;MRXA,oDAAsD,EQarD,EAAA;;AAED;EACA,cAAa,EACZ;;AAED;ERnEE,yCAA0C;EAC1C,wCQmE4C;ERlE5C,uCQkE4C;ERjE5C,sCQiE4C;ERhE5C,mCQgE4C,EAC7C;ER/DC;IQ6DF;MR1DE,oDAAsD,EQ4DvD,EAAA;ERzDC;IQuDF;MRpDE,oDAAsD,EQsDvD,EAAA;ERnDD;IQiDA;MR9CA,oDAAsD,EQgDrD,EAAA;ER7CD;IQ2CA;MRvCA,oDAAsD,EQyCrD,EAAA;ERtCD;IQoCA;MRhCA,oDAAsD,EQkCrD,EAAA;ER/BD;IQ6BA;MRzBA,oDAAsD,EQ2BrD,EAAA;ERxBD;IQsBA;MRnBA,oDAAsD,EQqBrD,EAAA;;AAED;ERvEE,yCAA0C;EAC1C,wCQuE4C;ERtE5C,uCQsE4C;ERrE5C,sCQqE4C;ERpE5C,mCQoE4C;EAC9C,oBAAoB;EACpB,oBAAmB,EAElB;ERtEC;IQiEF;MR9DE,oDAAsD,EQmEvD,EAAA;ERhEC;IQ2DF;MRxDE,oDAAsD,EQ6DvD,EAAA;ER1DD;IQqDA;MRlDA,oDAAsD,EQuDrD,EAAA;ERpDD;IQ+CA;MR3CA,oDAAsD,EQgDrD,EAAA;ER7CD;IQwCA;MRpCA,oDAAsD,EQyCrD,EAAA;ERtCD;IQiCA;MR7BA,oDAAsD,EQkCrD,EAAA;ER/BD;IQ0BA;MRvBA,oDAAsD,EQ4BrD,EAAA;;AAED;ER9EE,yCAA0C;EAC1C,wCQ8E8C;ER7E9C,uCQ6E8C;ER5E9C,sCQ4E8C;ER3E9C,mCQ2E8C,EAC/C;ER1EC;IQwEF;MRrEE,oDAAsD,EQuEvD,EAAA;ERpEC;IQkEF;MR/DE,oDAAsD,EQiEvD,EAAA;ER9DD;IQ4DA;MRzDA,oDAAsD,EQ2DrD,EAAA;ERxDD;IQsDA;MRlDA,oDAAsD,EQoDrD,EAAA;ERjDD;IQ+CA;MR3CA,oDAAsD,EQ6CrD,EAAA;ER1CD;IQwCA;MRpCA,oDAAsD,EQsCrD,EAAA;ERnCD;IQiCA;MR9BA,oDAAsD,EQgCrD,EAAA;;AAED;EACA,qBAAoB,EAEnB;;AV9ED;EACE,UAAS;EACT,WAAU;EACV,oBA1BuB;EFDzB,6BE4BwB;EF5BM,qCAAqC;EAChE,0BE2BqB;EF3BM,kBAAkB;EAC5C,yBE0BoB;EF1BM,uBAAuB;EAChD,wBEyBmB;EFzBM,kBAAkB;EACxC,qBEwBgB;EACtB,YAAW;EACX,mBAAiB,EAuClB;EA7CD;IAWI,yDAjC2D;IAkC3D,eApCqB;IAqCrB,mBAAkB;IAClB,iBAAgB,EACjB;EAfH;IAkBI,yDAvC6D;IAwC7D,eA5CoB;IA6CpB,iBAAgB,EACjB;EArBH;IAwBI,mBAAiB,EAElB;EA1BH;IAiCI,aAAY;IACZ,YAAW;IACX,aAAY;IACZ,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,OAAM;IACN,SAAQ;IACR,oBAAmB;IACnB,cAAa;IACb,yCAA0C,EAC3C","file":"main.scss","sourcesContent":["@mixin css-fadein($t) {\n-webkit-animation: fadein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: fadein $t; /* Firefox < 16 */\n    -ms-animation: fadein $t; /* Internet Explorer */\n     -o-animation: fadein $t; /* Opera < 12.1 */\n        animation: fadein $t;\n}\n\n\n@keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n",".Section {\n  background-color: $section-color;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n\n  h1 {\n    text-align: center;\n  }\n\n  p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center;\n  }\n}\n","$global-p-color: #916969;\n$global-h1-color: #ffffff;\n$global-bg-color: #f1f1f1;\n$global-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;\n$global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;\n$section-color: #dbd7d7;\n$p-section-color: #111111;\n\n@import './helpers/Animation_Mixins.scss';\n@import './helpers/Transform_Mixins.scss';\n@import './helpers/Display.scss';\n@import './helpers/User_Events.scss';\n\n@import './components/Section.scss';\n@import './components/Subsection.scss';\n@import './components/MenuBarIcon.scss';\n@import './components/MenuBar.scss';\n@import './components/MainContainer.scss';\n@import './components/NavBar.scss';\n@import './components/SmoothScroll.scss';\n@import './components/Intro.scss';\n\n@import './components/Company.scss';\n@import './components/_Graphs.scss';\n\nbody {\n  margin: 0;\n  padding: 0;\n  background: $global-bg-color;\n  @include css-fadein(3s);\n  width: 100%;\n  overflow-x:hidden;\n\n\n\n  h1 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 200;\n  }\n\n  p {\n    font-family: $global-p-font-stack;\n    color: $global-p-color;\n    font-weight: 300;\n  }\n\n  .wrapper {\n    overflow-x:hidden;\n\n  }\n\n  @media all and (max-width: 1200px) {\n\n  }\n\n  .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n  }\n}\n","$menu-bar-icon-color: #f7f5f5;\n$transition-time: 0.7s;\n$transition-prop: all;\n$transition-easing: ease;\n$g-time: 0.75s;\n$right-transition: 25vw;\n$mobile-right-transition: 75vw;\n\n@import '../helpers/Transform_Mixins.scss';\n\n\n.MenuBarIcon {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  border: none;\n  color: $menu-bar-icon-color;\n  background: transparent;\n  outline: none;\n  @include css-user-select(none);\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  z-index: -10;\n  display: block;\n\n  @media all and (max-width: 1200px) {\n    z-index: 99999;\n  }\n}\n\n.MenuBarIcon:hover > div {\n  @include css-transition($transition-prop, 1.1s, $transition-easing);\n  background: #bca293;\n}\n\n.MenuBarIcon div {\n  @include css-transition($transition-prop, 1.5s, $transition-easing);\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px;\n}\n\n.MenuBarIcon:hover > #topBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/\n}\n\n.MenuBarIcon:hover > #bottomBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/\n\n}\n\n.MenuBarIcon:hover > #middleBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/\n}\n\n.clicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x($right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n  }\n  opacity: 0;\n}\n\n.unclicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x(0vw);\n  opacity: 1;\n}\n","$g-time: 0.4s;\n\n@mixin css-linear-gradient($first, $second) {\n  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */\n  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */\n  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */\n  background: linear-gradient($first, $second); /* Standard syntax */\n}\n\n@mixin origin($o) {\n  -webkit-transform-origin: $o;\n  -ms-tranform-origin: $o;\n  -moz-transform-origin: $o;\n  -o-transform-origin: $o;\n  transform-origin: $o;\n}\n\n@mixin css-transition($prop, $time, $easing) {\n  -webkit-transition: $prop 0.5s ease-in-out;\n  -moz-transition: $prop, $time, $easing;\n  -ms-transition: $prop, $time, $easing;\n  -o-transition: $prop, $time, $easing;\n  transition: $prop, $time, $easing;\n\n  @media only screen\nand (min-device-width : 320px)\nand (max-device-width : 568px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n  }\n\n  @media only screen\nand (min-device-width : 414px)\nand (max-device-width : 736px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 375px)\nand (max-device-width : 667px) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1){\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 2) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n}\n\n@mixin css-transform-perspective($p) {\n  -ms-transform: perspective($p); /* IE 9 */\n  -moz-transform: perspective($p);\n  -webkit-transform: perspective($p); /* Safari */\n  -o-transform: perspective($p);\n  transform: perspective($p);\n}\n\n@mixin css-transform-scale($t) {\n  -ms-transform: scale($t); /* IE 9 */\n  -moz-transform: scale($t);\n  -webkit-transform: scale($t); /* Safari */\n  -o-transform: scale($t);\n  transform: scale($t);\n}\n\n@mixin css-transform-translate-x($t) {\n  -ms-transform: translate3D($t, 0, 0); /* IE 9 */\n  -moz-transform: translate3D($t, 0, 0);\n  -webkit-transform: translate3D($t, 0, 0); /* Safari */\n  -o-transform: translate3D($t, 0, 0);\n  transform: translate3D($t, 0, 0);\n\n}\n\n@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {\n  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */\n  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n}\n\n@mixin css-transform-rotate-and-translate-down($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate($a) {\n  -ms-transform: rotate($a); /* IE 9 */\n  -moz-transform: rotate($a); /* Safari */\n  -webkit-transform: rotate($a); /* Safari */\n  -o-transform: rotate($a);\n  transform: rotate($a);\n}\n\n@mixin css-transform-rotate-x($a) {\n  -ms-transform: rotateX($a); /* IE 9 */\n  -moz-transform: rotateX($a); /* Safari */\n  -webkit-transform: rotateX($a); /* Safari */\n  -o-transform: rotateX($a);\n  transform: rotateX($a);\n}\n\n\n@mixin css-transform-rotate-y($a) {\n  -ms-transform: rotateY($a); /* IE 9 */\n  -moz-transform: rotateY($a); /* Safari */\n  -webkit-transform: rotateY($a); /* Safari */\n  -o-transform: rotateY($a);\n  transform: rotateY($a);\n}\n\n@mixin css-transform-rotate-z($a) {\n  -ms-transform: rotateZ($a); /* IE 9 */\n  -moz-transform: rotateZ($a); /* Safari */\n  -webkit-transform: rotateZ($a); /* Safari */\n  -o-transform: rotateZ($a);\n  transform: rotateZ($a);\n}\n\n@mixin css-transform-squash($a) {\n  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */\n  -moz-transform: scaleY($a) scaleX($a); /* Safari */\n  -webkit-transform: scaleY($a) scaleX($a); /* Safari */\n  -o-transform: scaleY($a) scaleX($a);\n  transform: scaleY($a) scaleX($a);\n}\n\n\n@mixin css-transform-open-book($s, $r, $t) {\n  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */\n  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n}\n\n@mixin css-transform-skew-x($transformation) {\n  -ms-transform: skewX($transformation); /* IE 9 */\n  -moz-transform: skewX($transformation);  /* Safari */\n  -webkit-transform: skewX($transformation);  /* Safari */\n  -o-transform: skewX($transformation);\n  transform: skewX($transformation);\n}\n\n@mixin css-transform-skew-y($transformation) {\n  -ms-transform: skewY($transformation); /* IE 9 */\n  -moz-transform: skewY($transformation);  /* Safari */\n  -webkit-transform: skewY($transformation);  /* Safari */\n  -o-transform: skewY($transformation);\n  transform: skewY($transformation);\n}\n","@mixin css-user-select($n){\n  -webkit-touch-callout: $n; /* iOS Safari */\n  -webkit-user-select: $n; /* Safari */\n   -khtml-user-select: $n; /* Konqueror HTML */\n     -moz-user-select: $n; /* Firefox */\n      -ms-user-select: $n; /* Internet Explorer/Edge */\n          user-select: $n; /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n}\n","$transition-time: 0.2s;\n$transition-prop: transform;\n$transition-easing: ease-in-out;\n$bg-color: #7a6772;\n$menu-button-color: #e09090;\n\n.MenuBar {\n    @include css-transition(all, $transition-time, $transition-easing);\n    position: fixed;\n    top: 0;\n    height: 100vh;\n    left: 0;\n    width: 100vw;\n    background: $bg-color;\n\n    @media all and (max-width: 1200px) {\n    }\n\n    p {\n        z-index: 999999;\n        color: white;\n        font-weight: 900px;\n        padding: 5vh;\n        margin-bottom: 5vh;\n        @include css-user-select(none);\n        cursor: pointer;\n    }\n\n    .smooth-scroll {\n      display: block;\n      position: relative;\n      top: 0;\n      width: 100vw;\n      height: 5vh;\n      background: transparent;\n      z-index: 9999;\n    }\n}\n\n.MenuBarHidden {\n\n  @media all and (min-width: 1200px) {\n\n  }\n}\n\n\n.menu-bar-item {\n  text-align: left;\n}\n\n\n.menuButton {\n  @include css-transition(all, 0.5s, ease-in-out);\n  border: none;\n    margin: 20px 20px;\n    width: 60px;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: block;\n    outline: none;\n    background: transparent;\n    border: 2px solid $menu-button-color;\n\n    @media all and (max-width: 1200px) {\n    }\n\n  p {\n    color: #9a9aa2;\n    padding: 0px;\n    font-weight: 200;\n    margin: 0;\n    padding-left: 50px;\n    text-align: center;\n    white-space: nowrap;\n\n    @media all and (max-width: 1200px) {\n    }\n\n  }\n\n\n}\n\n.menuButton:hover {\n  @include css-transition(all, 0.5s, ease-in-out);\n  border: 2px solid $menu-button-color;\n  border-radius: 10%;\n  background: $menu-button-color;\n  cursor: pointer;\n\n  > p {\n    @include css-transition(all, 0.5s, ease-in-out);\n  }\n}\n","$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;\n$main-container-color: #f7f5f5;\n$live-stream-text-color: #a29393;\n$transition-time: 0.35s;\n$transition-prop: transform;\n$transition-easing: cubic-bezier(.94,.06,.32,.95);\n$right-transition: 25vw;\n$mobile-right-transition: 75vw;\n\n.MainContainer {\n  background: $main-container-color;\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  position: relative;\n  width: 100%;\n  overflow-x:hidden;\n  /*-webkit-overflow-scrolling: touch;*/\n\n  @media all and (max-width: 1200px) {\n    z-index: 9999;\n  }\n\n}\n\n.MainContainer:hover {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n}\n\n.menuBarOpen {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @media all and (max-width: 1200px) {\n  @include css-transform-translate-x($right-transition);\n  }\n    @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n    }\n}\n\n.menuBarClose {\n  @include css-transition($transition-prop, $transition-time, linear);\n  @include css-transform-translate-x(0vw);\n  @media all and (max-width: 1200px) {\n\n  }\n}\n","$height: 8vh;\n$text-color: #ac6e6e;\n$hover-color: #ffbb98;\n$text-hover-color: #ffffff;\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: $height;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1;\n  @media all and (max-width: 1200px) {\n    display: none;\n  }\n\n  .nav-bar-item {\n    text-align: center;\n  }\n\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    @include css-transition(all, 0.35s, ease-in-out);\n    cursor: pointer;\n\n    p {\n      @include css-user-select(none);\n      cursor: pointer;\n      font-weight: 400;\n      color: $text-color;\n      @include css-transition(all, 0.35s, ease-in-out);\n    }\n\n\n\n\n    @media all and (max-width: 1200px) {\n      z-index: -1;\n    }\n  }\n\n  .smooth-scroll:hover {\n    background: $hover-color;\n  }\n\n  .smooth-scroll:hover p {\n    color: $text-hover-color;\n  }\n\n\n  $nav-button-color: #e09090;\n\n  .navButton {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: none;\n      margin: 20px 20px;\n      width: 12em;\n      border-radius: 100%;\n      width: 20px;\n      height: 20px;\n      display: flex;\n      justify-content: center;\n      outline: none;\n      background: transparent;\n      border: 2px solid $nav-button-color;\n\n      @media all and (max-width: 1200px) {\n        margin: 20px 20px;\n      }\n\n    p {\n    color: #9a9aa2;\n    padding: 1em;\n    font-weight: 200;\n    text-align: center;\n\n      @media all and (max-width: 1200px) {\n        position: absolute;\n        color: #9a9aa2;\n        margin: 0;\n        margin-left: 3em;\n        left:0;\n        padding: 0;\n      }\n\n    }\n\n\n  }\n\n  .navButton:hover {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: 2px solid $nav-button-color;\n    border-radius: 10%;\n    background: $nav-button-color;\n    cursor: pointer;\n\n    > p {\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n  }\n\n}\n\n.NavBarHidden {\n  @media all and (max-width: 1200px) {\n  }\n}\n",".smooth-scroll {\n\n\n\n  .smooth-scroll-container {\n    width: 100%;\n    height: 8vh;\n  }\n}\n","$intro-button-color: #ff7970;\n.Intro {\n\n  height: 200vh;\n\n  background: $section-color;\n  padding-top: 25vh;\n\n  p {\n    text-align: center;\n    width: 100%;\n  }\n\n  .text-block {\n    width: 100%;\n    height: 50vh;\n    position: relative;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .description-block {\n    width: 50vw;\n  }\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: center;\n  }\n\n  .smooth-scroll-container {\n    width: 10vw;\n    cursor: pointer;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n\n\n    @media all and (max-width: 1200px) {\n      width: 33.33vw;\n    }\n  }\n\n  .begin-item {\n    background: $intro-button-color;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    z-index: 9999999;\n    border-radius: 5px;\n\n    p {\n      color: white;\n    }\n\n  }\n\n  #CompaniesGraph {\n    display: flex;\n    justify-content: center;\n    align-items: flex-start;\n  }\n}\n","$section-color: #f1f1f1;\n$start-button-color: #faa187;\n$fg-color: #dbd7d7;\n$bg-color: #ffffff;\n$border-width: 3px;\n\n.Company {\n  p {\n    color: black;\n    font-weight: 300;\n    @include css-user-select(none);\n  }\n\n  .images {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .section-title {\n    width: 50vw;\n    border-top: $border-width solid white;\n    border-bottom: $border-width solid white;\n    display: block;\n  }\n}\n","$first-color: #9bb5b5;\n$second-color: #eadab9;\n$blue-color: #637799;\n$red-color: #e0935c;\n$orange-color: #e0935c;\n$yellow-color: #efce69;\n$black-color: #262522;\n$white-color: #f9f6ef;\n\n\n.graph {\n    display: flex;\n    justify-content: center;\n    @include css-transition(all, 0.5s, ease-in-out);\n}\n\n\n.d3container {\n  border-radius: 50%;\n}\n\n.textGroup {\n  @include css-transition(transform, 0.9s ,ease-in-out);\n}\n\n.companyText {\n  fill: white;\n  @include css-user-select(none);\n  cursor: pointer;\n}\n\n.companyText:hover {\n  fill: black;\n}\n\n.firstWave:hover {\n\n  stroke: red;\n}\n\n.secondWave:hover {\n\nstroke: blue;\n\n}\n\npath {\n  @include css-transition(d, 0.9s ,ease-in-out);\n}\n\npath:hover {\n  stroke: red;\n}\n\n\n.graph rect {\n  @include css-transition(all, 0.9s ,ease-in-out);\n}\n\n\n\n.LinearReact {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6;\n}\n\n\n\n\npath {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\n.LinearRect:hover {\nfill: #c7bca5;\n}\n\n.kernel {\n@include css-transition(all, 0.9s, ease-in-out);\n}\n\n.kernel:hover + .core {\n@include css-transition(all, 0.5s, ease-in-out);\n/*stroke: #1c1c1c;*/\nstroke-width: 0.0px;\n\n}\n\n.core {\n  @include css-transition(all, 0.5s, ease-in-out);\n}\n\n.shell {\npointer-events: none;\n\n}\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -34030,7 +34054,7 @@ var debug = __webpack_require__(29)('engine.io-client:socket');
 var index = __webpack_require__(92);
 var parser = __webpack_require__(19);
 var parseuri = __webpack_require__(94);
-var parsejson = __webpack_require__(244);
+var parsejson = __webpack_require__(245);
 var parseqs = __webpack_require__(43);
 
 /**
@@ -35448,7 +35472,7 @@ var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 var NodeWebSocket;
 if (typeof window === 'undefined') {
   try {
-    NodeWebSocket = __webpack_require__(325);
+    NodeWebSocket = __webpack_require__(326);
   } catch (e) { }
 }
 
@@ -37071,13 +37095,25 @@ module.exports = [
 
 /***/ }),
 /* 243 */
+/***/ (function(module, exports) {
+
+module.exports = [
+	{
+		"title": "Informant",
+		"subtitle": "Informant is a social metrics dashboard. Wait what?",
+		"description": "Yeah, it's just this cool tool to keep watch on what people are feeling about companies."
+	}
+];
+
+/***/ }),
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! JSON v3.3.2 | http://bestiejs.github.io/json3 | Copyright 2012-2014, Kit Cambridge | http://kit.mit-license.org */
 ;(function () {
   // Detect the `define` function exposed by asynchronous module loaders. The
   // strict `define` check is necessary for compatibility with `r.js`.
-  var isLoader = "function" === "function" && __webpack_require__(323);
+  var isLoader = "function" === "function" && __webpack_require__(324);
 
   // A set of types used to distinguish objects from primitives.
   var objectTypes = {
@@ -37980,7 +38016,7 @@ module.exports = [
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(132)(module), __webpack_require__(7)))
 
 /***/ }),
-/* 244 */
+/* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -38018,13 +38054,13 @@ module.exports = function parsejson(data) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 245 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(246);
+module.exports = __webpack_require__(247);
 
 /***/ }),
-/* 246 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -38033,8 +38069,8 @@ module.exports = __webpack_require__(246);
  * @author yiminghe@gmail.com
  */
 
-var util = __webpack_require__(248);
-var parser = __webpack_require__(247);
+var util = __webpack_require__(249);
+var parser = __webpack_require__(248);
 
 var EXPANDO_SELECTOR_KEY = '_ks_data_selector_id_',
   caches = {},
@@ -38727,7 +38763,7 @@ select.version = '@VERSION@';
  */
 
 /***/ }),
-/* 247 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -39936,7 +39972,7 @@ if (true) {
 }
 
 /***/ }),
-/* 248 */
+/* 249 */
 /***/ (function(module, exports) {
 
 /**
@@ -40287,7 +40323,7 @@ var util = module.exports = {
 };
 
 /***/ }),
-/* 249 */
+/* 250 */
 /***/ (function(module, exports) {
 
 var Window = {
@@ -40302,7 +40338,7 @@ module.exports = Window
 
 
 /***/ }),
-/* 250 */
+/* 251 */
 /***/ (function(module, exports) {
 
 var anim = {
@@ -40334,7 +40370,7 @@ module.exports = anim
 
 
 /***/ }),
-/* 251 */
+/* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Element = __webpack_require__(95)
@@ -40362,7 +40398,7 @@ module.exports = mixin
 
 
 /***/ }),
-/* 252 */
+/* 253 */
 /***/ (function(module, exports) {
 
 function assign (dest) {
@@ -40384,7 +40420,7 @@ module.exports = assign
 
 
 /***/ }),
-/* 253 */
+/* 254 */
 /***/ (function(module, exports) {
 
 function isString (value) {
@@ -40395,7 +40431,7 @@ module.exports = isString
 
 
 /***/ }),
-/* 254 */
+/* 255 */
 /***/ (function(module, exports) {
 
 function isUndefined (value) {
@@ -40406,7 +40442,7 @@ module.exports = isUndefined
 
 
 /***/ }),
-/* 255 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var camelCase = __webpack_require__(96)
@@ -40432,7 +40468,7 @@ module.exports = styleCamelCase
 
 
 /***/ }),
-/* 256 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40474,7 +40510,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 257 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40495,9 +40531,9 @@ module.exports = AutoFocusUtils;
 var EventConstants = __webpack_require__(12);
 var EventPropagators = __webpack_require__(24);
 var ExecutionEnvironment = __webpack_require__(4);
-var FallbackCompositionState = __webpack_require__(265);
-var SyntheticCompositionEvent = __webpack_require__(297);
-var SyntheticInputEvent = __webpack_require__(300);
+var FallbackCompositionState = __webpack_require__(266);
+var SyntheticCompositionEvent = __webpack_require__(298);
+var SyntheticInputEvent = __webpack_require__(301);
 
 var keyOf = __webpack_require__(14);
 
@@ -40885,7 +40921,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 258 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40908,7 +40944,7 @@ var ExecutionEnvironment = __webpack_require__(4);
 var ReactPerf = __webpack_require__(9);
 
 var camelizeStyleName = __webpack_require__(167);
-var dangerousStyleValue = __webpack_require__(305);
+var dangerousStyleValue = __webpack_require__(306);
 var hyphenateStyleName = __webpack_require__(172);
 var memoizeStringOnly = __webpack_require__(176);
 var warning = __webpack_require__(3);
@@ -41067,7 +41103,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 259 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41394,7 +41430,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 260 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41423,7 +41459,7 @@ var ClientReactRootIndex = {
 module.exports = ClientReactRootIndex;
 
 /***/ }),
-/* 261 */
+/* 262 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41575,7 +41611,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 262 */
+/* 263 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41608,7 +41644,7 @@ var DefaultEventPluginOrder = [keyOf({ ResponderEventPlugin: null }), keyOf({ Si
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 263 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41738,7 +41774,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 264 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41947,7 +41983,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 265 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42048,7 +42084,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 266 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42284,7 +42320,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 267 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42302,11 +42338,11 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 var ReactDOM = __webpack_require__(104);
-var ReactDOMServer = __webpack_require__(277);
-var ReactIsomorphic = __webpack_require__(284);
+var ReactDOMServer = __webpack_require__(278);
+var ReactIsomorphic = __webpack_require__(285);
 
 var assign = __webpack_require__(2);
-var deprecated = __webpack_require__(306);
+var deprecated = __webpack_require__(307);
 
 // `version` will be added here by ReactIsomorphic.
 var React = {};
@@ -42330,7 +42366,7 @@ React.__SECRET_DOM_SERVER_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactDOMServer;
 module.exports = React;
 
 /***/ }),
-/* 268 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42373,7 +42409,7 @@ module.exports = ReactBrowserComponentMixin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 269 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -42502,7 +42538,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 270 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43203,7 +43239,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 271 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43259,7 +43295,7 @@ var ReactDOMButton = {
 module.exports = ReactDOMButton;
 
 /***/ }),
-/* 272 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43279,20 +43315,20 @@ module.exports = ReactDOMButton;
 
 
 
-var AutoFocusUtils = __webpack_require__(256);
-var CSSPropertyOperations = __webpack_require__(258);
+var AutoFocusUtils = __webpack_require__(257);
+var CSSPropertyOperations = __webpack_require__(259);
 var DOMProperty = __webpack_require__(16);
 var DOMPropertyOperations = __webpack_require__(46);
 var EventConstants = __webpack_require__(12);
 var ReactBrowserEventEmitter = __webpack_require__(31);
 var ReactComponentBrowserEnvironment = __webpack_require__(48);
-var ReactDOMButton = __webpack_require__(271);
-var ReactDOMInput = __webpack_require__(274);
-var ReactDOMOption = __webpack_require__(275);
+var ReactDOMButton = __webpack_require__(272);
+var ReactDOMInput = __webpack_require__(275);
+var ReactDOMOption = __webpack_require__(276);
 var ReactDOMSelect = __webpack_require__(106);
-var ReactDOMTextarea = __webpack_require__(278);
+var ReactDOMTextarea = __webpack_require__(279);
 var ReactMount = __webpack_require__(6);
-var ReactMultiChild = __webpack_require__(285);
+var ReactMultiChild = __webpack_require__(286);
 var ReactPerf = __webpack_require__(9);
 var ReactUpdateQueue = __webpack_require__(51);
 
@@ -44228,7 +44264,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 273 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44412,7 +44448,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 274 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44572,7 +44608,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 275 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44668,7 +44704,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 276 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44687,7 +44723,7 @@ module.exports = ReactDOMOption;
 
 var ExecutionEnvironment = __webpack_require__(4);
 
-var getNodeForCharacterOffset = __webpack_require__(309);
+var getNodeForCharacterOffset = __webpack_require__(310);
 var getTextContentAccessor = __webpack_require__(124);
 
 /**
@@ -44886,7 +44922,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 277 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44904,7 +44940,7 @@ module.exports = ReactDOMSelection;
 
 
 var ReactDefaultInjection = __webpack_require__(109);
-var ReactServerRendering = __webpack_require__(290);
+var ReactServerRendering = __webpack_require__(291);
 var ReactVersion = __webpack_require__(52);
 
 ReactDefaultInjection.inject();
@@ -44918,7 +44954,7 @@ var ReactDOMServer = {
 module.exports = ReactDOMServer;
 
 /***/ }),
-/* 278 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45038,7 +45074,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 279 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45057,7 +45093,7 @@ module.exports = ReactDOMTextarea;
 
 
 var DOMProperty = __webpack_require__(16);
-var ReactDefaultPerfAnalysis = __webpack_require__(280);
+var ReactDefaultPerfAnalysis = __webpack_require__(281);
 var ReactMount = __webpack_require__(6);
 var ReactPerf = __webpack_require__(9);
 
@@ -45281,7 +45317,7 @@ var ReactDefaultPerf = {
 module.exports = ReactDefaultPerf;
 
 /***/ }),
-/* 280 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45488,7 +45524,7 @@ var ReactDefaultPerfAnalysis = {
 module.exports = ReactDefaultPerfAnalysis;
 
 /***/ }),
-/* 281 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45532,7 +45568,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 282 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45749,7 +45785,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 283 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45793,7 +45829,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 284 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45813,14 +45849,14 @@ module.exports = ReactInjection;
 var ReactChildren = __webpack_require__(101);
 var ReactComponent = __webpack_require__(103);
 var ReactClass = __webpack_require__(102);
-var ReactDOMFactories = __webpack_require__(273);
+var ReactDOMFactories = __webpack_require__(274);
 var ReactElement = __webpack_require__(8);
 var ReactElementValidator = __webpack_require__(110);
 var ReactPropTypes = __webpack_require__(119);
 var ReactVersion = __webpack_require__(52);
 
 var assign = __webpack_require__(2);
-var onlyChild = __webpack_require__(310);
+var onlyChild = __webpack_require__(311);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
@@ -45874,7 +45910,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 285 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45897,9 +45933,9 @@ var ReactMultiChildUpdateTypes = __webpack_require__(116);
 
 var ReactCurrentOwner = __webpack_require__(13);
 var ReactReconciler = __webpack_require__(17);
-var ReactChildReconciler = __webpack_require__(269);
+var ReactChildReconciler = __webpack_require__(270);
 
-var flattenChildren = __webpack_require__(307);
+var flattenChildren = __webpack_require__(308);
 
 /**
  * Updating children of a component may trigger recursive updates. The depth is
@@ -46377,7 +46413,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 286 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46475,7 +46511,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 287 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46632,7 +46668,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 module.exports = ReactReconcileTransaction;
 
 /***/ }),
-/* 288 */
+/* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46649,7 +46685,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ReactOwner = __webpack_require__(286);
+var ReactOwner = __webpack_require__(287);
 
 var ReactRef = {};
 
@@ -46716,7 +46752,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 289 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46745,7 +46781,7 @@ var ReactServerBatchingStrategy = {
 module.exports = ReactServerBatchingStrategy;
 
 /***/ }),
-/* 290 */
+/* 291 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46766,8 +46802,8 @@ var ReactDefaultBatchingStrategy = __webpack_require__(108);
 var ReactElement = __webpack_require__(8);
 var ReactInstanceHandles = __webpack_require__(20);
 var ReactMarkupChecksum = __webpack_require__(115);
-var ReactServerBatchingStrategy = __webpack_require__(289);
-var ReactServerRenderingTransaction = __webpack_require__(291);
+var ReactServerBatchingStrategy = __webpack_require__(290);
+var ReactServerRenderingTransaction = __webpack_require__(292);
 var ReactUpdates = __webpack_require__(10);
 
 var emptyObject = __webpack_require__(22);
@@ -46835,7 +46871,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 291 */
+/* 292 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46928,7 +46964,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 module.exports = ReactServerRenderingTransaction;
 
 /***/ }),
-/* 292 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47061,7 +47097,7 @@ var SVGDOMPropertyConfig = {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 293 */
+/* 294 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47268,7 +47304,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 294 */
+/* 295 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47303,7 +47339,7 @@ var ServerReactRootIndex = {
 module.exports = ServerReactRootIndex;
 
 /***/ }),
-/* 295 */
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47324,15 +47360,15 @@ var EventConstants = __webpack_require__(12);
 var EventListener = __webpack_require__(70);
 var EventPropagators = __webpack_require__(24);
 var ReactMount = __webpack_require__(6);
-var SyntheticClipboardEvent = __webpack_require__(296);
+var SyntheticClipboardEvent = __webpack_require__(297);
 var SyntheticEvent = __webpack_require__(18);
-var SyntheticFocusEvent = __webpack_require__(299);
-var SyntheticKeyboardEvent = __webpack_require__(301);
+var SyntheticFocusEvent = __webpack_require__(300);
+var SyntheticKeyboardEvent = __webpack_require__(302);
 var SyntheticMouseEvent = __webpack_require__(34);
-var SyntheticDragEvent = __webpack_require__(298);
-var SyntheticTouchEvent = __webpack_require__(302);
+var SyntheticDragEvent = __webpack_require__(299);
+var SyntheticTouchEvent = __webpack_require__(303);
 var SyntheticUIEvent = __webpack_require__(26);
-var SyntheticWheelEvent = __webpack_require__(303);
+var SyntheticWheelEvent = __webpack_require__(304);
 
 var emptyFunction = __webpack_require__(11);
 var getEventCharCode = __webpack_require__(54);
@@ -47897,7 +47933,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 296 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47942,7 +47978,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 297 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47985,7 +48021,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 298 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48028,7 +48064,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 299 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48071,7 +48107,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 300 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48115,7 +48151,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 301 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48136,7 +48172,7 @@ module.exports = SyntheticInputEvent;
 var SyntheticUIEvent = __webpack_require__(26);
 
 var getEventCharCode = __webpack_require__(54);
-var getEventKey = __webpack_require__(308);
+var getEventKey = __webpack_require__(309);
 var getEventModifierState = __webpack_require__(55);
 
 /**
@@ -48206,7 +48242,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 302 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48258,7 +48294,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 303 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48319,7 +48355,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 304 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48367,7 +48403,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 305 */
+/* 306 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48428,7 +48464,7 @@ function dangerousStyleValue(name, value) {
 module.exports = dangerousStyleValue;
 
 /***/ }),
-/* 306 */
+/* 307 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48483,7 +48519,7 @@ module.exports = deprecated;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 307 */
+/* 308 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48538,7 +48574,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 308 */
+/* 309 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48647,7 +48683,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 309 */
+/* 310 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48726,7 +48762,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 310 */
+/* 311 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48766,7 +48802,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 311 */
+/* 312 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48798,7 +48834,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 312 */
+/* 313 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -48820,7 +48856,7 @@ var ReactMount = __webpack_require__(6);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 313 */
+/* 314 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -48828,7 +48864,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
  * Module dependencies.
  */
 
-var url = __webpack_require__(314);
+var url = __webpack_require__(315);
 var parser = __webpack_require__(64);
 var Manager = __webpack_require__(126);
 var debug = __webpack_require__(39)('socket.io-client');
@@ -48935,7 +48971,7 @@ exports.Socket = __webpack_require__(128);
 
 
 /***/ }),
-/* 314 */
+/* 315 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -49017,7 +49053,7 @@ function url (uri, loc) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 315 */
+/* 316 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -49223,7 +49259,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 316 */
+/* 317 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/*global Blob,File*/
@@ -49232,7 +49268,7 @@ function coerce(val) {
  * Module requirements
  */
 
-var isArray = __webpack_require__(319);
+var isArray = __webpack_require__(320);
 var isBuf = __webpack_require__(130);
 
 /**
@@ -49371,7 +49407,7 @@ exports.removeBlobs = function(data, callback) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
-/* 317 */
+/* 318 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -49381,7 +49417,7 @@ exports.removeBlobs = function(data, callback) {
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(318);
+exports = module.exports = __webpack_require__(319);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -49545,7 +49581,7 @@ function localstorage(){
 
 
 /***/ }),
-/* 318 */
+/* 319 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -49561,7 +49597,7 @@ exports.coerce = coerce;
 exports.disable = disable;
 exports.enable = enable;
 exports.enabled = enabled;
-exports.humanize = __webpack_require__(320);
+exports.humanize = __webpack_require__(321);
 
 /**
  * The currently active debug mode names, and names to skip.
@@ -49748,7 +49784,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 319 */
+/* 320 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -49757,7 +49793,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 320 */
+/* 321 */
 /***/ (function(module, exports) {
 
 /**
@@ -49888,7 +49924,7 @@ function plural(ms, n, name) {
 
 
 /***/ }),
-/* 321 */
+/* 322 */
 /***/ (function(module, exports) {
 
 
@@ -50000,7 +50036,7 @@ module.exports.stringify = stringify;
 module.exports.normalize = normalize;
 
 /***/ }),
-/* 322 */
+/* 323 */
 /***/ (function(module, exports) {
 
 module.exports = toArray
@@ -50019,7 +50055,7 @@ function toArray(list, index) {
 
 
 /***/ }),
-/* 323 */
+/* 324 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -50028,7 +50064,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 324 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/wtf8 v1.0.0 by @mathias */
@@ -50268,7 +50304,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(132)(module), __webpack_require__(7)))
 
 /***/ }),
-/* 325 */
+/* 326 */
 /***/ (function(module, exports) {
 
 /* (ignored) */

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import CompanyContainer from './CompanyContainer.jsx';
 import CompanyFactory from './CompanyFactory.jsx';
-import NavBar from './NavBar.jsx';
-import TopCompanies from './TopCompanies.jsx';
+import Intro from './Intro.jsx';
 
 
 class MainContainer extends Component {
@@ -24,13 +23,7 @@ class MainContainer extends Component {
 
     return (
         <div className={this.state.menuBarState}>
-          <NavBar infos={this.props.infos} companies={this.props.companies} open={this.props.open}/>
-
-          <CompanyContainer>
-            <div className={'Section'} id={this.props.id}>
-                <TopCompanies data={this.props.data} companies={this.props.companies}/>
-              </div>
-          </CompanyContainer>
+          <Intro data={this.props.data} companies={this.props.companies}/>
 
           <CompanyContainer>
             {this.props.companies.map((v, i) => (

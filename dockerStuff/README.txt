@@ -27,3 +27,4 @@ docker exec -it [NAME OF CONTAINER] bash
 Docker documentation for further commands:
 https://docs.docker.com/
 
+TODO: Connect containers using docker network

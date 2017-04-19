@@ -12,14 +12,11 @@ $bg-color: #ffffff;
   }
 
   p {
-    color: white;
+    color: black;
     font-weight: 300;
     @include css-user-select(none);
   }
 
-  h1 {
-    color: white;
-  }
 
   .StartContainer {
     display: flex;
@@ -39,7 +36,7 @@ $bg-color: #ffffff;
       width: 30%;
       height: 33.33vh;
       padding: 10px;
-      background-color: $bg-color;
+      background-color: $global-h1-color;
       position: absolute;
       display: flex;
       justify-content: center;

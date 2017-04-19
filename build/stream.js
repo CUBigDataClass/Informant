@@ -24,9 +24,9 @@ var companies2 = companies.map((company, i) => (
   '#' + company
 ));
 
-var companies = companies1.concat(companies2);
+companies = (companies1.concat(companies2)).toString();
 
-var params = { track: companies  language: 'en'};
+var params = { track: companies,  language: 'en'};
 
 client.stream('statuses/filter',params, function(stream){
   //streamHandler(stream,io);

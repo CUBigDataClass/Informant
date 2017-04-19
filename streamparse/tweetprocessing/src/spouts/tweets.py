@@ -5,7 +5,7 @@ class TweetSpout(Spout):
     outputs = ['tweet']
 
     def initialize(self, stormconf, context):
-        socketIO = SocketIO('localhost', 3333)
+        socketIO = SocketIO('localhost', 4000)
         socketIO.on('tweet', self.on_tweet)
         socketIO.wait()
 

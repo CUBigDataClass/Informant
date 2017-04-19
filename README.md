@@ -33,15 +33,10 @@ Informant aggregates social media data and produces a measure on online company 
 
 ### Task Cheatsheet
 
-   * 'npm install' - Install all necessary dependencies.
-   * 'npm install -g babel-cli' - Installs babel-node command
-   * 'babel-node frontEnd.jsx' (in build directory) - Render front-end statically with express
-   * 'node stream.js' (in build directory) - Runs a Twitter stream
+> TODO, will hold anything not directly stated in the below section
    
 ### Running Informant Locally
-
-> TODO
-
-##### Project Dependencies
-
-> TODO
+    1. 'npm install' (in 'Informant' root directory) - Installs all necessary dependencies.
+    2. 'npm install -g babel-cli' - Installs babel-node command globally on your computer
+    3. 'babel-node frontEnd.jsx' (in 'build' directory) - Render front-end statically with express
+    4. 'node stream.js' (in 'build' directory) - Runs a Twitter stream

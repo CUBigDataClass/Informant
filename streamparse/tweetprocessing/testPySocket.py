@@ -1,5 +1,4 @@
 from socketIO_client import SocketIO, BaseNamespace
-from gevent import monkey
 
 class Namespace(BaseNamespace):
 

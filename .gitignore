@@ -8,3 +8,4 @@ informant.pem
 _build
 _resources
 logs
+*.pyc

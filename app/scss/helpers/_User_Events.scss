@@ -1,11 +1,10 @@
 @mixin css-user-select($n){
-  -webkit-user-select: $n;  /* Chrome all / Safari all */
-  -moz-user-select: $n;     /* Firefox all */
-  -ms-user-select: $n;      /* IE 10+ */
-  user-select: $n;
-}
-
-
-@mixin css-cursor($p) {
-  cursor: $p;
+  -webkit-touch-callout: $n; /* iOS Safari */
+  -webkit-user-select: $n; /* Safari */
+   -khtml-user-select: $n; /* Konqueror HTML */
+     -moz-user-select: $n; /* Firefox */
+      -ms-user-select: $n; /* Internet Explorer/Edge */
+          user-select: $n; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }

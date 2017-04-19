@@ -1,35 +1,44 @@
 $live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
 $main-container-color: #f7f5f5;
 $live-stream-text-color: #a29393;
+$transition-time: 0.35s;
+$transition-prop: transform;
+$transition-easing: cubic-bezier(.94,.06,.32,.95);
+$right-transition: 25vw;
+$mobile-right-transition: 75vw;
 
-.MainContainerWrapper {
-  background: $main-container-color;
-  height: 800vh;
-}
 .MainContainer {
   background: $main-container-color;
-  @include css-transition(all, 0.25s, ease-in-cubic);
+  @include css-transition($transition-prop, $transition-time, $transition-easing);
   position: relative;
-  display: inline-block;
-  width: 100vw;
+  width: 100%;
+  overflow-x:hidden;
+  /*-webkit-overflow-scrolling: touch;*/
+
+  @media all and (max-width: 1200px) {
+    z-index: 9999;
+  }
+
+}
+
+.MainContainer:hover {
+  @include css-transition($transition-prop, $transition-time, $transition-easing);
 }
 
 .menuBarOpen {
-  margin-left: 15vw;
-  @media all and (max-width: 800px) {
-  margin-left: 80vw;
+  @include css-transition($transition-prop, $transition-time, $transition-easing);
+  @media all and (max-width: 1200px) {
+  @include css-transform-translate-x($right-transition);
   }
+    @media all and (max-width: 800px) {
+    @include css-transform-translate-x($mobile-right-transition);
+    }
 }
 
 .menuBarClose {
-  margin-left: 0vw;
-}
+  @include css-transition($transition-prop, $transition-time, linear);
+  @include css-transform-translate-x(0vw);
+  @media all and (max-width: 1200px) {
 
-.LiveStream {
-font-family: "Open Sans", Futura, Helvetica, sans-serif;
-  font-size: 1em;
-  font-weight: 400;
-  color: #a29393;
-  text-align: right;
-  width: 75vw;
+  }
 }

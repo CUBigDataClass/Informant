@@ -37,8 +37,9 @@ Informant aggregates social media data and produces a measure on online company 
 
    * 'npm install' - Install all necessary dependencies.
    * 'npm install -g babel-cli' - Installs babel-node command
-   * 'babel-node server.jsx' - Render front-end statically with express, and run a socket server that emits sentiment data for front-end
-
+   * 'babel-node frontEnd.jsx' (in build directory) - Render front-end statically with express
+   * 'node stream.js' (in build directory) - Runs a Twitter stream
+   
 ### Running Informant Locally
 
 > TODO

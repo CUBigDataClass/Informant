@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import MainContainer from './components/MainContainer.jsx';
 import SectionsData from './info/companies.json';
-var SmoothScroll = require('./components/SmoothScroll.js');
 import MenuBar from './components/MenuBar.jsx';
 import MenuBarIcon from './components/MenuBarIcon.jsx';
-var io = require('socket.io-client');
 import NavBar from './components/NavBar.jsx';
+
+var io = require('socket.io-client');
+var SmoothScroll = require('./components/SmoothScroll.js');
+var favicon = require('./assets/images/favicon.ico');
 
 class App extends Component {
   constructor(props) {

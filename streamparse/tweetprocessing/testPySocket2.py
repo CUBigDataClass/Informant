@@ -3,9 +3,8 @@ import sys
 
 # Create a TCP/IP socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
 # Bind the socket to the port
-server_address = ('localhost', 5000)
+server_address = ('localhost', 6000)
 sock.bind(server_address)
 
 # Listen for incoming connections

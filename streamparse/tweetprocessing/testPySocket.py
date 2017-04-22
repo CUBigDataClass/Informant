@@ -9,18 +9,21 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_address = ('localhost', 5000)
 sock.connect(server_address)
 
+company = "Twitter"
+text = "This is a test text"
+message = "{company: %s, text: %s}" %(company, text)
+print message
+
 
 # Client handler
 def on_tweet(*args):
 
     if args[0] is not None:
-        message = str(args[0].encode('utf-8'))
+        text = str(args[0].encode('utf-8'))
+        company = "Test"
+        message = "{company: %s, text: %s}" %(company, text)
+        sock.sendall(message)
 
-        try:
-            # Send data
-            sock.sendall(message)
-        except:
-            pass
 
 
 # Client setup

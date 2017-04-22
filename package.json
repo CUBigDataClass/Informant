@@ -53,6 +53,7 @@
     "react-json-stream": "^1.0.9",
     "react-native": "^0.43.4",
     "react-native-tcp": "^3.2.1",
+    "react-native-udp": "^2.0.0",
     "react-redux": "^5.0.3",
     "redux": "^3.6.0",
     "sass-loader": "^6.0.2",

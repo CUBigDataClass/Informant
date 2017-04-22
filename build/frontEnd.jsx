@@ -2,7 +2,7 @@ var express = require('express')
 var path = require('path');
 import React from 'React';
 import App from "../app/App.jsx";
-var net = require('net');
+var dgram = require('dgram')
 
 var port = 3333;
 
@@ -17,52 +17,55 @@ var server = http.createServer(app).listen(port, function() {
 });
 
 
-var amazonClient = net.createConnection(6000);
+const StringDecoder = require('string_decoder').StringDecoder;
+const decoder = new StringDecoder('utf8');
 
-amazonClient.on('data', function(data) {
-  console.log('Amazon:', data)
-});
+var amazonSocket = dgram.createSocket('udp4')
+amazonSocket.bind(6000)
+amazonSocket.on('message', function(msg, rinfo) {
+  console.log('Amazon: ', decoder.write(msg))
+})
 
-var appleClient = net.createConnection(6050);
+var appleSocket = dgram.createSocket('udp4')
+appleSocket.bind(6050)
+appleSocket.on('message', function(msg, rinfo) {
+  console.log('Apple: ', decoder.write(msg))
+})
 
-appleClient.on('data', function(data) {
-  console.log('Apple:', data)
-});
+var facebookSocket = dgram.createSocket('udp4')
+facebookSocket.bind(6100)
+facebookSocket.on('message', function(msg, rinfo) {
+  console.log('Facebook: ', decoder.write(msg))
+})
 
-var facebookClient = net.createConnection(6100);
+var googleSocket = dgram.createSocket('udp4')
+googleSocket.bind(6150)
+googleSocket.on('message', function(msg, rinfo) {
+  console.log('Google: ', decoder.write(msg))
+})
 
-facebookClient.on('data', function(data) {
-  console.log('Facebook:', data)
-});
+var lyftSocket = dgram.createSocket('udp4')
+lyftSocket.bind(6200)
+lyftSocket.on('message', function(msg, rinfo) {
+  console.log('Lyft: ', decoder.write(msg))
+})
 
-var googleClient = net.createConnection(6150);
+var microsoftSocket = dgram.createSocket('udp4')
+microsoftSocket.bind(6250)
+microsoftSocket.on('message', function(msg, rinfo) {
+  console.log('Microsoft: ', decoder.write(msg))
+})
 
-googleClient.on('data', function(data) {
-  console.log('Google:', data)
-});
+var twitterSocket = dgram.createSocket('udp4')
+twitterSocket.bind(6300)
+twitterSocket.on('message', function(msg, rinfo) {
+  console.log('Twitter: ', decoder.write(msg))
+})
 
-var lyftClient = net.createConnection(6200);
-
-lyftClient.on('data', function(data) {
-  console.log('Lyft:', data)
-});
-
-var microsoftClient = net.createConnection(6250);
-
-microsoftClient.on('data', function(data) {
-  console.log('Microsoft:', data)
-});
-
-var twitterClient = net.createConnection(6300);
-
-twitterClient.on('data', function(data) {
-  console.log('Twitter:', data)
-});
-
-var uberClient = net.createConnection(6350);
-
-uberClient.on('data', function(data) {
-  console.log('Uber:', data)
-});
+var uberSocket = dgram.createSocket('udp4')
+uberSocket.bind(6350)
+uberSocket.on('message', function(msg, rinfo) {
+  console.log('Uber: ', decoder.write(msg))
+})
 
 var io = require('socket.io').listen(server);

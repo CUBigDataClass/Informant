@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from kafka import KafkaConsumer
-consumer = KafkaConsumer('streamJS')
+consumer = KafkaConsumer('tweetReader')
 
 
 if __name__ == "__main__":

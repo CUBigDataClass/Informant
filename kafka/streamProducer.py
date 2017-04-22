@@ -1,8 +1,10 @@
+import json
+import xml
+import sys
 
 from kafka import KafkaProducer
 from socketIO_client import SocketIO
 
-#producer = KafkaProducer(bootstrap_servers='localhost:9092',value_serializer=lambda v json.dumps(v).encode('utf-8'))
 producer = KafkaProducer(bootstrap_servers='localhost:9092',value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 
 class tweetHandler(object):
@@ -13,12 +15,9 @@ class tweetHandler(object):
 
 	def on_tweet(self,*args):
 	     tweet = args[0]
+	     producer.send('tweetReader',tweet)
 	     print tweet
-	     if tweet != None:
-	     	producer.send('streamJS',tweet)
-	        print "SENT"
 
 tweetHandler()
-
 #Run stream.js in one terminal : node stream.js
 #

@@ -11,7 +11,7 @@ sock.bind(server_address)
 sock.listen(0)
 
 while True:
-    # Wait for a connection
+    #Wait for a connection
     connection, client_address = sock.accept()
 
     try:

@@ -13,11 +13,10 @@ class ProcessFacebook(Bolt):
         self.total = 0
         self.average = 0
 
-        self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
         # Connect the socket to the port where the server is listening
         self.server_address = ('localhost', 6100)
-        self.sock.connect(self.server_address)
 
     def _increment(self, sentiment):
         oldSum = self.average * self.total
@@ -41,4 +40,4 @@ class ProcessFacebook(Bolt):
 
                 tweetText = tweet.encode('utf-8')
                 message = "{text: %s, score: %s, average: %s}" %(tweetText, str(avgScore), str(self.average))
-                self.sock.sendall(message)
+                self.sock.sendto(message, self.server_address)

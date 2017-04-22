@@ -14,7 +14,21 @@ var client = new Twitter({
   access_token_secret: 'WRF3D3QsjiOjRS1rTO8Skm2WSyusrxgZl0XEUJ4XP1edb'
 });
 
-client.stream('statuses/filter',{ track:  'Amazon, Apple, Facebook, Google, Lyft, Microsoft, Twitter, Uber'}, function(stream){
+var companies = ['apple', 'amazon', 'facebook','google','lyft','microsoft','twitter','uber'];
+
+var companies1 = companies.map((company, i) => (
+  '@' + company
+));
+
+var companies2 = companies.map((company, i) => (
+  '#' + company
+));
+
+companies = (companies1.concat(companies2)).toString();
+
+var params = { track: companies,  language: 'en'};
+
+client.stream('statuses/filter',params, function(stream){
   //streamHandler(stream,io);
   stream.on('data', function(event) {
     //console.log(event.text)

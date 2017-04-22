@@ -1,20 +1,35 @@
-from socketIO_client import SocketIO, BaseNamespace
+from socketIO_client import SocketIO
+import socket
+import sys
 
-class Namespace(BaseNamespace):
+# Create a TCP/IP socket
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    def on_connect(self):
-        print('[Connected]')
+# Connect the socket to the port where the server is listening
+server_address = ('localhost', 5000)
+sock.connect(server_address)
 
-    def on_reconnect(self):
-        print('[Reconnected]')
+company = "Twitter"
+text = "This is a test text"
+message = "{company: %s, text: %s}" %(company, text)
+print message
 
-    def on_disconnect(self):
-        print('[Disconnected]')
 
+# Client handler
 def on_tweet(*args):
-    if args[0] is not None:
-        print(str(args[0].encode('utf-8')))
 
-socketIO = SocketIO('localhost', 3333, Namespace)
-socketIO.on('tweet', on_tweet)
-socketIO.wait()
+    if args[0] is not None:
+        text = str(args[0].encode('utf-8'))
+        company = "Test"
+        message = "{company: %s, text: %s}" %(company, text)
+        sock.sendall(message)
+
+
+
+# Client setup
+socketIOclient = SocketIO('localhost', 4000)
+print "Setting up client"
+socketIOclient.on('tweet', on_tweet)
+socketIOclient.wait()
+
+sock.close()

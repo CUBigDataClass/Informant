@@ -1,7 +1,6 @@
 import os
 import socket
 import sys
-import json
 from streamparse import Bolt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
@@ -16,7 +15,7 @@ class ProcessTwitter(Bolt):
         self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         # Connect the socket to the port where the server is listening
-        self.server_address = ('localhost', 6000)
+        self.server_address = ('localhost', 6300)
         self.sock.connect(self.server_address)
 
     def _increment(self, sentiment):

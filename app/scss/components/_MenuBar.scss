@@ -10,7 +10,7 @@ $menu-button-color: #e09090;
     top: 0;
     height: 100vh;
     left: 0;
-    width: 67vw;
+    width: 100vw;
     background: $bg-color;
 
     @media all and (max-width: 1200px) {
@@ -45,6 +45,9 @@ $menu-button-color: #e09090;
 }
 
 
+.menu-bar-item {
+  text-align: left;
+}
 
 
 .menuButton {

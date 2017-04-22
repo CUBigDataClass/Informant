@@ -1,8 +1,10 @@
-$global-p-color: #111111;
-$global-h1-color: #ca9191;
+$global-p-color: #916969;
+$global-h1-color: #ffffff;
 $global-bg-color: #f1f1f1;
 $global-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
 $global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
+$section-color: #dbd7d7;
+$p-section-color: #111111;
 
 @import './helpers/Animation_Mixins.scss';
 @import './helpers/Transform_Mixins.scss';
@@ -15,8 +17,10 @@ $global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
 @import './components/MenuBar.scss';
 @import './components/MainContainer.scss';
 @import './components/NavBar.scss';
+@import './components/SmoothScroll.scss';
+@import './components/Intro.scss';
 
-@import './components/companies/Company.scss';
+@import './components/Company.scss';
 @import './components/_Graphs.scss';
 
 body {
@@ -39,7 +43,7 @@ body {
   p {
     font-family: $global-p-font-stack;
     color: $global-p-color;
-    font-weight: 200;
+    font-weight: 300;
   }
 
   .wrapper {

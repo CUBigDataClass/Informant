@@ -7,6 +7,14 @@ $yellow-color: #efce69;
 $black-color: #262522;
 $white-color: #f9f6ef;
 
+
+.graph {
+    display: flex;
+    justify-content: center;
+    @include css-transition(all, 0.5s, ease-in-out);
+}
+
+
 .d3container {
   border-radius: 50%;
 }
@@ -64,9 +72,8 @@ path:hover {
   stroke: #e3a6a6;
 }
 
-.graph {
-@include css-transition(all, 0.5s, ease-in-out);
-}
+
+
 
 path {
 @include css-transition(all, 0.5s, ease-in-out);

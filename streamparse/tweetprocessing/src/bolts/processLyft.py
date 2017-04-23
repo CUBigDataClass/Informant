@@ -1,4 +1,6 @@
 import os
+import socket
+import sys
 from streamparse import Bolt
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from textblob import TextBlob
@@ -9,6 +11,11 @@ class ProcessLyft(Bolt):
     def initialize(self, conf, ctx):
         self.total = 0
         self.average = 0
+
+        self.sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+        # Connect the socket to the port where the server is listening
+        self.server_address = ('localhost', 6200)
 
     def _increment(self, sentiment):
         oldSum = self.average * self.total
@@ -29,3 +36,7 @@ class ProcessLyft(Bolt):
 
                 self.logger.info("Tweet Score: %.4f, Cumulative Score: %.4f" %(avgScore, self.average))
                 self.emit([avgScore, self.average])
+
+                tweetText = tweet.encode('utf-8')
+                message = "{\"text\": %s, \"score\": %s, \"average\": %s}" %(tweetText, str(avgScore), str(self.average))
+                self.sock.sendto(message, self.server_address)

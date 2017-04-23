@@ -34,9 +34,18 @@ Informant aggregates social media data and produces a measure on online company 
 ### Task Cheatsheet
 
 > TODO, will hold anything not directly stated in the below section
-   
+
 ### Running Informant Locally
     1. 'npm install' (in 'Informant' root directory) - Installs all necessary dependencies.
     2. 'npm install -g babel-cli' - Installs babel-node command globally on your computer
     3. 'babel-node frontEnd.jsx' (in 'build' directory) - Render front-end statically with express
     4. 'node stream.js' (in 'build' directory) - Runs a Twitter stream
+
+### To Run the Whole Setup
+    1. node stream.js
+    2. bin/zookeeper-server-start.sh config/zookeeper.properties (in kafka_2.10-0.10.2.0 when you download kafka)
+    3. bin/kafka-server-start.sh config/server.properties (in kafka_2.10-0.10.2.0)
+    4. python streamProducer.py
+    5. python streamConsumer.py
+    5. sparse run (in streamparse/tweetprocessing folder)
+    6. babel-node frontEnd.jsx

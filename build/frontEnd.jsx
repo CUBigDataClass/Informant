@@ -1,7 +1,6 @@
 var express = require('express')
 var path = require('path');
 import React from 'React';
-import App from "../app/App.jsx";
 
 var port = 3333;
 

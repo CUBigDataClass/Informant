@@ -38,6 +38,7 @@ Informant aggregates social media data and produces a measure on online company 
 ### Running Informant Locally
     1. 'npm install' (in 'Informant' root directory) - Installs all necessary dependencies.
     2. 'npm install -g babel-cli' - Installs babel-node command globally on your computer
+    3. 'npm run build' - Builds the project for deployment
     3. 'babel-node frontEnd.jsx' (in 'build' directory) - Render front-end statically with express
     4. 'node stream.js' (in 'build' directory) - Runs a Twitter stream
 

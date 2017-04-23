@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from kafka import KafkaConsumer
-consumer = KafkaConsumer('gnipReader')
+consumer = KafkaConsumer('appleReader')
 
 
 if __name__ == "__main__":

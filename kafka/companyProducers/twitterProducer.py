@@ -18,12 +18,12 @@ class poster(object):
 		url = 'https://gnip-api.twitter.com/search/fullarchive/accounts/greg-students/prod.json'
 		UN = 'michael.xiao@colorado.edu'
 		PWD = 'informant'
-		rule = '(@Apple OR @apple) lang:en -fruit -ads -advertisement ' #Write JSON rules here
+		rule = '(@Twitter OR @twitter) lang:en -ads -advertisement ' #Write JSON rules here
 		
 		if self.nextToken != "":
-			query = '{"query":"' + rule + '","fromDate":"201704220000","maxResults": "50", "next": %s }' %(self.nextToken,) 
+			query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "500", "next": %s }' %(self.nextToken,) 
 		else:
-			  query = '{"query":"' + rule + '","fromDate":"201704220000","maxResults": "50"}'
+			  query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "500"}'
 
 		base64string = base64.encodestring('%s:%s' % (UN, PWD)).replace('\n', '')
 		req = urllib2.Request(url=url, data=query)
@@ -39,10 +39,10 @@ class poster(object):
 			elif self.nextToken != data['next']:
 				self.nextToken = "\""+data['next']+"\""
 			
-			for i in range(0,10):
+			for i in range(0,499):
 				tweet = data['results'][i]['body']
 				print tweet
-				producer.send('gnipReader',tweet)
+				producer.send('twitterReader',tweet)
 
 		except urllib2.HTTPError as e:
 			print e.read()

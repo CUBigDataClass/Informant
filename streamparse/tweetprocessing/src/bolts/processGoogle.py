@@ -39,5 +39,5 @@ class ProcessGoogle(Bolt):
                 self.emit([avgScore, self.average])
 
                 tweetText = tweet.encode('utf-8')
-                message = "{text: %s, score: %s, average: %s}" %(tweetText, str(avgScore), str(self.average))
+                message = "{\"text\": %s, \"score\": %s, \"average\": %s}" %(tweetText, str(avgScore), str(self.average))
                 self.sock.sendto(message, self.server_address)

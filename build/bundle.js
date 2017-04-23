@@ -32245,7 +32245,7 @@ var App = function (_Component) {
       infos: 'loading...',
       open: false,
       MenuBarIconStyle: 'MenuBarIcon',
-      data: [5, 6, 8, 1, 11, 14, 5, 6, 8, 1]
+      data: [5, 6, 8, 1, 11, 14, 5, 6]
     };
     _this.togglePanel = _this.togglePanel.bind(_this);
     _this.closeMenuBar = _this.closeMenuBar.bind(_this);
@@ -32284,23 +32284,111 @@ var App = function (_Component) {
   }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
-      // Initialize socket.io
       var socket = io.connect();
-
-      // On tweet event emission...
-      socket.on('tweet', function (tweetData) {
-
-        this.setState(function (prevState, props) {
+      var self = this;
+      socket.on('amazonTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[0] = 15 * (tweetObj.score + 1);
           return {
-            tweet: tweetData.text + " " + tweetData.user.followers_count * 0.0015 + 20,
-            data: prevState.data.map(function (i) {
-              return Math.floor(Math.random() * tweetData.user.followers_count * 0.0015 + 20);
-            })
+            tweet: tweetObj.text + " ",
+            data: newData
           };
         });
       });
 
-      this.setState({
+      socket.on('appleTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[1] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      socket.on('facebookTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[2] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      socket.on('googleTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[3] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      socket.on('lyftTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[4] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      socket.on('microsoftTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[5] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      socket.on('twitterTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[6] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      socket.on('uberTweet', function (tweet) {
+        var tweetObj = JSON.parse(tweet);
+
+        self.setState(function (prevState, props) {
+          var newData = prevState.data;
+          newData[7] = 15 * (tweetObj.score + 1);
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData
+          };
+        });
+      });
+
+      self.setState({
         infos: _companies2.default
       });
     }
@@ -37061,10 +37149,6 @@ module.exports = [
 	},
 	{
 		"title": "Uber",
-		"text": ""
-	},
-	{
-		"title": "Spotify",
 		"text": ""
 	},
 	{

@@ -3,12 +3,13 @@ import * as d3 from 'd3';
 import LinearGraph from './graphs/LinearGraph.jsx';
 import WaveGraph from './graphs/WaveGraph.jsx';
 import DotGraph from './graphs/DotGraph.jsx';
+import PieGraph from './graphs/PieGraph.jsx';
 
 
 class GraphView extends React.Component {
   render() {
     return (
-      <WaveGraph data={this.props.data} companies={this.props.companies}/>
+      <LinearGraph data={this.props.data} companies={this.props.companies}/>
     );
   }
 }

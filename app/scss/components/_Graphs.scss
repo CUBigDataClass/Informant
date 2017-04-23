@@ -102,3 +102,7 @@ stroke-width: 0.0px;
 pointer-events: none;
 
 }
+
+.Rect {
+  transition: transform, 0.5s, ease-in-out;
+}

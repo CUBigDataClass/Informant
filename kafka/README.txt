@@ -12,7 +12,7 @@ To start kafka through the kafka source file, go to the kafka directory and foll
 2. Start Kafka server
 > bin/kafka-server-start.sh config/server.properties
 
-**To make the server run in the background: bin/kafka-server-start.sh config/server.properties
+**To make the server run in the background: bin/kafka-server-start.sh config/server.properties &
 
 3. You are ready to use kafka! You can now create topics and partition, and have kafka code that produces and consumers messages!
 

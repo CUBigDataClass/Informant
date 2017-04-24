@@ -1,6 +1,6 @@
 var express = require('express')
 var path = require('path');
-import React from 'React';
+//import React from 'react';
 import App from "../app/App.jsx";
 var dgram = require('dgram')
 

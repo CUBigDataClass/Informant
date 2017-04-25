@@ -32249,7 +32249,7 @@ var App = function (_Component) {
           var newData = prevState.data;
           newData[0] = 15 * (tweetObj.score + 1);
           return {
-            tweet: tweetObj.text + " ",
+            tweet: tweetObj.average + " ",
             data: newData
           };
         });
@@ -32260,7 +32260,7 @@ var App = function (_Component) {
 
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[1] = 15 * (tweetObj.score + 1);
+          newData[1] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData
@@ -32273,7 +32273,7 @@ var App = function (_Component) {
 
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[2] = 15 * (tweetObj.score + 1);
+          newData[2] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData
@@ -32286,7 +32286,7 @@ var App = function (_Component) {
 
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[3] = 15 * (tweetObj.score + 1);
+          newData[3] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData
@@ -32299,7 +32299,7 @@ var App = function (_Component) {
 
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[4] = 15 * (tweetObj.score + 1);
+          newData[4] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData
@@ -32312,7 +32312,7 @@ var App = function (_Component) {
 
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[5] = 15 * (tweetObj.score + 1);
+          newData[5] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData
@@ -32324,7 +32324,7 @@ var App = function (_Component) {
         var tweetObj = JSON.parse(tweet);
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[6] = 15 * (tweetObj.score + 1);
+          newData[6] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData
@@ -32337,7 +32337,7 @@ var App = function (_Component) {
 
         self.setState(function (prevState, props) {
           var newData = prevState.data;
-          newData[7] = 15 * (tweetObj.score + 1);
+          newData[7] = 15 * (tweetObj.average + 1);
           return {
             tweet: tweetObj.text + " ",
             data: newData

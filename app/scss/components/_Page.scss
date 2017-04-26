@@ -1,0 +1,26 @@
+$section-color: #f1f1f1;
+$start-button-color: #faa187;
+$fg-color: #dbd7d7;
+$bg-color: #ffffff;
+$border-width: 3px;
+
+.Page {
+  p {
+    color: black;
+    font-weight: 300;
+    @include css-user-select(none);
+  }
+
+  .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-title {
+    width: 50vw;
+    border-top: $border-width solid white;
+    border-bottom: $border-width solid white;
+    display: block;
+  }
+}

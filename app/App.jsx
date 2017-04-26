@@ -1,34 +1,35 @@
 import React, {Component} from 'react';
-import MainContainer from './components/MainContainer.jsx';
-import SectionsData from './info/companies.json';
 import MenuBar from './components/MenuBar.jsx';
 import MenuBarIcon from './components/MenuBarIcon.jsx';
-import NavBar from './components/NavBar.jsx';
-
 var io = require('socket.io-client');
 var SmoothScroll = require('./components/SmoothScroll.js');
 var favicon = require('./assets/images/favicon.ico');
+import Companies from './companies/companies.json';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    const N = SectionsData.length;
-    const companies = SectionsData.map((section, i) => {
-      return section.title;
-    });
+    // const N = Data.length;
+    // const companies = Data.map((section, i) => {
+    //   return section.title;
+    // });
+
+    console.log(Companies);
     this.state = {
-      companies: companies,
+      companies: 'loading...',
       infos: 'loading...',
       open: false,
-      MenuBarIconStyle: 'MenuBarIcon',
+      MenuBarIconStyle: 'menu-bar-icon',
       data: [
         5, 6, 8, 1, 11, 14,
         5, 6
-      ]
+      ],
+      slideContentState: 'main menu-bar-close'
     };
     this.togglePanel = this.togglePanel.bind(this);
     this.closeMenuBar = this.closeMenuBar.bind(this);
     this.updateData = this.updateData.bind(this);
+    this.slideContent = this.slideContent.bind(this);
 
   }
   updateData() {
@@ -39,16 +40,41 @@ class App extends Component {
         });
   }
   togglePanel() {
+    this.slideContent();
     this.setState((prevState, props) => {
           return {
             open : !prevState.open
           }
         });
+
   }
   closeMenuBar() {
+    this.slideContent();
     this.setState({
       open: false
-    })
+    });
+
+  }
+  slideContent() {
+    this.setState((prevState, props) => {
+          var newState;
+          console.log(prevState.slideContentState);
+          if(prevState.slideContentState == 'main menu-bar-close') {
+            newState = 'main menu-bar-open';
+          } else {
+            newState = 'main menu-bar-close';
+          }
+          return {
+            slideContentState : newState
+          }
+    });
+  }
+  componentWillUpdate() {
+    if(this.state.open) {
+      this.state.slideContentState = 'main menu-bar-open';
+    } else {
+      this.state.slideContentState = 'main menu-bar-close';
+    }
   }
   componentDidMount() {
     var socket = io.connect();
@@ -157,7 +183,7 @@ class App extends Component {
       });
 
       self.setState({
-        infos: SectionsData
+        infos: 'loading...'
       });
   }
   render() {
@@ -165,16 +191,12 @@ class App extends Component {
 
     return (
       <div>
-        <NavBar infos={this.state.infos} companies={this.state.companies} open={this.state.open}/>
-
-      <button className={'updateButton'} onMouseDown={this.updateData}>Update Data!</button>
-      <div className={'wrapper'}>
-
-          <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
-          <MenuBar infos={this.state.infos} companies={this.state.companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
-          <MainContainer data={this.state.data} infos={this.state.infos} companies={this.state.companies} togglePanel={this.togglePanel} open={this.state.open}/>
-      </div>
-    </div>);
+        <MenuBar names={Companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
+        <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
+        <div className={this.state.slideContentState}>
+          {this.props.children}
+        </div>
+      </div>);
   }
 }
 

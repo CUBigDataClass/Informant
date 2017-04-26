@@ -36,6 +36,10 @@ module.exports = {
         }
       },
       {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file-loader?name=public/fonts/[name].[ext]'
+      },
+      {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader?sourceMap', 'sass-loader?sourceMap']
       },

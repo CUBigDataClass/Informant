@@ -1,8 +1,8 @@
 $global-p-color: #916969;
 $global-h1-color: #ffffff;
-$global-bg-color: #f1f1f1;
-$global-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
-$global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
+$global-bg-color: #1b1a1a;
+$global-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$global-p-font-stack: 'Rubik', Helvetica, sans-serif;
 $section-color: #dbd7d7;
 $p-section-color: #111111;
 
@@ -15,12 +15,12 @@ $p-section-color: #111111;
 @import './components/Subsection.scss';
 @import './components/MenuBarIcon.scss';
 @import './components/MenuBar.scss';
-@import './components/MainContainer.scss';
+@import './components/Main.scss';
 @import './components/NavBar.scss';
 @import './components/SmoothScroll.scss';
-@import './components/Intro.scss';
+@import './components/Home.scss';
 
-@import './components/Company.scss';
+@import './components/Page.scss';
 @import './components/_Graphs.scss';
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto'); // Import Google Fonts
@@ -32,7 +32,7 @@ body {
   background: $global-bg-color;
   @include css-fadein(3s);
   width: 100%;
-  overflow-x:hidden;
+  overflow:hidden;
 
 
 
@@ -40,17 +40,43 @@ body {
     font-family: $global-font-stack;
     color: $global-h1-color;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
+    @css-user-select(none);
+  }
+
+  h2 {
+    font-family: $global-font-stack;
+    color: $global-h1-color;
+    text-align: center;
+    font-weight: 300;
+    @css-user-select(none);
+  }
+
+  h3 {
+    font-family: $global-font-stack;
+    color: $global-h1-color;
+    text-align: center;
+    font-weight: 300;
+    @css-user-select(none);
+  }
+
+  h4 {
+    font-family: $global-font-stack;
+    color: $global-h1-color;
+    text-align: center;
+    font-weight: 300;
+    @css-user-select(none);
   }
 
   p {
     font-family: $global-p-font-stack;
     color: $global-p-color;
-    font-weight: 300;
+    font-weight: 100;
+    @css-user-select(none);
   }
 
   .wrapper {
-    overflow-x:hidden;
+    overflow:hidden;
 
   }
 

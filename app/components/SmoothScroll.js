@@ -75,8 +75,8 @@ var smoothScroll = {
 var SmoothScroll = React.createClass({
     render: function () {
         return (
-            <div className="smooth-scroll">
-              <div className={'smooth-scroll-container ' + this.props.className} style={this.props.style} onMouseDown={this.handleSectionClick}>
+            <div>
+              <div className={this.props.className} style={this.props.style} onMouseDown={this.handleSectionClick}>
                     <p>
                       {this.props.text}
                     </p>

@@ -18,9 +18,14 @@ $menu-button-color: #e09090;
     }
 
     p {
-        font-weight: 100;
         @include css-user-select(none);
         cursor: pointer;
+        font-weight: 400;
+        color: #866363;
+    }
+
+    p:hover {
+      color: white;
     }
 }
 

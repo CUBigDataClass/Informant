@@ -1,4 +1,4 @@
-$global-p-color: #916969;
+$global-p-color: #dec5c5;
 $global-h1-color: #ffffff;
 $global-bg-color: #1b1a1a;
 $global-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
@@ -18,23 +18,26 @@ $p-section-color: #111111;
 @import './components/Main.scss';
 @import './components/NavBar.scss';
 @import './components/SmoothScroll.scss';
-@import './components/Home.scss';
-
+@import './components/DownArrow.scss';
 @import './components/Page.scss';
-@import './components/_Graphs.scss';
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto'); // Import Google Fonts
+@import './components/Graphs.scss';
 
 
 body {
   margin: 0;
   padding: 0;
   background: $global-bg-color;
-  @include css-fadein(3s);
+
   width: 100%;
   overflow:hidden;
 
-
+  a {
+    font-family: $global-p-font-stack;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    @include css-user-select(none);
+    }
 
   h1 {
     font-family: $global-font-stack;
@@ -42,6 +45,7 @@ body {
     text-align: center;
     font-weight: 300;
     @css-user-select(none);
+    font-size: 1.5em;
   }
 
   h2 {
@@ -50,6 +54,7 @@ body {
     text-align: center;
     font-weight: 300;
     @css-user-select(none);
+
   }
 
   h3 {
@@ -71,13 +76,12 @@ body {
   p {
     font-family: $global-p-font-stack;
     color: $global-p-color;
-    font-weight: 100;
+    font-weight: 500;
     @css-user-select(none);
   }
 
   .wrapper {
     overflow:hidden;
-
   }
 
   @media all and (max-width: 1200px) {
@@ -97,4 +101,7 @@ body {
     outline: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
+
+
+
 }

@@ -1,26 +1,120 @@
-$section-color: #f1f1f1;
-$start-button-color: #faa187;
-$fg-color: #dbd7d7;
-$bg-color: #ffffff;
-$border-width: 3px;
+$intro-button-color: #ff7970;
+$mobile-width: 800px;
+$transition-duration: 0.5s;
 
-.Page {
-  p {
-    color: black;
-    font-weight: 300;
+
+.on-enter {
+  transform: translateY(-100vh);
+
+  @include css-dropin(0.75s);
+}
+
+.on-enter-active {
+  transform: translateY(0vh);
+@include css-transition(all, 0.5s, ease);
+  @include css-dropin(1.75s);
+}
+
+.on-leave {
+  transform: translateY(0vh);
+
+}
+
+.on-leave-active {
+  transform: translateY(100vh);
+  @include css-transition(all, 0.5s, ease);
+}
+
+.page {
+  @include css-transition(all, 0.5s, ease);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+
+  .update-data {
+    position: fixed;
+    top: 0;
+    background: #36363d;
+    color: white;
+    font-family: 'Rubik';
+    font-size: 0.5em;
+    padding: 10px;
+    border-radius: 5px;
+    @css-transition(all, 0.2s, ease-in-out);
     @include css-user-select(none);
+    cursor: pointer;
   }
 
-  .images {
+  .update-data:hover {
+    background: #957a77;
+  }
+
+
+
+  .header {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    .header-box {
+      width: 50vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      transition: all 0.2s ease-in;
+
+      .title {
+        width: 100vw;
+
+        h1 {
+          @css-user-select(none);
+          cursor: default;
+        }
+      }
+
+      .subtitle {
+        width: 100vw;
+
+        p {
+          text-align: center;
+          transition: all 0.2s ease-in;
+          @css-user-select(none);
+        }
+
+
+      }
+    }
   }
 
-  .section-title {
-    width: 50vw;
-    border-top: $border-width solid white;
-    border-bottom: $border-width solid white;
-    display: block;
+  p:hover {
+  color: black;
+  cursor:pointer;
+  }
+
+
+  .page-bg-image {
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    background-size: cover;
+    left: 0;
+    z-index: -1;
+    width: 110vw;
+    /*filter: blur(5px);*/
+    /*margin: -20px -20px -20px -20px;*/
+
+    @media all and(max-width: $mobile-width) {
+      height: 110vh;
+      width: auto;
+    }
+  }
+
+  .page-bg-image-container {
+    overflow: hidden;
   }
 }

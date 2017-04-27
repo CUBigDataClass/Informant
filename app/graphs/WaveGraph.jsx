@@ -2,7 +2,9 @@ import React from 'react';
 import * as d3 from 'd3';
 import Faux from 'react-faux-dom';
 
-var color = '#583535';
+//var color = '#583535';
+var color = '#FFFFFF';
+
 var bgColor = '#dbd7d7';
 
 var WaveGraph = React.createClass({
@@ -142,25 +144,25 @@ var WaveGraph = React.createClass({
 
 
 
-      svg.append('circle')
-      .classed('innerCircle', true)
-      .attr('cx', '50%')
-      .attr('cy', '50%')
-      .attr('r', 40)
-      .attr('fill', 'transparent')
-      .attr('stroke', color)
-      .attr('stroke-width', '3px')
+      // svg.append('circle')
+      // .classed('innerCircle', true)
+      // .attr('cx', '50%')
+      // .attr('cy', '50%')
+      // .attr('r', 40)
+      // .attr('fill', 'transparent')
+      // .attr('stroke', color)
+      // .attr('stroke-width', '3px')
 
 
       //innerCircle is after outerCircle for hover events
-      svg.append('circle')
-      .classed('outerCircle', true)
-      .attr('cx', '50%')
-      .attr('cy', '50%')
-      .attr('r', 60)
-      .attr('fill', 'none')
-      .attr('stroke', color)
-      .attr('stroke-width', '3px')
+      // svg.append('circle')
+      // .classed('outerCircle', true)
+      // .attr('cx', '50%')
+      // .attr('cy', '50%')
+      // .attr('r', 60)
+      // .attr('fill', 'none')
+      // .attr('stroke', color)
+      // .attr('stroke-width', '3px')
 
 
 
@@ -201,6 +203,7 @@ var WaveGraph = React.createClass({
       })
   },
   componentDidMount(){
+    console.log(this.props.data);
     this.updateGraph(this.props.data)
   },
   componentWillReceiveProps(newProps) {

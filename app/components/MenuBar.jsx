@@ -1,5 +1,7 @@
 import React from 'react';
 import SmoothScroll from './SmoothScroll';
+import {Link} from 'react-router';
+
 
 class MenuBar extends React.Component {
   constructor(props) {
@@ -29,13 +31,14 @@ class MenuBar extends React.Component {
     return (
       <div className={this.state.MenuBarStyle}>
           {this.props.names.map((v, i) => (
-            <div onMouseDown={this.props.closeMenuBar} className={'menu-bar-content'}>
-              <SmoothScroll className={'menu-bar-item'} key={i} section={self.props.names[i].title} text={self.props.names[i].title}>
-              </SmoothScroll>
-            </div>)
+            <Link to={this.props.names[i].title.toLowerCase()}>
+              <div onMouseUp={this.props.closeMenuBar} className={'menu-bar-content'}>
+                <SmoothScroll className={'menu-bar-item'} key={i} section={self.props.names[i].title} text={self.props.names[i].title}>
+                </SmoothScroll>
+              </div>
+            </Link>)
             )
           }
-
       </div>
     );
   }

@@ -1,5 +1,6 @@
 var React = require('react');
 
+
 var smoothScroll = {
     timer: null,
 
@@ -78,7 +79,9 @@ var SmoothScroll = React.createClass({
             <div>
               <div className={this.props.className} style={this.props.style} onMouseDown={this.handleSectionClick}>
                     <p>
+
                       {this.props.text}
+
                     </p>
               </div>
             </div>

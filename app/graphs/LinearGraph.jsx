@@ -27,7 +27,7 @@ var LinearGraph = React.createClass({
       };
     };
 
-    const companies = this.props.companies;
+    const emojis = this.props.emojis;
 
 
     //Width and height
@@ -57,8 +57,9 @@ var LinearGraph = React.createClass({
        .attr("rx", '4')
        .attr("ry", '4')
        .attr('fill', function(d, i) {
-         const hex = (i*6).toString(16);
-         return '#' + hex + hex + hex;
+         const hex = (i*11).toString(12);
+        //  return '#' + hex + hex + hex;
+        return 'white';
        })
        .attr("width", function(d, i) {
          return '4.0';
@@ -71,7 +72,6 @@ var LinearGraph = React.createClass({
        })
        .style('stroke',color)
        .style('stroke-width', '0px')
-
 
 
 
@@ -91,9 +91,6 @@ var LinearGraph = React.createClass({
          return y;
        }
 
-
-
-
        data = data.map((d, i) => {
          const x = X(d, i);
          const y = Y(d, i);
@@ -105,20 +102,10 @@ var LinearGraph = React.createClass({
         .enter()
         .append("g");
 
-       newRects
-       .append("g")
-       .classed("textGroup", true)
-       .attr('transform', function(d, i){
-         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
-       })
-       .append('text')
-       .html(function(d, i) {
-         return companies[i];
-       })
-       .attr('font-family', 'Futura')
-       .attr('font-size', '15px')
-       .attr('fill', 'white')
-       .classed('companyText', true);
+        var self = this;
+
+
+
 
 
       var tau = 2 * Math.PI; // http://tauday.com/tau-manifesto
@@ -146,6 +133,32 @@ var LinearGraph = React.createClass({
       .classed('shell', true)
       .attr('stroke', bgColor)
       .attr("d", arc);
+
+
+      rects
+      .append("g")
+      .classed("textGroup", true)
+      .attr('transform', function(d, i){
+        return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+      })
+      .append('text')
+      .html(function(d, i) {
+        return emojis[i];
+      })
+      .attr('font-family', 'Futura')
+      .attr('font-size', '15px')
+      .attr('fill', 'white')
+      .classed('companyText', true)
+      .on('mouseover', function(d, i){
+        return self.props.hoverHandler(i);
+      })
+      .on('mouseout', function(d, i){
+        return self.props.hoverHandler(i);
+      });
+
+
+
+
 
 
       const finalChart = faux.toReact();

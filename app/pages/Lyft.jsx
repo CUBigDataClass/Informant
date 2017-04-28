@@ -7,10 +7,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Lyft extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Lyft'}
-          description={'This is the Lyft page.'}
+          description={'Opinions on Lyft?'}
           />
       </div>
     );

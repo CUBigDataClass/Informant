@@ -6,10 +6,10 @@ import PageLayout from '../layout/PageLayout.jsx';
 class Amazon extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Amazon'}
-          description={'This is the Amazon page.'}
+          description={'Opinions on Amazon Go?'}
           />
       </div>
     );

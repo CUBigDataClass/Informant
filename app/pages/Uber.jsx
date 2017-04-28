@@ -7,10 +7,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Uber extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Uber'}
-          description={'This is the Uber page.'}
+          description={'What are feeling about Uber?'}
           />
       </div>
     );

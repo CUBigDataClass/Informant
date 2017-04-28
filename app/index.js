@@ -8,6 +8,7 @@ import {Location} from 'react-router-component';
 // import PageTransition from 'react-router-page-transition'
 import CSSTransitionGroup from 'react-transition-group/CSSTransitionGroup' // ES6
 import Sass from './scss/main.scss';
+import Intro from './pages/Intro.jsx';
 import Home from './pages/Home.jsx';
 import Amazon from './pages/Amazon.jsx';
 import Apple from './pages/Apple.jsx';
@@ -42,7 +43,8 @@ import globalStyles from './assets/styles/_Fonts.scss';
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
+      <IndexRoute component={Intro}/>
+      <Route path="home" component={Home}/>
       <Route path="apple" component={Apple}/>
       <Route path="uber" component={Uber}/>
       <Route path="google" component={Google}/>

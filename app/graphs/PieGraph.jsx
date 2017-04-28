@@ -21,7 +21,7 @@ var PieGraph = React.createClass({
     var w = 500;
     var h = 500;
 
-    const companies = this.props.companies;
+    const emojis = this.props.emojis;
 
     const faux = new Faux.Element('div');
 
@@ -131,21 +131,9 @@ var PieGraph = React.createClass({
        })
        .classed('shell', true)
 
+       var self = this;
 
-       wave
-       .append("g")
-       .classed("textGroup", true)
-       .attr('transform', function(d, i){
-         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
-       })
-       .append('text')
-       .html(function(d, i) {
-         return companies[i];
-       })
-       .attr('font-family', 'Futura')
-       .attr('font-size', '15px')
-       .attr('fill', 'white')
-       .classed('companyText', true);
+
 
        svg.append('circle')
        .classed('innerCircle', true)
@@ -158,6 +146,26 @@ var PieGraph = React.createClass({
 
 
 
+       wave
+       .append("g")
+       .classed("textGroup", true)
+       .attr('transform', function(d, i){
+         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+       })
+       .append('text')
+       .html(function(d, i) {
+         return emojis[i];
+       })
+       .attr('font-family', 'Futura')
+       .attr('font-size', '15px')
+       .attr('fill', 'white')
+       .classed('companyText', true)
+       .on('mouseover', function(d, i){
+         return self.props.hoverHandler(i);
+       })
+       .on('mouseout', function(d, i){
+         return self.props.hoverHandler(i);
+       });
 
 
       const finalChart = faux.toReact();

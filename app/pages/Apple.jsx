@@ -7,10 +7,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Apple extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Apple'}
-          description={'This is the Apple page.'}
+          description={"When's the new Macbook Pro coming out?"}
           />
       </div>
     );

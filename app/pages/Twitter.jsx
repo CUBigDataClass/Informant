@@ -7,14 +7,11 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Twitter extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Twitter'}
-          description={'This is the Twitter page.'}
+          description={'What are people feeling about Twitter?'}
           />
-        <div className='page-bg-image-container'>
-          <img className='page-bg-image' src={require('../assets/images/mountains.jpg')} />
-        </div>
       </div>
     );
   }

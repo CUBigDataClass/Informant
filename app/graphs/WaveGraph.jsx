@@ -23,7 +23,7 @@ var WaveGraph = React.createClass({
     var w = 500;
     var h = 500;
 
-    const companies = this.props.companies;
+    const emojis = this.props.emojis;
 
     // const faux = this.connectFauxDOM('div.renderedD3', 'chart');
     const faux = new Faux.Element('div');
@@ -94,7 +94,7 @@ var WaveGraph = React.createClass({
        var link = d3.line()
                      .x(function(d) { return d.x*5; })
                      .y(function(d) { return d.y*5; })
-                     .curve(d3.curveBasisClosed) //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
+                     .curve(d3.curveCatmullRomClosed) //curveBasis,curveCatmullRom,curveMonotoneX,curveStepAfter,curveStepBefore,curveStep
                      //curveBasisClosed,
 
       //first wave
@@ -127,20 +127,7 @@ var WaveGraph = React.createClass({
       // .attr('stroke-width', '2px')
       // .classed('secondWave', true);
 
-      wave
-      .append("g")
-      .classed("textGroup", true)
-      .attr('transform', function(d, i){
-        return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
-      })
-      .append('text')
-      .html(function(d, i) {
-        return companies[i];
-      })
-      .attr('font-family', 'Futura')
-      .attr('font-size', '15px')
-      .attr('fill', 'white')
-      .classed('companyText', true);
+
 
 
 
@@ -193,6 +180,28 @@ var WaveGraph = React.createClass({
        .classed('shell', true)
        .attr('stroke', bgColor)
        .attr("d", arc);
+
+
+       wave
+       .append("g")
+       .classed("textGroup", true)
+       .attr('transform', function(d, i){
+         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+       })
+       .append('text')
+       .html(function(d, i) {
+         return emojis[i];
+       })
+       .attr('font-family', 'Futura')
+       .attr('font-size', '15px')
+       .attr('fill', 'white')
+       .classed('companyText', true)
+       .on('mouseover', function(d, i){
+         return self.props.hoverHandler(i);
+       })
+       .on('mouseout', function(d, i){
+         return self.props.hoverHandler(i);
+       });
 
 
 

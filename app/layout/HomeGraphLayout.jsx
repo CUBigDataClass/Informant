@@ -1,29 +1,23 @@
-import React from 'react';
-import {Link} from 'react-router';
-import GraphView from '../graphs/PieGraph.jsx';
-import TextLayout from './TextLayout.jsx';
-import GraphLayout from './GraphLayout.jsx';
+import React, {Component} from 'react';
+import * as d3 from 'd3';
+import LinearGraph from '../graphs/LinearGraph.jsx';
+import WaveGraph from '../graphs/WaveGraph.jsx';
+import DotGraph from '../graphs/DotGraph.jsx';
+import PieGraph from '../graphs/PieGraph.jsx';
+import Companies from '../info/companies.json';
 var io = require('socket.io-client');
 
-const emotions = ['Ecstatic','Joyous','Optimistic','Happy','Amused','Good','Indifferent','Awful','Enraged','Furious'];
-
-class PageLayout extends React.Component {
+class HomeGraphLayout extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      hoverTextStyle: 'hover-text off',
-      data: [5, 6, 8, 1, 11, 14, 5, 6, 8, 9],
-      tweet: "\\(o_o)/",
-      graphType: 'pie',
-      emotionLabel: '',
-      percentage: ''
+      data: [5, 6, 8, 1, 11, 14, 5, 6],
+      tweet: "loading...",
+      graphType: 'pie'
     }
-    this.hoverHandler = this.hoverHandler.bind(this);
 
     this.updateData = this.updateData.bind(this);
-    this.changeToPie = this.changeToPie.bind(this);
-    this.changeToWave = this.changeToWave.bind(this);
-    this.changeToLinear = this.changeToLinear.bind(this);
   }
   updateData() {
     this.setState((prevState, props) => {
@@ -31,21 +25,6 @@ class PageLayout extends React.Component {
             data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10))
           }
         });
-  }
-  hoverHandler(i) {
-    this.setState((prevState,props) => {
-      if(this.state.hoverTextStyle == "hover-text off") {
-        return {
-          hoverTextStyle: 'hover-text on',
-          emotionLabel: emotions[i],
-          percentage: prevState.data[i]
-        }
-      } else {
-        return {
-          hoverTextStyle: 'hover-text off'
-        }
-      }
-    });
   }
   componentDidMount() {
     var socket = io.connect();
@@ -153,70 +132,39 @@ class PageLayout extends React.Component {
         });
       });
   }
-  changeToPie() {
-    this.setState({
-      graphType: 'pie'
-    });
-  }
-  changeToWave() {
-    this.setState({
-      graphType: 'wave'
-    });
-  }
-  changeToLinear() {
-    this.setState({
-      graphType: 'linear'
-    });
-  }
   render() {
+    const companies = Companies.map((section, i) => {
+      return section.title;
+    });
+
+    var graph;
+    if(this.state.graphType == "linear") {
+      graph = (<LinearGraph
+        data={this.state.data}
+        emojis={companies}
+      />);
+    } else if(this.state.graphType == "wave") {
+      graph = (<WaveGraph
+        data={this.state.data}
+        emojis={companies}
+      />);
+    } else if(this.state.graphType == "pie") {
+      graph = (<PieGraph
+        data={this.state.data}
+        emojis={companies}
+      />);
+    }
+
     return (
-      <div className='page'>
-        <TextLayout
-          title={this.props.title}
-          description={this.props.description}
-          hoverTextStyle={this.state.hoverTextStyle}
-          percentage={this.state.percentage}
-          emotionLabel={this.state.emotionLabel}
-        />
-      <div className='graph-options'>
-      <div onMouseDown={this.updateData} className='update-data'>Update Data</div>
-      <div onMouseDown={this.changeToPie} className='update-data'>Pie Graph</div>
-      <div onMouseDown={this.changeToLinear} className='update-data'>Linear Graph</div>
-      <div onMouseDown={this.changeToWave} className='update-data'>Wave Graph</div>
-      </div>
-      <GraphLayout hoverHandler={this.hoverHandler} data={this.state.data} graphType={this.state.graphType}/>
-        <div className='page-bg-image-container'>
-          <img className='page-bg-image' src={require('../assets/images/mountains.jpg')} />
-        </div>
-        <div className='down-arrow-container'>
-          <Link to='amazon'>
-            Amazon
-          </Link>
-          <Link to='apple'>
-            Apple
-          </Link>
-          <Link to='facebook'>
-            Facebook
-          </Link>
-          <Link to='google'>
-            Google
-          </Link>
-          <Link to='lyft'>
-            Lyft
-          </Link>
-          <Link to='microsoft'>
-            Microsoft
-          </Link>
-          <Link to='twitter'>
-            Twitter
-          </Link>
-          <Link to='Uber'>
-            Uber
-          </Link>
-        </div>
+      <div className='home-graph-layout'>
+        <h1>
+          {this.state.tweet}
+        </h1>
+          {graph}
+
       </div>
     );
   }
 }
 
-export default PageLayout;
+export default HomeGraphLayout;

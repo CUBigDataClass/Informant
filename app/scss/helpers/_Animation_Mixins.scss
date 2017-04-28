@@ -63,11 +63,9 @@
 
 @keyframes dropin {
     from {
-    top: 100vh;
     font-size: 0em;
     }
     to   {
-    top: 0vh;
     font-size: 1.5em;
     }
 }
@@ -102,6 +100,52 @@
 
 
 
+
+@mixin css-dropout($t) {
+-webkit-animation: dropout $t; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: dropout $t; /* Firefox < 16 */
+    -ms-animation: dropout $t; /* Internet Explorer */
+     -o-animation: dropout $t; /* Opera < 12.1 */
+        animation: dropout $t;
+}
+
+
+@keyframes dropout {
+    from {
+    font-size: 1.5em;
+    }
+    to   {
+    font-size: 2.5em;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes dropout {
+    from { font-size: 1.5em; }
+    to   { font-size: 2.5em; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes dropout {
+    from {
+      font-size: 1.5em;
+    }
+    to   {
+      font-size: 2.5em;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes dropout {
+    from { font-size: 1.5em; }
+    to   { font-size: 2.5em; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes dropout {
+    from { font-size: 1.5em; }
+    to   { font-size: 2.5em; }
+}
 
 
 

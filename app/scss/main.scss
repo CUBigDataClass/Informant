@@ -1,8 +1,8 @@
 $global-p-color: #dec5c5;
 $global-h1-color: #ffffff;
 $global-bg-color: #1b1a1a;
-$global-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
-$global-p-font-stack: 'Rubik', Helvetica, sans-serif;
+$global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;
+$global-p-font-stack: 'Open Sans', Helvetica, sans-serif;
 $section-color: #dbd7d7;
 $p-section-color: #111111;
 
@@ -33,11 +33,15 @@ body {
 
   a {
     font-family: $global-p-font-stack;
-    color: white;
+    color: #a79191;
     text-decoration: none;
     margin: 10px;
     @include css-user-select(none);
     }
+
+  a:hover {
+    color: #ffecec;
+  }
 
   h1 {
     font-family: $global-font-stack;

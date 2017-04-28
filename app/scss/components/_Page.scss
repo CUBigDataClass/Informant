@@ -1,32 +1,37 @@
 $intro-button-color: #ff7970;
 $mobile-width: 800px;
 $transition-duration: 0.5s;
+$transition-prop: all;
+$transition-easing: ease;
 
 
 .on-enter {
-  transform: translateY(-100vh);
-
+  transform: translateY(0vh);
   @include css-dropin(0.75s);
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
+
 }
 
 .on-enter-active {
   transform: translateY(0vh);
-@include css-transition(all, 0.5s, ease);
-  @include css-dropin(1.75s);
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
+
 }
 
 .on-leave {
   transform: translateY(0vh);
-
+  /*@include css-dropout(0.75s);*/
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
 }
 
 .on-leave-active {
-  transform: translateY(100vh);
-  @include css-transition(all, 0.5s, ease);
+  transform: translateY(-100vh);
+  /*@include css-dropout(0.75s);*/
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
 }
 
 .page {
-  @include css-transition(all, 0.5s, ease);
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
 
   display: flex;
   justify-content: center;
@@ -34,9 +39,25 @@ $transition-duration: 0.5s;
   height: 100vh;
   flex-wrap: wrap;
 
+
+  .home-description {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+
+    p {
+        width: 20%;
+    }
+  }
+
+  .home-graph-layout {
+    h1 {
+    }
+  }
+
   .update-data {
-    position: fixed;
     top: 0;
+    margin-top: 1vh;
     background: #36363d;
     color: white;
     font-family: 'Rubik';
@@ -75,6 +96,26 @@ $transition-duration: 0.5s;
           @css-user-select(none);
           cursor: default;
         }
+      }
+
+      .hover-text {
+        color: #db8686;
+      }
+
+      .on {
+        /*@include css-transform-translate-x(0vw);*/
+        opacity: 1.0;
+        @include css-transition(all, 4.5s, ease-in-out);
+      }
+
+      .off {
+        @include css-transition(all, 4.5s, ease-in-out);
+        opacity: 0.0;
+        /*@include css-transform-translate-x(-50vw);*/
+      }
+
+      .graph-options {
+
       }
 
       .subtitle {

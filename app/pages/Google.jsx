@@ -7,10 +7,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Google extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Google'}
-          description={'This is the Google page.'}
+          description={"What's up with Google?"}
           />
       </div>
     );

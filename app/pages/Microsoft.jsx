@@ -7,10 +7,10 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Microsoft extends React.Component {
   render() {
     return (
-      <div className='page'>
+      <div>
         <PageLayout
           title={'Microsoft'}
-          description={'This is the Microsoft page.'}
+          description={'Opinions on Microsoft?'}
           />
       </div>
     );

@@ -5,33 +5,33 @@ class MenuBarIcon extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      MenuBarIconStyle: 'MenuBarIcon unclicked'
+      MenuBarIconState: 'menu-bar-icon unclicked'
     }
     this.toggleIcon = this.toggleIcon.bind(this);
   }
   toggleIcon() {
     this.setState((prevState, props) => {
       var newProp;
-      if(prevState.MenuBarIconStyle == 'MenuBarIcon unclicked') {
-        newProp = 'MenuBarIcon clicked';
+      if(prevState.MenuBarIconState == 'menu-bar-icon unclicked') {
+        newProp = 'menu-bar-icon clicked';
       } else {
-        newProp = 'MenuBarIcon unclicked';
+        newProp = 'menu-bar-icon unclicked';
       }
       return {
-        MenuBarIconStyle: newProp
+        MenuBarIconState: newProp
       }
     });
   }
   componentWillUpdate(props) {
     if(props.open == true) {
-      this.state.MenuBarIconStyle = 'MenuBarIcon clicked'
+      this.state.MenuBarIconState = 'menu-bar-icon clicked'
     } else {
-      this.state.MenuBarIconStyle = 'MenuBarIcon unclicked'
+      this.state.MenuBarIconState = 'menu-bar-icon unclicked'
     }
   }
   render() {
     return (
-      <button className={this.state.MenuBarIconStyle} onMouseDown={this.props.togglePanel}>
+      <button className={this.state.MenuBarIconState} onMouseDown={this.props.togglePanel}>
         <div id={'topBar'}></div>
         <div id={'middleBar'}></div>
         <div id={'bottomBar'}></div>

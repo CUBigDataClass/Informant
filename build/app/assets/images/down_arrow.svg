@@ -1,0 +1,12 @@
+<svg width="15" height="7" viewBox="0 0 15 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:figma="http://www.figma.com/figma/ns">
+<title>Vector 4</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(791 -912)" figma:type="canvas">
+<g id="Vector 4" figma:type="vector">
+<use xlink:href="#path0_stroke" transform="matrix(-1 -1.38778e-16 1.38778e-16 -1 -777 917)" fill="#FFFFFF"/>
+</g>
+</g>
+<defs>
+<path id="path0_stroke" d="M 6.5 0L 7.0241 -0.851658L 6.5 -1.17418L 5.9759 -0.851658L 6.5 0ZM 0.524097 4.85166L 7.0241 0.851658L 5.9759 -0.851658L -0.524097 3.14834L 0.524097 4.85166ZM 5.9759 0.851658L 12.4759 4.85166L 13.5241 3.14834L 7.0241 -0.851658L 5.9759 0.851658Z"/>
+</defs>
+</svg>

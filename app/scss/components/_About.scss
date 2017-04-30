@@ -1,0 +1,26 @@
+.about {
+  .about-image-container {
+    position: absolute;
+    top: 25vh;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-image {
+      width: 75vw;
+      background: red;
+      filter: brightness(100000%);
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+
+  .about-title {
+    position: absolute;
+    top: 0;
+  }
+
+
+}

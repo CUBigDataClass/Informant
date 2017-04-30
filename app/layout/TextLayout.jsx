@@ -12,7 +12,17 @@ class TextLayout extends React.Component {
             </div>
             <div className={'subtitle'}>
               <p>{this.props.description}</p>
-              <p className={this.props.hoverTextStyle}>{this.props.emotionLabel}: {this.props.percentage}</p>
+              <h1>
+                Average Sentiment:
+              </h1>
+              <h1 className='average-emotion'>
+                {this.props.average}
+              </h1>
+              <div className='hover-text-container'>
+                <p className={this.props.hoverTextStyle}>
+                  {this.props.emotionLabel}: {this.props.percentage}
+                </p>
+              </div>
             </div>
           </div>
         </div>

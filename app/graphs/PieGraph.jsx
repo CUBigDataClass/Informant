@@ -59,7 +59,7 @@ var PieGraph = React.createClass({
       //   return {x,y};
       // })
 
-      var palette = ['#9F7E69','#D2BBA0','#F8FCDA','#9F7E69','#D5896F','#A49E8D','#7A5C58','#969A97'];
+      var palette = ['#9F7E69','#D2BBA0','#F8FCDA','#9F7E69','#D5896F','#A49E8D','#7A5C58','#969A97', '#D2BBA0', '#9F7E69'];
 
       var wave = svg.selectAll("g")
        .data(data)
@@ -67,14 +67,14 @@ var PieGraph = React.createClass({
 
 
       //innerCircle is after outerCircle for hover events
-      svg.append('circle')
-      .classed('outerCircle', true)
-      .attr('cx', '50%')
-      .attr('cy', '50%')
-      .attr('r', 60)
-      .attr('fill', 'none')
-      .attr('stroke', color)
-      .attr('stroke-width', '3px')
+      // svg.append('circle')
+      // .classed('outerCircle', true)
+      // .attr('cx', '50%')
+      // .attr('cy', '50%')
+      // .attr('r', 60)
+      // .attr('fill', 'none')
+      // .attr('stroke', color)
+      // .attr('stroke-width', '3px')
 
 
        var start = 0;
@@ -99,10 +99,10 @@ var PieGraph = React.createClass({
         var deltaY = d.y - 0;
         var rad = Math.atan2(deltaY, deltaX); // In radians
         var deg = rad * (180 / Math.PI);
-        return rad + 1.57 //one radian;
+        return rad + 1.5 //one radian;
       })
       .innerRadius(function(d) {
-        return 10;
+        return 20;
       })
       .outerRadius(function(d) {
         var xsq = Math.pow(d.x,2);
@@ -134,15 +134,15 @@ var PieGraph = React.createClass({
        var self = this;
 
 
-
-       svg.append('circle')
-       .classed('innerCircle', true)
-       .attr('cx', '50%')
-       .attr('cy', '50%')
-       .attr('r', 40)
-       .attr('fill', 'transparent')
-       .attr('stroke', color)
-       .attr('stroke-width', '3px')
+       // 
+      //  svg.append('circle')
+      //  .classed('innerCircle', true)
+      //  .attr('cx', '50%')
+      //  .attr('cy', '50%')
+      //  .attr('r', 40)
+      //  .attr('fill', 'transparent')
+      //  .attr('stroke', color)
+      //  .attr('stroke-width', '3px')
 
 
 
@@ -150,7 +150,7 @@ var PieGraph = React.createClass({
        .append("g")
        .classed("textGroup", true)
        .attr('transform', function(d, i){
-         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+         return 'translate(' + (250 + 7.0*d.x) + ',' + (250 +  7.0*d.y) + ')';
        })
        .append('text')
        .html(function(d, i) {

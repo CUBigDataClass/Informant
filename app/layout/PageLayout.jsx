@@ -6,13 +6,17 @@ import GraphLayout from './GraphLayout.jsx';
 var io = require('socket.io-client');
 
 const emotions = ['Ecstatic','Joyous','Optimistic','Happy','Amused','Good','Indifferent','Awful','Enraged','Furious'];
+const emotions2 = ['Furious','Enraged','Awful','Indifferent','Good','Amused','Happy','Optimistic','Joyous','Ecstatic'];
+
 
 class PageLayout extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       hoverTextStyle: 'hover-text off',
       data: [5, 6, 8, 1, 11, 14, 5, 6, 8, 9],
+      emotionAverage: '',
       tweet: "\\(o_o)/",
       graphType: 'pie',
       emotionLabel: '',
@@ -24,13 +28,26 @@ class PageLayout extends React.Component {
     this.changeToPie = this.changeToPie.bind(this);
     this.changeToWave = this.changeToWave.bind(this);
     this.changeToLinear = this.changeToLinear.bind(this);
+    this.findEmotion = this.findEmotion.bind(this);
   }
   updateData() {
     this.setState((prevState, props) => {
+          const avg = Math.random() * 2 - 1;
           return {
-            data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10))
+            data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10)),
+            emotionAverage: this.findEmotion(avg)
           }
         });
+  }
+  findEmotion(avg) {
+    const l = emotions2.length;
+    var emotion;
+    for(var i = 0; i < l; i++) {
+      if(avg > (-1 + i*0.2) && avg < (-1 + (i+1)*0.2)) {
+        emotion = emotions2[i];
+      }
+    }
+    return emotion;
   }
   hoverHandler(i) {
     this.setState((prevState,props) => {
@@ -50,14 +67,18 @@ class PageLayout extends React.Component {
   componentDidMount() {
     var socket = io.connect();
     var self = this;
+
+    const num = 15;
+
     socket.on('amazonTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[0] = 15*(tweetObj.score + 1);
+          newData[0] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -67,10 +88,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[1] = 15*(tweetObj.score + 1);
+          newData[1] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -80,10 +102,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[2] = 15*(tweetObj.score + 1);
+          newData[2] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -94,10 +117,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[3] = 15*(tweetObj.score + 1);
+          newData[3] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -107,10 +131,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[4] = 15*(tweetObj.score + 1);
+          newData[4] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -120,10 +145,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[5] = 15*(tweetObj.score + 1);
+          newData[5] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -132,10 +158,11 @@ class PageLayout extends React.Component {
       var tweetObj = JSON.parse(tweet);
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[6] = 15*(tweetObj.score + 1);
+          newData[6] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -145,10 +172,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[7] = 15*(tweetObj.score + 1);
+          newData[7] = num*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData
+          data: newData,
+          emotionAverage: this.findEmotion(tweetObj.average)
           }
         });
       });
@@ -169,6 +197,7 @@ class PageLayout extends React.Component {
     });
   }
   render() {
+
     return (
       <div className='page'>
         <TextLayout
@@ -177,6 +206,7 @@ class PageLayout extends React.Component {
           hoverTextStyle={this.state.hoverTextStyle}
           percentage={this.state.percentage}
           emotionLabel={this.state.emotionLabel}
+          average={this.state.emotionAverage}
         />
       <div className='graph-options'>
       <div onMouseDown={this.updateData} className='update-data'>Update Data</div>

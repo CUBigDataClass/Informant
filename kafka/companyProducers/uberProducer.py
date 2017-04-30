@@ -21,9 +21,9 @@ class poster(object):
 		rule = '(@Uber OR @uber) lang:en -ads -advertisement ' #Write JSON rules here
 		
 		if self.nextToken != "":
-			query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "500", "next": %s }' %(self.nextToken,) 
+			query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "50", "next": %s }' %(self.nextToken,) 
 		else:
-			  query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "500"}'
+			  query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "50"}'
 
 		base64string = base64.encodestring('%s:%s' % (UN, PWD)).replace('\n', '')
 		req = urllib2.Request(url=url, data=query)

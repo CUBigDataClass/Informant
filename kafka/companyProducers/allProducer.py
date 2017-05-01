@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 
 import urllib2
 import base64
@@ -12,6 +12,9 @@ producer = KafkaProducer(bootstrap_servers='localhost:9092',value_serializer=lam
 class poster(object):
 	def __init__(self):
 		self.nextToken = ""
+		socketIO = SocketIO('localhost', 4000)
+		socketIO.on('tweet', self.on_tweet)
+		socketIO.wait()
 
 	def post(self):
 
@@ -19,9 +22,9 @@ class poster(object):
 		UN = 'michael.xiao@colorado.edu'
 		PWD = 'informant'
 		rule = ' (@twitter OR @Twitter) OR (@Uber OR @uber) OR (@amazon OR @Amazon) OR (@apple OR @Apple) OR (@facebook OR @Facebook) OR (@google OR @Google) OR (@Lyft or @lyft) OR (@microsoft OR @Microsoft) OR  lang:en -ads -advertisement ' #Write JSON rules here
-		
+
 		if self.nextToken != "":
-			query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "50", "next": %s }' %(self.nextToken,) 
+			query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "50", "next": %s }' %(self.nextToken,)
 		else:
 			  query = '{"query":"' + rule + '","fromDate":"201704150000","maxResults": "50"}'
 
@@ -29,7 +32,7 @@ class poster(object):
 		req = urllib2.Request(url=url, data=query)
 		req.add_header('Content-type', 'application/json')
 		req.add_header("Authorization", "Basic %s" % base64string)
-		
+
 		try:
 			response = urllib2.urlopen(req)
 			the_page = response.read()
@@ -38,20 +41,20 @@ class poster(object):
 				self.nextToken = "\""+data['next']+"\""
 			elif self.nextToken != data['next']:
 				self.nextToken = "\""+data['next']+"\""
-			
-			for i in range(0,500):
-				tweet = data['results'][i]['body']
+
+			for i in range(0,49):
+				tweet = data['results'][i]['text']
 				print tweet
 				producer.send('gnipReader',tweet)
 
 		except urllib2.HTTPError as e:
 			print e.read()
-	
+
 	def contPost(self):
 		while True:
-			self.post()	
+			self.post()
 
 if __name__ == "__main__":
 	postReq = poster()
-	
+
 	postReq.contPost()

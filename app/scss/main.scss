@@ -23,13 +23,28 @@ $p-section-color: #111111;
 @import './components/Graphs.scss';
 @import './components/About.scss';
 @import './components/TextLayout.scss';
+@import './components/TechStack.scss';
 
 
 body {
   margin: 0;
   padding: 0;
 
+  .profile-pic-container {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+
+  .profile-pic {
+    border-radius: 100%;
+width: 25%;
+margin: 50px;
+  }
 
   width: 100%;
   overflow:hidden;

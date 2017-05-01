@@ -30,9 +30,10 @@ class HomeGraphLayout extends Component {
   updateData() {
     this.setState((prevState, props) => {
           const avg = Math.random() * 2 - 1;
+          const new_avg = this.findEmotion(avg);
           return {
             data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10)),
-            average: this.findEmotion(avg)
+            average: new_avg
           }
         });
   }
@@ -40,7 +41,7 @@ class HomeGraphLayout extends Component {
     const l = emotions2.length;
     var emotion;
     for(var i = 0; i < l; i++) {
-      if(avg > (-1 + i*0.2) && avg < (-1 + (i+1)*0.2)) {
+      if(avg > (-1 + i*0.2) && avg <= (-1 + (i+1)*0.2)) {
         emotion = emotions2[i];
       }
     }
@@ -226,9 +227,11 @@ class HomeGraphLayout extends Component {
           </div>
           <p>{this.state.average}</p>
         </div>
-        <h1>
+        <div className='current-tweet-container'>
+        <h1 className='current-tweet'>
           {this.state.tweet}
         </h1>
+        </div>
           {graph}
 
       </div>

@@ -10,10 +10,10 @@ class TechStack extends React.Component {
       <div className='about'>
         <AboutPageLayout
           title={'Tech Stack'}
-          description={'Our Tech Stack.'}
+          description={''}
           />
-        <div className='about-image-container'>
-          <img className='about-image' src={require('../assets/images/tech_stack.png')}/>
+        <div className='tech-stack-image-container'>
+          <img className='tech-stack-image' src={require('../assets/images/tech_stack.png')}/>
         </div>
 
       </div>

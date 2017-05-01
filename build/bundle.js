@@ -442,21 +442,21 @@ module.exports = warning;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Router__ = __webpack_require__(306);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Router__ = __webpack_require__(310);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_0__Router__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Link__ = __webpack_require__(141);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_1__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IndexLink__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IndexLink__ = __webpack_require__(306);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IndexLink", function() { return __WEBPACK_IMPORTED_MODULE_2__IndexLink__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__withRouter__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__withRouter__ = __webpack_require__(321);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "withRouter", function() { return __WEBPACK_IMPORTED_MODULE_3__withRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__IndexRedirect__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__IndexRedirect__ = __webpack_require__(307);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IndexRedirect", function() { return __WEBPACK_IMPORTED_MODULE_4__IndexRedirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__IndexRoute__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__IndexRoute__ = __webpack_require__(308);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IndexRoute", function() { return __WEBPACK_IMPORTED_MODULE_5__IndexRoute__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(143);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(305);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(309);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__RouteUtils__ = __webpack_require__(24);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createRoutes", function() { return __WEBPACK_IMPORTED_MODULE_8__RouteUtils__["a"]; });
@@ -465,17 +465,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__PropTypes__ = __webpack_require__(75);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "locationShape", function() { return __WEBPACK_IMPORTED_MODULE_10__PropTypes__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "routerShape", function() { return __WEBPACK_IMPORTED_MODULE_10__PropTypes__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__match__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__match__ = __webpack_require__(319);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "match", function() { return __WEBPACK_IMPORTED_MODULE_11__match__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__useRouterHistory__ = __webpack_require__(148);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "useRouterHistory", function() { return __WEBPACK_IMPORTED_MODULE_12__useRouterHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__PatternUtils__ = __webpack_require__(32);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "formatPattern", function() { return __WEBPACK_IMPORTED_MODULE_13__PatternUtils__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__applyRouterMiddleware__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__applyRouterMiddleware__ = __webpack_require__(312);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "applyRouterMiddleware", function() { return __WEBPACK_IMPORTED_MODULE_14__applyRouterMiddleware__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__browserHistory__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__browserHistory__ = __webpack_require__(313);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "browserHistory", function() { return __WEBPACK_IMPORTED_MODULE_15__browserHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hashHistory__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hashHistory__ = __webpack_require__(317);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "hashHistory", function() { return __WEBPACK_IMPORTED_MODULE_16__hashHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__createMemoryHistory__ = __webpack_require__(145);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createMemoryHistory", function() { return __WEBPACK_IMPORTED_MODULE_17__createMemoryHistory__["a"]; });
@@ -1538,11 +1538,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(278)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(282)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(277)();
+  module.exports = __webpack_require__(281)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1551,7 +1551,7 @@ if (process.env.NODE_ENV !== 'production') {
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(333);
+module.exports = __webpack_require__(337);
 
 /***/ }),
 /* 12 */
@@ -3479,7 +3479,7 @@ module.exports = DOMProperty;
 
 
 
-var ReactRef = __webpack_require__(354);
+var ReactRef = __webpack_require__(358);
 
 /**
  * Helper to call ReactRef.attachRefs with this composite component, split out
@@ -20340,7 +20340,7 @@ var keys = __webpack_require__(235);
 var hasBinary = __webpack_require__(118);
 var sliceBuffer = __webpack_require__(205);
 var after = __webpack_require__(204);
-var utf8 = __webpack_require__(392);
+var utf8 = __webpack_require__(396);
 
 var base64encoder;
 if (global && global.ArrayBuffer) {
@@ -21673,7 +21673,7 @@ module.exports = emptyObject;
  */
 
 var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-var DummyEnvironment      = __webpack_require__(298);
+var DummyEnvironment      = __webpack_require__(302);
 var Environment           = __webpack_require__(50);
 
 /**
@@ -21702,7 +21702,7 @@ var dummyEnvironment;
 
 if (canUseDOM) {
 
-  PathnameEnvironment = __webpack_require__(299);
+  PathnameEnvironment = __webpack_require__(303);
   HashEnvironment     = __webpack_require__(139);
 
   pathnameEnvironment = new PathnameEnvironment();
@@ -21787,7 +21787,7 @@ var routes = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_prop_types__["one
 
 
 var EventPluginRegistry = __webpack_require__(152);
-var EventPluginUtils = __webpack_require__(329);
+var EventPluginUtils = __webpack_require__(333);
 var ReactErrorUtils = __webpack_require__(164);
 
 var accumulateInto = __webpack_require__(173);
@@ -22471,7 +22471,11 @@ var PieGraph = _react2.default.createClass({
       return 'translate(' + (250 + 7.0 * d.x) + ',' + (250 + 7.0 * d.y) + ')';
     }).append('text').html(function (d, i) {
       return emojis[i];
-    }).attr('font-family', 'Futura').attr('font-size', '15px').attr('fill', 'white').classed('companyText', true);
+    }).attr('font-family', 'Futura').attr('font-size', '15px').attr('fill', 'white').classed('companyText', true).on('mouseover', function (d, i) {
+      return self.props.hoverHandler(i);
+    }).on('mouseout', function (d, i) {
+      return self.props.hoverHandler(i);
+    });
 
     var finalChart = faux.toReact();
     this.setState({
@@ -22847,8 +22851,8 @@ var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isE
 
 
 
-var isObject = __webpack_require__(268);
-var forOwn = __webpack_require__(254);
+var isObject = __webpack_require__(272);
+var forOwn = __webpack_require__(258);
 
 module.exports = function omit(obj, keys) {
   if (!isObject(obj)) return {};
@@ -22885,9 +22889,9 @@ module.exports = function omit(obj, keys) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var Element = __webpack_require__(133)
-var Window = __webpack_require__(287)
-var core = __webpack_require__(289)
-var anim = __webpack_require__(288)
+var Window = __webpack_require__(291)
+var core = __webpack_require__(293)
+var anim = __webpack_require__(292)
 
 var ReactFauxDOM = {
   Element: Element,
@@ -23035,11 +23039,11 @@ module.exports = Environment;
 
 
 var ReactDOM = __webpack_require__(82);
-var ReactDOMServer = __webpack_require__(343);
-var ReactIsomorphic = __webpack_require__(350);
+var ReactDOMServer = __webpack_require__(347);
+var ReactIsomorphic = __webpack_require__(354);
 
 var assign = __webpack_require__(3);
-var deprecated = __webpack_require__(375);
+var deprecated = __webpack_require__(379);
 
 // `version` will be added here by ReactIsomorphic.
 var React = {};
@@ -23084,7 +23088,7 @@ module.exports = React;
 var EventConstants = __webpack_require__(18);
 var EventPluginHub = __webpack_require__(38);
 var EventPluginRegistry = __webpack_require__(152);
-var ReactEventEmitterMixin = __webpack_require__(347);
+var ReactEventEmitterMixin = __webpack_require__(351);
 var ReactPerf = __webpack_require__(13);
 var ViewportMetrics = __webpack_require__(172);
 
@@ -23950,7 +23954,7 @@ module.exports = setInnerHTML;
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(381);
+exports = module.exports = __webpack_require__(385);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -24302,7 +24306,7 @@ Transport.prototype.onClose = function () {
 
 /* WEBPACK VAR INJECTION */(function(global) {// browser shim for xmlhttprequest module
 
-var hasCORS = __webpack_require__(259);
+var hasCORS = __webpack_require__(263);
 
 module.exports = function (opts) {
   var xdomain = opts.xdomain;
@@ -24633,7 +24637,7 @@ var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.d
 
 exports.__esModule = true;
 
-var _AsyncUtils = __webpack_require__(260);
+var _AsyncUtils = __webpack_require__(264);
 
 var _PathUtils = __webpack_require__(22);
 
@@ -24847,7 +24851,7 @@ exports.default = runTransitionHook;
 var has = Object.prototype.hasOwnProperty;
 var toStr = Object.prototype.toString;
 var slice = Array.prototype.slice;
-var isArgs = __webpack_require__(271);
+var isArgs = __webpack_require__(275);
 var isEnumerable = Object.prototype.propertyIsEnumerable;
 var hasDontEnumBug = !isEnumerable.call({ toString: null }, 'toString');
 var hasProtoEnumBug = isEnumerable.call(function () {}, 'prototype');
@@ -25390,7 +25394,7 @@ var locationShape = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_prop_types
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getRouteParams__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getRouteParams__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ContextUtils__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RouteUtils__ = __webpack_require__(24);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -25629,7 +25633,7 @@ module.exports = CallbackQueue;
 var DOMProperty = __webpack_require__(26);
 var ReactPerf = __webpack_require__(13);
 
-var quoteAttributeValueForBrowser = __webpack_require__(378);
+var quoteAttributeValueForBrowser = __webpack_require__(382);
 var warning = __webpack_require__(4);
 
 // Simplified subset
@@ -26116,7 +26120,7 @@ var ReactUpdates = __webpack_require__(15);
 var ReactVersion = __webpack_require__(85);
 
 var findDOMNode = __webpack_require__(86);
-var renderSubtreeIntoContainer = __webpack_require__(379);
+var renderSubtreeIntoContainer = __webpack_require__(383);
 var warning = __webpack_require__(4);
 
 ReactDefaultInjection.inject();
@@ -26831,7 +26835,7 @@ module.exports = getIteratorFn;
 
 
 
-var ReactCompositeComponent = __webpack_require__(336);
+var ReactCompositeComponent = __webpack_require__(340);
 var ReactEmptyComponent = __webpack_require__(162);
 var ReactNativeComponent = __webpack_require__(168);
 
@@ -27667,7 +27671,7 @@ module.exports = validateDOMNesting;
  * Module dependencies.
  */
 
-var url = __webpack_require__(380);
+var url = __webpack_require__(384);
 var parser = __webpack_require__(98);
 var Manager = __webpack_require__(179);
 var debug = __webpack_require__(60)('socket.io-client');
@@ -27782,10 +27786,10 @@ exports.Socket = __webpack_require__(181);
  * Module dependencies.
  */
 
-var debug = __webpack_require__(383)('socket.io-parser');
-var json = __webpack_require__(270);
+var debug = __webpack_require__(387)('socket.io-parser');
+var json = __webpack_require__(274);
 var Emitter = __webpack_require__(215);
-var binary = __webpack_require__(382);
+var binary = __webpack_require__(386);
 var isBuf = __webpack_require__(183);
 
 /**
@@ -28190,9 +28194,9 @@ function error(data){
 "use strict";
 
 
-var Router                    = __webpack_require__(297);
-var Route                     = __webpack_require__(296);
-var Link                      = __webpack_require__(295);
+var Router                    = __webpack_require__(301);
+var Route                     = __webpack_require__(300);
+var Link                      = __webpack_require__(299);
 
 var RouterMixin               = __webpack_require__(138);
 var RouteRenderingMixin       = __webpack_require__(137);
@@ -28201,7 +28205,7 @@ var NavigatableMixin          = __webpack_require__(136);
 
 var environment               = __webpack_require__(36);
 
-var CaptureClicks             = __webpack_require__(294);
+var CaptureClicks             = __webpack_require__(298);
 
 var URLPattern                = __webpack_require__(184);
 
@@ -28528,7 +28532,11 @@ var LinearGraph = _react2.default.createClass({
       return 'translate(' + (250 - 7.5 * d.x) + ',' + (250 + 7.5 * d.y) + ')';
     }).append('text').html(function (d, i) {
       return emojis[i];
-    }).attr('font-family', 'Futura').attr('font-size', '15px').attr('fill', 'white').classed('companyText', true);
+    }).attr('font-family', 'Futura').attr('font-size', '15px').attr('fill', 'white').classed('companyText', true).on('mouseover', function (d, i) {
+      return self.props.hoverHandler(i);
+    }).on('mouseout', function (d, i) {
+      return self.props.hoverHandler(i);
+    });
 
     var finalChart = faux.toReact();
     this.setState({
@@ -28829,20 +28837,6 @@ var AboutPageLayout = function (_React$Component) {
       return _react2.default.createElement(
         'div',
         { className: 'page' },
-        _react2.default.createElement(
-          'div',
-          { className: 'about-title' },
-          _react2.default.createElement(
-            'h1',
-            null,
-            this.props.title
-          ),
-          _react2.default.createElement(
-            'h3',
-            null,
-            this.props.description
-          )
-        ),
         _react2.default.createElement('div', { className: 'page-bg-image-container' }),
         _react2.default.createElement(
           'div',
@@ -29143,7 +29137,7 @@ module.exports = function(obj, fn){
 
 
 var keys = __webpack_require__(69);
-var foreach = __webpack_require__(255);
+var foreach = __webpack_require__(259);
 var hasSymbols = typeof Symbol === 'function' && typeof Symbol() === 'symbol';
 
 var toStr = Object.prototype.toString;
@@ -29914,7 +29908,7 @@ module.exports = shallowEqual;
  * Module requirements.
  */
 
-var isArray = __webpack_require__(258);
+var isArray = __webpack_require__(262);
 
 /**
  * Module exports.
@@ -30189,7 +30183,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _queryString = __webpack_require__(286);
+var _queryString = __webpack_require__(290);
 
 var _runTransitionHook = __webpack_require__(68);
 
@@ -30570,11 +30564,11 @@ function plural(ms, n, name) {
 
 // modified from https://github.com/es-shims/es6-shim
 var keys = __webpack_require__(69);
-var bind = __webpack_require__(257);
+var bind = __webpack_require__(261);
 var canBeObject = function (obj) {
 	return typeof obj !== 'undefined' && obj !== null;
 };
-var hasSymbols = __webpack_require__(272)();
+var hasSymbols = __webpack_require__(276)();
 var toObject = Object;
 var push = bind.call(Function.call, Array.prototype.push);
 var propIsEnumerable = bind.call(Function.call, Object.prototype.propertyIsEnumerable);
@@ -31025,14 +31019,14 @@ exports.isBuffer = function (obj) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1)
-var styleAttr = __webpack_require__(388)
-var querySelectorAll = __webpack_require__(282)
+var styleAttr = __webpack_require__(392)
+var querySelectorAll = __webpack_require__(286)
 var camelCase = __webpack_require__(134)
-var isString = __webpack_require__(291)
-var isUndefined = __webpack_require__(292)
-var assign = __webpack_require__(290)
+var isString = __webpack_require__(295)
+var isUndefined = __webpack_require__(296)
+var assign = __webpack_require__(294)
 var mapValues = __webpack_require__(135)
-var styleCamelCase = __webpack_require__(293)
+var styleCamelCase = __webpack_require__(297)
 
 function Element (nodeName, parentNode) {
   this.nodeName = nodeName
@@ -31539,9 +31533,9 @@ module.exports = RouteRenderingMixin;
 var React         = __webpack_require__(1);
 var invariant     = __webpack_require__(140);
 var assign        = Object.assign || __webpack_require__(23);
-var matchRoutes   = __webpack_require__(300);
+var matchRoutes   = __webpack_require__(304);
 var Environment   = __webpack_require__(36);
-var shallowEqual  = __webpack_require__(267);
+var shallowEqual  = __webpack_require__(271);
 
 var RouterMixin = {
   mixins: [Environment.Mixin],
@@ -32179,7 +32173,7 @@ function assignRouterState(router, _ref) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_useQueries___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_history_lib_useQueries__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_lib_useBasename__ = __webpack_require__(120);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_history_lib_useBasename___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_history_lib_useBasename__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_lib_createMemoryHistory__ = __webpack_require__(265);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_lib_createMemoryHistory__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_history_lib_createMemoryHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_history_lib_createMemoryHistory__);
 /* harmony export (immutable) */ __webpack_exports__["a"] = createMemoryHistory;
 
@@ -32221,11 +32215,11 @@ function createRouterHistory(createHistory) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__routerWarning__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__computeChangedRoutes__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TransitionUtils__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isActive__ = __webpack_require__(314);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getComponents__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__matchRoutes__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__computeChangedRoutes__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__TransitionUtils__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__isActive__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__getComponents__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__matchRoutes__ = __webpack_require__(320);
 /* harmony export (immutable) */ __webpack_exports__["a"] = createTransitionManager;
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -32726,7 +32720,7 @@ module.exports = CSSProperty;
 
 
 
-var Danger = __webpack_require__(326);
+var Danger = __webpack_require__(330);
 var ReactMultiChildUpdateTypes = __webpack_require__(167);
 var ReactPerf = __webpack_require__(13);
 
@@ -34609,27 +34603,27 @@ module.exports = ReactDefaultBatchingStrategy;
 
 
 
-var BeforeInputEventPlugin = __webpack_require__(322);
-var ChangeEventPlugin = __webpack_require__(324);
-var ClientReactRootIndex = __webpack_require__(325);
-var DefaultEventPluginOrder = __webpack_require__(327);
-var EnterLeaveEventPlugin = __webpack_require__(328);
+var BeforeInputEventPlugin = __webpack_require__(326);
+var ChangeEventPlugin = __webpack_require__(328);
+var ClientReactRootIndex = __webpack_require__(329);
+var DefaultEventPluginOrder = __webpack_require__(331);
+var EnterLeaveEventPlugin = __webpack_require__(332);
 var ExecutionEnvironment = __webpack_require__(6);
-var HTMLDOMPropertyConfig = __webpack_require__(331);
-var ReactBrowserComponentMixin = __webpack_require__(332);
+var HTMLDOMPropertyConfig = __webpack_require__(335);
+var ReactBrowserComponentMixin = __webpack_require__(336);
 var ReactComponentBrowserEnvironment = __webpack_require__(80);
 var ReactDefaultBatchingStrategy = __webpack_require__(159);
-var ReactDOMComponent = __webpack_require__(338);
+var ReactDOMComponent = __webpack_require__(342);
 var ReactDOMTextComponent = __webpack_require__(158);
-var ReactEventListener = __webpack_require__(348);
-var ReactInjection = __webpack_require__(349);
+var ReactEventListener = __webpack_require__(352);
+var ReactInjection = __webpack_require__(353);
 var ReactInstanceHandles = __webpack_require__(34);
 var ReactMount = __webpack_require__(7);
-var ReactReconcileTransaction = __webpack_require__(353);
-var SelectEventPlugin = __webpack_require__(362);
-var ServerReactRootIndex = __webpack_require__(363);
-var SimpleEventPlugin = __webpack_require__(364);
-var SVGDOMPropertyConfig = __webpack_require__(361);
+var ReactReconcileTransaction = __webpack_require__(357);
+var SelectEventPlugin = __webpack_require__(366);
+var ServerReactRootIndex = __webpack_require__(367);
+var SimpleEventPlugin = __webpack_require__(368);
+var SVGDOMPropertyConfig = __webpack_require__(365);
 
 var alreadyInjected = false;
 
@@ -34684,7 +34678,7 @@ function inject() {
   if (process.env.NODE_ENV !== 'production') {
     var url = ExecutionEnvironment.canUseDOM && window.location.href || '';
     if (/[?&]react_perf\b/.test(url)) {
-      var ReactDefaultPerf = __webpack_require__(345);
+      var ReactDefaultPerf = __webpack_require__(349);
       ReactDefaultPerf.start();
     }
   }
@@ -35200,7 +35194,7 @@ module.exports = ReactErrorUtils;
 
 
 
-var ReactDOMSelection = __webpack_require__(342);
+var ReactDOMSelection = __webpack_require__(346);
 
 var containsNode = __webpack_require__(113);
 var focusNode = __webpack_require__(114);
@@ -35330,7 +35324,7 @@ module.exports = ReactInputSelection;
 
 
 
-var adler32 = __webpack_require__(373);
+var adler32 = __webpack_require__(377);
 
 var TAG_END = /\/?>/;
 
@@ -36945,7 +36939,7 @@ function on (obj, ev, fn) {
 
 var parser = __webpack_require__(98);
 var Emitter = __webpack_require__(182);
-var toArray = __webpack_require__(390);
+var toArray = __webpack_require__(394);
 var on = __webpack_require__(180);
 var bind = __webpack_require__(107);
 var debug = __webpack_require__(60)('socket.io-client:socket');
@@ -38219,7 +38213,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         'div',
         null,
-        _react2.default.createElement('img', { className: 'bg-image', src: __webpack_require__(251) }),
+        _react2.default.createElement('img', { className: 'bg-image', src: __webpack_require__(254) }),
         _react2.default.createElement(_MenuBar2.default, { names: _companies2.default, open: this.state.open, closeMenuBar: this.closeMenuBar }),
         _react2.default.createElement(_MenuBarIcon2.default, { togglePanel: this.togglePanel, open: this.state.open }),
         _react2.default.createElement(
@@ -38299,8 +38293,7 @@ var About = function (_React$Component) {
         'div',
         { className: 'about' },
         _react2.default.createElement(_AboutPageLayout2.default, {
-          title: 'About',
-          description: 'About Us.'
+          title: 'About'
         }),
         _react2.default.createElement(
           'div',
@@ -38329,6 +38322,14 @@ var About = function (_React$Component) {
             'p',
             null,
             'Informant serves a dual purpose as a stock market assistant tool and as an ongoing narrative, streaming realtime emotion into an immediate and concise visualization.'
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'profile-pic-container' },
+            _react2.default.createElement('img', { className: 'profile-pic', src: __webpack_require__(252) }),
+            _react2.default.createElement('img', { className: 'profile-pic', src: __webpack_require__(253) }),
+            _react2.default.createElement('img', { className: 'profile-pic', src: __webpack_require__(256) }),
+            _react2.default.createElement('img', { className: 'profile-pic', src: __webpack_require__(251) })
           )
         )
       );
@@ -38922,12 +38923,12 @@ var TechStack = function (_React$Component) {
         { className: 'about' },
         _react2.default.createElement(_AboutPageLayout2.default, {
           title: 'Tech Stack',
-          description: 'Our Tech Stack.'
+          description: ''
         }),
         _react2.default.createElement(
           'div',
-          { className: 'about-image-container' },
-          _react2.default.createElement('img', { className: 'about-image', src: __webpack_require__(252) })
+          { className: 'tech-stack-image-container' },
+          _react2.default.createElement('img', { className: 'tech-stack-image', src: __webpack_require__(255) })
         )
       );
     }
@@ -39077,7 +39078,7 @@ exports.default = Uber;
 var React              = __webpack_require__(1);
 var CSSTransitionGroup = __webpack_require__(11);
 var Router             = __webpack_require__(99);
-var assign             = __webpack_require__(273);
+var assign             = __webpack_require__(277);
 
 var AnimatedLocations = React.createClass({
 
@@ -39157,11 +39158,11 @@ var _propTypes = __webpack_require__(10);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _TransitionGroup = __webpack_require__(319);
+var _TransitionGroup = __webpack_require__(323);
 
 var _TransitionGroup2 = _interopRequireDefault(_TransitionGroup);
 
-var _CSSTransitionGroupChild = __webpack_require__(318);
+var _CSSTransitionGroupChild = __webpack_require__(322);
 
 var _CSSTransitionGroupChild2 = _interopRequireDefault(_CSSTransitionGroupChild);
 
@@ -39248,7 +39249,7 @@ module.exports = exports['default'];
 var content = __webpack_require__(221);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(389)(content, {});
+var update = __webpack_require__(393)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -39729,11 +39730,12 @@ var HomeGraphLayout = function (_Component) {
 
       this.setState(function (prevState, props) {
         var avg = Math.random() * 2 - 1;
+        var new_avg = _this2.findEmotion(avg);
         return {
           data: prevState.data.map(function (i) {
             return Math.floor(Math.random() * 20 + 10);
           }),
-          average: _this2.findEmotion(avg)
+          average: new_avg
         };
       });
     }
@@ -39743,7 +39745,7 @@ var HomeGraphLayout = function (_Component) {
       var l = emotions2.length;
       var emotion;
       for (var i = 0; i < l; i++) {
-        if (avg > -1 + i * 0.2 && avg < -1 + (i + 1) * 0.2) {
+        if (avg > -1 + i * 0.2 && avg <= -1 + (i + 1) * 0.2) {
           emotion = emotions2[i];
         }
       }
@@ -39939,9 +39941,13 @@ var HomeGraphLayout = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          'h1',
-          null,
-          this.state.tweet
+          'div',
+          { className: 'current-tweet-container' },
+          _react2.default.createElement(
+            'h1',
+            { className: 'current-tweet' },
+            this.state.tweet
+          )
         ),
         graph
       );
@@ -41486,7 +41492,7 @@ exports = module.exports = __webpack_require__(222)();
 
 
 // module
-exports.push([module.i, "@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes dropin {\n  from {\n    transform: scale(1.2);\n    h1 {\n      opacity: 0.1; } }\n  to {\n    transform: scale(1);\n    h1 {\n      opacity: 1.0; } } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n@keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n@keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n@keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n.Section {\n  background-color: #dbd7d7;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center; }\n  .Section h1 {\n    text-align: center; }\n  .Section p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center; }\n\n.menu-bar-icon {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  border: none;\n  color: #f7f5f5;\n  background: transparent;\n  outline: none;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .menu-bar-icon {\n      z-index: 99999; } }\n\n.clicked {\n  left: 50px; }\n\n.unclicked {\n  left: 0vw; }\n\n.menu-bar-icon:hover > div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.1s, ease;\n  -ms-transition: all, 1.1s, ease;\n  -o-transition: all, 1.1s, ease;\n  transition: all, 1.1s, ease;\n  background: #bca293; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease;\n  -ms-transition: all, 1.5s, ease;\n  -o-transition: all, 1.5s, ease;\n  transition: all, 1.5s, ease;\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.clicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  transform: translate3D(50px, 10px, 0) rotate(45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #topBar {\n      -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      transform: translate3D(50px, 10px, 0) rotate(45deg); } }\n\n.clicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  transform: translate3D(50px, -10px, 0) rotate(-45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #bottomBar {\n      -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      transform: translate3D(50px, -10px, 0) rotate(-45deg); } }\n\n.clicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(50px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 0, 0);\n  -webkit-transform: translate3D(50px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(50px, 0, 0);\n  transform: translate3D(50px, 0, 0);\n  opacity: 0; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #middleBar {\n      -ms-transform: translate3D(50px, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 0, 0);\n      -webkit-transform: translate3D(50px, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(50px, 0, 0);\n      transform: translate3D(50px, 0, 0); } }\n\n.unclicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0);\n  opacity: 1; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.2s, ease-in-out;\n  -ms-transition: all, 0.2s, ease-in-out;\n  -o-transition: all, 0.2s, ease-in-out;\n  transition: all, 0.2s, ease-in-out;\n  position: fixed;\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background: transparent;\n  display: flex;\n  flex-flow: column; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar p {\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer;\n    font-weight: 400;\n    color: white; }\n  .menu-bar p:hover {\n    color: #866363; }\n\n.menu-bar-hidden {\n  -ms-transform: translate3D(0, 50px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 50px, 0);\n  -webkit-transform: translate3D(0, 50px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 50px, 0);\n  transform: translate3D(0, 50px, 0);\n  opacity: 0.0; }\n\n.menu-bar-shown {\n  -ms-transform: translate3D(0, 0px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 0px, 0);\n  -webkit-transform: translate3D(0, 0px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 0px, 0);\n  transform: translate3D(0, 0px, 0);\n  opacity: 1.0; }\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center; }\n\n.menu-bar-item {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.2s, ease-in-out;\n  -ms-transition: transform, 0.2s, ease-in-out;\n  -o-transition: transform, 0.2s, ease-in-out;\n  transition: transform, 0.2s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar-item > p {\n    -webkit-transition: transform 0.5s ease-in-out;\n    -moz-transition: transform, 0.2s, ease-in-out;\n    -ms-transition: transform, 0.2s, ease-in-out;\n    -o-transition: transform, 0.2s, ease-in-out;\n    transition: transform, 0.2s, ease-in-out;\n    margin: 0;\n    padding-left: 8px; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw; }\n\n.main {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow: hidden;\n  /*-webkit-overflow-scrolling: touch;*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .main {\n      z-index: 9999; } }\n\n.menu-bar-open {\n  -ms-transform: translate3D(100px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(100px, 0, 0);\n  -webkit-transform: translate3D(100px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(100px, 0, 0);\n  transform: translate3D(100px, 0, 0); }\n\n.menu-bar-close {\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0); }\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: 8vh;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1; }\n  @media all and (max-width: 1200px) {\n    .NavBar {\n      display: none; } }\n  .NavBar .nav-bar-item {\n    text-align: center; }\n  .NavBar .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.35s, ease-in-out;\n    -ms-transition: all, 0.35s, ease-in-out;\n    -o-transition: all, 0.35s, ease-in-out;\n    transition: all, 0.35s, ease-in-out;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .smooth-scroll p {\n      -webkit-touch-callout: none;\n      /* iOS Safari */\n      -webkit-user-select: none;\n      /* Safari */\n      -khtml-user-select: none;\n      /* Konqueror HTML */\n      -moz-user-select: none;\n      /* Firefox */\n      -ms-user-select: none;\n      /* Internet Explorer/Edge */\n      user-select: none;\n      /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n      -webkit-tap-highlight-color: transparent;\n      cursor: pointer;\n      font-weight: 400;\n      color: #ac6e6e;\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.35s, ease-in-out;\n      -ms-transition: all, 0.35s, ease-in-out;\n      -o-transition: all, 0.35s, ease-in-out;\n      transition: all, 0.35s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .smooth-scroll {\n        z-index: -1; } }\n  .NavBar .smooth-scroll:hover {\n    background: #ffbb98; }\n  .NavBar .smooth-scroll:hover p {\n    color: #ffffff; }\n  .NavBar .navButton {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: none;\n    margin: 20px 20px;\n    width: 12em;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: flex;\n    justify-content: center;\n    outline: none;\n    background: transparent;\n    border: 2px solid #e09090; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .navButton {\n        margin: 20px 20px; } }\n    .NavBar .navButton p {\n      color: #9a9aa2;\n      padding: 1em;\n      font-weight: 200;\n      text-align: center; }\n      @media all and (max-width: 1200px) {\n        .NavBar .navButton p {\n          position: absolute;\n          color: #9a9aa2;\n          margin: 0;\n          margin-left: 3em;\n          left: 0;\n          padding: 0; } }\n  .NavBar .navButton:hover {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: 2px solid #e09090;\n    border-radius: 10%;\n    background: #e09090;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .navButton:hover > p {\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.down-arrow-container {\n  position: absolute;\n  bottom: 10vh; }\n  .down-arrow-container .down-arrow {\n    width: 5vw;\n    text-align: center; }\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual leave transition*/\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.page {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease;\n  transform: translateX(0vh);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .page .home-graph-layout .average-emotion {\n    text-align: center; }\n    .page .home-graph-layout .average-emotion p {\n      font-size: 2em; }\n  .page .home-header {\n    width: 50vw; }\n    .page .home-header h1 {\n      text-align: left; }\n    .page .home-header h4 {\n      text-align: left; }\n    .page .home-header p {\n      text-align: left; }\n  .page .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition (all, 0.2s, ease-in-out);\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer; }\n  .page .update-data:hover {\n    background: #957a77; }\n  .page .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .page .header .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in; }\n      .page .header .header-box .title {\n        width: 100vw; }\n        .page .header .header-box .title h1 {\n          @css-user-select (none);\n          cursor: default; }\n      .page .header .header-box .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column; }\n        .page .header .header-box .subtitle p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select (none); }\n  .page p:hover {\n    color: black;\n    cursor: pointer; }\n  .page .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/ }\n    @media all and (max-width: 800px) {\n      .page .page-bg-image {\n        height: 110vh;\n        width: auto; } }\n  .page .page-bg-image-container {\n    overflow: hidden; }\n\n.graph {\n  display: flex;\n  justify-content: center;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.d3container {\n  border-radius: 50%; }\n\n.textGroup {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.9s, ease-in-out;\n  -ms-transition: transform, 0.9s, ease-in-out;\n  -o-transition: transform, 0.9s, ease-in-out;\n  transition: transform, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.companyText {\n  fill: white;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer;\n  font-size: 2em; }\n\n.companyText:hover {\n  font-size: 2.1em; }\n\n.firstWave:hover {\n  stroke: red; }\n\n.secondWave:hover {\n  stroke: blue; }\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n  /*-moz-transition: transform 0.6s ease-out;*/\n  /*-o-transition: transform 0.6s ease-out;*/\n  /*transition: transform 0.6s ease-out;*/\n  -webkit-backface-visibility: hidden; }\n\npath:hover {\n  stroke: red; }\n\n.graph rect {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearReact {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6; }\n\npath {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearRect:hover {\n  fill: #c7bca5; }\n\n.kernel {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.kernel:hover + .core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  /*stroke: #1c1c1c;*/\n  stroke-width: 0.0px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.shell {\n  pointer-events: none; }\n\n.about .about-image-container {\n  position: absolute;\n  top: 25vh;\n  left: 0;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .about .about-image-container .about-image {\n    width: 75vw;\n    background: red;\n    filter: brightness(100000%);\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.15); }\n\n.about .about-title {\n  position: absolute;\n  top: 0; }\n\n.text-layout .hover-text-container {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease-in-out;\n  -ms-transition: all, 1.5s, ease-in-out;\n  -o-transition: all, 1.5s, ease-in-out;\n  transition: all, 1.5s, ease-in-out;\n  font-size: 1.5em;\n  white-space: nowrap; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .average-emotion {\n  background: white;\n  margin: 0;\n  padding: 0;\n  width: 20%;\n  color: #73667c;\n  border-radius: 5px;\n  font-weight: 900; }\n\n.text-layout .hover-text {\n  color: #db8686; }\n\n.text-layout .on {\n  /*@include css-transform-translate-x(0vw);*/\n  opacity: 1.0;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 4.5s, ease-in-out;\n  -ms-transition: all, 4.5s, ease-in-out;\n  -o-transition: all, 4.5s, ease-in-out;\n  transition: all, 4.5s, ease-in-out;\n  background: white;\n  width: 25%;\n  border-radius: 4px;\n  padding: 10px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .off {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 4.5s, ease-in-out;\n  -ms-transition: all, 4.5s, ease-in-out;\n  -o-transition: all, 4.5s, ease-in-out;\n  transition: all, 4.5s, ease-in-out;\n  opacity: 0.0;\n  width: 100%;\n  padding: 10px;\n  /*@include css-transform-translate-x(-50vw);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .home-graph-layout .companyText {\n  font-size: 1em !important; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  overflow: hidden; }\n  body a {\n    font-family: \"Questrial\", Helvetica, sans-serif;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent; }\n  body a:hover {\n    color: #ffecec; }\n  body h1 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none);\n    font-size: 1.5em; }\n  body h2 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h3 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h4 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body p {\n    font-family: \"Questrial\", Helvetica, sans-serif;\n    color: #dec5c5;\n    font-weight: 500;\n    @css-user-select (none); }\n  body .wrapper {\n    overflow: hidden; }\n  body .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: transparent; }\n  body .home-graph-options {\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Animation_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Section.scss","/Users/josecanizares/Desktop/Informant/app/scss/main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBarIcon.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Transform_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_User_Events.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_NavBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_DownArrow.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Page.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Graphs.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_About.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_TextLayout.scss"],"names":[],"mappings":"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,EDzBrD,EAAA;EC4BD;ID7CA;MCiDA,oDAAsD,EDhCrD,EAAA;ECmCD;IDpDA;MCuDA,oDAAsD,EDtCrD,EAAA;EAHC;IAdF;MAeI,eAAc,EAEjB,EAAA;;AAED;EACA,WA1BuB,EA2BtB;;AAED;EACA,UAAS,EACR;;AAED;ECpBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAqCtB,oBAAmB,EACpB;ECjBC;IDcF;MCXE,oDAAsD,EDcvD,EAAA;ECXC;IDQF;MCLE,oDAAsD,EDQvD,EAAA;ECLD;IDEA;MCCA,oDAAsD,EDErD,EAAA;ECCD;IDJA;MCQA,oDAAsD,EDLrD,EAAA;ECQD;IDXA;MCeA,oDAAsD,EDZrD,EAAA;ECeD;IDlBA;MCsBA,oDAAsD,EDnBrD,EAAA;ECsBD;IDzBA;MC4BA,oDAAsD,EDzBrD,EAAA;;AAED;ECzBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA0CtB,YAAW;EACX,YAAW;EACX,oBAAmB;EACnB,gBAAe,EAChB;ECzBC;IDmBF;MChBE,oDAAsD,EDsBvD,EAAA;ECnBC;IDaF;MCVE,oDAAsD,EDgBvD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;ECPD;IDCA;MCGA,oDAAsD,EDGrD,EAAA;ECAD;IDNA;MCUA,oDAAsD,EDJrD,EAAA;ECOD;IDbA;MCiBA,oDAAsD,EDXrD,EAAA;ECcD;IDpBA;MCuBA,oDAAsD,EDjBrD,EAAA;;AAED;ECjCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAkDtB,gEAAgE;EAChE,kEAAkE,EACnE;EC/BC;ID2BF;MCxBE,oDAAsD,ED4BvD,EAAA;ECzBC;IDqBF;MClBE,oDAAsD,EDsBvD,EAAA;ECnBD;IDeA;MCZA,oDAAsD,EDgBrD,EAAA;ECbD;IDSA;MCLA,oDAAsD,EDSrD,EAAA;ECND;IDEA;MCEA,oDAAsD,EDErD,EAAA;ECCD;IDLA;MCSA,oDAAsD,EDLrD,EAAA;ECQD;IDZA;MCeA,oDAAsD,EDXrD,EAAA;;AAED;ECvCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAwDtB,gEAAgE;EAChE,kEAAkE,EAEnE;ECtCC;IDiCF;MC9BE,oDAAsD,EDmCvD,EAAA;EChCC;ID2BF;MCxBE,oDAAsD,ED6BvD,EAAA;EC1BD;IDqBA;MClBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDeA;MCXA,oDAAsD,EDgBrD,EAAA;ECbD;IDQA;MCJA,oDAAsD,EDSrD,EAAA;ECND;IDCA;MCGA,oDAAsD,EDErD,EAAA;ECCD;IDNA;MCSA,oDAAsD,EDJrD,EAAA;;AAED;EC9CE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA+DtB,8CAA8C;EAC9C,qCAAqC,EACtC;EC5CC;IDwCF;MCrCE,oDAAsD,EDyCvD,EAAA;ECtCC;IDkCF;MC/BE,oDAAsD,EDmCvD,EAAA;EChCD;ID4BA;MCzBA,oDAAsD,ED6BrD,EAAA;EC1BD;IDsBA;MClBA,oDAAsD,EDsBrD,EAAA;ECnBD;IDeA;MCXA,oDAAsD,EDerD,EAAA;ECZD;IDQA;MCJA,oDAAsD,EDQrD,EAAA;ECLD;IDCA;MCEA,oDAAsD,EDErD,EAAA;;AAED;ECpDE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuHtB,wDAAgD;EAAG,UAAU;EAC7D,yDAAiD;EAAG,YAAY;EAChE,4DAAoD;EAAG,YAAY;EACnE,uDAA+C;EAC/C,oDAA4C,EDlD7C;ECpDC;ID8CF;MC3CE,oDAAsD,EDiDvD,EAAA;EC9CC;IDwCF;MCrCE,oDAAsD,ED2CvD,EAAA;ECxCD;IDkCA;MC/BA,oDAAsD,EDqCrD,EAAA;EClCD;ID4BA;MCxBA,oDAAsD,ED8BrD,EAAA;EC3BD;IDqBA;MCjBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDcA;MCVA,oDAAsD,EDgBrD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;EAHC;IAHF;MCoDE,wDAAgD;MAAG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B;EAC3B,oBAAmB,EACpB;;AAGD;EFhCE,+CAA0C;EAC1C,8CEjB6B;EFkB7B,6CElB6B;EFmB7B,4CEnB6B;EFoB7B,yCEpB6B,EAwD9B;EFlCC;IE0BF;MFvBE,oDAAsD,EE+BvD,EAAA;EF5BC;IEoBF;MFjBE,oDAAsD,EEyBvD,EAAA;EFtBD;IEcA;MFXA,oDAAsD,EEmBrD,EAAA;EFhBD;IEQA;MFJA,oDAAsD,EEYrD,EAAA;EFTD;IECA;MFGA,oDAAsD,EEKrD,EAAA;EFFD;IENA;MFUA,oDAAsD,EEFrD,EAAA;EFKD;IEbA;MFgBA,oDAAsD,EERrD,EAAA;EARD;IFhCE,+CAA0C;IAC1C,8CEjB6B;IFkB7B,6CElB6B;IFmB7B,4CEnB6B;IFoB7B,yCEpB6B;IAqD3B,UAAS;IACT,kBAAiB,EAClB;IFjCD;ME0BF;QFvBE,oDAAsD,EE8BrD,EAAA;IF3BD;MEoBF;QFjBE,oDAAsD,EEwBrD,EAAA;IFrBH;MEcA;QFXA,oDAAsD,EEkBnD,EAAA;IFfH;MEQA;QFJA,oDAAsD,EEWnD,EAAA;IFRH;MECA;QFGA,oDAAsD,EEInD,EAAA;IFDH;MENA;QFUA,oDAAsD,EEHnD,EAAA;IFMH;MEbA;QFgBA,oDAAsD,EETnD,EAAA;;AChDH;EACE,mCAAkC;EAClC,mBAAkB;EAClB,OAAM;EACN,uBAAsB;EACtB,QAAO;EACP,aAAY,EAEb;;AAED;EHDE,yCAA0C;EAC1C,kEGd+C;EHe/C,iEGf+C;EHgB/C,gEGhB+C;EHiB/C,6DGjB+C;EAiB/C,oBAAoB;EACpB,gBAAgB;EAChB,iBAAe;EACf,sCAAsC,EAQvC;EHTC;IGLF;MHQE,oDAAsD,EGMvD,EAAA;EHHC;IGXF;MHcE,oDAAsD,EGAvD,EAAA;EHGD;IGjBA;MHoBA,oDAAsD,EGNrD,EAAA;EHSD;IGvBA;MH2BA,oDAAsD,EGbrD,EAAA;EHgBD;IG9BA;MHkCA,oDAAsD,EGpBrD,EAAA;EHuBD;IGrCA;MHyCA,oDAAsD,EG3BrD,EAAA;EH8BD;IG5CA;MH+CA,oDAAsD,EGjCrD,EAAA;EALC;IATF;MAUI,cAAa,EAIhB,EAAA;;AAED;EHqDE,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AsD,EImDnD,EAAA;IJhDH;MI1DA;QJ6DA,oDAAsD,EI6CnD,EAAA;IA1GH;MJaE,yCAA0C;MAC1C,wCI0FkD;MJzFlD,uCIyFkD;MJxFlD,sCIwFkD;MJvFlD,mCIuFkD,EAC/C;MJtFH;QInBF;UJsBE,oDAAsD,EImFnD,EAAA;MJhFH;QIzBF;UJ4BE,oDAAsD,EI6EnD,EAAA;MJ1EL;QI/BA;UJkCA,oDAAsD,EIuEjD,EAAA;MJpEL;QIrCA;UJyCA,oDAAsD,EIgEjD,EAAA;MJ7DL;QI5CA;UJgDA,oDAAsD,EIyDjD,EAAA;MJtDL;QInDA;UJuDA,oDAAsD,EIkDjD,EAAA;MJ/CL;QI1DA;UJ6DA,oDAAsD,EI4CjD,EAAA;;AC9GL;EACE,mBAAkB;EAClB,aAAY,EAMb;EARD;IAKI,WAAU;IACV,mBAAkB,EACnB;;ACDH,uDAAuD;AACvD;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,+BAA+B;ENQ/B,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EASvB;ENWC;IMjBF;MNoBE,oDAAsD,EMdvD,EAAA;ENiBC;IMvBF;MN0BE,oDAAsD,EMpBvD,EAAA;ENuBD;IM7BA;MNgCA,oDAAsD,EM1BrD,EAAA;EN6BD;IMnCA;MNuCA,oDAAsD,EMjCrD,EAAA;ENoCD;IM1CA;MN8CA,oDAAsD,EMxCrD,EAAA;EN2CD;IMjDA;MNqDA,oDAAsD,EM/CrD,EAAA;ENkDD;IMxDA;MN2DA,oDAAsD,EMrDrD,EAAA;;AAED,uCAAuC;AACvC;EACE,2BAA0B;EAC1B,qBAAqB;ENArB,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiBvB;ENGC;IMRF;MNWE,oDAAsD,EMNvD,EAAA;ENSC;IMdF;MNiBE,oDAAsD,EMZvD,EAAA;ENeD;IMpBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN4CA,oDAAsD,EMvCrD,EAAA;EN0CD;IM/CA;MNkDA,oDAAsD,EM7CrD,EAAA;;AACD,sDAAsD;AACtD;EACE,2BAA0B;EAC1B,qBAAqB;EACrB,gCAAgC;ENRhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAwBvB;ENJC;IMDF;MNIE,oDAAsD,EMCvD,EAAA;ENEC;IMPF;MNUE,oDAAsD,EMLvD,EAAA;ENQD;IMbA;MNgBA,oDAAsD,EMXrD,EAAA;ENcD;IMnBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN2CA,oDAAsD,EMtCrD,EAAA;;AAED,uCAAuC;AAEvC;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,gCAAgC;ENjBhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiCvB;ENbC;IMQF;MNLE,oDAAsD,EMUvD,EAAA;ENPC;IMEF;MNCE,oDAAsD,EMIvD,EAAA;ENDD;IMJA;MNOA,oDAAsD,EMFrD,EAAA;ENKD;IMVA;MNcA,oDAAsD,EMTrD,EAAA;ENYD;IMjBA;MNqBA,oDAAsD,EMhBrD,EAAA;ENmBD;IMxBA;MN4BA,oDAAsD,EMvBrD,EAAA;EN0BD;IM/BA;MNkCA,oDAAsD,EM7BrD,EAAA;;AAED;ENrBE,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB;EAqCtB,2BAA0B;EAE1B,cAAa;EACb,wBAAuB;EACvB,oBAAmB;EACnB,cAAa,EA4Hd;ENlJC;IMeF;MNZE,oDAAsD,EM+IvD,EAAA;EN5IC;IMSF;MNNE,oDAAsD,EMyIvD,EAAA;ENtID;IMGA;MNAA,oDAAsD,EMmIrD,EAAA;ENhID;IMHA;MNOA,oDAAsD,EM4HrD,EAAA;ENzHD;IMVA;MNcA,oDAAsD,EMqHrD,EAAA;ENlHD;IMjBA;MNqBA,oDAAsD,EM8GrD,EAAA;EN3GD;IMxBA;MN2BA,oDAAsD,EMwGrD,EAAA;EAnID;IAWM,mBAAkB,EAKnB;IAhBL;MAaQ,eAAc,EACf;EAdP;IAsBI,YAAW,EAYZ;IAlCH;MAwBM,iBAAgB,EACjB;IAzBL;MA4BM,iBAAgB,EACjB;IA7BL;MAgCM,iBAAgB,EACjB;EAjCL;IA0CI,OAAM;IACN,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,qBAAoB;IACpB,iBAAgB;IAChB,cAAa;IACb,mBAAkB;IAClB,yCAAe;ILxFjB,4BKyF+B;ILzFJ,gBAAgB;IAC3C,0BKwF+B;ILxFN,YAAY;IACpC,yBKuF8B;ILvFN,oBAAoB;IAC1C,uBKsF4B;ILtFN,aAAa;IAClC,sBKqF2B;ILrFN,4BAA4B;IAC7C,kBKoFuB;ILpFN;gEACqC;IAC9D,yCAA0C;IKmFxC,gBAAe,EAChB;EArDH;IAwDI,oBAAmB,EACpB;EAzDH;IA8DI,cAAa;IACb,wBAAuB;IACvB,oBAAmB;IACnB,gBAAe,EAsChB;IAvGH;MAoEM,YAAW;MACX,cAAa;MACb,wBAAuB;MACvB,oBAAmB;MACnB,gBAAe;MACf,6BAA4B,EA6B7B;MAtGL;QA4EQ,aAAY,EAMb;QAlFP;UA+EU,wBAAgB;UAChB,gBAAe,EAChB;MAjFT;QAyFQ,aAAY;QACZ,cAAa;QACb,wBAAuB;QACvB,oBAAmB;QACnB,gBAAe;QACf,uBAAsB,EAOvB;QArGP;UAiGU,mBAAkB;UAClB,6BAA4B;UAC5B,wBAAgB,EACjB;EApGT;IA0GE,aAAY;IACZ,gBAAc,EACb;EA5GH;IAgHI,mCAAkC;IAClC,mBAAkB;IAClB,OAAM;IACN,uBAAsB;IACtB,QAAO;IACP,YAAW;IACX,aAAY;IACZ,sBAAsB;IACtB,oCAAoC,EAMrC;IAJC;MA1HJ;QA2HM,cAAa;QACb,YAAW,EAEd,EAAA;EA9HH;IAiII,iBAAgB,EACjB;;AC/JH;EACI,cAAa;EACb,wBAAuB;EPMzB,yCAA0C;EAC1C,wCONgD;EPOhD,uCOPgD;EPQhD,sCORgD;EPShD,mCOTgD,EACjD;EPUC;IOdF;MPiBE,oDAAsD,EObvD,EAAA;EPgBC;IOpBF;MPuBE,oDAAsD,EOnBvD,EAAA;EPsBD;IO1BA;MP6BA,oDAAsD,EOzBrD,EAAA;EP4BD;IOhCA;MPoCA,oDAAsD,EOhCrD,EAAA;EPmCD;IOvCA;MP2CA,oDAAsD,EOvCrD,EAAA;EP0CD;IO9CA;MPkDA,oDAAsD,EO9CrD,EAAA;EPiDD;IOrDA;MPwDA,oDAAsD,EOpDrD,EAAA;;AAGD;EACE,mBAAkB,EACnB;;AAED;EPHE,+CAA0C;EAC1C,8COGoD;EPFpD,6COEoD;EPDpD,4COCoD;EPApD,yCOAoD,EACrD;EPCC;IOHF;MPME,oDAAsD,EOJvD,EAAA;EPOC;IOTF;MPYE,oDAAsD,EOVvD,EAAA;EPaD;IOfA;MPkBA,oDAAsD,EOhBrD,EAAA;EPmBD;IOrBA;MPyBA,oDAAsD,EOvBrD,EAAA;EP0BD;IO5BA;MPgCA,oDAAsD,EO9BrD,EAAA;EPiCD;IOnCA;MPuCA,oDAAsD,EOrCrD,EAAA;EPwCD;IO1CA;MP6CA,oDAAsD,EO3CrD,EAAA;;AAED;EACE,YAAW;ENzBX,4BM0B6B;EN1BF,gBAAgB;EAC3C,0BMyB6B;ENzBJ,YAAY;EACpC,yBMwB4B;ENxBJ,oBAAoB;EAC1C,uBMuB0B;ENvBJ,aAAa;EAClC,sBMsByB;ENtBJ,4BAA4B;EAC7C,kBMqBqB;ENrBJ;gEACqC;EAC9D,yCAA0C;EMoB1C,gBAAe;EACf,eAAc,EACf;;AAED;EACE,iBAAgB,EACjB;;AAED;EAEE,YAAW,EACZ;;AAED;EAEA,aAAY,EAEX;;AAED;EACE,kDAAkD;EAClD,oDAAoD;EACpD,oDAAmD;EACjD,6CAA6C;EAC7C,2CAA2C;EAC3C,wCAAwC;EACxC,oCAAmC,EACtC;;AAED;EACE,YAAW,EACZ;;AAGD;EP5CE,yCAA0C;EAC1C,wCO4C8C;EP3C9C,uCO2C8C;EP1C9C,sCO0C8C;EPzC9C,mCOyC8C,EAC/C;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCC;IOgCF;MP7BE,oDAAsD,EO+BvD,EAAA;EP5BD;IO0BA;MPvBA,oDAAsD,EOyBrD,EAAA;EPtBD;IOoBA;MPhBA,oDAAsD,EOkBrD,EAAA;EPfD;IOaA;MPTA,oDAAsD,EOWrD,EAAA;EPRD;IOMA;MPFA,oDAAsD,EOIrD,EAAA;EPDD;IODA;MPIA,oDAAsD,EOFrD,EAAA;;AAID;EPlDE,yCAA0C;EAC1C,wCOkD8C;EPjD9C,uCOiD8C;EPhD9C,sCOgD8C;EP/C9C,mCO+C8C,EAC/C;EP9CC;IO4CF;MPzCE,oDAAsD,EO2CvD,EAAA;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCD;IOgCA;MP7BA,oDAAsD,EO+BrD,EAAA;EP5BD;IO0BA;MPtBA,oDAAsD,EOwBrD,EAAA;EPrBD;IOmBA;MPfA,oDAAsD,EOiBrD,EAAA;EPdD;IOYA;MPRA,oDAAsD,EOUrD,EAAA;EPPD;IOKA;MPFA,oDAAsD,EOIrD,EAAA;;AAED;EPtDE,yCAA0C;EAC1C,wCOsD8C;EPrD9C,uCOqD8C;EPpD9C,sCOoD8C;EPnD9C,mCOmD8C,EAC/C;EPlDC;IOgDF;MP7CE,oDAAsD,EO+CvD,EAAA;EP5CC;IO0CF;MPvCE,oDAAsD,EOyCvD,EAAA;EPtCD;IOoCA;MPjCA,oDAAsD,EOmCrD,EAAA;EPhCD;IO8BA;MP1BA,oDAAsD,EO4BrD,EAAA;EPzBD;IOuBA;MPnBA,oDAAsD,EOqBrD,EAAA;EPlBD;IOgBA;MPZA,oDAAsD,EOcrD,EAAA;EPXD;IOSA;MPNA,oDAAsD,EOQrD,EAAA;;AAED;EACE,cAAa;EACb,gBAAe,EAChB;;AAKD;EPlEE,yCAA0C;EAC1C,wCOkE4C;EPjE5C,uCOiE4C;EPhE5C,sCOgE4C;EP/D5C,mCO+D4C,EAC7C;EP9DC;IO4DF;MPzDE,oDAAsD,EO2DvD,EAAA;EPxDC;IOsDF;MPnDE,oDAAsD,EOqDvD,EAAA;EPlDD;IOgDA;MP7CA,oDAAsD,EO+CrD,EAAA;EP5CD;IO0CA;MPtCA,oDAAsD,EOwCrD,EAAA;EPrCD;IOmCA;MP/BA,oDAAsD,EOiCrD,EAAA;EP9BD;IO4BA;MPxBA,oDAAsD,EO0BrD,EAAA;EPvBD;IOqBA;MPlBA,oDAAsD,EOoBrD,EAAA;;AAED;EACA,cAAa,EACZ;;AAED;EP1EE,yCAA0C;EAC1C,wCO0E4C;EPzE5C,uCOyE4C;EPxE5C,sCOwE4C;EPvE5C,mCOuE4C,EAC7C;EPtEC;IOoEF;MPjEE,oDAAsD,EOmEvD,EAAA;EPhEC;IO8DF;MP3DE,oDAAsD,EO6DvD,EAAA;EP1DD;IOwDA;MPrDA,oDAAsD,EOuDrD,EAAA;EPpDD;IOkDA;MP9CA,oDAAsD,EOgDrD,EAAA;EP7CD;IO2CA;MPvCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOoCA;MPhCA,oDAAsD,EOkCrD,EAAA;EP/BD;IO6BA;MP1BA,oDAAsD,EO4BrD,EAAA;;AAED;EP9EE,yCAA0C;EAC1C,wCO8E4C;EP7E5C,uCO6E4C;EP5E5C,sCO4E4C;EP3E5C,mCO2E4C;EAC9C,oBAAoB;EACpB,oBAAmB,EAElB;EP7EC;IOwEF;MPrEE,oDAAsD,EO0EvD,EAAA;EPvEC;IOkEF;MP/DE,oDAAsD,EOoEvD,EAAA;EPjED;IO4DA;MPzDA,oDAAsD,EO8DrD,EAAA;EP3DD;IOsDA;MPlDA,oDAAsD,EOuDrD,EAAA;EPpDD;IO+CA;MP3CA,oDAAsD,EOgDrD,EAAA;EP7CD;IOwCA;MPpCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOiCA;MP9BA,oDAAsD,EOmCrD,EAAA;;AAED;EPrFE,yCAA0C;EAC1C,wCOqF8C;EPpF9C,uCOoF8C;EPnF9C,sCOmF8C;EPlF9C,mCOkF8C,EAC/C;EPjFC;IO+EF;MP5EE,oDAAsD,EO8EvD,EAAA;EP3EC;IOyEF;MPtEE,oDAAsD,EOwEvD,EAAA;EPrED;IOmEA;MPhEA,oDAAsD,EOkErD,EAAA;EP/DD;IO6DA;MPzDA,oDAAsD,EO2DrD,EAAA;EPxDD;IOsDA;MPlDA,oDAAsD,EOoDrD,EAAA;EPjDD;IO+CA;MP3CA,oDAAsD,EO6CrD,EAAA;EP1CD;IOwCA;MPrCA,oDAAsD,EOuCrD,EAAA;;AAED;EACA,qBAAoB,EAEnB;;AC9GD;EAEI,mBAAkB;EAClB,UAAS;EACT,QAAO;EACP,YAAW;EACX,cAAa;EACb,wBAAuB;EACvB,oBAAmB,EASpB;EAjBH;IAWM,YAAW;IACX,gBAAe;IACf,4BAA2B;IAC3B,cAAa;IACb,4CAA2C,EAC5C;;AAhBL;EAoBI,mBAAkB;EAClB,OAAM,EACP;;ACtBH;EAEI,cAAa;EACb,wBAAuB;EACvB,YAAW;ETcb,yCAA0C;EAC1C,wCSdgD;ETehD,uCSfgD;ETgBhD,sCShBgD;ETiBhD,mCSjBgD;EAC9C,iBAAgB;EAChB,oBAAmB,EACpB;ETgBD;ISxBF;MT2BE,oDAAsD,ESnBrD,EAAA;ETsBD;IS9BF;MTiCE,oDAAsD,ESzBrD,EAAA;ET4BH;ISpCA;MTuCA,oDAAsD,ES/BnD,EAAA;ETkCH;IS1CA;MT8CA,oDAAsD,EStCnD,EAAA;ETyCH;ISjDA;MTqDA,oDAAsD,ES7CnD,EAAA;ETgDH;ISxDA;MT4DA,oDAAsD,ESpDnD,EAAA;ETuDH;IS/DA;MTkEA,oDAAsD,ES1DnD,EAAA;;AARH;EAWI,kBAAiB;EACjB,UAAS;EACT,WAAU;EACV,WAAU;EACV,eAAc;EACd,mBAAkB;EAClB,iBAAgB,EACjB;;AAlBH;EAsBI,eAAc,EACf;;AAvBH;EA0BI,4CAA4C;EAC5C,aAAY;ETTd,yCAA0C;EAC1C,wCSSgD;ETRhD,uCSQgD;ETPhD,sCSOgD;ETNhD,mCSMgD;EAC9C,kBAAiB;EACjB,WAAU;EACV,mBAAkB;EAClB,cAAa,EAEd;ETVD;ISxBF;MT2BE,oDAAsD,ESOrD,EAAA;ETJD;IS9BF;MTiCE,oDAAsD,ESCrD,EAAA;ETEH;ISpCA;MTuCA,oDAAsD,ESLnD,EAAA;ETQH;IS1CA;MT8CA,oDAAsD,ESZnD,EAAA;ETeH;ISjDA;MTqDA,oDAAsD,ESnBnD,EAAA;ETsBH;ISxDA;MT4DA,oDAAsD,ES1BnD,EAAA;ET6BH;IS/DA;MTkEA,oDAAsD,EShCnD,EAAA;;AAlCH;ETkBE,yCAA0C;EAC1C,wCSkBgD;ETjBhD,uCSiBgD;EThBhD,sCSgBgD;ETfhD,mCSegD;EAC9C,aAAY;EACZ,YAAW;EACX,cAAa;EACb,8CAA8C,EAC/C;ETlBD;ISxBF;MT2BE,oDAAsD,ESerD,EAAA;ETZD;IS9BF;MTiCE,oDAAsD,ESSrD,EAAA;ETNH;ISpCA;MTuCA,oDAAsD,ESGnD,EAAA;ETAH;IS1CA;MT8CA,oDAAsD,ESJnD,EAAA;ETOH;ISjDA;MTqDA,oDAAsD,ESXnD,EAAA;ETcH;ISxDA;MT4DA,oDAAsD,ESlBnD,EAAA;ETqBH;IS/DA;MTkEA,oDAAsD,ESxBnD,EAAA;;AA1CH;EA+CM,0BAAyB,EAC1B;;AXrBL;EACE,UAAS;EACT,WAAU;EAIV,YAAW;EACX,iBAAe,EAkFhB;EAzFD;IAUI,gDAjCoD;IAkCpD,eAAc;IACd,sBAAqB;IACrB,aAAY;IGvCd,4BHwC+B;IGxCJ,gBAAgB;IAC3C,0BHuC+B;IGvCN,YAAY;IACpC,yBHsC8B;IGtCN,oBAAoB;IAC1C,uBHqC4B;IGrCN,aAAa;IAClC,sBHoC2B;IGpCN,4BAA4B;IAC7C,kBHmCuB;IGnCN;gEACqC;IAC9D,yCAA0C,EHkCvC;EAfL;IAkBI,eAAc,EACf;EAnBH;IAsBI,qDA9CuD;IA+CvD,eAjDqB;IAkDrB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB;IAChB,iBAAgB,EACjB;EA5BH;IA+BI,qDAvDuD;IAwDvD,eA1DqB;IA2DrB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EAEjB;EArCH;IAwCI,qDAhEuD;IAiEvD,eAnEqB;IAoErB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EACjB;EA7CH;IAgDI,qDAxEuD;IAyEvD,eA3EqB;IA4ErB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EACjB;EArDH;IAwDI,gDA/EoD;IAgFpD,eApFoB;IAqFpB,iBAAgB;IAChB,wBAAgB,EACjB;EA5DH;IA+DI,iBAAe,EAChB;EAhEH;IAuEI,aAAY;IACZ,YAAW;IACX,aAAY;IACZ,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,OAAM;IACN,SAAQ;IACR,oBAAmB;IACnB,cAAa;IACb,yCAA0C,EAC3C;EAlFH;IAqFE,mBAAkB,EACjB","file":"main.scss","sourcesContent":["@mixin css-fadein($t) {\n-webkit-animation: fadein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: fadein $t; /* Firefox < 16 */\n    -ms-animation: fadein $t; /* Internet Explorer */\n     -o-animation: fadein $t; /* Opera < 12.1 */\n        animation: fadein $t;\n}\n\n\n@keyframes fadein {\n    from {\n    opacity: 0;\n    }\n    to   {\n    opacity: 1;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n    from {\n      opacity: 0;\n    }\n    to   {\n      opacity: 1;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n\n\n\n\n\n\n\n\n@mixin css-dropin($t) {\n-webkit-animation: dropin $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropin $t; /* Firefox < 16 */\n    -ms-animation: dropin $t; /* Internet Explorer */\n     -o-animation: dropin $t; /* Opera < 12.1 */\n        animation: dropin $t;\n}\n\n\n@keyframes dropin {\n    from {\n      transform: scale(1.2);\n      h1 {\n        opacity: 0.1;\n      }\n    }\n    to   {\n      transform: scale(1);\n      h1 {\n        opacity: 1.0;\n      }\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n\n\n\n@mixin css-dropout($t) {\n-webkit-animation: dropout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropout $t; /* Firefox < 16 */\n    -ms-animation: dropout $t; /* Internet Explorer */\n     -o-animation: dropout $t; /* Opera < 12.1 */\n        animation: dropout $t;\n}\n\n\n@keyframes dropout {\n    from {\n    font-size: 1.5em;\n    }\n    to   {\n    font-size: 2.5em;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n    from {\n      font-size: 1.5em;\n    }\n    to   {\n      font-size: 2.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n\n\n\n\n@mixin css-slidein($t) {\n-webkit-animation: slidein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slidein $t; /* Firefox < 16 */\n    -ms-animation: slidein $t; /* Internet Explorer */\n     -o-animation: slidein $t; /* Opera < 12.1 */\n        animation: slidein $t;\n}\n\n\n@keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n\n\n\n\n\n\n\n@mixin css-slideout($t) {\n-webkit-animation: slideout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slideout $t; /* Firefox < 16 */\n    -ms-animation: slideout $t; /* Internet Explorer */\n     -o-animation: slideout $t; /* Opera < 12.1 */\n        animation: slideout $t;\n}\n\n\n@keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n",".Section {\n  background-color: $section-color;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n\n  h1 {\n    text-align: center;\n  }\n\n  p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center;\n  }\n}\n","$global-p-color: #dec5c5;\n$global-h1-color: #ffffff;\n$global-bg-color: #1b1a1a;\n$global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;\n$global-p-font-stack: 'Questrial', Helvetica, sans-serif;\n$section-color: #dbd7d7;\n$p-section-color: #111111;\n\n@import './helpers/Animation_Mixins.scss';\n@import './helpers/Transform_Mixins.scss';\n@import './helpers/Display.scss';\n@import './helpers/User_Events.scss';\n\n@import './components/Section.scss';\n@import './components/Subsection.scss';\n@import './components/MenuBarIcon.scss';\n@import './components/MenuBar.scss';\n@import './components/Main.scss';\n@import './components/NavBar.scss';\n@import './components/SmoothScroll.scss';\n@import './components/DownArrow.scss';\n@import './components/Page.scss';\n@import './components/Graphs.scss';\n@import './components/About.scss';\n@import './components/TextLayout.scss';\n\n\nbody {\n  margin: 0;\n  padding: 0;\n\n\n\n  width: 100%;\n  overflow:hidden;\n\n  a {\n    font-family: $global-p-font-stack;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    @include css-user-select(none);\n    }\n\n  a:hover {\n    color: #ffecec;\n  }\n\n  h1 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n    font-size: 1.5em;\n  }\n\n  h2 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n\n  }\n\n  h3 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  h4 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  p {\n    font-family: $global-p-font-stack;\n    color: $global-p-color;\n    font-weight: 500;\n    @css-user-select(none);\n  }\n\n  .wrapper {\n    overflow:hidden;\n  }\n\n  @media all and (max-width: 1200px) {\n\n  }\n\n  .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n  }\n\n  .home-graph-options {\n  position: absolute;\n  }\n\n\n}\n","$menu-bar-icon-color: #f7f5f5;\n$transition-time: 0.7s;\n$transition-prop: all;\n$transition-easing: ease;\n$g-time: 0.75s;\n$right-transition: 50px;\n$mobile-right-transition: 50px;\n\n@import '../helpers/Transform_Mixins.scss';\n\n\n.menu-bar-icon {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  border: none;\n  color: $menu-bar-icon-color;\n  background: transparent;\n  outline: none;\n  @include css-user-select(none);\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999;\n\n  @media all and (max-width: 1200px) {\n    z-index: 99999;\n  }\n}\n\n.clicked {\nleft: $right-transition;\n}\n\n.unclicked {\nleft: 0vw;\n}\n\n.menu-bar-icon:hover > div {\n  @include css-transition($transition-prop, 1.1s, $transition-easing);\n  background: #bca293;\n}\n\n.menu-bar-icon div {\n  @include css-transition($transition-prop, 1.5s, $transition-easing);\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px;\n}\n\n.menu-bar-icon:hover > #topBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/\n}\n\n.menu-bar-icon:hover > #bottomBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/\n\n}\n\n.menu-bar-icon:hover > #middleBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/\n}\n\n.clicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x($right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n  }\n  opacity: 0;\n}\n\n.unclicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x(0vw);\n  opacity: 1;\n}\n","$g-time: 0.4s;\n\n@mixin css-linear-gradient($first, $second) {\n  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */\n  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */\n  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */\n  background: linear-gradient($first, $second); /* Standard syntax */\n}\n\n@mixin origin($o) {\n  -webkit-transform-origin: $o;\n  -ms-tranform-origin: $o;\n  -moz-transform-origin: $o;\n  -o-transform-origin: $o;\n  transform-origin: $o;\n}\n\n@mixin css-transition($prop, $time, $easing) {\n  -webkit-transition: $prop 0.5s ease-in-out;\n  -moz-transition: $prop, $time, $easing;\n  -ms-transition: $prop, $time, $easing;\n  -o-transition: $prop, $time, $easing;\n  transition: $prop, $time, $easing;\n\n  @media only screen\nand (min-device-width : 320px)\nand (max-device-width : 568px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n  }\n\n  @media only screen\nand (min-device-width : 414px)\nand (max-device-width : 736px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 375px)\nand (max-device-width : 667px) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1){\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 2) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n}\n\n@mixin css-transform-perspective($p) {\n  -ms-transform: perspective($p); /* IE 9 */\n  -moz-transform: perspective($p);\n  -webkit-transform: perspective($p); /* Safari */\n  -o-transform: perspective($p);\n  transform: perspective($p);\n}\n\n@mixin css-transform-scale($t) {\n  -ms-transform: scale($t); /* IE 9 */\n  -moz-transform: scale($t);\n  -webkit-transform: scale($t); /* Safari */\n  -o-transform: scale($t);\n  transform: scale($t);\n}\n\n@mixin css-transform-translate-x($t) {\n  -ms-transform: translate3D($t, 0, 0); /* IE 9 */\n  -moz-transform: translate3D($t, 0, 0);\n  -webkit-transform: translate3D($t, 0, 0); /* Safari */\n  -o-transform: translate3D($t, 0, 0);\n  transform: translate3D($t, 0, 0);\n\n}\n\n@mixin css-transform-translate-y($t) {\n  -ms-transform: translate3D(0, $t, 0); /* IE 9 */\n  -moz-transform: translate3D(0, $t, 0);\n  -webkit-transform: translate3D(0, $t, 0); /* Safari */\n  -o-transform: translate3D(0, $t, 0);\n  transform: translate3D(0, $t, 0);\n\n}\n\n@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {\n  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */\n  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n}\n\n@mixin css-transform-rotate-and-translate-down($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate($a) {\n  -ms-transform: rotate($a); /* IE 9 */\n  -moz-transform: rotate($a); /* Safari */\n  -webkit-transform: rotate($a); /* Safari */\n  -o-transform: rotate($a);\n  transform: rotate($a);\n}\n\n@mixin css-transform-rotate-x($a) {\n  -ms-transform: rotateX($a); /* IE 9 */\n  -moz-transform: rotateX($a); /* Safari */\n  -webkit-transform: rotateX($a); /* Safari */\n  -o-transform: rotateX($a);\n  transform: rotateX($a);\n}\n\n\n@mixin css-transform-rotate-y($a) {\n  -ms-transform: rotateY($a); /* IE 9 */\n  -moz-transform: rotateY($a); /* Safari */\n  -webkit-transform: rotateY($a); /* Safari */\n  -o-transform: rotateY($a);\n  transform: rotateY($a);\n}\n\n@mixin css-transform-rotate-z($a) {\n  -ms-transform: rotateZ($a); /* IE 9 */\n  -moz-transform: rotateZ($a); /* Safari */\n  -webkit-transform: rotateZ($a); /* Safari */\n  -o-transform: rotateZ($a);\n  transform: rotateZ($a);\n}\n\n@mixin css-transform-squash($a) {\n  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */\n  -moz-transform: scaleY($a) scaleX($a); /* Safari */\n  -webkit-transform: scaleY($a) scaleX($a); /* Safari */\n  -o-transform: scaleY($a) scaleX($a);\n  transform: scaleY($a) scaleX($a);\n}\n\n\n@mixin css-transform-open-book($s, $r, $t) {\n  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */\n  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n}\n\n@mixin css-transform-skew-x($transformation) {\n  -ms-transform: skewX($transformation); /* IE 9 */\n  -moz-transform: skewX($transformation);  /* Safari */\n  -webkit-transform: skewX($transformation);  /* Safari */\n  -o-transform: skewX($transformation);\n  transform: skewX($transformation);\n}\n\n@mixin css-transform-skew-y($transformation) {\n  -ms-transform: skewY($transformation); /* IE 9 */\n  -moz-transform: skewY($transformation);  /* Safari */\n  -webkit-transform: skewY($transformation);  /* Safari */\n  -o-transform: skewY($transformation);\n  transform: skewY($transformation);\n}\n","@mixin css-user-select($n){\n  -webkit-touch-callout: $n; /* iOS Safari */\n  -webkit-user-select: $n; /* Safari */\n   -khtml-user-select: $n; /* Konqueror HTML */\n     -moz-user-select: $n; /* Firefox */\n      -ms-user-select: $n; /* Internet Explorer/Edge */\n          user-select: $n; /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n}\n","$transition-time: 0.2s;\n$transition-prop: transform;\n$transition-easing: ease-in-out;\n$bg-color: transparent;\n$menu-button-color: #e09090;\n\n.menu-bar {\n    @include css-transition(all, $transition-time, $transition-easing);\n    position: fixed;\n    top: 0;\n    height: 100vh;\n    width: 100vw;\n    background: $bg-color;\n    display: flex;\n    flex-flow: column;\n\n    @media all and (max-width: 1200px) {\n    }\n\n    p {\n        @include css-user-select(none);\n        cursor: pointer;\n        font-weight: 400;\n        color: white;\n    }\n\n    p:hover {\n      color: #866363;\n    }\n}\n\n.menu-bar-hidden {\n  @include css-transform-translate-y(50px);\n  opacity: 0.0;\n\n}\n\n.menu-bar-shown {\n  @include css-transform-translate-y(0px);\n  opacity: 1.0;\n}\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n\n.menu-bar-item {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n\n  > p {\n    @include css-transition($transition-prop, $transition-time, $transition-easing);\n    margin: 0;\n    padding-left: 8px;\n  }\n}\n","$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;\n$main-container-color: black;\n$live-stream-text-color: #a29393;\n$transition-time: 0.35s;\n$transition-prop: all;\n$transition-easing: cubic-bezier(.94,.06,.32,.95);\n$right-transition: 100px;\n$mobile-right-transition: 100px;\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw;\n\n}\n\n.main {\n\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow:hidden;\n  /*-webkit-overflow-scrolling: touch;*/\n\n\n  @media all and (max-width: 1200px) {\n    z-index: 9999;\n\n  }\n\n}\n\n.menu-bar-open {\n  @include css-transform-translate-x($right-transition);\n\n}\n\n.menu-bar-close {\n  @include css-transform-translate-x(0vw);\n\n\n}\n","$height: 8vh;\n$text-color: #ac6e6e;\n$hover-color: #ffbb98;\n$text-hover-color: #ffffff;\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: $height;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1;\n  @media all and (max-width: 1200px) {\n    display: none;\n  }\n\n  .nav-bar-item {\n    text-align: center;\n  }\n\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    @include css-transition(all, 0.35s, ease-in-out);\n    cursor: pointer;\n\n    p {\n      @include css-user-select(none);\n      cursor: pointer;\n      font-weight: 400;\n      color: $text-color;\n      @include css-transition(all, 0.35s, ease-in-out);\n    }\n\n\n\n\n    @media all and (max-width: 1200px) {\n      z-index: -1;\n    }\n  }\n\n  .smooth-scroll:hover {\n    background: $hover-color;\n  }\n\n  .smooth-scroll:hover p {\n    color: $text-hover-color;\n  }\n\n\n  $nav-button-color: #e09090;\n\n  .navButton {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: none;\n      margin: 20px 20px;\n      width: 12em;\n      border-radius: 100%;\n      width: 20px;\n      height: 20px;\n      display: flex;\n      justify-content: center;\n      outline: none;\n      background: transparent;\n      border: 2px solid $nav-button-color;\n\n      @media all and (max-width: 1200px) {\n        margin: 20px 20px;\n      }\n\n    p {\n    color: #9a9aa2;\n    padding: 1em;\n    font-weight: 200;\n    text-align: center;\n\n      @media all and (max-width: 1200px) {\n        position: absolute;\n        color: #9a9aa2;\n        margin: 0;\n        margin-left: 3em;\n        left:0;\n        padding: 0;\n      }\n\n    }\n\n\n  }\n\n  .navButton:hover {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: 2px solid $nav-button-color;\n    border-radius: 10%;\n    background: $nav-button-color;\n    cursor: pointer;\n\n    > p {\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n  }\n\n}\n\n.NavBarHidden {\n  @media all and (max-width: 1200px) {\n  }\n}\n",".down-arrow-container {\n  position: absolute;\n  bottom: 10vh;\n\n  .down-arrow {\n    width: 5vw;\n    text-align: center;\n  }\n}\n","$intro-button-color: #ff7970;\n$mobile-width: 800px;\n$transition-duration: 0.75s;\n$transition-prop: all;\n$transition-easing: ease;\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n/*defines the actual leave transition*/\n\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n.page {\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n  transform: translateX(0vh);\n\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n\n  .home-graph-layout {\n    .average-emotion {\n      text-align: center;\n      p {\n        font-size: 2em;\n      }\n\n    }\n\n  }\n\n\n  .home-header {\n    width: 50vw;\n    h1 {\n      text-align: left;\n    }\n\n    h4 {\n      text-align: left;\n    }\n\n    p {\n      text-align: left;\n    }\n  }\n\n  .home-graph-layout {\n    h1 {\n    }\n  }\n\n  .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition(all, 0.2s, ease-in-out);\n    @include css-user-select(none);\n    cursor: pointer;\n  }\n\n  .update-data:hover {\n    background: #957a77;\n  }\n\n\n\n  .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n\n    .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in;\n\n      .title {\n        width: 100vw;\n\n        h1 {\n          @css-user-select(none);\n          cursor: default;\n        }\n      }\n\n      .graph-options {\n\n      }\n\n      .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column;\n\n        p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select(none);\n        }\n      }\n    }\n  }\n\n  p:hover {\n  color: black;\n  cursor:pointer;\n  }\n\n\n  .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/\n\n    @media all and(max-width: $mobile-width) {\n      height: 110vh;\n      width: auto;\n    }\n  }\n\n  .page-bg-image-container {\n    overflow: hidden;\n  }\n}\n","$first-color: #9bb5b5;\n$second-color: #eadab9;\n$blue-color: #637799;\n$red-color: #e0935c;\n$orange-color: #e0935c;\n$yellow-color: #efce69;\n$black-color: #262522;\n$white-color: #f9f6ef;\n\n\n.graph {\n    display: flex;\n    justify-content: center;\n    @include css-transition(all, 0.5s, ease-in-out);\n}\n\n\n.d3container {\n  border-radius: 50%;\n}\n\n.textGroup {\n  @include css-transition(transform, 0.9s ,ease-in-out);\n}\n\n.companyText {\n  fill: white;\n  @include css-user-select(none);\n  cursor: pointer;\n  font-size: 2em;\n}\n\n.companyText:hover {\n  font-size: 2.1em;\n}\n\n.firstWave:hover {\n\n  stroke: red;\n}\n\n.secondWave:hover {\n\nstroke: blue;\n\n}\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n    /*-moz-transition: transform 0.6s ease-out;*/\n    /*-o-transition: transform 0.6s ease-out;*/\n    /*transition: transform 0.6s ease-out;*/\n    -webkit-backface-visibility: hidden;\n}\n\npath:hover {\n  stroke: red;\n}\n\n\n.graph rect {\n  @include css-transition(all, 0.9s ,ease-in-out);\n}\n\n\n\n.LinearReact {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6;\n}\n\n\n\n\npath {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\n.LinearRect:hover {\nfill: #c7bca5;\n}\n\n.kernel {\n@include css-transition(all, 0.9s, ease-in-out);\n}\n\n.kernel:hover + .core {\n@include css-transition(all, 0.5s, ease-in-out);\n/*stroke: #1c1c1c;*/\nstroke-width: 0.0px;\n\n}\n\n.core {\n  @include css-transition(all, 0.5s, ease-in-out);\n}\n\n.shell {\npointer-events: none;\n\n}\n",".about {\n  .about-image-container {\n    position: absolute;\n    top: 25vh;\n    left: 0;\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    .about-image {\n      width: 75vw;\n      background: red;\n      filter: brightness(100000%);\n      padding: 20px;\n      background-color: rgba(255, 255, 255, 0.15);\n    }\n  }\n\n  .about-title {\n    position: absolute;\n    top: 0;\n  }\n\n\n}\n",".text-layout {\n  .hover-text-container {\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    @include css-transition(all, 1.5s, ease-in-out);\n    font-size: 1.5em;\n    white-space: nowrap;\n  }\n\n  .average-emotion {\n    background: white;\n    margin: 0;\n    padding: 0;\n    width: 20%;\n    color: #73667c;\n    border-radius: 5px;\n    font-weight: 900;\n  }\n\n\n  .hover-text {\n    color: #db8686;\n  }\n\n  .on {\n    /*@include css-transform-translate-x(0vw);*/\n    opacity: 1.0;\n    @include css-transition(all, 4.5s, ease-in-out);\n    background: white;\n    width: 25%;\n    border-radius: 4px;\n    padding: 10px;\n\n  }\n\n  .off {\n    @include css-transition(all, 4.5s, ease-in-out);\n    opacity: 0.0;\n    width: 100%;\n    padding: 10px;\n    /*@include css-transform-translate-x(-50vw);*/\n  }\n\n\n  .home-graph-layout {\n    .companyText {\n      font-size: 1em !important;\n    }\n\n  }\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes dropin {\n  from {\n    transform: scale(1.2);\n    h1 {\n      opacity: 0.1; } }\n  to {\n    transform: scale(1);\n    h1 {\n      opacity: 1.0; } } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n@keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n@keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n@keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n.Section {\n  background-color: #dbd7d7;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center; }\n  .Section h1 {\n    text-align: center; }\n  .Section p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center; }\n\n.menu-bar-icon {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  border: none;\n  color: #f7f5f5;\n  background: transparent;\n  outline: none;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .menu-bar-icon {\n      z-index: 99999; } }\n\n.clicked {\n  left: 50px; }\n\n.unclicked {\n  left: 0vw; }\n\n.menu-bar-icon:hover > div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.1s, ease;\n  -ms-transition: all, 1.1s, ease;\n  -o-transition: all, 1.1s, ease;\n  transition: all, 1.1s, ease;\n  background: #bca293; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease;\n  -ms-transition: all, 1.5s, ease;\n  -o-transition: all, 1.5s, ease;\n  transition: all, 1.5s, ease;\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.clicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  transform: translate3D(50px, 10px, 0) rotate(45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #topBar {\n      -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      transform: translate3D(50px, 10px, 0) rotate(45deg); } }\n\n.clicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  transform: translate3D(50px, -10px, 0) rotate(-45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #bottomBar {\n      -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      transform: translate3D(50px, -10px, 0) rotate(-45deg); } }\n\n.clicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(50px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 0, 0);\n  -webkit-transform: translate3D(50px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(50px, 0, 0);\n  transform: translate3D(50px, 0, 0);\n  opacity: 0; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #middleBar {\n      -ms-transform: translate3D(50px, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 0, 0);\n      -webkit-transform: translate3D(50px, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(50px, 0, 0);\n      transform: translate3D(50px, 0, 0); } }\n\n.unclicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0);\n  opacity: 1; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.2s, ease-in-out;\n  -ms-transition: all, 0.2s, ease-in-out;\n  -o-transition: all, 0.2s, ease-in-out;\n  transition: all, 0.2s, ease-in-out;\n  position: fixed;\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background: transparent;\n  display: flex;\n  flex-flow: column; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar p {\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer;\n    font-weight: 400;\n    color: white; }\n  .menu-bar p:hover {\n    color: #866363; }\n\n.menu-bar-hidden {\n  -ms-transform: translate3D(0, 50px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 50px, 0);\n  -webkit-transform: translate3D(0, 50px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 50px, 0);\n  transform: translate3D(0, 50px, 0);\n  opacity: 0.0; }\n\n.menu-bar-shown {\n  -ms-transform: translate3D(0, 0px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 0px, 0);\n  -webkit-transform: translate3D(0, 0px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 0px, 0);\n  transform: translate3D(0, 0px, 0);\n  opacity: 1.0; }\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center; }\n\n.menu-bar-item {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.2s, ease-in-out;\n  -ms-transition: transform, 0.2s, ease-in-out;\n  -o-transition: transform, 0.2s, ease-in-out;\n  transition: transform, 0.2s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar-item > p {\n    -webkit-transition: transform 0.5s ease-in-out;\n    -moz-transition: transform, 0.2s, ease-in-out;\n    -ms-transition: transform, 0.2s, ease-in-out;\n    -o-transition: transform, 0.2s, ease-in-out;\n    transition: transform, 0.2s, ease-in-out;\n    margin: 0;\n    padding-left: 8px; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw; }\n\n.main {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow: hidden;\n  /*-webkit-overflow-scrolling: touch;*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .main {\n      z-index: 9999; } }\n\n.menu-bar-open {\n  -ms-transform: translate3D(100px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(100px, 0, 0);\n  -webkit-transform: translate3D(100px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(100px, 0, 0);\n  transform: translate3D(100px, 0, 0); }\n\n.menu-bar-close {\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0); }\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: 8vh;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1; }\n  @media all and (max-width: 1200px) {\n    .NavBar {\n      display: none; } }\n  .NavBar .nav-bar-item {\n    text-align: center; }\n  .NavBar .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.35s, ease-in-out;\n    -ms-transition: all, 0.35s, ease-in-out;\n    -o-transition: all, 0.35s, ease-in-out;\n    transition: all, 0.35s, ease-in-out;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .smooth-scroll p {\n      -webkit-touch-callout: none;\n      /* iOS Safari */\n      -webkit-user-select: none;\n      /* Safari */\n      -khtml-user-select: none;\n      /* Konqueror HTML */\n      -moz-user-select: none;\n      /* Firefox */\n      -ms-user-select: none;\n      /* Internet Explorer/Edge */\n      user-select: none;\n      /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n      -webkit-tap-highlight-color: transparent;\n      cursor: pointer;\n      font-weight: 400;\n      color: #ac6e6e;\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.35s, ease-in-out;\n      -ms-transition: all, 0.35s, ease-in-out;\n      -o-transition: all, 0.35s, ease-in-out;\n      transition: all, 0.35s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .smooth-scroll {\n        z-index: -1; } }\n  .NavBar .smooth-scroll:hover {\n    background: #ffbb98; }\n  .NavBar .smooth-scroll:hover p {\n    color: #ffffff; }\n  .NavBar .navButton {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: none;\n    margin: 20px 20px;\n    width: 12em;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: flex;\n    justify-content: center;\n    outline: none;\n    background: transparent;\n    border: 2px solid #e09090; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .navButton {\n        margin: 20px 20px; } }\n    .NavBar .navButton p {\n      color: #9a9aa2;\n      padding: 1em;\n      font-weight: 200;\n      text-align: center; }\n      @media all and (max-width: 1200px) {\n        .NavBar .navButton p {\n          position: absolute;\n          color: #9a9aa2;\n          margin: 0;\n          margin-left: 3em;\n          left: 0;\n          padding: 0; } }\n  .NavBar .navButton:hover {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: 2px solid #e09090;\n    border-radius: 10%;\n    background: #e09090;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .navButton:hover > p {\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.down-arrow-container {\n  position: absolute;\n  bottom: 10vh; }\n  .down-arrow-container .down-arrow {\n    width: 5vw;\n    text-align: center; }\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual leave transition*/\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.page {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease;\n  transform: translateX(0vh);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .page .current-tweet-container {\n    width: 100vw;\n    position: absolute;\n    top: 50vh;\n    left: 0;\n    display: flex;\n    justify-content: center; }\n  .page .current-tweet {\n    width: 50vw; }\n  .page .home-graph-layout .average-emotion {\n    text-align: center;\n    position: absolute;\n    top: 0;\n    width: 100vw;\n    left: 0; }\n    .page .home-graph-layout .average-emotion p {\n      font-size: 2em; }\n  .page .home-header {\n    width: 50vw;\n    position: absolute;\n    left: 10vw;\n    top: 10vh; }\n    .page .home-header h1 {\n      text-align: left; }\n    .page .home-header h4 {\n      text-align: left; }\n    .page .home-header p {\n      text-align: left; }\n  .page .home-graph-layout .graph {\n    position: absolute;\n    right: 0;\n    top: 0; }\n  .page .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition (all, 0.2s, ease-in-out);\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer; }\n  .page .update-data:hover {\n    background: #957a77; }\n  .page .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .page .header .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in; }\n      .page .header .header-box .title {\n        width: 100vw; }\n        .page .header .header-box .title h1 {\n          @css-user-select (none);\n          cursor: default; }\n      .page .header .header-box .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column; }\n        .page .header .header-box .subtitle p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select (none); }\n  .page p:hover {\n    color: black;\n    cursor: pointer; }\n  .page .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/ }\n    @media all and (max-width: 800px) {\n      .page .page-bg-image {\n        height: 110vh;\n        width: auto; } }\n  .page .page-bg-image-container {\n    overflow: hidden; }\n\n.graph {\n  display: flex;\n  justify-content: center;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.d3container {\n  border-radius: 50%; }\n\n.textGroup {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.9s, ease-in-out;\n  -ms-transition: transform, 0.9s, ease-in-out;\n  -o-transition: transform, 0.9s, ease-in-out;\n  transition: transform, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.companyText {\n  fill: white;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer;\n  font-size: 2em; }\n\n.companyText:hover {\n  font-size: 2.1em; }\n\n.firstWave:hover {\n  stroke: red; }\n\n.secondWave:hover {\n  stroke: blue; }\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n  /*-moz-transition: transform 0.6s ease-out;*/\n  /*-o-transition: transform 0.6s ease-out;*/\n  /*transition: transform 0.6s ease-out;*/\n  -webkit-backface-visibility: hidden; }\n\npath:hover {\n  stroke: red; }\n\n.graph rect {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearReact {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6; }\n\npath {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearRect:hover {\n  fill: #c7bca5; }\n\n.kernel {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.kernel:hover + .core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  /*stroke: #1c1c1c;*/\n  stroke-width: 0.0px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.shell {\n  pointer-events: none; }\n\n.about .about-image-container {\n  position: absolute;\n  top: 10vh;\n  left: 25%;\n  width: 50%; }\n  .about .about-image-container .about-image {\n    width: 75vw;\n    background: red;\n    filter: brightness(100000%);\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.15); }\n\n.about .about-title {\n  position: absolute;\n  top: 0; }\n\n.text-layout .hover-text-container {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease-in-out;\n  -ms-transition: all, 1.5s, ease-in-out;\n  -o-transition: all, 1.5s, ease-in-out;\n  transition: all, 1.5s, ease-in-out;\n  font-size: 1.5em;\n  white-space: nowrap; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .average-emotion {\n  background: white;\n  margin: 0;\n  padding: 0;\n  width: 20%;\n  color: #73667c;\n  border-radius: 5px;\n  font-weight: 900; }\n\n.text-layout .hover-text {\n  color: #db8686; }\n\n.text-layout .on {\n  /*@include css-transform-translate-x(0vw);*/\n  opacity: 1.0;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 4.5s, ease-in-out;\n  -ms-transition: all, 4.5s, ease-in-out;\n  -o-transition: all, 4.5s, ease-in-out;\n  transition: all, 4.5s, ease-in-out;\n  background: white;\n  width: 25%;\n  border-radius: 4px;\n  padding: 10px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .off {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 4.5s, ease-in-out;\n  -ms-transition: all, 4.5s, ease-in-out;\n  -o-transition: all, 4.5s, ease-in-out;\n  transition: all, 4.5s, ease-in-out;\n  opacity: 0.0;\n  width: 100%;\n  padding: 10px;\n  /*@include css-transform-translate-x(-50vw);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .home-graph-layout .companyText {\n  font-size: 1em !important; }\n\n.tech-stack-image-container {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  height: 100vh;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .tech-stack-image-container .tech-stack-image {\n    width: 75vw;\n    background: red;\n    filter: brightness(100000%);\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.15); }\n\n.tech-stack-title {\n  position: absolute;\n  top: 0; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  overflow: hidden; }\n  body .profile-pic-container {\n    width: 100%;\n    position: absolute;\n    left: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center; }\n  body .profile-pic {\n    border-radius: 100%;\n    width: 25%;\n    margin: 50px; }\n  body a {\n    font-family: \"Questrial\", Helvetica, sans-serif;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent; }\n  body a:hover {\n    color: #ffecec; }\n  body h1 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none);\n    font-size: 1.5em; }\n  body h2 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h3 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h4 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body p {\n    font-family: \"Questrial\", Helvetica, sans-serif;\n    color: #dec5c5;\n    font-weight: 500;\n    @css-user-select (none); }\n  body .wrapper {\n    overflow: hidden; }\n  body .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: transparent; }\n  body .home-graph-options {\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Animation_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Section.scss","/Users/josecanizares/Desktop/Informant/app/scss/main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBarIcon.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Transform_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_User_Events.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_NavBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_DownArrow.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Page.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Graphs.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_About.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_TextLayout.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_TechStack.scss"],"names":[],"mappings":"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,EDzBrD,EAAA;EC4BD;ID7CA;MCiDA,oDAAsD,EDhCrD,EAAA;ECmCD;IDpDA;MCuDA,oDAAsD,EDtCrD,EAAA;EAHC;IAdF;MAeI,eAAc,EAEjB,EAAA;;AAED;EACA,WA1BuB,EA2BtB;;AAED;EACA,UAAS,EACR;;AAED;ECpBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAqCtB,oBAAmB,EACpB;ECjBC;IDcF;MCXE,oDAAsD,EDcvD,EAAA;ECXC;IDQF;MCLE,oDAAsD,EDQvD,EAAA;ECLD;IDEA;MCCA,oDAAsD,EDErD,EAAA;ECCD;IDJA;MCQA,oDAAsD,EDLrD,EAAA;ECQD;IDXA;MCeA,oDAAsD,EDZrD,EAAA;ECeD;IDlBA;MCsBA,oDAAsD,EDnBrD,EAAA;ECsBD;IDzBA;MC4BA,oDAAsD,EDzBrD,EAAA;;AAED;ECzBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA0CtB,YAAW;EACX,YAAW;EACX,oBAAmB;EACnB,gBAAe,EAChB;ECzBC;IDmBF;MChBE,oDAAsD,EDsBvD,EAAA;ECnBC;IDaF;MCVE,oDAAsD,EDgBvD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;ECPD;IDCA;MCGA,oDAAsD,EDGrD,EAAA;ECAD;IDNA;MCUA,oDAAsD,EDJrD,EAAA;ECOD;IDbA;MCiBA,oDAAsD,EDXrD,EAAA;ECcD;IDpBA;MCuBA,oDAAsD,EDjBrD,EAAA;;AAED;ECjCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAkDtB,gEAAgE;EAChE,kEAAkE,EACnE;EC/BC;ID2BF;MCxBE,oDAAsD,ED4BvD,EAAA;ECzBC;IDqBF;MClBE,oDAAsD,EDsBvD,EAAA;ECnBD;IDeA;MCZA,oDAAsD,EDgBrD,EAAA;ECbD;IDSA;MCLA,oDAAsD,EDSrD,EAAA;ECND;IDEA;MCEA,oDAAsD,EDErD,EAAA;ECCD;IDLA;MCSA,oDAAsD,EDLrD,EAAA;ECQD;IDZA;MCeA,oDAAsD,EDXrD,EAAA;;AAED;ECvCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAwDtB,gEAAgE;EAChE,kEAAkE,EAEnE;ECtCC;IDiCF;MC9BE,oDAAsD,EDmCvD,EAAA;EChCC;ID2BF;MCxBE,oDAAsD,ED6BvD,EAAA;EC1BD;IDqBA;MClBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDeA;MCXA,oDAAsD,EDgBrD,EAAA;ECbD;IDQA;MCJA,oDAAsD,EDSrD,EAAA;ECND;IDCA;MCGA,oDAAsD,EDErD,EAAA;ECCD;IDNA;MCSA,oDAAsD,EDJrD,EAAA;;AAED;EC9CE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA+DtB,8CAA8C;EAC9C,qCAAqC,EACtC;EC5CC;IDwCF;MCrCE,oDAAsD,EDyCvD,EAAA;ECtCC;IDkCF;MC/BE,oDAAsD,EDmCvD,EAAA;EChCD;ID4BA;MCzBA,oDAAsD,ED6BrD,EAAA;EC1BD;IDsBA;MClBA,oDAAsD,EDsBrD,EAAA;ECnBD;IDeA;MCXA,oDAAsD,EDerD,EAAA;ECZD;IDQA;MCJA,oDAAsD,EDQrD,EAAA;ECLD;IDCA;MCEA,oDAAsD,EDErD,EAAA;;AAED;ECpDE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuHtB,wDAAgD;EAAG,UAAU;EAC7D,yDAAiD;EAAG,YAAY;EAChE,4DAAoD;EAAG,YAAY;EACnE,uDAA+C;EAC/C,oDAA4C,EDlD7C;ECpDC;ID8CF;MC3CE,oDAAsD,EDiDvD,EAAA;EC9CC;IDwCF;MCrCE,oDAAsD,ED2CvD,EAAA;ECxCD;IDkCA;MC/BA,oDAAsD,EDqCrD,EAAA;EClCD;ID4BA;MCxBA,oDAAsD,ED8BrD,EAAA;EC3BD;IDqBA;MCjBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDcA;MCVA,oDAAsD,EDgBrD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;EAHC;IAHF;MCoDE,wDAAgD;MAAG,UAAU;MAC7D,yDAAiD;MAAG,YAAY;MAChE,4DAAoD;MAAG,YAAY;MACnE,uDAA+C;MAC/C,oDAA4C,EDlD7C,EAAA;;AAED;EC5DE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EC+HtB,0DAAgD;EAAG,UAAU;EAC7D,2DAAiD;EAAG,YAAY;EAChE,8DAAoD;EAAG,YAAY;EACnE,yDAA+C;EAC/C,sDAA4C,EDlD7C;EC5DC;IDsDF;MCnDE,oDAAsD,EDyDvD,EAAA;ECtDC;IDgDF;MC7CE,oDAAsD,EDmDvD,EAAA;EChDD;ID0CA;MCvCA,oDAAsD,ED6CrD,EAAA;EC1CD;IDoCA;MChCA,oDAAsD,EDsCrD,EAAA;ECnCD;ID6BA;MCzBA,oDAAsD,ED+BrD,EAAA;EC5BD;IDsBA;MClBA,oDAAsD,EDwBrD,EAAA;ECrBD;IDeA;MCZA,oDAAsD,EDkBrD,EAAA;EAHC;IAHF;MCoDE,0DAAgD;MAAG,UAAU;MAC7D,2DAAiD;MAAG,YAAY;MAChE,8DAAoD;MAAG,YAAY;MACnE,yDAA+C;MAC/C,sDAA4C,EDlD7C,EAAA;;AAED;ECpEE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECgLtB,mCAAoC;EAAE,UAAU;EAChD,oCAAqC;EAAE,YAAY;EACnD,uCAAwC;EAAE,YAAY;EACtD,kCAAmC;EACnC,+BAAgC;EA/FhC,uCAAoC;EAAE,UAAU;EAChD,wCAAqC;EACrC,2CAAwC;EAAE,YAAY;EACtD,sCAAmC;EACnC,mCAAgC;EDChC,WAAU,EACX;ECtEC;ID8DF;MC3DE,oDAAsD,EDmEvD,EAAA;EChEC;IDwDF;MCrDE,oDAAsD,ED6DvD,EAAA;EC1DD;IDkDA;MC/CA,oDAAsD,EDuDrD,EAAA;ECpDD;ID4CA;MCxCA,oDAAsD,EDgDrD,EAAA;EC7CD;IDqCA;MCjCA,oDAAsD,EDyCrD,EAAA;ECtCD;ID8BA;MC1BA,oDAAsD,EDkCrD,EAAA;EC/BD;IDuBA;MCpBA,oDAAsD,ED4BrD,EAAA;EAJC;IAJF;MCEE,uCAAoC;MAAE,UAAU;MAChD,wCAAqC;MACrC,2CAAwC;MAAE,YAAY;MACtD,sCAAmC;MACnC,mCAAgC,EDEjC,EAAA;;AAED;EC9EE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuHtB,qDAAgD;EAAG,UAAU;EAC7D,sDAAiD;EAAG,YAAY;EAChE,yDAAoD;EAAG,YAAY;EACnE,oDAA+C;EAC/C,iDAA4C,ED3B7C;EC3EC;IDwEF;MCrEE,oDAAsD,EDwEvD,EAAA;ECrEC;IDkEF;MC/DE,oDAAsD,EDkEvD,EAAA;EC/DD;ID4DA;MCzDA,oDAAsD,ED4DrD,EAAA;ECzDD;IDsDA;MClDA,oDAAsD,EDqDrD,EAAA;EClDD;ID+CA;MC3CA,oDAAsD,ED8CrD,EAAA;EC3CD;IDwCA;MCpCA,oDAAsD,EDuCrD,EAAA;ECpCD;IDiCA;MC9BA,oDAAsD,EDiCrD,EAAA;;AAED;ECnFE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EC+HtB,qDAAgD;EAAG,UAAU;EAC7D,sDAAiD;EAAG,YAAY;EAChE,yDAAoD;EAAG,YAAY;EACnE,oDAA+C;EAC/C,iDAA4C,ED9B7C;EChFC;ID6EF;MC1EE,oDAAsD,ED6EvD,EAAA;EC1EC;IDuEF;MCpEE,oDAAsD,EDuEvD,EAAA;ECpED;IDiEA;MC9DA,oDAAsD,EDiErD,EAAA;EC9DD;ID2DA;MCvDA,oDAAsD,ED0DrD,EAAA;ECvDD;IDoDA;MChDA,oDAAsD,EDmDrD,EAAA;EChDD;ID6CA;MCzCA,oDAAsD,ED4CrD,EAAA;ECzCD;IDsCA;MCnCA,oDAAsD,EDsCrD,EAAA;;AAED;ECxFE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECgLtB,mCAAoC;EAAE,UAAU;EAChD,oCAAqC;EAAE,YAAY;EACnD,uCAAwC;EAAE,YAAY;EACtD,kCAAmC;EACnC,+BAAgC;EA/FhC,sCAAoC;EAAE,UAAU;EAChD,uCAAqC;EACrC,0CAAwC;EAAE,YAAY;EACtD,qCAAmC;EACnC,kCAAgC;EDkBhC,WAAU,EACX;ECvFC;IDkFF;MC/EE,oDAAsD,EDoFvD,EAAA;ECjFC;ID4EF;MCzEE,oDAAsD,ED8EvD,EAAA;EC3ED;IDsEA;MCnEA,oDAAsD,EDwErD,EAAA;ECrED;IDgEA;MC5DA,oDAAsD,EDiErD,EAAA;EC9DD;IDyDA;MCrDA,oDAAsD,ED0DrD,EAAA;ECvDD;IDkDA;MC9CA,oDAAsD,EDmDrD,EAAA;EChDD;ID2CA;MCxCA,oDAAsD,ED6CrD,EAAA;;AGzGD;EFYE,yCAA0C;EAC1C,wCEjB6B;EFkB7B,uCElB6B;EFmB7B,sCEnB6B;EFoB7B,mCEpB6B;EAM3B,gBAAe;EACf,OAAM;EACN,cAAa;EACb,aAAY;EACZ,wBATkB;EAUlB,cAAa;EACb,kBAAiB,EAepB;EFLC;IElBF;MFqBE,oDAAsD,EEEvD,EAAA;EFCC;IExBF;MF2BE,oDAAsD,EEJvD,EAAA;EFOD;IE9BA;MFiCA,oDAAsD,EEVrD,EAAA;EFaD;IEpCA;MFwCA,oDAAsD,EEjBrD,EAAA;EFoBD;IE3CA;MF+CA,oDAAsD,EExBrD,EAAA;EF2BD;IElDA;MFsDA,oDAAsD,EE/BrD,EAAA;EFkCD;IEzDA;MF4DA,oDAAsD,EErCrD,EAAA;EAvBD;IDLE,4BCmBmC;IDnBR,gBAAgB;IAC3C,0BCkBmC;IDlBV,YAAY;IACpC,yBCiBkC;IDjBV,oBAAoB;IAC1C,uBCgBgC;IDhBV,aAAa;IAClC,sBCe+B;IDfV,4BAA4B;IAC7C,kBCc2B;IDdV;gEACqC;IAC9D,yCAA0C;ICapC,gBAAe;IACf,iBAAgB;IAChB,aAAY,EACf;EAlBL;IAqBM,eAAc,EACf;;AAGL;EFkEE,uCAAoC;EAAE,UAAU;EAChD,wCAAqC;EACrC,2CAAwC;EAAE,YAAY;EACtD,sCAAmC;EACnC,mCAAgC;EEpEhC,aAAY,EAEb;;AAED;EF4DE,sCAAoC;EAAE,UAAU;EAChD,uCAAqC;EACrC,0CAAwC;EAAE,YAAY;EACtD,qCAAmC;EACnC,kCAAgC;EE9DhC,aAAY,EACb;;AAED;EACE,QAAO;EACP,cAAa;EACb,4BAA2B;EAC3B,oBAAmB,EACpB;;AAGD;EFhCE,+CAA0C;EAC1C,8CEjB6B;EFkB7B,6CElB6B;EFmB7B,4CEnB6B;EFoB7B,yCEpB6B,EAwD9B;EFlCC;IE0BF;MFvBE,oDAAsD,EE+BvD,EAAA;EF5BC;IEoBF;MFjBE,oDAAsD,EEyBvD,EAAA;EFtBD;IEcA;MFXA,oDAAsD,EEmBrD,EAAA;EFhBD;IEQA;MFJA,oDAAsD,EEYrD,EAAA;EFTD;IECA;MFGA,oDAAsD,EEKrD,EAAA;EFFD;IENA;MFUA,oDAAsD,EEFrD,EAAA;EFKD;IEbA;MFgBA,oDAAsD,EERrD,EAAA;EARD;IFhCE,+CAA0C;IAC1C,8CEjB6B;IFkB7B,6CElB6B;IFmB7B,4CEnB6B;IFoB7B,yCEpB6B;IAqD3B,UAAS;IACT,kBAAiB,EAClB;IFjCD;ME0BF;QFvBE,oDAAsD,EE8BrD,EAAA;IF3BD;MEoBF;QFjBE,oDAAsD,EEwBrD,EAAA;IFrBH;MEcA;QFXA,oDAAsD,EEkBnD,EAAA;IFfH;MEQA;QFJA,oDAAsD,EEWnD,EAAA;IFRH;MECA;QFGA,oDAAsD,EEInD,EAAA;IFDH;MENA;QFUA,oDAAsD,EEHnD,EAAA;IFMH;MEbA;QFgBA,oDAAsD,EETnD,EAAA;;AChDH;EACE,mCAAkC;EAClC,mBAAkB;EAClB,OAAM;EACN,uBAAsB;EACtB,QAAO;EACP,aAAY,EAEb;;AAED;EHDE,yCAA0C;EAC1C,kEGd+C;EHe/C,iEGf+C;EHgB/C,gEGhB+C;EHiB/C,6DGjB+C;EAiB/C,oBAAoB;EACpB,gBAAgB;EAChB,iBAAe;EACf,sCAAsC,EAQvC;EHTC;IGLF;MHQE,oDAAsD,EGMvD,EAAA;EHHC;IGXF;MHcE,oDAAsD,EGAvD,EAAA;EHGD;IGjBA;MHoBA,oDAAsD,EGNrD,EAAA;EHSD;IGvBA;MH2BA,oDAAsD,EGbrD,EAAA;EHgBD;IG9BA;MHkCA,oDAAsD,EGpBrD,EAAA;EHuBD;IGrCA;MHyCA,oDAAsD,EG3BrD,EAAA;EH8BD;IG5CA;MH+CA,oDAAsD,EGjCrD,EAAA;EALC;IATF;MAUI,cAAa,EAIhB,EAAA;;AAED;EHqDE,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AsD,EImDnD,EAAA;IJhDH;MI1DA;QJ6DA,oDAAsD,EI6CnD,EAAA;IA1GH;MJaE,yCAA0C;MAC1C,wCI0FkD;MJzFlD,uCIyFkD;MJxFlD,sCIwFkD;MJvFlD,mCIuFkD,EAC/C;MJtFH;QInBF;UJsBE,oDAAsD,EImFnD,EAAA;MJhFH;QIzBF;UJ4BE,oDAAsD,EI6EnD,EAAA;MJ1EL;QI/BA;UJkCA,oDAAsD,EIuEjD,EAAA;MJpEL;QIrCA;UJyCA,oDAAsD,EIgEjD,EAAA;MJ7DL;QI5CA;UJgDA,oDAAsD,EIyDjD,EAAA;MJtDL;QInDA;UJuDA,oDAAsD,EIkDjD,EAAA;MJ/CL;QI1DA;UJ6DA,oDAAsD,EI4CjD,EAAA;;AC9GL;EACE,mBAAkB;EAClB,aAAY,EAMb;EARD;IAKI,WAAU;IACV,mBAAkB,EACnB;;ACDH,uDAAuD;AACvD;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,+BAA+B;ENQ/B,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EASvB;ENWC;IMjBF;MNoBE,oDAAsD,EMdvD,EAAA;ENiBC;IMvBF;MN0BE,oDAAsD,EMpBvD,EAAA;ENuBD;IM7BA;MNgCA,oDAAsD,EM1BrD,EAAA;EN6BD;IMnCA;MNuCA,oDAAsD,EMjCrD,EAAA;ENoCD;IM1CA;MN8CA,oDAAsD,EMxCrD,EAAA;EN2CD;IMjDA;MNqDA,oDAAsD,EM/CrD,EAAA;ENkDD;IMxDA;MN2DA,oDAAsD,EMrDrD,EAAA;;AAED,uCAAuC;AACvC;EACE,2BAA0B;EAC1B,qBAAqB;ENArB,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiBvB;ENGC;IMRF;MNWE,oDAAsD,EMNvD,EAAA;ENSC;IMdF;MNiBE,oDAAsD,EMZvD,EAAA;ENeD;IMpBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN4CA,oDAAsD,EMvCrD,EAAA;EN0CD;IM/CA;MNkDA,oDAAsD,EM7CrD,EAAA;;AACD,sDAAsD;AACtD;EACE,2BAA0B;EAC1B,qBAAqB;EACrB,gCAAgC;ENRhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAwBvB;ENJC;IMDF;MNIE,oDAAsD,EMCvD,EAAA;ENEC;IMPF;MNUE,oDAAsD,EMLvD,EAAA;ENQD;IMbA;MNgBA,oDAAsD,EMXrD,EAAA;ENcD;IMnBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN2CA,oDAAsD,EMtCrD,EAAA;;AAED,uCAAuC;AAEvC;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,gCAAgC;ENjBhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiCvB;ENbC;IMQF;MNLE,oDAAsD,EMUvD,EAAA;ENPC;IMEF;MNCE,oDAAsD,EMIvD,EAAA;ENDD;IMJA;MNOA,oDAAsD,EMFrD,EAAA;ENKD;IMVA;MNcA,oDAAsD,EMTrD,EAAA;ENYD;IMjBA;MNqBA,oDAAsD,EMhBrD,EAAA;ENmBD;IMxBA;MN4BA,oDAAsD,EMvBrD,EAAA;EN0BD;IM/BA;MNkCA,oDAAsD,EM7BrD,EAAA;;AAED;ENrBE,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB;EAqCtB,2BAA0B;EAiB1B,cAAa;EACb,wBAAuB;EACvB,oBAAmB;EACnB,cAAa,EA4Id;ENjLC;IMeF;MNZE,oDAAsD,EM8KvD,EAAA;EN3KC;IMSF;MNNE,oDAAsD,EMwKvD,EAAA;ENrKD;IMGA;MNAA,oDAAsD,EMkKrD,EAAA;EN/JD;IMHA;MNOA,oDAAsD,EM2JrD,EAAA;ENxJD;IMVA;MNcA,oDAAsD,EMoJrD,EAAA;ENjJD;IMjBA;MNqBA,oDAAsD,EM6IrD,EAAA;EN1ID;IMxBA;MN2BA,oDAAsD,EMuIrD,EAAA;EAlKD;IAMI,aAAY;IAC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9C,mCOyC8C,EAC/C;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCC;IOgCF;MP7BE,oDAAsD,EO+BvD,EAAA;EP5BD;IO0BA;MPvBA,oDAAsD,EOyBrD,EAAA;EPtBD;IOoBA;MPhBA,oDAAsD,EOkBrD,EAAA;EPfD;IOaA;MPTA,oDAAsD,EOWrD,EAAA;EPRD;IOMA;MPFA,oDAAsD,EOIrD,EAAA;EPDD;IODA;MPIA,oDAAsD,EOFrD,EAAA;;AAID;EPlDE,yCAA0C;EAC1C,wCOkD8C;EPjD9C,uCOiD8C;EPhD9C,sCOgD8C;EP/C9C,mCO+C8C,EAC/C;EP9CC;IO4CF;MPzCE,oDAAsD,EO2CvD,EAAA;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCD;IOgCA;MP7BA,oDAAsD,EO+BrD,EAAA;EP5BD;IO0BA;MPtBA,oDAAsD,EOwBrD,EAAA;EPrBD;IOmBA;MPfA,oDAAsD,EOiBrD,EAAA;EPdD;IOYA;MPRA,oDAAsD,EOUrD,EAAA;EPPD;IOKA;MPFA,oDAAsD,EOIrD,EAAA;;AAED;EPtDE,yCAA0C;EAC1C,wCOsD8C;EPrD9C,uCOqD8C;EPpD9C,sCOoD8C;EPnD9C,mCOmD8C,EAC/C;EPlDC;IOgDF;MP7CE,oDAAsD,EO+CvD,EAAA;EP5CC;IO0CF;MPvCE,oDAAsD,EOyCvD,EAAA;EPtCD;IOoCA;MPjCA,oDAAsD,EOmCrD,EAAA;EPhCD;IO8BA;MP1BA,oDAAsD,EO4BrD,EAAA;EPzBD;IOuBA;MPnBA,oDAAsD,EOqBrD,EAAA;EPlBD;IOgBA;MPZA,oDAAsD,EOcrD,EAAA;EPXD;IOSA;MPNA,oDAAsD,EOQrD,EAAA;;AAED;EACE,cAAa;EACb,gBAAe,EAChB;;AAKD;EPlEE,yCAA0C;EAC1C,wCOkE4C;EPjE5C,uCOiE4C;EPhE5C,sCOgE4C;EP/D5C,mCO+D4C,EAC7C;EP9DC;IO4DF;MPzDE,oDAAsD,EO2DvD,EAAA;EPxDC;IOsDF;MPnDE,oDAAsD,EOqDvD,EAAA;EPlDD;IOgDA;MP7CA,oDAAsD,EO+CrD,EAAA;EP5CD;IO0CA;MPtCA,oDAAsD,EOwCrD,EAAA;EPrCD;IOmCA;MP/BA,oDAAsD,EOiCrD,EAAA;EP9BD;IO4BA;MPxBA,oDAAsD,EO0BrD,EAAA;EPvBD;IOqBA;MPlBA,oDAAsD,EOoBrD,EAAA;;AAED;EACA,cAAa,EACZ;;AAED;EP1EE,yCAA0C;EAC1C,wCO0E4C;EPzE5C,uCOyE4C;EPxE5C,sCOwE4C;EPvE5C,mCOuE4C,EAC7C;EPtEC;IOoEF;MPjEE,oDAAsD,EOmEvD,EAAA;EPhEC;IO8DF;MP3DE,oDAAsD,EO6DvD,EAAA;EP1DD;IOwDA;MPrDA,oDAAsD,EOuDrD,EAAA;EPpDD;IOkDA;MP9CA,oDAAsD,EOgDrD,EAAA;EP7CD;IO2CA;MPvCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOoCA;MPhCA,oDAAsD,EOkCrD,EAAA;EP/BD;IO6BA;MP1BA,oDAAsD,EO4BrD,EAAA;;AAED;EP9EE,yCAA0C;EAC1C,wCO8E4C;EP7E5C,uCO6E4C;EP5E5C,sCO4E4C;EP3E5C,mCO2E4C;EAC9C,oBAAoB;EACpB,oBAAmB,EAElB;EP7EC;IOwEF;MPrEE,oDAAsD,EO0EvD,EAAA;EPvEC;IOkEF;MP/DE,oDAAsD,EOoEvD,EAAA;EPjED;IO4DA;MPzDA,oDAAsD,EO8DrD,EAAA;EP3DD;IOsDA;MPlDA,oDAAsD,EOuDrD,EAAA;EPpDD;IO+CA;MP3CA,oDAAsD,EOgDrD,EAAA;EP7CD;IOwCA;MPpCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOiCA;MP9BA,oDAAsD,EOmCrD,EAAA;;AAED;EPrFE,yCAA0C;EAC1C,wCOqF8C;EPpF9C,uCOoF8C;EPnF9C,sCOmF8C;EPlF9C,mCOkF8C,EAC/C;EPjFC;IO+EF;MP5EE,oDAAsD,EO8EvD,EAAA;EP3EC;IOyEF;MPtEE,oDAAsD,EOwEvD,EAAA;EPrED;IOmEA;MPhEA,oDAAsD,EOkErD,EAAA;EP/DD;IO6DA;MPzDA,oDAAsD,EO2DrD,EAAA;EPxDD;IOsDA;MPlDA,oDAAsD,EOoDrD,EAAA;EPjDD;IO+CA;MP3CA,oDAAsD,EO6CrD,EAAA;EP1CD;IOwCA;MPrCA,oDAAsD,EOuCrD,EAAA;;AAED;EACA,qB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","file":"main.scss","sourcesContent":["@mixin css-fadein($t) {\n-webkit-animation: fadein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: fadein $t; /* Firefox < 16 */\n    -ms-animation: fadein $t; /* Internet Explorer */\n     -o-animation: fadein $t; /* Opera < 12.1 */\n        animation: fadein $t;\n}\n\n\n@keyframes fadein {\n    from {\n    opacity: 0;\n    }\n    to   {\n    opacity: 1;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n    from {\n      opacity: 0;\n    }\n    to   {\n      opacity: 1;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n\n\n\n\n\n\n\n\n@mixin css-dropin($t) {\n-webkit-animation: dropin $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropin $t; /* Firefox < 16 */\n    -ms-animation: dropin $t; /* Internet Explorer */\n     -o-animation: dropin $t; /* Opera < 12.1 */\n        animation: dropin $t;\n}\n\n\n@keyframes dropin {\n    from {\n      transform: scale(1.2);\n      h1 {\n        opacity: 0.1;\n      }\n    }\n    to   {\n      transform: scale(1);\n      h1 {\n        opacity: 1.0;\n      }\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n\n\n\n@mixin css-dropout($t) {\n-webkit-animation: dropout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropout $t; /* Firefox < 16 */\n    -ms-animation: dropout $t; /* Internet Explorer */\n     -o-animation: dropout $t; /* Opera < 12.1 */\n        animation: dropout $t;\n}\n\n\n@keyframes dropout {\n    from {\n    font-size: 1.5em;\n    }\n    to   {\n    font-size: 2.5em;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n    from {\n      font-size: 1.5em;\n    }\n    to   {\n      font-size: 2.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n\n\n\n\n@mixin css-slidein($t) {\n-webkit-animation: slidein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slidein $t; /* Firefox < 16 */\n    -ms-animation: slidein $t; /* Internet Explorer */\n     -o-animation: slidein $t; /* Opera < 12.1 */\n        animation: slidein $t;\n}\n\n\n@keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n\n\n\n\n\n\n\n@mixin css-slideout($t) {\n-webkit-animation: slideout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slideout $t; /* Firefox < 16 */\n    -ms-animation: slideout $t; /* Internet Explorer */\n     -o-animation: slideout $t; /* Opera < 12.1 */\n        animation: slideout $t;\n}\n\n\n@keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n",".Section {\n  background-color: $section-color;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n\n  h1 {\n    text-align: center;\n  }\n\n  p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center;\n  }\n}\n","$global-p-color: #dec5c5;\n$global-h1-color: #ffffff;\n$global-bg-color: #1b1a1a;\n$global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;\n$global-p-font-stack: 'Questrial', Helvetica, sans-serif;\n$section-color: #dbd7d7;\n$p-section-color: #111111;\n\n@import './helpers/Animation_Mixins.scss';\n@import './helpers/Transform_Mixins.scss';\n@import './helpers/Display.scss';\n@import './helpers/User_Events.scss';\n\n@import './components/Section.scss';\n@import './components/Subsection.scss';\n@import './components/MenuBarIcon.scss';\n@import './components/MenuBar.scss';\n@import './components/Main.scss';\n@import './components/NavBar.scss';\n@import './components/SmoothScroll.scss';\n@import './components/DownArrow.scss';\n@import './components/Page.scss';\n@import './components/Graphs.scss';\n@import './components/About.scss';\n@import './components/TextLayout.scss';\n@import './components/TechStack.scss';\n\n\nbody {\n  margin: 0;\n  padding: 0;\n\n  .profile-pic-container {\n    width: 100%;\n    position: absolute;\n    left: 0;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n\n  .profile-pic {\n    border-radius: 100%;\nwidth: 25%;\nmargin: 50px;\n  }\n\n  width: 100%;\n  overflow:hidden;\n\n  a {\n    font-family: $global-p-font-stack;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    @include css-user-select(none);\n    }\n\n  a:hover {\n    color: #ffecec;\n  }\n\n  h1 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n    font-size: 1.5em;\n  }\n\n  h2 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n\n  }\n\n  h3 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  h4 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  p {\n    font-family: $global-p-font-stack;\n    color: $global-p-color;\n    font-weight: 500;\n    @css-user-select(none);\n  }\n\n  .wrapper {\n    overflow:hidden;\n  }\n\n  @media all and (max-width: 1200px) {\n\n  }\n\n  .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n  }\n\n  .home-graph-options {\n  position: absolute;\n  }\n\n\n}\n","$menu-bar-icon-color: #f7f5f5;\n$transition-time: 0.7s;\n$transition-prop: all;\n$transition-easing: ease;\n$g-time: 0.75s;\n$right-transition: 50px;\n$mobile-right-transition: 50px;\n\n@import '../helpers/Transform_Mixins.scss';\n\n\n.menu-bar-icon {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  border: none;\n  color: $menu-bar-icon-color;\n  background: transparent;\n  outline: none;\n  @include css-user-select(none);\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999;\n\n  @media all and (max-width: 1200px) {\n    z-index: 99999;\n  }\n}\n\n.clicked {\nleft: $right-transition;\n}\n\n.unclicked {\nleft: 0vw;\n}\n\n.menu-bar-icon:hover > div {\n  @include css-transition($transition-prop, 1.1s, $transition-easing);\n  background: #bca293;\n}\n\n.menu-bar-icon div {\n  @include css-transition($transition-prop, 1.5s, $transition-easing);\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px;\n}\n\n.menu-bar-icon:hover > #topBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/\n}\n\n.menu-bar-icon:hover > #bottomBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/\n\n}\n\n.menu-bar-icon:hover > #middleBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/\n}\n\n.clicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x($right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n  }\n  opacity: 0;\n}\n\n.unclicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x(0vw);\n  opacity: 1;\n}\n","$g-time: 0.4s;\n\n@mixin css-linear-gradient($first, $second) {\n  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */\n  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */\n  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */\n  background: linear-gradient($first, $second); /* Standard syntax */\n}\n\n@mixin origin($o) {\n  -webkit-transform-origin: $o;\n  -ms-tranform-origin: $o;\n  -moz-transform-origin: $o;\n  -o-transform-origin: $o;\n  transform-origin: $o;\n}\n\n@mixin css-transition($prop, $time, $easing) {\n  -webkit-transition: $prop 0.5s ease-in-out;\n  -moz-transition: $prop, $time, $easing;\n  -ms-transition: $prop, $time, $easing;\n  -o-transition: $prop, $time, $easing;\n  transition: $prop, $time, $easing;\n\n  @media only screen\nand (min-device-width : 320px)\nand (max-device-width : 568px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n  }\n\n  @media only screen\nand (min-device-width : 414px)\nand (max-device-width : 736px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 375px)\nand (max-device-width : 667px) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1){\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 2) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n}\n\n@mixin css-transform-perspective($p) {\n  -ms-transform: perspective($p); /* IE 9 */\n  -moz-transform: perspective($p);\n  -webkit-transform: perspective($p); /* Safari */\n  -o-transform: perspective($p);\n  transform: perspective($p);\n}\n\n@mixin css-transform-scale($t) {\n  -ms-transform: scale($t); /* IE 9 */\n  -moz-transform: scale($t);\n  -webkit-transform: scale($t); /* Safari */\n  -o-transform: scale($t);\n  transform: scale($t);\n}\n\n@mixin css-transform-translate-x($t) {\n  -ms-transform: translate3D($t, 0, 0); /* IE 9 */\n  -moz-transform: translate3D($t, 0, 0);\n  -webkit-transform: translate3D($t, 0, 0); /* Safari */\n  -o-transform: translate3D($t, 0, 0);\n  transform: translate3D($t, 0, 0);\n\n}\n\n@mixin css-transform-translate-y($t) {\n  -ms-transform: translate3D(0, $t, 0); /* IE 9 */\n  -moz-transform: translate3D(0, $t, 0);\n  -webkit-transform: translate3D(0, $t, 0); /* Safari */\n  -o-transform: translate3D(0, $t, 0);\n  transform: translate3D(0, $t, 0);\n\n}\n\n@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {\n  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */\n  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n}\n\n@mixin css-transform-rotate-and-translate-down($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate($a) {\n  -ms-transform: rotate($a); /* IE 9 */\n  -moz-transform: rotate($a); /* Safari */\n  -webkit-transform: rotate($a); /* Safari */\n  -o-transform: rotate($a);\n  transform: rotate($a);\n}\n\n@mixin css-transform-rotate-x($a) {\n  -ms-transform: rotateX($a); /* IE 9 */\n  -moz-transform: rotateX($a); /* Safari */\n  -webkit-transform: rotateX($a); /* Safari */\n  -o-transform: rotateX($a);\n  transform: rotateX($a);\n}\n\n\n@mixin css-transform-rotate-y($a) {\n  -ms-transform: rotateY($a); /* IE 9 */\n  -moz-transform: rotateY($a); /* Safari */\n  -webkit-transform: rotateY($a); /* Safari */\n  -o-transform: rotateY($a);\n  transform: rotateY($a);\n}\n\n@mixin css-transform-rotate-z($a) {\n  -ms-transform: rotateZ($a); /* IE 9 */\n  -moz-transform: rotateZ($a); /* Safari */\n  -webkit-transform: rotateZ($a); /* Safari */\n  -o-transform: rotateZ($a);\n  transform: rotateZ($a);\n}\n\n@mixin css-transform-squash($a) {\n  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */\n  -moz-transform: scaleY($a) scaleX($a); /* Safari */\n  -webkit-transform: scaleY($a) scaleX($a); /* Safari */\n  -o-transform: scaleY($a) scaleX($a);\n  transform: scaleY($a) scaleX($a);\n}\n\n\n@mixin css-transform-open-book($s, $r, $t) {\n  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */\n  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n}\n\n@mixin css-transform-skew-x($transformation) {\n  -ms-transform: skewX($transformation); /* IE 9 */\n  -moz-transform: skewX($transformation);  /* Safari */\n  -webkit-transform: skewX($transformation);  /* Safari */\n  -o-transform: skewX($transformation);\n  transform: skewX($transformation);\n}\n\n@mixin css-transform-skew-y($transformation) {\n  -ms-transform: skewY($transformation); /* IE 9 */\n  -moz-transform: skewY($transformation);  /* Safari */\n  -webkit-transform: skewY($transformation);  /* Safari */\n  -o-transform: skewY($transformation);\n  transform: skewY($transformation);\n}\n","@mixin css-user-select($n){\n  -webkit-touch-callout: $n; /* iOS Safari */\n  -webkit-user-select: $n; /* Safari */\n   -khtml-user-select: $n; /* Konqueror HTML */\n     -moz-user-select: $n; /* Firefox */\n      -ms-user-select: $n; /* Internet Explorer/Edge */\n          user-select: $n; /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n}\n","$transition-time: 0.2s;\n$transition-prop: transform;\n$transition-easing: ease-in-out;\n$bg-color: transparent;\n$menu-button-color: #e09090;\n\n.menu-bar {\n    @include css-transition(all, $transition-time, $transition-easing);\n    position: fixed;\n    top: 0;\n    height: 100vh;\n    width: 100vw;\n    background: $bg-color;\n    display: flex;\n    flex-flow: column;\n\n    @media all and (max-width: 1200px) {\n    }\n\n    p {\n        @include css-user-select(none);\n        cursor: pointer;\n        font-weight: 400;\n        color: white;\n    }\n\n    p:hover {\n      color: #866363;\n    }\n}\n\n.menu-bar-hidden {\n  @include css-transform-translate-y(50px);\n  opacity: 0.0;\n\n}\n\n.menu-bar-shown {\n  @include css-transform-translate-y(0px);\n  opacity: 1.0;\n}\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n\n.menu-bar-item {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n\n  > p {\n    @include css-transition($transition-prop, $transition-time, $transition-easing);\n    margin: 0;\n    padding-left: 8px;\n  }\n}\n","$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;\n$main-container-color: black;\n$live-stream-text-color: #a29393;\n$transition-time: 0.35s;\n$transition-prop: all;\n$transition-easing: cubic-bezier(.94,.06,.32,.95);\n$right-transition: 100px;\n$mobile-right-transition: 100px;\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw;\n\n}\n\n.main {\n\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow:hidden;\n  /*-webkit-overflow-scrolling: touch;*/\n\n\n  @media all and (max-width: 1200px) {\n    z-index: 9999;\n\n  }\n\n}\n\n.menu-bar-open {\n  @include css-transform-translate-x($right-transition);\n\n}\n\n.menu-bar-close {\n  @include css-transform-translate-x(0vw);\n\n\n}\n","$height: 8vh;\n$text-color: #ac6e6e;\n$hover-color: #ffbb98;\n$text-hover-color: #ffffff;\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: $height;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1;\n  @media all and (max-width: 1200px) {\n    display: none;\n  }\n\n  .nav-bar-item {\n    text-align: center;\n  }\n\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    @include css-transition(all, 0.35s, ease-in-out);\n    cursor: pointer;\n\n    p {\n      @include css-user-select(none);\n      cursor: pointer;\n      font-weight: 400;\n      color: $text-color;\n      @include css-transition(all, 0.35s, ease-in-out);\n    }\n\n\n\n\n    @media all and (max-width: 1200px) {\n      z-index: -1;\n    }\n  }\n\n  .smooth-scroll:hover {\n    background: $hover-color;\n  }\n\n  .smooth-scroll:hover p {\n    color: $text-hover-color;\n  }\n\n\n  $nav-button-color: #e09090;\n\n  .navButton {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: none;\n      margin: 20px 20px;\n      width: 12em;\n      border-radius: 100%;\n      width: 20px;\n      height: 20px;\n      display: flex;\n      justify-content: center;\n      outline: none;\n      background: transparent;\n      border: 2px solid $nav-button-color;\n\n      @media all and (max-width: 1200px) {\n        margin: 20px 20px;\n      }\n\n    p {\n    color: #9a9aa2;\n    padding: 1em;\n    font-weight: 200;\n    text-align: center;\n\n      @media all and (max-width: 1200px) {\n        position: absolute;\n        color: #9a9aa2;\n        margin: 0;\n        margin-left: 3em;\n        left:0;\n        padding: 0;\n      }\n\n    }\n\n\n  }\n\n  .navButton:hover {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: 2px solid $nav-button-color;\n    border-radius: 10%;\n    background: $nav-button-color;\n    cursor: pointer;\n\n    > p {\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n  }\n\n}\n\n.NavBarHidden {\n  @media all and (max-width: 1200px) {\n  }\n}\n",".down-arrow-container {\n  position: absolute;\n  bottom: 10vh;\n\n  .down-arrow {\n    width: 5vw;\n    text-align: center;\n  }\n}\n","$intro-button-color: #ff7970;\n$mobile-width: 800px;\n$transition-duration: 0.75s;\n$transition-prop: all;\n$transition-easing: ease;\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n/*defines the actual leave transition*/\n\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n.page {\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n  transform: translateX(0vh);\n\n\n  .current-tweet-container {\n    width: 100vw;\n    position: absolute;\n    top: 50vh;\n    left: 0;\n    display: flex;\n    justify-content: center;\n  }\n\n\n  .current-tweet {\n    width: 50vw;\n  }\n\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n\n  .home-graph-layout {\n    .average-emotion {\n      text-align: center;\n      position: absolute;\n      top: 0;\n      width: 100vw;\n      left: 0;\n\n      p {\n        font-size: 2em;\n      }\n\n    }\n\n  }\n\n\n  .home-header {\n    width: 50vw;\n    position: absolute;\n    left: 10vw;\n    top: 10vh;\n\n    h1 {\n      text-align: left;\n    }\n\n    h4 {\n      text-align: left;\n    }\n\n    p {\n      text-align: left;\n    }\n  }\n\n  .home-graph-layout {\n    h1 {\n    }\n\n\n    .graph {\n      position: absolute;\n      right: 0;\n      top: 0;\n    }\n  }\n\n  .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition(all, 0.2s, ease-in-out);\n    @include css-user-select(none);\n    cursor: pointer;\n  }\n\n  .update-data:hover {\n    background: #957a77;\n  }\n\n\n\n  .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n\n    .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in;\n\n      .title {\n        width: 100vw;\n\n        h1 {\n          @css-user-select(none);\n          cursor: default;\n        }\n      }\n\n      .graph-options {\n\n      }\n\n      .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column;\n\n        p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select(none);\n        }\n      }\n    }\n  }\n\n  p:hover {\n  color: black;\n  cursor:pointer;\n  }\n\n\n  .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/\n\n    @media all and(max-width: $mobile-width) {\n      height: 110vh;\n      width: auto;\n    }\n  }\n\n  .page-bg-image-container {\n    overflow: hidden;\n  }\n}\n","$first-color: #9bb5b5;\n$second-color: #eadab9;\n$blue-color: #637799;\n$red-color: #e0935c;\n$orange-color: #e0935c;\n$yellow-color: #efce69;\n$black-color: #262522;\n$white-color: #f9f6ef;\n\n\n.graph {\n    display: flex;\n    justify-content: center;\n    @include css-transition(all, 0.5s, ease-in-out);\n}\n\n\n.d3container {\n  border-radius: 50%;\n}\n\n.textGroup {\n  @include css-transition(transform, 0.9s ,ease-in-out);\n}\n\n.companyText {\n  fill: white;\n  @include css-user-select(none);\n  cursor: pointer;\n  font-size: 2em;\n}\n\n.companyText:hover {\n  font-size: 2.1em;\n}\n\n.firstWave:hover {\n\n  stroke: red;\n}\n\n.secondWave:hover {\n\nstroke: blue;\n\n}\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n    /*-moz-transition: transform 0.6s ease-out;*/\n    /*-o-transition: transform 0.6s ease-out;*/\n    /*transition: transform 0.6s ease-out;*/\n    -webkit-backface-visibility: hidden;\n}\n\npath:hover {\n  stroke: red;\n}\n\n\n.graph rect {\n  @include css-transition(all, 0.9s ,ease-in-out);\n}\n\n\n\n.LinearReact {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6;\n}\n\n\n\n\npath {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\n.LinearRect:hover {\nfill: #c7bca5;\n}\n\n.kernel {\n@include css-transition(all, 0.9s, ease-in-out);\n}\n\n.kernel:hover + .core {\n@include css-transition(all, 0.5s, ease-in-out);\n/*stroke: #1c1c1c;*/\nstroke-width: 0.0px;\n\n}\n\n.core {\n  @include css-transition(all, 0.5s, ease-in-out);\n}\n\n.shell {\npointer-events: none;\n\n}\n",".about {\n  .about-image-container {\n    position: absolute;\n    top: 10vh;\n    left: 25%;\n    width: 50%;\n\n    .about-image {\n      width: 75vw;\n      background: red;\n      filter: brightness(100000%);\n      padding: 20px;\n      background-color: rgba(255, 255, 255, 0.15);\n    }\n  }\n\n  .about-title {\n    position: absolute;\n    top: 0;\n  }\n\n\n}\n",".text-layout {\n  .hover-text-container {\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    @include css-transition(all, 1.5s, ease-in-out);\n    font-size: 1.5em;\n    white-space: nowrap;\n  }\n\n  .average-emotion {\n    background: white;\n    margin: 0;\n    padding: 0;\n    width: 20%;\n    color: #73667c;\n    border-radius: 5px;\n    font-weight: 900;\n  }\n\n\n  .hover-text {\n    color: #db8686;\n  }\n\n  .on {\n    /*@include css-transform-translate-x(0vw);*/\n    opacity: 1.0;\n    @include css-transition(all, 4.5s, ease-in-out);\n    background: white;\n    width: 25%;\n    border-radius: 4px;\n    padding: 10px;\n\n  }\n\n  .off {\n    @include css-transition(all, 4.5s, ease-in-out);\n    opacity: 0.0;\n    width: 100%;\n    padding: 10px;\n    /*@include css-transform-translate-x(-50vw);*/\n  }\n\n\n  .home-graph-layout {\n    .companyText {\n      font-size: 1em !important;\n    }\n\n  }\n}\n","\n  .tech-stack-image-container {\n      position: absolute;\n      top: 0;\n      width: 100%;\n      height: 100vh;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n\n    .tech-stack-image {\n      width: 75vw;\n      background: red;\n      filter: brightness(100000%);\n      padding: 20px;\n      background-color: rgba(255, 255, 255, 0.15);\n    }\n  }\n\n  .tech-stack-title {\n    position: absolute;\n    top: 0;\n  }\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -41810,7 +41816,7 @@ var debug = __webpack_require__(44)('engine.io-client:socket');
 var index = __webpack_require__(122);
 var parser = __webpack_require__(30);
 var parseuri = __webpack_require__(128);
-var parsejson = __webpack_require__(275);
+var parsejson = __webpack_require__(279);
 var parseqs = __webpack_require__(70);
 
 /**
@@ -43228,7 +43234,7 @@ var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 var NodeWebSocket;
 if (typeof window === 'undefined') {
   try {
-    NodeWebSocket = __webpack_require__(393);
+    NodeWebSocket = __webpack_require__(397);
   } catch (e) { }
 }
 
@@ -44522,16 +44528,40 @@ module.exports = toArray;
 /* 251 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "app/assets/images/mountains.jpg";
+module.exports = __webpack_require__.p + "app/assets/images/hunter.jpg";
 
 /***/ }),
 /* 252 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "app/assets/images/tech_stack.png";
+module.exports = __webpack_require__.p + "app/assets/images/jose.jpg";
 
 /***/ }),
 /* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "app/assets/images/michael.jpg";
+
+/***/ }),
+/* 254 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "app/assets/images/mountains.jpg";
+
+/***/ }),
+/* 255 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "app/assets/images/tech_stack.png";
+
+/***/ }),
+/* 256 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "app/assets/images/tyler.jpg";
+
+/***/ }),
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44554,7 +44584,7 @@ module.exports = function forIn(obj, fn, thisArg) {
 
 
 /***/ }),
-/* 254 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44567,7 +44597,7 @@ module.exports = function forIn(obj, fn, thisArg) {
 
 
 
-var forIn = __webpack_require__(253);
+var forIn = __webpack_require__(257);
 var hasOwn = Object.prototype.hasOwnProperty;
 
 module.exports = function forOwn(obj, fn, thisArg) {
@@ -44580,7 +44610,7 @@ module.exports = function forOwn(obj, fn, thisArg) {
 
 
 /***/ }),
-/* 255 */
+/* 259 */
 /***/ (function(module, exports) {
 
 
@@ -44608,7 +44638,7 @@ module.exports = function forEach (obj, fn, ctx) {
 
 
 /***/ }),
-/* 256 */
+/* 260 */
 /***/ (function(module, exports) {
 
 var ERROR_MESSAGE = 'Function.prototype.bind called on incompatible ';
@@ -44662,16 +44692,16 @@ module.exports = function bind(that) {
 
 
 /***/ }),
-/* 257 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var implementation = __webpack_require__(256);
+var implementation = __webpack_require__(260);
 
 module.exports = Function.prototype.bind || implementation;
 
 
 /***/ }),
-/* 258 */
+/* 262 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -44680,7 +44710,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 259 */
+/* 263 */
 /***/ (function(module, exports) {
 
 
@@ -44703,7 +44733,7 @@ try {
 
 
 /***/ }),
-/* 260 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44765,7 +44795,7 @@ var loopAsync = exports.loopAsync = function loopAsync(turns, work, callback) {
 };
 
 /***/ }),
-/* 261 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44908,7 +44938,7 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 262 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44951,7 +44981,7 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
 };
 
 /***/ }),
-/* 263 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44971,7 +45001,7 @@ var _BrowserProtocol = __webpack_require__(65);
 
 var BrowserProtocol = _interopRequireWildcard(_BrowserProtocol);
 
-var _RefreshProtocol = __webpack_require__(262);
+var _RefreshProtocol = __webpack_require__(266);
 
 var RefreshProtocol = _interopRequireWildcard(_RefreshProtocol);
 
@@ -45051,7 +45081,7 @@ exports.default = createBrowserHistory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 264 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45073,7 +45103,7 @@ var _ExecutionEnvironment = __webpack_require__(66);
 
 var _DOMUtils = __webpack_require__(47);
 
-var _HashProtocol = __webpack_require__(261);
+var _HashProtocol = __webpack_require__(265);
 
 var HashProtocol = _interopRequireWildcard(_HashProtocol);
 
@@ -45205,7 +45235,7 @@ exports.default = createHashHistory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 265 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45352,7 +45382,7 @@ exports.default = createMemoryHistory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 266 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45409,7 +45439,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 /***/ }),
-/* 267 */
+/* 271 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45422,7 +45452,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
 
 
 
-var isPrimitive = __webpack_require__(269);
+var isPrimitive = __webpack_require__(273);
 
 module.exports = function isEqual(a, b) {
   if (!a && !b) { return true; }
@@ -45443,7 +45473,7 @@ module.exports = function isEqual(a, b) {
 
 
 /***/ }),
-/* 268 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45463,7 +45493,7 @@ module.exports = function isExtendable(val) {
 
 
 /***/ }),
-/* 269 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45483,7 +45513,7 @@ module.exports = function isPrimitive(value) {
 
 
 /***/ }),
-/* 270 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! JSON v3.3.2 | http://bestiejs.github.io/json3 | Copyright 2012-2014, Kit Cambridge | http://kit.mit-license.org */
@@ -46393,7 +46423,7 @@ module.exports = function isPrimitive(value) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)(module), __webpack_require__(8)))
 
 /***/ }),
-/* 271 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46417,7 +46447,7 @@ module.exports = function isArguments(value) {
 
 
 /***/ }),
-/* 272 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46465,7 +46495,7 @@ module.exports = function hasSymbols() {
 
 
 /***/ }),
-/* 273 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46475,7 +46505,7 @@ var defineProperties = __webpack_require__(108);
 
 var implementation = __webpack_require__(126);
 var getPolyfill = __webpack_require__(127);
-var shim = __webpack_require__(274);
+var shim = __webpack_require__(278);
 
 var polyfill = getPolyfill();
 
@@ -46489,7 +46519,7 @@ module.exports = polyfill;
 
 
 /***/ }),
-/* 274 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46510,7 +46540,7 @@ module.exports = function shimAssign() {
 
 
 /***/ }),
-/* 275 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -46548,7 +46578,7 @@ module.exports = function parsejson(data) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 276 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46617,7 +46647,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 277 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46678,7 +46708,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 278 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -46698,7 +46728,7 @@ var invariant = __webpack_require__(72);
 var warning = __webpack_require__(130);
 
 var ReactPropTypesSecret = __webpack_require__(129);
-var checkPropTypes = __webpack_require__(276);
+var checkPropTypes = __webpack_require__(280);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -47164,14 +47194,14 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 279 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var stringify = __webpack_require__(281);
-var parse = __webpack_require__(280);
+var stringify = __webpack_require__(285);
+var parse = __webpack_require__(284);
 var formats = __webpack_require__(131);
 
 module.exports = {
@@ -47182,7 +47212,7 @@ module.exports = {
 
 
 /***/ }),
-/* 280 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47356,7 +47386,7 @@ module.exports = function (str, opts) {
 
 
 /***/ }),
-/* 281 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -47570,13 +47600,13 @@ module.exports = function (object, opts) {
 
 
 /***/ }),
-/* 282 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(283);
+module.exports = __webpack_require__(287);
 
 /***/ }),
-/* 283 */
+/* 287 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -47585,8 +47615,8 @@ module.exports = __webpack_require__(283);
  * @author yiminghe@gmail.com
  */
 
-var util = __webpack_require__(285);
-var parser = __webpack_require__(284);
+var util = __webpack_require__(289);
+var parser = __webpack_require__(288);
 
 var EXPANDO_SELECTOR_KEY = '_ks_data_selector_id_',
   caches = {},
@@ -48279,7 +48309,7 @@ select.version = '@VERSION@';
  */
 
 /***/ }),
-/* 284 */
+/* 288 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -49488,7 +49518,7 @@ if (true) {
 }
 
 /***/ }),
-/* 285 */
+/* 289 */
 /***/ (function(module, exports) {
 
 /**
@@ -49839,12 +49869,12 @@ var util = module.exports = {
 };
 
 /***/ }),
-/* 286 */
+/* 290 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var strictUriEncode = __webpack_require__(387);
+var strictUriEncode = __webpack_require__(391);
 var objectAssign = __webpack_require__(23);
 
 function encoderForArrayFormat(opts) {
@@ -50049,7 +50079,7 @@ exports.stringify = function (obj, opts) {
 
 
 /***/ }),
-/* 287 */
+/* 291 */
 /***/ (function(module, exports) {
 
 var Window = {
@@ -50064,7 +50094,7 @@ module.exports = Window
 
 
 /***/ }),
-/* 288 */
+/* 292 */
 /***/ (function(module, exports) {
 
 var anim = {
@@ -50096,7 +50126,7 @@ module.exports = anim
 
 
 /***/ }),
-/* 289 */
+/* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Element = __webpack_require__(133)
@@ -50124,7 +50154,7 @@ module.exports = mixin
 
 
 /***/ }),
-/* 290 */
+/* 294 */
 /***/ (function(module, exports) {
 
 function assign (dest) {
@@ -50146,7 +50176,7 @@ module.exports = assign
 
 
 /***/ }),
-/* 291 */
+/* 295 */
 /***/ (function(module, exports) {
 
 function isString (value) {
@@ -50157,7 +50187,7 @@ module.exports = isString
 
 
 /***/ }),
-/* 292 */
+/* 296 */
 /***/ (function(module, exports) {
 
 function isUndefined (value) {
@@ -50168,7 +50198,7 @@ module.exports = isUndefined
 
 
 /***/ }),
-/* 293 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var camelCase = __webpack_require__(134)
@@ -50194,14 +50224,14 @@ module.exports = styleCamelCase
 
 
 /***/ }),
-/* 294 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var React       = __webpack_require__(1);
-var urllite     = __webpack_require__(391);
+var urllite     = __webpack_require__(395);
 var Environment = __webpack_require__(36);
 var HashEnvironment = __webpack_require__(139);
 var assign      = Object.assign || __webpack_require__(23);
@@ -50340,7 +50370,7 @@ module.exports = CaptureClicks;
 
 
 /***/ }),
-/* 295 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50434,7 +50464,7 @@ module.exports = Link;
 
 
 /***/ }),
-/* 296 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50494,7 +50524,7 @@ module.exports = {
 
 
 /***/ }),
-/* 297 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50568,7 +50598,7 @@ module.exports = {
 
 
 /***/ }),
-/* 298 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50609,7 +50639,7 @@ module.exports = DummyEnvironment;
 
 
 /***/ }),
-/* 299 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50675,7 +50705,7 @@ module.exports = PathnameEnvironment;
 
 
 /***/ }),
-/* 300 */
+/* 304 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50683,11 +50713,11 @@ module.exports = PathnameEnvironment;
 
 var URLPattern = __webpack_require__(184);
 var invariant = __webpack_require__(140);
-var warning = __webpack_require__(301);
+var warning = __webpack_require__(305);
 var React = __webpack_require__(1);
 var assign = Object.assign || __webpack_require__(23);
 var omit = __webpack_require__(48);
-var qs = __webpack_require__(279);
+var qs = __webpack_require__(283);
 
 var patternCache = {};
 
@@ -50839,7 +50869,7 @@ module.exports = matchRoutes;
 
 
 /***/ }),
-/* 301 */
+/* 305 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -50894,7 +50924,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 302 */
+/* 306 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50923,7 +50953,7 @@ var IndexLink = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 /* harmony default export */ __webpack_exports__["a"] = (IndexLink);
 
 /***/ }),
-/* 303 */
+/* 307 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -50979,7 +51009,7 @@ var IndexRedirect = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 304 */
+/* 308 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51036,7 +51066,7 @@ var IndexRoute = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 305 */
+/* 309 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51090,7 +51120,7 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 306 */
+/* 310 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51261,7 +51291,7 @@ var Router = __WEBPACK_IMPORTED_MODULE_2_create_react_class___default()({
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 307 */
+/* 311 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51425,7 +51455,7 @@ function getTransitionUtils() {
 }
 
 /***/ }),
-/* 308 */
+/* 312 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51477,11 +51507,11 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 309 */
+/* 313 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory__ = __webpack_require__(267);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(146);
 
@@ -51489,7 +51519,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default.a));
 
 /***/ }),
-/* 310 */
+/* 314 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51566,7 +51596,7 @@ function computeChangedRoutes(prevState, nextState) {
 /* harmony default export */ __webpack_exports__["a"] = (computeChangedRoutes);
 
 /***/ }),
-/* 311 */
+/* 315 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51608,7 +51638,7 @@ function getComponents(nextState, callback) {
 /* harmony default export */ __webpack_exports__["a"] = (getComponents);
 
 /***/ }),
-/* 312 */
+/* 316 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51636,11 +51666,11 @@ function getRouteParams(route, params) {
 /* harmony default export */ __webpack_exports__["a"] = (getRouteParams);
 
 /***/ }),
-/* 313 */
+/* 317 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory__ = __webpack_require__(268);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(146);
 
@@ -51648,7 +51678,7 @@ function getRouteParams(route, params) {
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory___default.a));
 
 /***/ }),
-/* 314 */
+/* 318 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51801,7 +51831,7 @@ function isActive(_ref, indexOnly, currentLocation, routes, params) {
 }
 
 /***/ }),
-/* 315 */
+/* 319 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51871,7 +51901,7 @@ function match(_ref, callback) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 316 */
+/* 320 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52124,7 +52154,7 @@ function matchRoutes(routes, location, callback, remainingPathname) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 317 */
+/* 321 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52134,7 +52164,7 @@ function matchRoutes(routes, location, callback, remainingPathname) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics__ = __webpack_require__(266);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ContextUtils__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__PropTypes__ = __webpack_require__(75);
@@ -52200,7 +52230,7 @@ function withRouter(WrappedComponent, options) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 318 */
+/* 322 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52435,7 +52465,7 @@ exports.default = CSSTransitionGroupChild;
 module.exports = exports['default'];
 
 /***/ }),
-/* 319 */
+/* 323 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52461,7 +52491,7 @@ var _warning = __webpack_require__(20);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _ChildMapping = __webpack_require__(320);
+var _ChildMapping = __webpack_require__(324);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52703,7 +52733,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 320 */
+/* 324 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52800,7 +52830,7 @@ function mergeChildMappings(prev, next) {
 }
 
 /***/ }),
-/* 321 */
+/* 325 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52842,7 +52872,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 322 */
+/* 326 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -52863,9 +52893,9 @@ module.exports = AutoFocusUtils;
 var EventConstants = __webpack_require__(18);
 var EventPropagators = __webpack_require__(39);
 var ExecutionEnvironment = __webpack_require__(6);
-var FallbackCompositionState = __webpack_require__(330);
-var SyntheticCompositionEvent = __webpack_require__(366);
-var SyntheticInputEvent = __webpack_require__(369);
+var FallbackCompositionState = __webpack_require__(334);
+var SyntheticCompositionEvent = __webpack_require__(370);
+var SyntheticInputEvent = __webpack_require__(373);
 
 var keyOf = __webpack_require__(21);
 
@@ -53253,7 +53283,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 323 */
+/* 327 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53276,7 +53306,7 @@ var ExecutionEnvironment = __webpack_require__(6);
 var ReactPerf = __webpack_require__(13);
 
 var camelizeStyleName = __webpack_require__(238);
-var dangerousStyleValue = __webpack_require__(374);
+var dangerousStyleValue = __webpack_require__(378);
 var hyphenateStyleName = __webpack_require__(243);
 var memoizeStringOnly = __webpack_require__(247);
 var warning = __webpack_require__(4);
@@ -53435,7 +53465,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 324 */
+/* 328 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53762,7 +53792,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 325 */
+/* 329 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53791,7 +53821,7 @@ var ClientReactRootIndex = {
 module.exports = ClientReactRootIndex;
 
 /***/ }),
-/* 326 */
+/* 330 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53943,7 +53973,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 327 */
+/* 331 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -53976,7 +54006,7 @@ var DefaultEventPluginOrder = [keyOf({ ResponderEventPlugin: null }), keyOf({ Si
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 328 */
+/* 332 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54106,7 +54136,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 329 */
+/* 333 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54315,7 +54345,7 @@ module.exports = EventPluginUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 330 */
+/* 334 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54416,7 +54446,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 331 */
+/* 335 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54652,7 +54682,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 332 */
+/* 336 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54695,7 +54725,7 @@ module.exports = ReactBrowserComponentMixin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 333 */
+/* 337 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54717,8 +54747,8 @@ var React = __webpack_require__(51);
 
 var assign = __webpack_require__(3);
 
-var ReactTransitionGroup = __webpack_require__(360);
-var ReactCSSTransitionGroupChild = __webpack_require__(334);
+var ReactTransitionGroup = __webpack_require__(364);
+var ReactCSSTransitionGroupChild = __webpack_require__(338);
 
 function createTransitionTimeoutPropValidator(transitionType) {
   var timeoutPropName = 'transition' + transitionType + 'Timeout';
@@ -54784,7 +54814,7 @@ var ReactCSSTransitionGroup = React.createClass({
 module.exports = ReactCSSTransitionGroup;
 
 /***/ }),
-/* 334 */
+/* 338 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -54806,7 +54836,7 @@ var React = __webpack_require__(51);
 var ReactDOM = __webpack_require__(82);
 
 var CSSCore = __webpack_require__(236);
-var ReactTransitionEvents = __webpack_require__(359);
+var ReactTransitionEvents = __webpack_require__(363);
 
 var onlyChild = __webpack_require__(178);
 
@@ -54955,7 +54985,7 @@ var ReactCSSTransitionGroupChild = React.createClass({
 module.exports = ReactCSSTransitionGroupChild;
 
 /***/ }),
-/* 335 */
+/* 339 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55084,7 +55114,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 336 */
+/* 340 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55785,7 +55815,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 337 */
+/* 341 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55841,7 +55871,7 @@ var ReactDOMButton = {
 module.exports = ReactDOMButton;
 
 /***/ }),
-/* 338 */
+/* 342 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -55861,20 +55891,20 @@ module.exports = ReactDOMButton;
 
 
 
-var AutoFocusUtils = __webpack_require__(321);
-var CSSPropertyOperations = __webpack_require__(323);
+var AutoFocusUtils = __webpack_require__(325);
+var CSSPropertyOperations = __webpack_require__(327);
 var DOMProperty = __webpack_require__(26);
 var DOMPropertyOperations = __webpack_require__(78);
 var EventConstants = __webpack_require__(18);
 var ReactBrowserEventEmitter = __webpack_require__(52);
 var ReactComponentBrowserEnvironment = __webpack_require__(80);
-var ReactDOMButton = __webpack_require__(337);
-var ReactDOMInput = __webpack_require__(340);
-var ReactDOMOption = __webpack_require__(341);
+var ReactDOMButton = __webpack_require__(341);
+var ReactDOMInput = __webpack_require__(344);
+var ReactDOMOption = __webpack_require__(345);
 var ReactDOMSelect = __webpack_require__(157);
-var ReactDOMTextarea = __webpack_require__(344);
+var ReactDOMTextarea = __webpack_require__(348);
 var ReactMount = __webpack_require__(7);
-var ReactMultiChild = __webpack_require__(351);
+var ReactMultiChild = __webpack_require__(355);
 var ReactPerf = __webpack_require__(13);
 var ReactUpdateQueue = __webpack_require__(84);
 
@@ -56810,7 +56840,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 339 */
+/* 343 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -56994,7 +57024,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 340 */
+/* 344 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57154,7 +57184,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 341 */
+/* 345 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57250,7 +57280,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 342 */
+/* 346 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57269,7 +57299,7 @@ module.exports = ReactDOMOption;
 
 var ExecutionEnvironment = __webpack_require__(6);
 
-var getNodeForCharacterOffset = __webpack_require__(377);
+var getNodeForCharacterOffset = __webpack_require__(381);
 var getTextContentAccessor = __webpack_require__(176);
 
 /**
@@ -57468,7 +57498,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 343 */
+/* 347 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57486,7 +57516,7 @@ module.exports = ReactDOMSelection;
 
 
 var ReactDefaultInjection = __webpack_require__(160);
-var ReactServerRendering = __webpack_require__(356);
+var ReactServerRendering = __webpack_require__(360);
 var ReactVersion = __webpack_require__(85);
 
 ReactDefaultInjection.inject();
@@ -57500,7 +57530,7 @@ var ReactDOMServer = {
 module.exports = ReactDOMServer;
 
 /***/ }),
-/* 344 */
+/* 348 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57620,7 +57650,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 345 */
+/* 349 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -57639,7 +57669,7 @@ module.exports = ReactDOMTextarea;
 
 
 var DOMProperty = __webpack_require__(26);
-var ReactDefaultPerfAnalysis = __webpack_require__(346);
+var ReactDefaultPerfAnalysis = __webpack_require__(350);
 var ReactMount = __webpack_require__(7);
 var ReactPerf = __webpack_require__(13);
 
@@ -57863,7 +57893,7 @@ var ReactDefaultPerf = {
 module.exports = ReactDefaultPerf;
 
 /***/ }),
-/* 346 */
+/* 350 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58070,7 +58100,7 @@ var ReactDefaultPerfAnalysis = {
 module.exports = ReactDefaultPerfAnalysis;
 
 /***/ }),
-/* 347 */
+/* 351 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58114,7 +58144,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 348 */
+/* 352 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58331,7 +58361,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 349 */
+/* 353 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58375,7 +58405,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 350 */
+/* 354 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58395,7 +58425,7 @@ module.exports = ReactInjection;
 var ReactChildren = __webpack_require__(153);
 var ReactComponent = __webpack_require__(155);
 var ReactClass = __webpack_require__(154);
-var ReactDOMFactories = __webpack_require__(339);
+var ReactDOMFactories = __webpack_require__(343);
 var ReactElement = __webpack_require__(12);
 var ReactElementValidator = __webpack_require__(161);
 var ReactPropTypes = __webpack_require__(170);
@@ -58456,7 +58486,7 @@ module.exports = React;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 351 */
+/* 355 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -58479,7 +58509,7 @@ var ReactMultiChildUpdateTypes = __webpack_require__(167);
 
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactReconciler = __webpack_require__(27);
-var ReactChildReconciler = __webpack_require__(335);
+var ReactChildReconciler = __webpack_require__(339);
 
 var flattenChildren = __webpack_require__(174);
 
@@ -58959,7 +58989,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 352 */
+/* 356 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59057,7 +59087,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 353 */
+/* 357 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59214,7 +59244,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 module.exports = ReactReconcileTransaction;
 
 /***/ }),
-/* 354 */
+/* 358 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59231,7 +59261,7 @@ module.exports = ReactReconcileTransaction;
 
 
 
-var ReactOwner = __webpack_require__(352);
+var ReactOwner = __webpack_require__(356);
 
 var ReactRef = {};
 
@@ -59298,7 +59328,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 355 */
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59327,7 +59357,7 @@ var ReactServerBatchingStrategy = {
 module.exports = ReactServerBatchingStrategy;
 
 /***/ }),
-/* 356 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59348,8 +59378,8 @@ var ReactDefaultBatchingStrategy = __webpack_require__(159);
 var ReactElement = __webpack_require__(12);
 var ReactInstanceHandles = __webpack_require__(34);
 var ReactMarkupChecksum = __webpack_require__(166);
-var ReactServerBatchingStrategy = __webpack_require__(355);
-var ReactServerRenderingTransaction = __webpack_require__(357);
+var ReactServerBatchingStrategy = __webpack_require__(359);
+var ReactServerRenderingTransaction = __webpack_require__(361);
 var ReactUpdates = __webpack_require__(15);
 
 var emptyObject = __webpack_require__(35);
@@ -59417,7 +59447,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 357 */
+/* 361 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59510,7 +59540,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 module.exports = ReactServerRenderingTransaction;
 
 /***/ }),
-/* 358 */
+/* 362 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59614,7 +59644,7 @@ var ReactTransitionChildMapping = {
 module.exports = ReactTransitionChildMapping;
 
 /***/ }),
-/* 359 */
+/* 363 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59729,7 +59759,7 @@ var ReactTransitionEvents = {
 module.exports = ReactTransitionEvents;
 
 /***/ }),
-/* 360 */
+/* 364 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -59747,7 +59777,7 @@ module.exports = ReactTransitionEvents;
 
 
 var React = __webpack_require__(51);
-var ReactTransitionChildMapping = __webpack_require__(358);
+var ReactTransitionChildMapping = __webpack_require__(362);
 
 var assign = __webpack_require__(3);
 var emptyFunction = __webpack_require__(14);
@@ -59940,7 +59970,7 @@ var ReactTransitionGroup = React.createClass({
 module.exports = ReactTransitionGroup;
 
 /***/ }),
-/* 361 */
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60073,7 +60103,7 @@ var SVGDOMPropertyConfig = {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 362 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60280,7 +60310,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 363 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60315,7 +60345,7 @@ var ServerReactRootIndex = {
 module.exports = ServerReactRootIndex;
 
 /***/ }),
-/* 364 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60336,15 +60366,15 @@ var EventConstants = __webpack_require__(18);
 var EventListener = __webpack_require__(112);
 var EventPropagators = __webpack_require__(39);
 var ReactMount = __webpack_require__(7);
-var SyntheticClipboardEvent = __webpack_require__(365);
+var SyntheticClipboardEvent = __webpack_require__(369);
 var SyntheticEvent = __webpack_require__(28);
-var SyntheticFocusEvent = __webpack_require__(368);
-var SyntheticKeyboardEvent = __webpack_require__(370);
+var SyntheticFocusEvent = __webpack_require__(372);
+var SyntheticKeyboardEvent = __webpack_require__(374);
 var SyntheticMouseEvent = __webpack_require__(55);
-var SyntheticDragEvent = __webpack_require__(367);
-var SyntheticTouchEvent = __webpack_require__(371);
+var SyntheticDragEvent = __webpack_require__(371);
+var SyntheticTouchEvent = __webpack_require__(375);
 var SyntheticUIEvent = __webpack_require__(41);
-var SyntheticWheelEvent = __webpack_require__(372);
+var SyntheticWheelEvent = __webpack_require__(376);
 
 var emptyFunction = __webpack_require__(14);
 var getEventCharCode = __webpack_require__(87);
@@ -60909,7 +60939,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 365 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60954,7 +60984,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 366 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -60997,7 +61027,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 367 */
+/* 371 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61040,7 +61070,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 368 */
+/* 372 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61083,7 +61113,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 369 */
+/* 373 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61127,7 +61157,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 370 */
+/* 374 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61148,7 +61178,7 @@ module.exports = SyntheticInputEvent;
 var SyntheticUIEvent = __webpack_require__(41);
 
 var getEventCharCode = __webpack_require__(87);
-var getEventKey = __webpack_require__(376);
+var getEventKey = __webpack_require__(380);
 var getEventModifierState = __webpack_require__(88);
 
 /**
@@ -61218,7 +61248,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 371 */
+/* 375 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61270,7 +61300,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 372 */
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61331,7 +61361,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 373 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61379,7 +61409,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 374 */
+/* 378 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61440,7 +61470,7 @@ function dangerousStyleValue(name, value) {
 module.exports = dangerousStyleValue;
 
 /***/ }),
-/* 375 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61495,7 +61525,7 @@ module.exports = deprecated;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 376 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61604,7 +61634,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 377 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61683,7 +61713,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 378 */
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61715,7 +61745,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 379 */
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -61737,7 +61767,7 @@ var ReactMount = __webpack_require__(7);
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 380 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -61819,7 +61849,7 @@ function url (uri, loc) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 381 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -62025,7 +62055,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 382 */
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/*global Blob,File*/
@@ -62034,7 +62064,7 @@ function coerce(val) {
  * Module requirements
  */
 
-var isArray = __webpack_require__(385);
+var isArray = __webpack_require__(389);
 var isBuf = __webpack_require__(183);
 
 /**
@@ -62173,7 +62203,7 @@ exports.removeBlobs = function(data, callback) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 383 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -62183,7 +62213,7 @@ exports.removeBlobs = function(data, callback) {
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(384);
+exports = module.exports = __webpack_require__(388);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -62347,7 +62377,7 @@ function localstorage(){
 
 
 /***/ }),
-/* 384 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -62363,7 +62393,7 @@ exports.coerce = coerce;
 exports.disable = disable;
 exports.enable = enable;
 exports.enabled = enabled;
-exports.humanize = __webpack_require__(386);
+exports.humanize = __webpack_require__(390);
 
 /**
  * The currently active debug mode names, and names to skip.
@@ -62550,7 +62580,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 385 */
+/* 389 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -62559,7 +62589,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 386 */
+/* 390 */
 /***/ (function(module, exports) {
 
 /**
@@ -62690,7 +62720,7 @@ function plural(ms, n, name) {
 
 
 /***/ }),
-/* 387 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62703,7 +62733,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 388 */
+/* 392 */
 /***/ (function(module, exports) {
 
 
@@ -62815,7 +62845,7 @@ module.exports.stringify = stringify;
 module.exports.normalize = normalize;
 
 /***/ }),
-/* 389 */
+/* 393 */
 /***/ (function(module, exports) {
 
 /*
@@ -63067,7 +63097,7 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 390 */
+/* 394 */
 /***/ (function(module, exports) {
 
 module.exports = toArray
@@ -63086,7 +63116,7 @@ function toArray(list, index) {
 
 
 /***/ }),
-/* 391 */
+/* 395 */
 /***/ (function(module, exports) {
 
 (function() {
@@ -63157,7 +63187,7 @@ function toArray(list, index) {
 
 
 /***/ }),
-/* 392 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/wtf8 v1.0.0 by @mathias */
@@ -63397,7 +63427,7 @@ function toArray(list, index) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)(module), __webpack_require__(8)))
 
 /***/ }),
-/* 393 */
+/* 397 */
 /***/ (function(module, exports) {
 
 /* (ignored) */

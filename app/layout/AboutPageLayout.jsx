@@ -10,10 +10,6 @@ class AboutPageLayout extends React.Component {
   render() {
     return (
       <div className='page'>
-        <div className='about-title'>
-          <h1>{this.props.title}</h1>
-          <h3>{this.props.description}</h3>
-        </div>
         <div className='page-bg-image-container'>
 
         </div>

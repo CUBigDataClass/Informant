@@ -13,12 +13,12 @@ class PageLayout extends React.Component {
             <h4>
               Informant aggregates social media data and produces a measure on online company sentiment and reputation.
               In tracking the state in real-time, Informant is able to give a clear picture of 'vox populi' opinions.
-              Informant has a dual purpose: it's a stock market assistant tool, but also an on-going narrative, streaming real-time emotion into an immediate and concise visualization.
+              Informant has a dual purpose: it's a stock market assistant tool, but also an ongoing narrative, streaming realtime emotion into an immediate and concise visualization.
             </h4>
         </div>
         <HomeGraphLayout/>
         <div className='page-bg-image-container'>
-          <img className='page-bg-image' src={require('../assets/images/mountains.jpg')} />
+
         </div>
         <div className='down-arrow-container'>
           <Link to='amazon'>

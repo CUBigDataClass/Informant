@@ -198,6 +198,7 @@ class PageLayout extends React.Component {
   }
   render() {
 
+    //<div onMouseDown={this.updateData} className='update-data'>Update Data</div>
     return (
       <div className='page'>
         <TextLayout
@@ -209,14 +210,14 @@ class PageLayout extends React.Component {
           average={this.state.emotionAverage}
         />
       <div className='graph-options'>
-      <div onMouseDown={this.updateData} className='update-data'>Update Data</div>
+    
       <div onMouseDown={this.changeToPie} className='update-data'>Pie Graph</div>
       <div onMouseDown={this.changeToLinear} className='update-data'>Linear Graph</div>
       <div onMouseDown={this.changeToWave} className='update-data'>Wave Graph</div>
       </div>
       <GraphLayout hoverHandler={this.hoverHandler} data={this.state.data} graphType={this.state.graphType}/>
         <div className='page-bg-image-container'>
-          <img className='page-bg-image' src={require('../assets/images/mountains.jpg')} />
+
         </div>
         <div className='down-arrow-container'>
           <Link to='amazon'>

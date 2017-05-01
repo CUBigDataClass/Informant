@@ -44,6 +44,13 @@ class MenuBar extends React.Component {
           </div>
         </Link>
 
+        <Link to={'techstack'}>
+          <div onMouseUp={this.props.closeMenuBar} className={'menu-bar-content'}>
+            <SmoothScroll className={'menu-bar-item'} section={'techstack'} text={'Tech Stack'}>
+            </SmoothScroll>
+          </div>
+        </Link>
+
           {this.props.names.map((v, i) => (
             <Link to={this.props.names[i].title.toLowerCase()}>
               <div onMouseUp={this.props.closeMenuBar} className={'menu-bar-content'}>

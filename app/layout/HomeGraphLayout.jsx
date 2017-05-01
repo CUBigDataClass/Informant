@@ -7,6 +7,8 @@ import PieGraph from '../graphs/PieGraph.jsx';
 import Companies from '../info/companies.json';
 var io = require('socket.io-client');
 
+const emotions2 = ['Furious','Enraged','Awful','Indifferent','Good','Amused','Happy','Optimistic','Joyous','Ecstatic'];
+
 class HomeGraphLayout extends Component {
   constructor(props) {
     super(props);
@@ -17,18 +19,32 @@ class HomeGraphLayout extends Component {
       tweet: "loading...",
       graphType: 'pie',
       tweetCount: 0,
-      average: 0
+      average: ''
     }
 
     this.updateData = this.updateData.bind(this);
     this.calculateAvg = this.calculateAvg.bind(this);
+    this.findEmotion = this.findEmotion.bind(this);
+    this.updateData = this.updateData.bind(this);
   }
   updateData() {
     this.setState((prevState, props) => {
+          const avg = Math.random() * 2 - 1;
           return {
-            data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10))
+            data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10)),
+            average: this.findEmotion(avg)
           }
         });
+  }
+  findEmotion(avg) {
+    const l = emotions2.length;
+    var emotion;
+    for(var i = 0; i < l; i++) {
+      if(avg > (-1 + i*0.2) && avg < (-1 + (i+1)*0.2)) {
+        emotion = emotions2[i];
+      }
+    }
+    return emotion;
   }
   componentDidMount() {
     var socket = io.connect();
@@ -45,7 +61,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -62,7 +78,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -79,7 +95,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -97,7 +113,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -114,7 +130,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -131,7 +147,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -147,7 +163,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -165,7 +181,7 @@ class HomeGraphLayout extends Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          average: this.calculateAvg(newAverages)
+          average: this.findEmotion(this.calculateAvg(newAverages))
           }
         });
       });
@@ -200,9 +216,14 @@ class HomeGraphLayout extends Component {
       />);
     }
 
+    //<div onMouseDown={this.updateData} className='update-data'>Update Data</div>
+
     return (
       <div className='home-graph-layout'>
         <div className='average-emotion'>
+          <div className='home-graph-options'>
+
+          </div>
           <p>{this.state.average}</p>
         </div>
         <h1>

@@ -18,7 +18,7 @@ var PieGraph = React.createClass({
   updateGraph: function(data) {
 
     //Width and height
-    var w = 500;
+    var w = 600;
     var h = 500;
 
     const emojis = this.props.emojis;
@@ -134,7 +134,7 @@ var PieGraph = React.createClass({
        var self = this;
 
 
-       // 
+       //
       //  svg.append('circle')
       //  .classed('innerCircle', true)
       //  .attr('cx', '50%')

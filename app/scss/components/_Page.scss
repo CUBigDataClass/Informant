@@ -6,7 +6,7 @@ $transition-easing: ease;
 
 /*defines the beginning state of the enter transition*/
 .on-enter {
-  transform: translateY(-100vh);
+  transform: translateX(-250vh);
   /*font-size: 0.1em;*/
   /*@include css-dropin(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
@@ -15,14 +15,14 @@ $transition-easing: ease;
 
 /*defines the actual enter transition*/
 .on-enter.on-enter-active {
-  transform: translateY(0vh);
+  transform: translateX(0vh);
   /*font-size: 1.0em;*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 
 }
 /*defines the beginning state of the leave transitio*/
 .on-leave {
-  transform: translateY(0vh);
+  transform: translateX(0vh);
   /*font-size: 1.0em;*/
   /*@include css-dropout(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
@@ -31,7 +31,7 @@ $transition-easing: ease;
 /*defines the actual leave transition*/
 
 .on-leave.on-leave-active {
-  transform: translateY(-100vh);
+  transform: translateX(-250vh);
   /*font-size: 0.1em;*/
   /*@include css-dropout(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
@@ -39,13 +39,23 @@ $transition-easing: ease;
 
 .page {
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
-  transform: translateY(0vh);
+  transform: translateX(0vh);
 
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  flex-wrap: wrap;
+
+  .home-graph-layout {
+    .average-emotion {
+      text-align: center;
+      p {
+        font-size: 2em;
+      }
+
+    }
+
+  }
 
 
   .home-header {

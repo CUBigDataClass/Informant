@@ -8,12 +8,12 @@ class Home extends React.Component {
   render() {
     return (
         <div className='page'>
-          <h1>Informant</h1>
+
             <div className='page-bg-image-container'>
-              <img className='page-bg-image' src={require('../assets/images/mountains.jpg')} />
+
             </div>
             <Link to='home'>
-              <img className='down-arrow' src={require('../assets/images/down_arrow.svg')} />
+              <h1>Informant &gt;</h1>
             </Link>
         </div>
     )

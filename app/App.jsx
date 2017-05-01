@@ -62,6 +62,7 @@ class App extends Component {
     });
     return (
       <div>
+        <img className='bg-image' src={require('./assets/images/mountains.jpg')}/>
         <MenuBar names={Companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
         <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
         <div className={this.state.slideContentState}>

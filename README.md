@@ -25,14 +25,6 @@ Informant aggregates social media data and produces a measure on online company 
 ### Production URLs
 52.24.109.218:3333 (Temporary IP)
 
-### Architecture
-
-> TODO
-
-### Task Cheatsheet
-
-> TODO, will hold anything not directly stated in the below section
-
 ### Running Informant Locally
     1. 'npm install' (in 'Informant' root directory) - Installs all necessary dependencies.
     2. 'npm install -g babel-cli' - Installs babel-node command globally on your computer

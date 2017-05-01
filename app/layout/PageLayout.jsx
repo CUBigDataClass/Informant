@@ -68,17 +68,17 @@ class PageLayout extends React.Component {
     var socket = io.connect();
     var self = this;
 
-    const num = 15;
 
     socket.on('amazonTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
+      console.log(tweetObj);
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[0] = num*(tweetObj.score + 1);
+          newData[0] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -88,11 +88,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[1] = num*(tweetObj.score + 1);
+          newData[1] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -102,11 +102,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[2] = num*(tweetObj.score + 1);
+          newData[2] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -117,11 +117,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[3] = num*(tweetObj.score + 1);
+          newData[3] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -131,11 +131,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[4] = num*(tweetObj.score + 1);
+          newData[4] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -145,11 +145,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[5] = num*(tweetObj.score + 1);
+          newData[5] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -158,11 +158,11 @@ class PageLayout extends React.Component {
       var tweetObj = JSON.parse(tweet);
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[6] = num*(tweetObj.score + 1);
+          newData[6] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -172,11 +172,11 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[7] = num*(tweetObj.score + 1);
+          newData[7] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: this.findEmotion(tweetObj.average)
+          emotionAverage: self.findEmotion(tweetObj.average)
           }
         });
       });
@@ -210,7 +210,7 @@ class PageLayout extends React.Component {
           average={this.state.emotionAverage}
         />
       <div className='graph-options'>
-    
+
       <div onMouseDown={this.changeToPie} className='update-data'>Pie Graph</div>
       <div onMouseDown={this.changeToLinear} className='update-data'>Linear Graph</div>
       <div onMouseDown={this.changeToWave} className='update-data'>Wave Graph</div>

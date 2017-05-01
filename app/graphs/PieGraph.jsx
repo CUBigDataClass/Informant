@@ -159,13 +159,7 @@ var PieGraph = React.createClass({
        .attr('font-family', 'Futura')
        .attr('font-size', '15px')
        .attr('fill', 'white')
-       .classed('companyText', true)
-       .on('mouseover', function(d, i){
-         return self.props.hoverHandler(i);
-       })
-       .on('mouseout', function(d, i){
-         return self.props.hoverHandler(i);
-       });
+       .classed('companyText', true);
 
 
       const finalChart = faux.toReact();

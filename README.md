@@ -23,7 +23,7 @@ Informant aggregates social media data and produces a measure on online company 
     * React
 
 ### Production URLs
-52.24.109.218:3333 (Temporary IP)
+www.cuinformant.com
 
 ### Running Informant Locally
     1. 'npm install' (in 'Informant' root directory) - Installs all necessary dependencies.

@@ -10,7 +10,7 @@ class Microsoft extends React.Component {
       <div>
         <PageLayout
           title={'Microsoft'}
-          description={'Opinions on Microsoft?'}
+          description={'What does Microsoft even do anymore?'}
           />
       </div>
     );

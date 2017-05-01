@@ -62,14 +62,15 @@ class App extends Component {
     });
     return (
       <div>
+        <img className='bg-image' src={require('./assets/images/mountains.jpg')}/>
         <MenuBar names={Companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
         <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
         <div className={this.state.slideContentState}>
           <ReactCSSTransitionGroup
           component="div"
           transitionName={"on"}
-          transitionEnterTimeout={1000}
-          transitionLeaveTimeout={1000}>
+          transitionEnterTimeout={0}
+          transitionLeaveTimeout={0}>
           {this.props.children ?
             React.cloneElement(this.props.children, {
               key: this.props.location.pathname

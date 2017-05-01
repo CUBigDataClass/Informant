@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 206);
+/******/ 	return __webpack_require__(__webpack_require__.s = 205);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -240,6 +240,10 @@ process.off = noop;
 process.removeListener = noop;
 process.removeAllListeners = noop;
 process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
 
 process.binding = function (name) {
     throw new Error('process.binding is not supported');
@@ -444,7 +448,7 @@ module.exports = warning;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Router__ = __webpack_require__(306);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Router", function() { return __WEBPACK_IMPORTED_MODULE_0__Router__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Link__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Link__ = __webpack_require__(140);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Link", function() { return __WEBPACK_IMPORTED_MODULE_1__Link__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__IndexLink__ = __webpack_require__(302);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IndexLink", function() { return __WEBPACK_IMPORTED_MODULE_2__IndexLink__["a"]; });
@@ -454,7 +458,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IndexRedirect", function() { return __WEBPACK_IMPORTED_MODULE_4__IndexRedirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__IndexRoute__ = __webpack_require__(304);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "IndexRoute", function() { return __WEBPACK_IMPORTED_MODULE_5__IndexRoute__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(142);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Redirect", function() { return __WEBPACK_IMPORTED_MODULE_6__Redirect__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(305);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Route", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
@@ -467,7 +471,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "routerShape", function() { return __WEBPACK_IMPORTED_MODULE_10__PropTypes__["b"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__match__ = __webpack_require__(315);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "match", function() { return __WEBPACK_IMPORTED_MODULE_11__match__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__useRouterHistory__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__useRouterHistory__ = __webpack_require__(147);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "useRouterHistory", function() { return __WEBPACK_IMPORTED_MODULE_12__useRouterHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__PatternUtils__ = __webpack_require__(32);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "formatPattern", function() { return __WEBPACK_IMPORTED_MODULE_13__PatternUtils__["a"]; });
@@ -477,7 +481,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "browserHistory", function() { return __WEBPACK_IMPORTED_MODULE_15__browserHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__hashHistory__ = __webpack_require__(313);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "hashHistory", function() { return __WEBPACK_IMPORTED_MODULE_16__hashHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__createMemoryHistory__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__createMemoryHistory__ = __webpack_require__(144);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createMemoryHistory", function() { return __WEBPACK_IMPORTED_MODULE_17__createMemoryHistory__["a"]; });
 /* components */
 
@@ -588,12 +592,12 @@ module.exports = ExecutionEnvironment;
 var DOMProperty = __webpack_require__(26);
 var ReactBrowserEventEmitter = __webpack_require__(52);
 var ReactCurrentOwner = __webpack_require__(19);
-var ReactDOMFeatureFlags = __webpack_require__(156);
+var ReactDOMFeatureFlags = __webpack_require__(155);
 var ReactElement = __webpack_require__(12);
-var ReactEmptyComponentRegistry = __webpack_require__(163);
+var ReactEmptyComponentRegistry = __webpack_require__(162);
 var ReactInstanceHandles = __webpack_require__(34);
 var ReactInstanceMap = __webpack_require__(40);
-var ReactMarkupChecksum = __webpack_require__(166);
+var ReactMarkupChecksum = __webpack_require__(165);
 var ReactPerf = __webpack_require__(13);
 var ReactReconciler = __webpack_require__(27);
 var ReactUpdateQueue = __webpack_require__(84);
@@ -2564,7 +2568,7 @@ exports.default = PageLayout;
 
 
 var React = __webpack_require__(1);
-var factory = __webpack_require__(216);
+var factory = __webpack_require__(215);
 
 // Hack to grab NoopUpdateQueue from isomorphic React
 var ReactNoopUpdateQueue = new React.Component().updater;
@@ -3782,14 +3786,14 @@ module.exports = SyntheticEvent;
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// https://d3js.org Version 4.7.4. Copyright 2017 Mike Bostock.
+// https://d3js.org Version 4.8.0. Copyright 2017 Mike Bostock.
 (function (global, factory) {
 	 true ? factory(exports) :
 	typeof define === 'function' && define.amd ? define(['exports'], factory) :
 	(factory((global.d3 = global.d3 || {})));
 }(this, (function (exports) { 'use strict';
 
-var version = "4.7.4";
+var version = "4.8.0";
 
 var ascending = function(a, b) {
   return a < b ? -1 : a > b ? 1 : a >= b ? 0 : NaN;
@@ -3842,11 +3846,24 @@ function pair(a, b) {
   return [a, b];
 }
 
-var cross = function(a, b, f) {
-  var na = a.length, nb = b.length, c = new Array(na * nb), ia, ib, ic, va;
-  if (f == null) f = pair;
-  for (ia = ic = 0; ia < na; ++ia) for (va = a[ia], ib = 0; ib < nb; ++ib, ++ic) c[ic] = f(va, b[ib]);
-  return c;
+var cross = function(values0, values1, reduce) {
+  var n0 = values0.length,
+      n1 = values1.length,
+      values = new Array(n0 * n1),
+      i0,
+      i1,
+      i,
+      value0;
+
+  if (reduce == null) reduce = pair;
+
+  for (i0 = i = 0; i0 < n0; ++i0) {
+    for (value0 = values0[i0], i1 = 0; i1 < n1; ++i1, ++i) {
+      values[i] = reduce(value0, values1[i1]);
+    }
+  }
+
+  return values;
 };
 
 var descending = function(a, b) {
@@ -3857,36 +3874,36 @@ var number = function(x) {
   return x === null ? NaN : +x;
 };
 
-var variance = function(array, f) {
-  var n = array.length,
+var variance = function(values, valueof) {
+  var n = values.length,
       m = 0,
-      a,
-      d,
-      s = 0,
       i = -1,
-      j = 0;
+      mean = 0,
+      value,
+      delta,
+      sum = 0;
 
-  if (f == null) {
+  if (valueof == null) {
     while (++i < n) {
-      if (!isNaN(a = number(array[i]))) {
-        d = a - m;
-        m += d / ++j;
-        s += d * (a - m);
+      if (!isNaN(value = number(values[i]))) {
+        delta = value - mean;
+        mean += delta / ++m;
+        sum += delta * (value - mean);
       }
     }
   }
 
   else {
     while (++i < n) {
-      if (!isNaN(a = number(f(array[i], i, array)))) {
-        d = a - m;
-        m += d / ++j;
-        s += d * (a - m);
+      if (!isNaN(value = number(valueof(values[i], i, values)))) {
+        delta = value - mean;
+        mean += delta / ++m;
+        sum += delta * (value - mean);
       }
     }
   }
 
-  if (j > 1) return s / (j - 1);
+  if (m > 1) return sum / (m - 1);
 };
 
 var deviation = function(array, f) {
@@ -3894,30 +3911,42 @@ var deviation = function(array, f) {
   return v ? Math.sqrt(v) : v;
 };
 
-var extent = function(array, f) {
-  var i = -1,
-      n = array.length,
-      a,
-      b,
-      c;
+var extent = function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      min,
+      max;
 
-  if (f == null) {
-    while (++i < n) if ((b = array[i]) != null && b >= b) { a = c = b; break; }
-    while (++i < n) if ((b = array[i]) != null) {
-      if (a > b) a = b;
-      if (c < b) c = b;
+  if (valueof == null) {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = values[i]) != null && value >= value) {
+        min = max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = values[i]) != null) {
+            if (min > value) min = value;
+            if (max < value) max = value;
+          }
+        }
+      }
     }
   }
 
   else {
-    while (++i < n) if ((b = f(array[i], i, array)) != null && b >= b) { a = c = b; break; }
-    while (++i < n) if ((b = f(array[i], i, array)) != null) {
-      if (a > b) a = b;
-      if (c < b) c = b;
+    while (++i < n) { // Find the first comparable value.
+      if ((value = valueof(values[i], i, values)) != null && value >= value) {
+        min = max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = valueof(values[i], i, values)) != null) {
+            if (min > value) min = value;
+            if (max < value) max = value;
+          }
+        }
+      }
     }
   }
 
-  return [a, c];
+  return [min, max];
 };
 
 var array = Array.prototype;
@@ -3954,13 +3983,41 @@ var e5 = Math.sqrt(10);
 var e2 = Math.sqrt(2);
 
 var ticks = function(start, stop, count) {
-  var step = tickStep(start, stop, count);
-  return sequence(
-    Math.ceil(start / step) * step,
-    Math.floor(stop / step) * step + step / 2, // inclusive
-    step
-  );
+  var reverse = stop < start,
+      i = -1,
+      n,
+      ticks,
+      step;
+
+  if (reverse) n = start, start = stop, stop = n;
+
+  if ((step = tickIncrement(start, stop, count)) === 0 || !isFinite(step)) return [];
+
+  if (step > 0) {
+    start = Math.ceil(start / step);
+    stop = Math.floor(stop / step);
+    ticks = new Array(n = Math.ceil(stop - start + 1));
+    while (++i < n) ticks[i] = (start + i) * step;
+  } else {
+    start = Math.floor(start * step);
+    stop = Math.ceil(stop * step);
+    ticks = new Array(n = Math.ceil(start - stop + 1));
+    while (++i < n) ticks[i] = (start - i) / step;
+  }
+
+  if (reverse) ticks.reverse();
+
+  return ticks;
 };
+
+function tickIncrement(start, stop, count) {
+  var step = (stop - start) / Math.max(0, count),
+      power = Math.floor(Math.log(step) / Math.LN10),
+      error = step / Math.pow(10, power);
+  return power >= 0
+      ? (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1) * Math.pow(10, power)
+      : -Math.pow(10, -power) / (error >= e10 ? 10 : error >= e5 ? 5 : error >= e2 ? 2 : 1);
+}
 
 function tickStep(start, stop, count) {
   var step0 = Math.abs(stop - start) / Math.max(0, count),
@@ -3997,12 +4054,15 @@ var histogram = function() {
         tz = threshold(values, x0, x1);
 
     // Convert number of thresholds into uniform thresholds.
-    if (!Array.isArray(tz)) tz = ticks(x0, x1, tz);
+    if (!Array.isArray(tz)) {
+      tz = tickStep(x0, x1, tz);
+      tz = sequence(Math.ceil(x0 / tz) * tz, Math.floor(x1 / tz) * tz, tz); // exclusive
+    }
 
     // Remove any thresholds outside the domain.
     var m = tz.length;
     while (tz[0] <= x0) tz.shift(), --m;
-    while (tz[m - 1] >= x1) tz.pop(), --m;
+    while (tz[m - 1] > x1) tz.pop(), --m;
 
     var bins = new Array(m + 1),
         bin;
@@ -4040,17 +4100,17 @@ var histogram = function() {
   return histogram;
 };
 
-var threshold = function(array, p, f) {
-  if (f == null) f = number;
-  if (!(n = array.length)) return;
-  if ((p = +p) <= 0 || n < 2) return +f(array[0], 0, array);
-  if (p >= 1) return +f(array[n - 1], n - 1, array);
+var threshold = function(values, p, valueof) {
+  if (valueof == null) valueof = number;
+  if (!(n = values.length)) return;
+  if ((p = +p) <= 0 || n < 2) return +valueof(values[0], 0, values);
+  if (p >= 1) return +valueof(values[n - 1], n - 1, values);
   var n,
-      h = (n - 1) * p,
-      i = Math.floor(h),
-      a = +f(array[i], i, array),
-      b = +f(array[i + 1], i + 1, array);
-  return a + (b - a) * (h - i);
+      i = (n - 1) * p,
+      i0 = Math.floor(i),
+      value0 = +valueof(values[i0], i0, values),
+      value1 = +valueof(values[i0 + 1], i0 + 1, values);
+  return value0 + (value1 - value0) * (i - i0);
 };
 
 var freedmanDiaconis = function(values, min, max) {
@@ -4062,55 +4122,85 @@ var scott = function(values, min, max) {
   return Math.ceil((max - min) / (3.5 * deviation(values) * Math.pow(values.length, -1 / 3)));
 };
 
-var max = function(array, f) {
-  var i = -1,
-      n = array.length,
-      a,
-      b;
-
-  if (f == null) {
-    while (++i < n) if ((b = array[i]) != null && b >= b) { a = b; break; }
-    while (++i < n) if ((b = array[i]) != null && b > a) a = b;
-  }
-
-  else {
-    while (++i < n) if ((b = f(array[i], i, array)) != null && b >= b) { a = b; break; }
-    while (++i < n) if ((b = f(array[i], i, array)) != null && b > a) a = b;
-  }
-
-  return a;
-};
-
-var mean = function(array, f) {
-  var s = 0,
-      n = array.length,
-      a,
+var max = function(values, valueof) {
+  var n = values.length,
       i = -1,
-      j = n;
+      value,
+      max;
 
-  if (f == null) {
-    while (++i < n) if (!isNaN(a = number(array[i]))) s += a; else --j;
+  if (valueof == null) {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = values[i]) != null && value >= value) {
+        max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = values[i]) != null && value > max) {
+            max = value;
+          }
+        }
+      }
+    }
   }
 
   else {
-    while (++i < n) if (!isNaN(a = number(f(array[i], i, array)))) s += a; else --j;
+    while (++i < n) { // Find the first comparable value.
+      if ((value = valueof(values[i], i, values)) != null && value >= value) {
+        max = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = valueof(values[i], i, values)) != null && value > max) {
+            max = value;
+          }
+        }
+      }
+    }
   }
 
-  if (j) return s / j;
+  return max;
 };
 
-var median = function(array, f) {
-  var numbers = [],
-      n = array.length,
-      a,
-      i = -1;
+var mean = function(values, valueof) {
+  var n = values.length,
+      m = n,
+      i = -1,
+      value,
+      sum = 0;
 
-  if (f == null) {
-    while (++i < n) if (!isNaN(a = number(array[i]))) numbers.push(a);
+  if (valueof == null) {
+    while (++i < n) {
+      if (!isNaN(value = number(values[i]))) sum += value;
+      else --m;
+    }
   }
 
   else {
-    while (++i < n) if (!isNaN(a = number(f(array[i], i, array)))) numbers.push(a);
+    while (++i < n) {
+      if (!isNaN(value = number(valueof(values[i], i, values)))) sum += value;
+      else --m;
+    }
+  }
+
+  if (m) return sum / m;
+};
+
+var median = function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      numbers = [];
+
+  if (valueof == null) {
+    while (++i < n) {
+      if (!isNaN(value = number(values[i]))) {
+        numbers.push(value);
+      }
+    }
+  }
+
+  else {
+    while (++i < n) {
+      if (!isNaN(value = number(valueof(values[i], i, values)))) {
+        numbers.push(value);
+      }
+    }
   }
 
   return threshold(numbers.sort(ascending), 0.5);
@@ -4138,23 +4228,39 @@ var merge = function(arrays) {
   return merged;
 };
 
-var min = function(array, f) {
-  var i = -1,
-      n = array.length,
-      a,
-      b;
+var min = function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      min;
 
-  if (f == null) {
-    while (++i < n) if ((b = array[i]) != null && b >= b) { a = b; break; }
-    while (++i < n) if ((b = array[i]) != null && a > b) a = b;
+  if (valueof == null) {
+    while (++i < n) { // Find the first comparable value.
+      if ((value = values[i]) != null && value >= value) {
+        min = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = values[i]) != null && min > value) {
+            min = value;
+          }
+        }
+      }
+    }
   }
 
   else {
-    while (++i < n) if ((b = f(array[i], i, array)) != null && b >= b) { a = b; break; }
-    while (++i < n) if ((b = f(array[i], i, array)) != null && a > b) a = b;
+    while (++i < n) { // Find the first comparable value.
+      if ((value = valueof(values[i], i, values)) != null && value >= value) {
+        min = value;
+        while (++i < n) { // Compare the remaining values.
+          if ((value = valueof(values[i], i, values)) != null && min > value) {
+            min = value;
+          }
+        }
+      }
+    }
   }
 
-  return a;
+  return min;
 };
 
 var permute = function(array, indexes) {
@@ -4163,17 +4269,21 @@ var permute = function(array, indexes) {
   return permutes;
 };
 
-var scan = function(array, compare) {
-  if (!(n = array.length)) return;
-  var i = 0,
-      n,
+var scan = function(values, compare) {
+  if (!(n = values.length)) return;
+  var n,
+      i = 0,
       j = 0,
       xi,
-      xj = array[j];
+      xj = values[j];
 
-  if (!compare) compare = ascending;
+  if (compare == null) compare = ascending;
 
-  while (++i < n) if (compare(xi = array[i], xj) < 0 || compare(xj, xj) !== 0) xj = xi, j = i;
+  while (++i < n) {
+    if (compare(xi = values[i], xj) < 0 || compare(xj, xj) !== 0) {
+      xj = xi, j = i;
+    }
+  }
 
   if (compare(xj, xj) === 0) return j;
 };
@@ -4193,21 +4303,25 @@ var shuffle = function(array, i0, i1) {
   return array;
 };
 
-var sum = function(array, f) {
-  var s = 0,
-      n = array.length,
-      a,
-      i = -1;
+var sum = function(values, valueof) {
+  var n = values.length,
+      i = -1,
+      value,
+      sum = 0;
 
-  if (f == null) {
-    while (++i < n) if (a = +array[i]) s += a; // Note: zero and null are equivalent.
+  if (valueof == null) {
+    while (++i < n) {
+      if (value = +values[i]) sum += value; // Note: zero and null are equivalent.
+    }
   }
 
   else {
-    while (++i < n) if (a = +f(array[i], i, array)) s += a;
+    while (++i < n) {
+      if (value = +valueof(values[i], i, values)) sum += value;
+    }
   }
 
-  return s;
+  return sum;
 };
 
 var transpose = function(matrix) {
@@ -10189,7 +10303,8 @@ var formatLocale = function(locale) {
   var group = locale.grouping && locale.thousands ? formatGroup(locale.grouping, locale.thousands) : identity$3,
       currency = locale.currency,
       decimal = locale.decimal,
-      numerals = locale.numerals ? formatNumerals(locale.numerals) : identity$3;
+      numerals = locale.numerals ? formatNumerals(locale.numerals) : identity$3,
+      percent = locale.percent || "%";
 
   function newFormat(specifier) {
     specifier = formatSpecifier(specifier);
@@ -10207,7 +10322,7 @@ var formatLocale = function(locale) {
     // Compute the prefix and suffix.
     // For SI-prefix, the suffix is lazily computed.
     var prefix = symbol === "$" ? currency[0] : symbol === "#" && /[boxX]/.test(type) ? "0" + type.toLowerCase() : "",
-        suffix = symbol === "$" ? currency[1] : /[%p]/.test(type) ? "%" : "";
+        suffix = symbol === "$" ? currency[1] : /[%p]/.test(type) ? percent : "";
 
     // What format function should we use?
     // Is this an integer type?
@@ -19987,6 +20102,7 @@ exports.scan = scan;
 exports.shuffle = shuffle;
 exports.sum = sum;
 exports.ticks = ticks;
+exports.tickIncrement = tickIncrement;
 exports.tickStep = tickStep;
 exports.transpose = transpose;
 exports.variance = variance;
@@ -20355,13 +20471,13 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 var keys = __webpack_require__(235);
 var hasBinary = __webpack_require__(118);
-var sliceBuffer = __webpack_require__(205);
-var after = __webpack_require__(204);
-var utf8 = __webpack_require__(392);
+var sliceBuffer = __webpack_require__(204);
+var after = __webpack_require__(203);
+var utf8 = __webpack_require__(393);
 
 var base64encoder;
 if (global && global.ArrayBuffer) {
-  base64encoder = __webpack_require__(212);
+  base64encoder = __webpack_require__(211);
 }
 
 /**
@@ -20419,7 +20535,7 @@ var err = { type: 'error', data: 'parser error' };
  * Create a blob api even for blob builder when vendor prefixes exist
  */
 
-var Blob = __webpack_require__(213);
+var Blob = __webpack_require__(212);
 
 /**
  * Encodes a packet.
@@ -21360,7 +21476,7 @@ function _resetWarned() {
 
 
 
-var ReactRootIndex = __webpack_require__(171);
+var ReactRootIndex = __webpack_require__(170);
 
 var invariant = __webpack_require__(2);
 
@@ -21720,7 +21836,7 @@ var dummyEnvironment;
 if (canUseDOM) {
 
   PathnameEnvironment = __webpack_require__(299);
-  HashEnvironment     = __webpack_require__(139);
+  HashEnvironment     = __webpack_require__(138);
 
   pathnameEnvironment = new PathnameEnvironment();
   hashEnvironment     = new HashEnvironment();
@@ -21803,12 +21919,12 @@ var routes = __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_prop_types__["one
 
 
 
-var EventPluginRegistry = __webpack_require__(152);
+var EventPluginRegistry = __webpack_require__(151);
 var EventPluginUtils = __webpack_require__(329);
-var ReactErrorUtils = __webpack_require__(164);
+var ReactErrorUtils = __webpack_require__(163);
 
-var accumulateInto = __webpack_require__(173);
-var forEachAccumulated = __webpack_require__(175);
+var accumulateInto = __webpack_require__(172);
+var forEachAccumulated = __webpack_require__(174);
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(4);
 
@@ -22094,8 +22210,8 @@ var EventPluginHub = __webpack_require__(38);
 
 var warning = __webpack_require__(4);
 
-var accumulateInto = __webpack_require__(173);
-var forEachAccumulated = __webpack_require__(175);
+var accumulateInto = __webpack_require__(172);
+var forEachAccumulated = __webpack_require__(174);
 
 var PropagationPhases = EventConstants.PropagationPhases;
 var getListener = EventPluginHub.getListener;
@@ -22543,7 +22659,7 @@ module.exports = function(a, b){
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(234);
+exports = module.exports = __webpack_require__(233);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -22905,7 +23021,7 @@ module.exports = function omit(obj, keys) {
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Element = __webpack_require__(133)
+var Element = __webpack_require__(132)
 var Window = __webpack_require__(287)
 var core = __webpack_require__(289)
 var anim = __webpack_require__(288)
@@ -23104,10 +23220,10 @@ module.exports = React;
 
 var EventConstants = __webpack_require__(18);
 var EventPluginHub = __webpack_require__(38);
-var EventPluginRegistry = __webpack_require__(152);
+var EventPluginRegistry = __webpack_require__(151);
 var ReactEventEmitterMixin = __webpack_require__(347);
 var ReactPerf = __webpack_require__(13);
-var ViewportMetrics = __webpack_require__(172);
+var ViewportMetrics = __webpack_require__(171);
 
 var assign = __webpack_require__(3);
 var isEventSupported = __webpack_require__(92);
@@ -23492,7 +23608,7 @@ module.exports = ReactPropTypeLocations;
 
 
 var SyntheticUIEvent = __webpack_require__(41);
-var ViewportMetrics = __webpack_require__(172);
+var ViewportMetrics = __webpack_require__(171);
 
 var getEventModifierState = __webpack_require__(88);
 
@@ -25879,7 +25995,7 @@ module.exports = DOMPropertyOperations;
 
 
 
-var ReactPropTypes = __webpack_require__(170);
+var ReactPropTypes = __webpack_require__(169);
 var ReactPropTypeLocations = __webpack_require__(54);
 
 var invariant = __webpack_require__(2);
@@ -25943,7 +26059,7 @@ var LinkedValueUtils = {
   checkPropTypes: function (tagName, props, owner) {
     for (var propName in propTypes) {
       if (propTypes.hasOwnProperty(propName)) {
-        var error = propTypes[propName](props, propName, tagName, ReactPropTypeLocations.prop);
+        var error = propTypes[propName](props, propName, tagName, ReactPropTypeLocations.prop, null, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
       }
       if (error instanceof Error && !(error.message in loggedTypeFailures)) {
         // Only monitor this failure once because there tends to be a lot of the
@@ -26127,8 +26243,8 @@ module.exports = ReactComponentEnvironment;
 
 
 var ReactCurrentOwner = __webpack_require__(19);
-var ReactDOMTextComponent = __webpack_require__(158);
-var ReactDefaultInjection = __webpack_require__(160);
+var ReactDOMTextComponent = __webpack_require__(157);
+var ReactDefaultInjection = __webpack_require__(159);
 var ReactInstanceHandles = __webpack_require__(34);
 var ReactMount = __webpack_require__(7);
 var ReactPerf = __webpack_require__(13);
@@ -26224,7 +26340,7 @@ module.exports = React;
 
 
 
-var DOMChildrenOperations = __webpack_require__(151);
+var DOMChildrenOperations = __webpack_require__(150);
 var DOMPropertyOperations = __webpack_require__(78);
 var ReactMount = __webpack_require__(7);
 var ReactPerf = __webpack_require__(13);
@@ -26588,7 +26704,7 @@ module.exports = ReactUpdateQueue;
 
 
 
-module.exports = '0.14.8';
+module.exports = '0.14.9';
 
 /***/ }),
 /* 86 */
@@ -26853,8 +26969,8 @@ module.exports = getIteratorFn;
 
 
 var ReactCompositeComponent = __webpack_require__(336);
-var ReactEmptyComponent = __webpack_require__(162);
-var ReactNativeComponent = __webpack_require__(168);
+var ReactEmptyComponent = __webpack_require__(161);
+var ReactNativeComponent = __webpack_require__(167);
 
 var assign = __webpack_require__(3);
 var invariant = __webpack_require__(2);
@@ -27690,7 +27806,7 @@ module.exports = validateDOMNesting;
 
 var url = __webpack_require__(380);
 var parser = __webpack_require__(98);
-var Manager = __webpack_require__(179);
+var Manager = __webpack_require__(178);
 var debug = __webpack_require__(60)('socket.io-client');
 
 /**
@@ -27790,8 +27906,8 @@ exports.connect = lookup;
  * @api public
  */
 
-exports.Manager = __webpack_require__(179);
-exports.Socket = __webpack_require__(181);
+exports.Manager = __webpack_require__(178);
+exports.Socket = __webpack_require__(180);
 
 
 /***/ }),
@@ -27803,11 +27919,11 @@ exports.Socket = __webpack_require__(181);
  * Module dependencies.
  */
 
-var debug = __webpack_require__(383)('socket.io-parser');
+var debug = __webpack_require__(384)('socket.io-parser');
 var json = __webpack_require__(270);
-var Emitter = __webpack_require__(215);
-var binary = __webpack_require__(382);
-var isBuf = __webpack_require__(183);
+var Emitter = __webpack_require__(214);
+var binary = __webpack_require__(383);
+var isBuf = __webpack_require__(182);
 
 /**
  * Protocol version.
@@ -28215,16 +28331,16 @@ var Router                    = __webpack_require__(297);
 var Route                     = __webpack_require__(296);
 var Link                      = __webpack_require__(295);
 
-var RouterMixin               = __webpack_require__(138);
-var RouteRenderingMixin       = __webpack_require__(137);
+var RouterMixin               = __webpack_require__(137);
+var RouteRenderingMixin       = __webpack_require__(136);
 
-var NavigatableMixin          = __webpack_require__(136);
+var NavigatableMixin          = __webpack_require__(135);
 
 var environment               = __webpack_require__(36);
 
 var CaptureClicks             = __webpack_require__(294);
 
-var URLPattern                = __webpack_require__(184);
+var URLPattern                = __webpack_require__(183);
 
 var exportsObject = {
   Locations: Router.Locations,
@@ -28485,8 +28601,6 @@ var LinearGraph = _react2.default.createClass({
 
     var emojis = this.props.emojis;
 
-    var palette = ['#edc2c2', '#D2BBA0', '#F8FCDA', '#edc2c2', '#D5896F', '#A49E8D', '#7A5C58', '#969A97', '#D2BBA0', '#edc2c2'];
-
     //Width and height
     var w = 500;
     var h = 500;
@@ -28499,15 +28613,17 @@ var LinearGraph = _react2.default.createClass({
 
     var rects = svg.selectAll("g").data(data).enter().append("g");
 
-    rects.append('rect').classed("LinearRect", true).attr("x", '250').attr("y", '250').attr("rx", '4').attr("ry", '4').attr("stroke", function (d, i) {
-      return palette[i];
+    rects.append('rect').classed("LinearRect", true).attr("x", '250').attr("y", '250').attr("rx", '4').attr("ry", '4').attr('fill', function (d, i) {
+      var hex = (i * 11).toString(12);
+      //  return '#' + hex + hex + hex;
+      return 'white';
     }).attr("width", function (d, i) {
       return '4.0';
     }).attr("height", function (d, i) {
       return d * 5;
     }).attr('transform', function (d, i) {
       return 'translate(0, 50) rotate(' + i * (360.0 / data.length) + ' 250 200)';
-    }).style('stroke-width', '5px');
+    }).style('stroke', color).style('stroke-width', '0px');
 
     function X(d, i) {
       var inc = 360.0 / data.length;
@@ -28546,7 +28662,7 @@ var LinearGraph = _react2.default.createClass({
     var foreground = g.append("path").datum({ endAngle: 0.227 * tau }).style("fill", bgColor).classed('shell', true).attr('stroke', bgColor).attr("d", arc);
 
     rects.append("g").classed("textGroup", true).attr('transform', function (d, i) {
-      return 'translate(' + (250 - 7.5 * d.x) + ',' + (250 + 7.5 * d.y) + ')';
+      return 'translate(' + (250 + 7.5 * d.x) + ',' + (250 + 7.5 * d.y) + ')';
     }).append('text').html(function (d, i) {
       return emojis[i];
     }).attr('font-family', 'Futura').attr('font-size', '15px').attr('fill', 'white').classed('companyText', true).on('mouseover', function (d, i) {
@@ -28755,6 +28871,16 @@ var WaveGraph = _react2.default.createClass({
     var foreground = g.append("path").datum({ endAngle: 0.227 * tau }).style("fill", bgColor).classed('shell', true).attr('stroke', bgColor).attr("d", arc);
 
     var self = this;
+
+    wave.append("g").classed("textGroup", true).attr('transform', function (d, i) {
+      return 'translate(' + (250 + 7.5 * d.x) + ',' + (250 + 7.5 * d.y) + ')';
+    }).append('text').html(function (d, i) {
+      return emojis[i];
+    }).attr('font-family', 'Futura').attr('font-size', '15px').attr('fill', 'white').classed('companyText', true).on('mouseover', function (d, i) {
+      return self.props.hoverHandler(i);
+    }).on('mouseout', function (d, i) {
+      return self.props.hoverHandler(i);
+    });
 
     wave.append("g").classed("textGroup", true).attr('transform', function (d, i) {
       return 'translate(' + (250 + 7.5 * d.x) + ',' + (250 + 7.5 * d.y) + ')';
@@ -29093,25 +29219,11 @@ var TextLayout = function (_React$Component) {
                 this.props.description
               ),
               _react2.default.createElement(
-                'h1',
-                null,
-                'Average Sentiment:'
-              ),
-              _react2.default.createElement(
-                'h1',
-                { className: 'average-emotion' },
-                this.props.average
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'hover-text-container' },
-                _react2.default.createElement(
-                  'p',
-                  { className: this.props.hoverTextStyle },
-                  this.props.emotionLabel,
-                  ': ',
-                  this.props.percentage
-                )
+                'p',
+                { className: this.props.hoverTextStyle },
+                this.props.emotionLabel,
+                ': ',
+                this.props.percentage
               )
             )
           )
@@ -29239,9 +29351,9 @@ module.exports = exports['default'];
  */
 
 var XMLHttpRequest = __webpack_require__(63);
-var XHR = __webpack_require__(232);
-var JSONP = __webpack_require__(231);
-var websocket = __webpack_require__(233);
+var XHR = __webpack_require__(231);
+var JSONP = __webpack_require__(230);
+var websocket = __webpack_require__(232);
 
 /**
  * Export transports.
@@ -29302,7 +29414,7 @@ var Transport = __webpack_require__(62);
 var parseqs = __webpack_require__(70);
 var parser = __webpack_require__(30);
 var inherit = __webpack_require__(43);
-var yeast = __webpack_require__(187);
+var yeast = __webpack_require__(186);
 var debug = __webpack_require__(44)('engine.io-client:polling');
 
 /**
@@ -30427,161 +30539,6 @@ module.exports = [
 
 /***/ }),
 /* 125 */
-/***/ (function(module, exports) {
-
-/**
- * Helpers.
- */
-
-var s = 1000
-var m = s * 60
-var h = m * 60
-var d = h * 24
-var y = d * 365.25
-
-/**
- * Parse or format the given `val`.
- *
- * Options:
- *
- *  - `long` verbose formatting [false]
- *
- * @param {String|Number} val
- * @param {Object} options
- * @throws {Error} throw an error if val is not a non-empty string or a number
- * @return {String|Number}
- * @api public
- */
-
-module.exports = function (val, options) {
-  options = options || {}
-  var type = typeof val
-  if (type === 'string' && val.length > 0) {
-    return parse(val)
-  } else if (type === 'number' && isNaN(val) === false) {
-    return options.long ?
-			fmtLong(val) :
-			fmtShort(val)
-  }
-  throw new Error('val is not a non-empty string or a valid number. val=' + JSON.stringify(val))
-}
-
-/**
- * Parse the given `str` and return milliseconds.
- *
- * @param {String} str
- * @return {Number}
- * @api private
- */
-
-function parse(str) {
-  str = String(str)
-  if (str.length > 10000) {
-    return
-  }
-  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str)
-  if (!match) {
-    return
-  }
-  var n = parseFloat(match[1])
-  var type = (match[2] || 'ms').toLowerCase()
-  switch (type) {
-    case 'years':
-    case 'year':
-    case 'yrs':
-    case 'yr':
-    case 'y':
-      return n * y
-    case 'days':
-    case 'day':
-    case 'd':
-      return n * d
-    case 'hours':
-    case 'hour':
-    case 'hrs':
-    case 'hr':
-    case 'h':
-      return n * h
-    case 'minutes':
-    case 'minute':
-    case 'mins':
-    case 'min':
-    case 'm':
-      return n * m
-    case 'seconds':
-    case 'second':
-    case 'secs':
-    case 'sec':
-    case 's':
-      return n * s
-    case 'milliseconds':
-    case 'millisecond':
-    case 'msecs':
-    case 'msec':
-    case 'ms':
-      return n
-    default:
-      return undefined
-  }
-}
-
-/**
- * Short format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
-
-function fmtShort(ms) {
-  if (ms >= d) {
-    return Math.round(ms / d) + 'd'
-  }
-  if (ms >= h) {
-    return Math.round(ms / h) + 'h'
-  }
-  if (ms >= m) {
-    return Math.round(ms / m) + 'm'
-  }
-  if (ms >= s) {
-    return Math.round(ms / s) + 's'
-  }
-  return ms + 'ms'
-}
-
-/**
- * Long format for `ms`.
- *
- * @param {Number} ms
- * @return {String}
- * @api private
- */
-
-function fmtLong(ms) {
-  return plural(ms, d, 'day') ||
-    plural(ms, h, 'hour') ||
-    plural(ms, m, 'minute') ||
-    plural(ms, s, 'second') ||
-    ms + ' ms'
-}
-
-/**
- * Pluralization helper.
- */
-
-function plural(ms, n, name) {
-  if (ms < n) {
-    return
-  }
-  if (ms < n * 1.5) {
-    return Math.floor(ms / n) + ' ' + name
-  }
-  return Math.ceil(ms / n) + ' ' + name + 's'
-}
-
-
-/***/ }),
-/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30629,13 +30586,13 @@ module.exports = function assign(target, source1) {
 
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var implementation = __webpack_require__(126);
+var implementation = __webpack_require__(125);
 
 var lacksProperEnumerationOrder = function () {
 	if (!Object.assign) {
@@ -30687,7 +30644,7 @@ module.exports = function getPolyfill() {
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports) {
 
 /**
@@ -30732,7 +30689,7 @@ module.exports = function parseuri(str) {
 
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30753,7 +30710,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30826,7 +30783,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -30851,7 +30808,7 @@ module.exports = {
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31040,17 +30997,17 @@ exports.isBuffer = function (obj) {
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var React = __webpack_require__(1)
-var styleAttr = __webpack_require__(388)
+var styleAttr = __webpack_require__(389)
 var querySelectorAll = __webpack_require__(282)
-var camelCase = __webpack_require__(134)
+var camelCase = __webpack_require__(133)
 var isString = __webpack_require__(291)
 var isUndefined = __webpack_require__(292)
 var assign = __webpack_require__(290)
-var mapValues = __webpack_require__(135)
+var mapValues = __webpack_require__(134)
 var styleCamelCase = __webpack_require__(293)
 
 function Element (nodeName, parentNode) {
@@ -31403,7 +31360,7 @@ module.exports = Element
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports) {
 
 var hyphenExpression = /\-+([a-z])/gi
@@ -31426,7 +31383,7 @@ module.exports = camelCase
 
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports) {
 
 function mapValues (source, fn) {
@@ -31445,7 +31402,7 @@ module.exports = mapValues
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31491,7 +31448,7 @@ module.exports = NavigatableMixin;
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31549,14 +31506,14 @@ module.exports = RouteRenderingMixin;
 
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var React         = __webpack_require__(1);
-var invariant     = __webpack_require__(140);
+var invariant     = __webpack_require__(139);
 var assign        = Object.assign || __webpack_require__(23);
 var matchRoutes   = __webpack_require__(300);
 var Environment   = __webpack_require__(36);
@@ -31787,7 +31744,7 @@ module.exports = RouterMixin;
 
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31847,7 +31804,7 @@ module.exports = HashEnvironment;
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -31905,7 +31862,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32051,7 +32008,7 @@ var Link = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32061,7 +32018,7 @@ function isPromise(obj) {
 }
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32160,7 +32117,7 @@ var Redirect = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 144 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32190,7 +32147,7 @@ function assignRouterState(router, _ref) {
 }
 
 /***/ }),
-/* 145 */
+/* 144 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32218,11 +32175,11 @@ function createMemoryHistory(options) {
 }
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__useRouterHistory__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__useRouterHistory__ = __webpack_require__(147);
 /* harmony export (immutable) */ __webpack_exports__["a"] = createRouterHistory;
 
 
@@ -32235,7 +32192,7 @@ function createRouterHistory(createHistory) {
 }
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32507,7 +32464,7 @@ function createTransitionManager(history, routes) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32527,7 +32484,7 @@ function useRouterHistory(createHistory) {
 }
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32582,7 +32539,7 @@ var nameShape = exports.nameShape = _propTypes2.default.oneOfType([_propTypes2.d
 })]);
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32727,7 +32684,7 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32746,7 +32703,7 @@ module.exports = CSSProperty;
 
 
 var Danger = __webpack_require__(326);
-var ReactMultiChildUpdateTypes = __webpack_require__(167);
+var ReactMultiChildUpdateTypes = __webpack_require__(166);
 var ReactPerf = __webpack_require__(13);
 
 var setInnerHTML = __webpack_require__(59);
@@ -32863,7 +32820,7 @@ module.exports = DOMChildrenOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33090,7 +33047,7 @@ module.exports = EventPluginRegistry;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33278,7 +33235,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -33295,11 +33252,11 @@ module.exports = ReactChildren;
 
 
 
-var ReactComponent = __webpack_require__(155);
+var ReactComponent = __webpack_require__(154);
 var ReactElement = __webpack_require__(12);
 var ReactPropTypeLocations = __webpack_require__(54);
 var ReactPropTypeLocationNames = __webpack_require__(53);
-var ReactNoopUpdateQueue = __webpack_require__(169);
+var ReactNoopUpdateQueue = __webpack_require__(168);
 
 var assign = __webpack_require__(3);
 var emptyObject = __webpack_require__(35);
@@ -34056,7 +34013,7 @@ module.exports = ReactClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 155 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34073,7 +34030,7 @@ module.exports = ReactClass;
 
 
 
-var ReactNoopUpdateQueue = __webpack_require__(169);
+var ReactNoopUpdateQueue = __webpack_require__(168);
 
 var canDefineProperty = __webpack_require__(57);
 var emptyObject = __webpack_require__(35);
@@ -34185,7 +34142,7 @@ module.exports = ReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 156 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34209,7 +34166,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34404,7 +34361,7 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34422,7 +34379,7 @@ module.exports = ReactDOMSelect;
 
 
 
-var DOMChildrenOperations = __webpack_require__(151);
+var DOMChildrenOperations = __webpack_require__(150);
 var DOMPropertyOperations = __webpack_require__(78);
 var ReactComponentBrowserEnvironment = __webpack_require__(80);
 var ReactMount = __webpack_require__(7);
@@ -34538,7 +34495,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34611,7 +34568,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34637,9 +34594,9 @@ var ExecutionEnvironment = __webpack_require__(6);
 var HTMLDOMPropertyConfig = __webpack_require__(331);
 var ReactBrowserComponentMixin = __webpack_require__(332);
 var ReactComponentBrowserEnvironment = __webpack_require__(80);
-var ReactDefaultBatchingStrategy = __webpack_require__(159);
+var ReactDefaultBatchingStrategy = __webpack_require__(158);
 var ReactDOMComponent = __webpack_require__(338);
-var ReactDOMTextComponent = __webpack_require__(158);
+var ReactDOMTextComponent = __webpack_require__(157);
 var ReactEventListener = __webpack_require__(348);
 var ReactInjection = __webpack_require__(349);
 var ReactInstanceHandles = __webpack_require__(34);
@@ -34715,7 +34672,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -34896,7 +34853,7 @@ function checkPropTypes(componentName, propTypes, props, location) {
         // This is intentionally an invariant that gets caught. It's the same
         // behavior as without this statement except with a better message.
         !(typeof propTypes[propName] === 'function') ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s: %s type `%s` is invalid; it must be a function, usually from ' + 'React.PropTypes.', componentName || 'React class', ReactPropTypeLocationNames[location], propName) : invariant(false) : undefined;
-        error = propTypes[propName](props, propName, componentName, location);
+        error = propTypes[propName](props, propName, componentName, location, null, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
       } catch (ex) {
         error = ex;
       }
@@ -35003,7 +34960,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35021,7 +34978,7 @@ module.exports = ReactElementValidator;
 
 
 var ReactElement = __webpack_require__(12);
-var ReactEmptyComponentRegistry = __webpack_require__(163);
+var ReactEmptyComponentRegistry = __webpack_require__(162);
 var ReactReconciler = __webpack_require__(27);
 
 var assign = __webpack_require__(3);
@@ -35064,7 +35021,7 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35118,7 +35075,7 @@ var ReactEmptyComponentRegistry = {
 module.exports = ReactEmptyComponentRegistry;
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35202,7 +35159,7 @@ module.exports = ReactErrorUtils;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35332,7 +35289,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35383,7 +35340,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 167 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35421,7 +35378,7 @@ var ReactMultiChildUpdateTypes = keyMirror({
 module.exports = ReactMultiChildUpdateTypes;
 
 /***/ }),
-/* 168 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35522,7 +35479,7 @@ module.exports = ReactNativeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 169 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35647,7 +35604,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 170 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35790,7 +35747,7 @@ function createArrayOfTypeChecker(typeChecker) {
       return new Error('Invalid ' + locationName + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
     }
     for (var i = 0; i < propValue.length; i++) {
-      var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']');
+      var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
       if (error instanceof Error) {
         return error;
       }
@@ -35856,7 +35813,7 @@ function createObjectOfTypeChecker(typeChecker) {
     }
     for (var key in propValue) {
       if (propValue.hasOwnProperty(key)) {
-        var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key);
+        var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
         if (error instanceof Error) {
           return error;
         }
@@ -35877,7 +35834,7 @@ function createUnionTypeChecker(arrayOfTypeCheckers) {
   function validate(props, propName, componentName, location, propFullName) {
     for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
       var checker = arrayOfTypeCheckers[i];
-      if (checker(props, propName, componentName, location, propFullName) == null) {
+      if (checker(props, propName, componentName, location, propFullName, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED') == null) {
         return null;
       }
     }
@@ -35912,7 +35869,7 @@ function createShapeTypeChecker(shapeTypes) {
       if (!checker) {
         continue;
       }
-      var error = checker(propValue, key, componentName, location, propFullName + '.' + key);
+      var error = checker(propValue, key, componentName, location, propFullName + '.' + key, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
       if (error) {
         return error;
       }
@@ -36009,7 +35966,7 @@ function getClassName(propValue) {
 module.exports = ReactPropTypes;
 
 /***/ }),
-/* 171 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36044,7 +36001,7 @@ var ReactRootIndex = {
 module.exports = ReactRootIndex;
 
 /***/ }),
-/* 172 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36077,7 +36034,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 173 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36143,7 +36100,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 174 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36198,7 +36155,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 175 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36233,7 +36190,7 @@ var forEachAccumulated = function (arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 176 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36272,7 +36229,7 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ }),
-/* 177 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36318,7 +36275,7 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ }),
-/* 178 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -36358,7 +36315,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 179 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -36366,15 +36323,15 @@ module.exports = onlyChild;
  * Module dependencies.
  */
 
-var eio = __webpack_require__(228);
-var Socket = __webpack_require__(181);
-var Emitter = __webpack_require__(182);
+var eio = __webpack_require__(227);
+var Socket = __webpack_require__(180);
+var Emitter = __webpack_require__(181);
 var parser = __webpack_require__(98);
-var on = __webpack_require__(180);
+var on = __webpack_require__(179);
 var bind = __webpack_require__(107);
 var debug = __webpack_require__(60)('socket.io-client:manager');
 var indexOf = __webpack_require__(122);
-var Backoff = __webpack_require__(211);
+var Backoff = __webpack_require__(210);
 
 /**
  * IE6+ hasOwnProperty
@@ -36924,7 +36881,7 @@ Manager.prototype.onreconnect = function () {
 
 
 /***/ }),
-/* 180 */
+/* 179 */
 /***/ (function(module, exports) {
 
 
@@ -36954,7 +36911,7 @@ function on (obj, ev, fn) {
 
 
 /***/ }),
-/* 181 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -36963,9 +36920,9 @@ function on (obj, ev, fn) {
  */
 
 var parser = __webpack_require__(98);
-var Emitter = __webpack_require__(182);
-var toArray = __webpack_require__(390);
-var on = __webpack_require__(180);
+var Emitter = __webpack_require__(181);
+var toArray = __webpack_require__(391);
+var on = __webpack_require__(179);
 var bind = __webpack_require__(107);
 var debug = __webpack_require__(60)('socket.io-client:socket');
 var hasBin = __webpack_require__(118);
@@ -37379,7 +37336,7 @@ Socket.prototype.compress = function (compress) {
 
 
 /***/ }),
-/* 182 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -37548,7 +37505,7 @@ Emitter.prototype.hasListeners = function(event){
 
 
 /***/ }),
-/* 183 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -37568,14 +37525,14 @@ function isBuf(obj) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 184 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.10.0
 var slice = [].slice;
 
 (function(root, factory) {
-  if (('function' === "function") && (__webpack_require__(185) != null)) {
+  if (('function' === "function") && (__webpack_require__(184) != null)) {
     return !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
@@ -38013,7 +37970,7 @@ var slice = [].slice;
 
 
 /***/ }),
-/* 185 */
+/* 184 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -38022,7 +37979,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 186 */
+/* 185 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -38050,7 +38007,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 187 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38125,7 +38082,7 @@ module.exports = yeast;
 
 
 /***/ }),
-/* 188 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38141,11 +38098,11 @@ var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _MenuBar = __webpack_require__(207);
+var _MenuBar = __webpack_require__(206);
 
 var _MenuBar2 = _interopRequireDefault(_MenuBar);
 
-var _MenuBarIcon = __webpack_require__(208);
+var _MenuBarIcon = __webpack_require__(207);
 
 var _MenuBarIcon2 = _interopRequireDefault(_MenuBarIcon);
 
@@ -38249,8 +38206,8 @@ var App = function (_Component) {
             {
               component: 'div',
               transitionName: "on",
-              transitionEnterTimeout: 0,
-              transitionLeaveTimeout: 0 },
+              transitionEnterTimeout: 1000,
+              transitionLeaveTimeout: 1000 },
             this.props.children ? _react2.default.cloneElement(this.props.children, {
               key: this.props.location.pathname
             }) : null
@@ -38266,7 +38223,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 189 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38360,7 +38317,7 @@ var About = function (_React$Component) {
 exports.default = About;
 
 /***/ }),
-/* 190 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38409,7 +38366,7 @@ var Amazon = function (_React$Component) {
         null,
         _react2.default.createElement(_PageLayout2.default, {
           title: 'Amazon',
-          description: 'Amazon must feel proud.'
+          description: 'Opinions on Amazon Go?'
         })
       );
     }
@@ -38421,7 +38378,7 @@ var Amazon = function (_React$Component) {
 exports.default = Amazon;
 
 /***/ }),
-/* 191 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38486,7 +38443,7 @@ var Apple = function (_React$Component) {
 exports.default = Apple;
 
 /***/ }),
-/* 192 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38551,7 +38508,7 @@ var Facebook = function (_React$Component) {
 exports.default = Facebook;
 
 /***/ }),
-/* 193 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38616,7 +38573,7 @@ var Google = function (_React$Component) {
 exports.default = Google;
 
 /***/ }),
-/* 194 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38634,7 +38591,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(5);
 
-var _HomePageLayout = __webpack_require__(210);
+var _HomePageLayout = __webpack_require__(209);
 
 var _HomePageLayout2 = _interopRequireDefault(_HomePageLayout);
 
@@ -38685,7 +38642,7 @@ var Google = function (_React$Component) {
 exports.default = Google;
 
 /***/ }),
-/* 195 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38758,7 +38715,7 @@ var Home = function (_React$Component) {
 exports.default = Home;
 
 /***/ }),
-/* 196 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38811,7 +38768,7 @@ var Lyft = function (_React$Component) {
         null,
         _react2.default.createElement(_PageLayout2.default, {
           title: 'Lyft',
-          description: 'Lyft drivers, am I right?'
+          description: 'Opinions on Lyft?'
         })
       );
     }
@@ -38823,7 +38780,7 @@ var Lyft = function (_React$Component) {
 exports.default = Lyft;
 
 /***/ }),
-/* 197 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38876,7 +38833,7 @@ var Microsoft = function (_React$Component) {
         null,
         _react2.default.createElement(_PageLayout2.default, {
           title: 'Microsoft',
-          description: 'What does Microsoft even do anymore?'
+          description: 'Opinions on Microsoft?'
         })
       );
     }
@@ -38888,7 +38845,7 @@ var Microsoft = function (_React$Component) {
 exports.default = Microsoft;
 
 /***/ }),
-/* 198 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -38958,7 +38915,7 @@ var TechStack = function (_React$Component) {
 exports.default = TechStack;
 
 /***/ }),
-/* 199 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39023,7 +38980,7 @@ var Twitter = function (_React$Component) {
 exports.default = Twitter;
 
 /***/ }),
-/* 200 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39076,7 +39033,7 @@ var Uber = function (_React$Component) {
         null,
         _react2.default.createElement(_PageLayout2.default, {
           title: 'Uber',
-          description: 'This is how people feel about modern-day taxi services.'
+          description: 'What are feeling about Uber?'
         })
       );
     }
@@ -39088,7 +39045,7 @@ var Uber = function (_React$Component) {
 exports.default = Uber;
 
 /***/ }),
-/* 201 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39158,7 +39115,7 @@ module.exports = AnimatedLocations;
 
 
 /***/ }),
-/* 202 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39184,7 +39141,7 @@ var _CSSTransitionGroupChild = __webpack_require__(318);
 
 var _CSSTransitionGroupChild2 = _interopRequireDefault(_CSSTransitionGroupChild);
 
-var _PropTypes = __webpack_require__(149);
+var _PropTypes = __webpack_require__(148);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39258,16 +39215,16 @@ exports.default = CSSTransitionGroup;
 module.exports = exports['default'];
 
 /***/ }),
-/* 203 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(221);
+var content = __webpack_require__(220);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
-var update = __webpack_require__(389)(content, {});
+var update = __webpack_require__(390)(content, {});
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -39284,7 +39241,7 @@ if(false) {
 }
 
 /***/ }),
-/* 204 */
+/* 203 */
 /***/ (function(module, exports) {
 
 module.exports = after
@@ -39318,7 +39275,7 @@ function noop() {}
 
 
 /***/ }),
-/* 205 */
+/* 204 */
 /***/ (function(module, exports) {
 
 /**
@@ -39353,13 +39310,13 @@ module.exports = function(arraybuffer, start, end) {
 
 
 /***/ }),
-/* 206 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _App = __webpack_require__(188);
+var _App = __webpack_require__(187);
 
 var _App2 = _interopRequireDefault(_App);
 
@@ -39373,65 +39330,65 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactRouter = __webpack_require__(5);
 
-var _reactRouterComponentTransition = __webpack_require__(201);
+var _reactRouterComponentTransition = __webpack_require__(200);
 
 var _reactRouterComponentTransition2 = _interopRequireDefault(_reactRouterComponentTransition);
 
 var _reactRouterComponent = __webpack_require__(99);
 
-var _CSSTransitionGroup = __webpack_require__(202);
+var _CSSTransitionGroup = __webpack_require__(201);
 
 var _CSSTransitionGroup2 = _interopRequireDefault(_CSSTransitionGroup);
 
-var _main = __webpack_require__(203);
+var _main = __webpack_require__(202);
 
 var _main2 = _interopRequireDefault(_main);
 
-var _Intro = __webpack_require__(195);
+var _Intro = __webpack_require__(194);
 
 var _Intro2 = _interopRequireDefault(_Intro);
 
-var _Home = __webpack_require__(194);
+var _Home = __webpack_require__(193);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _Amazon = __webpack_require__(190);
+var _Amazon = __webpack_require__(189);
 
 var _Amazon2 = _interopRequireDefault(_Amazon);
 
-var _Apple = __webpack_require__(191);
+var _Apple = __webpack_require__(190);
 
 var _Apple2 = _interopRequireDefault(_Apple);
 
-var _Facebook = __webpack_require__(192);
+var _Facebook = __webpack_require__(191);
 
 var _Facebook2 = _interopRequireDefault(_Facebook);
 
-var _Google = __webpack_require__(193);
+var _Google = __webpack_require__(192);
 
 var _Google2 = _interopRequireDefault(_Google);
 
-var _Lyft = __webpack_require__(196);
+var _Lyft = __webpack_require__(195);
 
 var _Lyft2 = _interopRequireDefault(_Lyft);
 
-var _Microsoft = __webpack_require__(197);
+var _Microsoft = __webpack_require__(196);
 
 var _Microsoft2 = _interopRequireDefault(_Microsoft);
 
-var _Twitter = __webpack_require__(199);
+var _Twitter = __webpack_require__(198);
 
 var _Twitter2 = _interopRequireDefault(_Twitter);
 
-var _Uber = __webpack_require__(200);
+var _Uber = __webpack_require__(199);
 
 var _Uber2 = _interopRequireDefault(_Uber);
 
-var _About = __webpack_require__(189);
+var _About = __webpack_require__(188);
 
 var _About2 = _interopRequireDefault(_About);
 
-var _TechStack = __webpack_require__(198);
+var _TechStack = __webpack_require__(197);
 
 var _TechStack2 = _interopRequireDefault(_TechStack);
 
@@ -39462,7 +39419,7 @@ function _interopRequireDefault(obj) {
 _reactDom2.default.render(_react2.default.createElement(_reactRouter.Router, { history: _reactRouter.hashHistory }, _react2.default.createElement(_reactRouter.Route, { path: '/', component: _App2.default }, _react2.default.createElement(_reactRouter.IndexRoute, { component: _Intro2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'home', component: _Home2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'apple', component: _Apple2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'uber', component: _Uber2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'google', component: _Google2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'amazon', component: _Amazon2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'facebook', component: _Facebook2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'lyft', component: _Lyft2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'twitter', component: _Twitter2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'microsoft', component: _Microsoft2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'about', component: _About2.default }), _react2.default.createElement(_reactRouter.Route, { path: 'techstack', component: _TechStack2.default }))), document.getElementById('app')); // ES6
 
 /***/ }),
-/* 207 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39581,7 +39538,7 @@ var MenuBar = function (_React$Component) {
 exports.default = MenuBar;
 
 /***/ }),
-/* 208 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39663,7 +39620,7 @@ var MenuBarIcon = function (_Component) {
 exports.default = MenuBarIcon;
 
 /***/ }),
-/* 209 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -39989,7 +39946,7 @@ var HomeGraphLayout = function (_Component) {
 exports.default = HomeGraphLayout;
 
 /***/ }),
-/* 210 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40011,7 +39968,7 @@ var _PieGraph = __webpack_require__(42);
 
 var _PieGraph2 = _interopRequireDefault(_PieGraph);
 
-var _HomeGraphLayout = __webpack_require__(209);
+var _HomeGraphLayout = __webpack_require__(208);
 
 var _HomeGraphLayout2 = _interopRequireDefault(_HomeGraphLayout);
 
@@ -40113,7 +40070,7 @@ var PageLayout = function (_React$Component) {
 exports.default = PageLayout;
 
 /***/ }),
-/* 211 */
+/* 210 */
 /***/ (function(module, exports) {
 
 
@@ -40204,7 +40161,7 @@ Backoff.prototype.setJitter = function(jitter){
 
 
 /***/ }),
-/* 212 */
+/* 211 */
 /***/ (function(module, exports) {
 
 /*
@@ -40277,7 +40234,7 @@ Backoff.prototype.setJitter = function(jitter){
 
 
 /***/ }),
-/* 213 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -40380,7 +40337,7 @@ module.exports = (function() {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 214 */
+/* 213 */
 /***/ (function(module, exports) {
 
 
@@ -40406,7 +40363,7 @@ module.exports = function chain(){
 
 
 /***/ }),
-/* 215 */
+/* 214 */
 /***/ (function(module, exports) {
 
 
@@ -40576,7 +40533,7 @@ Emitter.prototype.hasListeners = function(event){
 
 
 /***/ }),
-/* 216 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -40594,11 +40551,11 @@ Emitter.prototype.hasListeners = function(event){
 
 var _assign = __webpack_require__(23);
 
-var emptyObject = __webpack_require__(218);
-var _invariant = __webpack_require__(219);
+var emptyObject = __webpack_require__(217);
+var _invariant = __webpack_require__(218);
 
 if (process.env.NODE_ENV !== 'production') {
-  var warning = __webpack_require__(220);
+  var warning = __webpack_require__(219);
 }
 
 var MIXINS_KEY = 'mixins';
@@ -41308,7 +41265,7 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 217 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41352,7 +41309,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 218 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41378,7 +41335,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 219 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41440,7 +41397,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 220 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41456,7 +41413,7 @@ module.exports = invariant;
 
 
 
-var emptyFunction = __webpack_require__(217);
+var emptyFunction = __webpack_require__(216);
 
 /**
  * Similar to invariant but only logs a warning if the condition is not met.
@@ -41513,21 +41470,21 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 221 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(222)();
+exports = module.exports = __webpack_require__(221)();
 // imports
 
 
 // module
-exports.push([module.i, "@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes dropin {\n  from {\n    transform: scale(1.2);\n    h1 {\n      opacity: 0.1; } }\n  to {\n    transform: scale(1);\n    h1 {\n      opacity: 1.0; } } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n@keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n@keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n@keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n.Section {\n  background-color: #dbd7d7;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center; }\n  .Section h1 {\n    text-align: center; }\n  .Section p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center; }\n\n.menu-bar-icon {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  border: none;\n  color: #f7f5f5;\n  background: transparent;\n  outline: none;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .menu-bar-icon {\n      z-index: 99999; } }\n\n.clicked {\n  left: 50px; }\n\n.unclicked {\n  left: 0vw; }\n\n.menu-bar-icon:hover > div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.1s, ease;\n  -ms-transition: all, 1.1s, ease;\n  -o-transition: all, 1.1s, ease;\n  transition: all, 1.1s, ease;\n  background: #bca293; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease;\n  -ms-transition: all, 1.5s, ease;\n  -o-transition: all, 1.5s, ease;\n  transition: all, 1.5s, ease;\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.clicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  transform: translate3D(50px, 10px, 0) rotate(45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #topBar {\n      -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      transform: translate3D(50px, 10px, 0) rotate(45deg); } }\n\n.clicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  transform: translate3D(50px, -10px, 0) rotate(-45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #bottomBar {\n      -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      transform: translate3D(50px, -10px, 0) rotate(-45deg); } }\n\n.clicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(50px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 0, 0);\n  -webkit-transform: translate3D(50px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(50px, 0, 0);\n  transform: translate3D(50px, 0, 0);\n  opacity: 0; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #middleBar {\n      -ms-transform: translate3D(50px, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 0, 0);\n      -webkit-transform: translate3D(50px, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(50px, 0, 0);\n      transform: translate3D(50px, 0, 0); } }\n\n.unclicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0);\n  opacity: 1; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.2s, ease-in-out;\n  -ms-transition: all, 0.2s, ease-in-out;\n  -o-transition: all, 0.2s, ease-in-out;\n  transition: all, 0.2s, ease-in-out;\n  position: fixed;\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background: transparent;\n  display: flex;\n  flex-flow: column; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar p {\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer;\n    font-weight: 400;\n    color: white; }\n  .menu-bar p:hover {\n    color: #866363; }\n\n.menu-bar-hidden {\n  -ms-transform: translate3D(0, 50px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 50px, 0);\n  -webkit-transform: translate3D(0, 50px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 50px, 0);\n  transform: translate3D(0, 50px, 0);\n  opacity: 0.0; }\n\n.menu-bar-shown {\n  -ms-transform: translate3D(0, 0px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 0px, 0);\n  -webkit-transform: translate3D(0, 0px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 0px, 0);\n  transform: translate3D(0, 0px, 0);\n  opacity: 1.0; }\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center; }\n\n.menu-bar-item {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.2s, ease-in-out;\n  -ms-transition: transform, 0.2s, ease-in-out;\n  -o-transition: transform, 0.2s, ease-in-out;\n  transition: transform, 0.2s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar-item > p {\n    -webkit-transition: transform 0.5s ease-in-out;\n    -moz-transition: transform, 0.2s, ease-in-out;\n    -ms-transition: transform, 0.2s, ease-in-out;\n    -o-transition: transform, 0.2s, ease-in-out;\n    transition: transform, 0.2s, ease-in-out;\n    margin: 0;\n    padding-left: 8px; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw; }\n\n.main {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow: hidden;\n  /*-webkit-overflow-scrolling: touch;*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .main {\n      z-index: 9999; } }\n\n.menu-bar-open {\n  -ms-transform: translate3D(100px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(100px, 0, 0);\n  -webkit-transform: translate3D(100px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(100px, 0, 0);\n  transform: translate3D(100px, 0, 0); }\n\n.menu-bar-close {\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0); }\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: 8vh;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1; }\n  @media all and (max-width: 1200px) {\n    .NavBar {\n      display: none; } }\n  .NavBar .nav-bar-item {\n    text-align: center; }\n  .NavBar .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.35s, ease-in-out;\n    -ms-transition: all, 0.35s, ease-in-out;\n    -o-transition: all, 0.35s, ease-in-out;\n    transition: all, 0.35s, ease-in-out;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .smooth-scroll p {\n      -webkit-touch-callout: none;\n      /* iOS Safari */\n      -webkit-user-select: none;\n      /* Safari */\n      -khtml-user-select: none;\n      /* Konqueror HTML */\n      -moz-user-select: none;\n      /* Firefox */\n      -ms-user-select: none;\n      /* Internet Explorer/Edge */\n      user-select: none;\n      /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n      -webkit-tap-highlight-color: transparent;\n      cursor: pointer;\n      font-weight: 400;\n      color: #ac6e6e;\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.35s, ease-in-out;\n      -ms-transition: all, 0.35s, ease-in-out;\n      -o-transition: all, 0.35s, ease-in-out;\n      transition: all, 0.35s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .smooth-scroll {\n        z-index: -1; } }\n  .NavBar .smooth-scroll:hover {\n    background: #ffbb98; }\n  .NavBar .smooth-scroll:hover p {\n    color: #ffffff; }\n  .NavBar .navButton {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: none;\n    margin: 20px 20px;\n    width: 12em;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: flex;\n    justify-content: center;\n    outline: none;\n    background: transparent;\n    border: 2px solid #e09090; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .navButton {\n        margin: 20px 20px; } }\n    .NavBar .navButton p {\n      color: #9a9aa2;\n      padding: 1em;\n      font-weight: 200;\n      text-align: center; }\n      @media all and (max-width: 1200px) {\n        .NavBar .navButton p {\n          position: absolute;\n          color: #9a9aa2;\n          margin: 0;\n          margin-left: 3em;\n          left: 0;\n          padding: 0; } }\n  .NavBar .navButton:hover {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: 2px solid #e09090;\n    border-radius: 10%;\n    background: #e09090;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .navButton:hover > p {\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.down-arrow-container {\n  position: absolute;\n  bottom: 10vh; }\n  .down-arrow-container .down-arrow {\n    width: 5vw;\n    text-align: center; }\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual leave transition*/\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.page {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease;\n  transform: translateX(0vh);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .page .home-graph-layout .average-emotion {\n    text-align: center; }\n    .page .home-graph-layout .average-emotion p {\n      font-size: 2em; }\n  .page .home-header {\n    width: 50vw; }\n    .page .home-header h1 {\n      text-align: left; }\n    .page .home-header h4 {\n      text-align: left; }\n    .page .home-header p {\n      text-align: left; }\n  .page .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition (all, 0.2s, ease-in-out);\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer; }\n  .page .update-data:hover {\n    background: #957a77; }\n  .page .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .page .header .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in; }\n      .page .header .header-box .title {\n        width: 100vw; }\n        .page .header .header-box .title h1 {\n          @css-user-select (none);\n          cursor: default; }\n      .page .header .header-box .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column; }\n        .page .header .header-box .subtitle p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select (none); }\n  .page p:hover {\n    color: black;\n    cursor: pointer; }\n  .page .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/ }\n    @media all and (max-width: 800px) {\n      .page .page-bg-image {\n        height: 110vh;\n        width: auto; } }\n  .page .page-bg-image-container {\n    overflow: hidden; }\n\n.graph {\n  display: flex;\n  justify-content: center;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.d3container {\n  border-radius: 50%; }\n\n.textGroup {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.9s, ease-in-out;\n  -ms-transition: transform, 0.9s, ease-in-out;\n  -o-transition: transform, 0.9s, ease-in-out;\n  transition: transform, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.companyText {\n  fill: white;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer;\n  font-size: 2em; }\n\n.companyText:hover {\n  font-size: 2.1em; }\n\n.firstWave:hover {\n  stroke: red; }\n\n.secondWave:hover {\n  stroke: blue; }\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n  /*-moz-transition: transform 0.6s ease-out;*/\n  /*-o-transition: transform 0.6s ease-out;*/\n  /*transition: transform 0.6s ease-out;*/\n  -webkit-backface-visibility: hidden; }\n\npath:hover {\n  stroke: red; }\n\n.graph rect {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearReact {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6; }\n\npath {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearRect:hover {\n  fill: #c7bca5; }\n\n.kernel {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.kernel:hover + .core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  /*stroke: #1c1c1c;*/\n  stroke-width: 0.0px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.shell {\n  pointer-events: none; }\n\n.about .about-image-container {\n  position: absolute;\n  top: 25vh;\n  left: 0;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n  .about .about-image-container .about-image {\n    width: 75vw;\n    background: red;\n    filter: brightness(100000%);\n    padding: 20px;\n    background-color: rgba(255, 255, 255, 0.15); }\n\n.about .about-title {\n  position: absolute;\n  top: 0; }\n\n.text-layout .hover-text-container {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease-in-out;\n  -ms-transition: all, 1.5s, ease-in-out;\n  -o-transition: all, 1.5s, ease-in-out;\n  transition: all, 1.5s, ease-in-out;\n  font-size: 1.5em;\n  white-space: nowrap; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .hover-text-container {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .average-emotion {\n  background: white;\n  margin: 0;\n  padding: 0;\n  width: 20%;\n  color: #73667c;\n  border-radius: 5px;\n  font-weight: 900; }\n\n.text-layout .hover-text {\n  color: #db8686; }\n\n.text-layout .on {\n  /*@include css-transform-translate-x(0vw);*/\n  opacity: 1.0;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 4.5s, ease-in-out;\n  -ms-transition: all, 4.5s, ease-in-out;\n  -o-transition: all, 4.5s, ease-in-out;\n  transition: all, 4.5s, ease-in-out;\n  background: white;\n  width: 25%;\n  border-radius: 4px;\n  padding: 10px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .on {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .off {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 4.5s, ease-in-out;\n  -ms-transition: all, 4.5s, ease-in-out;\n  -o-transition: all, 4.5s, ease-in-out;\n  transition: all, 4.5s, ease-in-out;\n  opacity: 0.0;\n  width: 100%;\n  padding: 10px;\n  /*@include css-transform-translate-x(-50vw);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .text-layout .off {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.text-layout .home-graph-layout .companyText {\n  font-size: 1em !important; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  overflow: hidden; }\n  body a {\n    font-family: \"Questrial\", Helvetica, sans-serif;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent; }\n  body a:hover {\n    color: #ffecec; }\n  body h1 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none);\n    font-size: 1.5em; }\n  body h2 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h3 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h4 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body p {\n    font-family: \"Questrial\", Helvetica, sans-serif;\n    color: #dec5c5;\n    font-weight: 500;\n    @css-user-select (none); }\n  body .wrapper {\n    overflow: hidden; }\n  body .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: transparent; }\n  body .home-graph-options {\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Animation_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Section.scss","/Users/josecanizares/Desktop/Informant/app/scss/main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBarIcon.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_Transform_Mixins.scss","/Users/josecanizares/Desktop/Informant/app/scss/helpers/_User_Events.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_MenuBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Main.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_NavBar.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_DownArrow.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Page.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_Graphs.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_About.scss","/Users/josecanizares/Desktop/Informant/app/scss/components/_TextLayout.scss"],"names":[],"mappings":"AASA;EACI;IACA,WAAU,EAAA;EAEV;IACA,WAAU,EAAA,EAAA;;AAId,kBAAkB;AAClB;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAGrB,qCAAqC;AACrC;EACI;IACE,WAAU,EAAA;EAEZ;IACE,WAAU,EAAA,EAAA;;AAIhB,uBAAuB;AACvB;EACI;IAAO,WAAU,EAAK;EACtB;IAAO,WAAU,EAAK,EAAA;;AAG1B,kBAAkB;AAClB;EACI;IAAO,WAAU,EAAA;EACjB;IAAO,WAAU,EAAA,EAAA;;AAoBrB;EACI;IACE,sBAAqB;IACrB;MACE,aAAY,EAAA,EAAA;EAGhB;IACE,oBAAmB;IACnB;MACE,aAAY,EAAA,EAAA,EAAA;;AAKpB,kBAAkB;AAClB;EACI;IACE,eAAc,EAAA;EAEhB;IACE,iBAAgB,EAAA,EAAA;;AAItB,qCAAqC;AACrC;EACI;IACE,eAAc,EAAA;EAEhB;IACE,iBAAgB,EAAA,EAAA;;AAItB,uBAAuB;AACvB;EACI;IACE,eAAc,EACf;EACD;IACE,iBAAgB,EACjB,EAAA;;AAGL,kBAAkB;AAClB;EACI;IACE,eAAc,EAAA;EAEhB;IACE,iBAAgB,EAAA,EAAA;;AAgBtB;EACI;IACA,iBAAgB,EAAA;EAEhB;IACA,iBAAgB,EAAA,EAAA;;AAIpB,kBAAkB;AAClB;EACI;IAAO,iBAAgB,EAAA;EACvB;IAAO,iBAAgB,EAAA,EAAA;;AAG3B,qCAAqC;AACrC;EACI;IACE,iBAAgB,EAAA;EAElB;IACE,iBAAgB,EAAA,EAAA;;AAItB,uBAAuB;AACvB;EACI;IAAO,iBAAgB,EAAK;EAC5B;IAAO,iBAAgB,EAAK,EAAA;;AAGhC,kBAAkB;AAClB;EACI;IAAO,iBAAgB,EAAA;EACvB;IAAO,iBAAgB,EAAA,EAAA;;AAgB3B;EACI;IACE,qCAAoC,EAAA;EAEtC;IACE,gCAA+B,EAAA,EAAA;;AAIrC,kBAAkB;AAClB;EACI;IAAO,qCAAoC,EAAA;EAC3C;IAAO,gCAA+B,EAAA,EAAA;;AAG1C,qCAAqC;AACrC;EACI;IACE,qCAAoC,EAAA;EAEtC;IACE,gCAA+B,EAAA,EAAA;;AAIrC,uBAAuB;AACvB;EACI;IAAO,qCAAoC,EAAI;EAC/C;IAAO,gCAA+B,EAAI,EAAA;;AAG9C,kBAAkB;AAClB;EACI;IAAO,qCAAoC,EAAA;EAC3C;IAAO,gCAA+B,EAAA,EAAA;;AAmB1C;EACI;IACE,gCAA+B,EAAA;EAEjC;IACE,qCAAoC,EAAA,EAAA;;AAI1C,kBAAkB;AAClB;EACI;IAAO,gCAA+B,EAAA;EACtC;IAAO,qCAAoC,EAAA,EAAA;;AAG/C,qCAAqC;AACrC;EACI;IACE,gCAA+B,EAAA;EAEjC;IACE,qCAAoC,EAAA,EAAA;;AAI1C,uBAAuB;AACvB;EACI;IAAO,gCAA+B,EAAI;EAC1C;IAAO,qCAAoC,EAAI,EAAA;;AAGnD,kBAAkB;AAClB;EACI;IAAO,gCAA+B,EAAA;EACtC;IAAO,qCAAoC,EAAA,EAAA;;AC3Q/C;EACE,0BCIqB;EDHrB,UAAS;EACT,YAAW;EACX,cAAa;EACb,cAAa;EACb,8BAA6B;EAC7B,oBAAmB,EAapB;EApBD;IAUI,mBAAkB,EACnB;EAXH;IAcI,yDAAwD;IACxD,eAAc;IACd,iBAAgB;IAChB,YAAW;IACX,mBAAkB,EACnB;;AERH;ECOE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAUtB,aAAY;EACZ,eAd2B;EAe3B,wBAAuB;EACvB,cAAa;EEfb,4BFgB6B;EEhBF,gBAAgB;EAC3C,0BFe6B;EEfJ,YAAY;EACpC,yBFc4B;EEdJ,oBAAoB;EAC1C,uBFa0B;EEbJ,aAAa;EAClC,sBFYyB;EEZJ,4BAA4B;EAC7C,kBFWqB;EEXJ;gEACqC;EAC9D,yCAA0C;EFU1C,gBAAe;EACf,kBAAiB;EACjB,gBAAe;EACf,OAAM;EACN,eAAc;EACd,aAAY,EAKb;ECJC;IDbF;MCgBE,oDAAsD,EDCvD,EAAA;ECEC;IDnBF;MCsBE,oDAAsD,EDLvD,EAAA;ECQD;IDzBA;MC4BA,oDAAsD,EDXrD,EAAA;ECcD;ID/BA;MCmCA,oDAAsD,EDlBrD,EAAA;ECqBD;IDtCA;MC0CA,oDAAsD,EDzBrD,EAAA;EC4BD;ID7CA;MCiDA,oDAAsD,EDhCrD,EAAA;ECmCD;IDpDA;MCuDA,oDAAsD,EDtCrD,EAAA;EAHC;IAdF;MAeI,eAAc,EAEjB,EAAA;;AAED;EACA,WA1BuB,EA2BtB;;AAED;EACA,UAAS,EACR;;AAED;ECpBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAqCtB,oBAAmB,EACpB;ECjBC;IDcF;MCXE,oDAAsD,EDcvD,EAAA;ECXC;IDQF;MCLE,oDAAsD,EDQvD,EAAA;ECLD;IDEA;MCCA,oDAAsD,EDErD,EAAA;ECCD;IDJA;MCQA,oDAAsD,EDLrD,EAAA;ECQD;IDXA;MCeA,oDAAsD,EDZrD,EAAA;ECeD;IDlBA;MCsBA,oDAAsD,EDnBrD,EAAA;ECsBD;IDzBA;MC4BA,oDAAsD,EDzBrD,EAAA;;AAED;ECzBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA0CtB,YAAW;EACX,YAAW;EACX,oBAAmB;EACnB,gBAAe,EAChB;ECzBC;IDmBF;MChBE,oDAAsD,EDsBvD,EAAA;ECnBC;IDaF;MCVE,oDAAsD,EDgBvD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;ECPD;IDCA;MCGA,oDAAsD,EDGrD,EAAA;ECAD;IDNA;MCUA,oDAAsD,EDJrD,EAAA;ECOD;IDbA;MCiBA,oDAAsD,EDXrD,EAAA;ECcD;IDpBA;MCuBA,oDAAsD,EDjBrD,EAAA;;AAED;ECjCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAkDtB,gEAAgE;EAChE,kEAAkE,EACnE;EC/BC;ID2BF;MCxBE,oDAAsD,ED4BvD,EAAA;ECzBC;IDqBF;MClBE,oDAAsD,EDsBvD,EAAA;ECnBD;IDeA;MCZA,oDAAsD,EDgBrD,EAAA;ECbD;IDSA;MCLA,oDAAsD,EDSrD,EAAA;ECND;IDEA;MCEA,oDAAsD,EDErD,EAAA;ECCD;IDLA;MCSA,oDAAsD,EDLrD,EAAA;ECQD;IDZA;MCeA,oDAAsD,EDXrD,EAAA;;AAED;ECvCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAwDtB,gEAAgE;EAChE,kEAAkE,EAEnE;ECtCC;IDiCF;MC9BE,oDAAsD,EDmCvD,EAAA;EChCC;ID2BF;MCxBE,oDAAsD,ED6BvD,EAAA;EC1BD;IDqBA;MClBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDeA;MCXA,oDAAsD,EDgBrD,EAAA;ECbD;IDQA;MCJA,oDAAsD,EDSrD,EAAA;ECND;IDCA;MCGA,oDAAsD,EDErD,EAAA;ECCD;IDNA;MCSA,oDAAsD,EDJrD,EAAA;;AAED;EC9CE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA+DtB,8CAA8C;EAC9C,qCAAqC,EACtC;EC5CC;IDwCF;MCrCE,oDAAsD,EDyCvD,EAAA;ECtCC;IDkCF;MC/BE,oDAAsD,EDmCvD,EAAA;EChCD;ID4BA;MCzBA,oDAAsD,ED6BrD,EAAA;EC1BD;IDsBA;MClBA,oDAAsD,EDsBrD,EAAA;ECnBD;IDeA;MCXA,oDAAsD,EDerD,EAAA;ECZD;IDQA;MCJA,oDAAsD,EDQrD,EAAA;ECLD;IDCA;MCEA,oDAAsD,EDErD,EAAA;;AAED;ECpDE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuHtB,wDAAgD;EAAG,UAAU;EAC7D,yDAAiD;EAAG,YAAY;EAChE,4DAAoD;EAAG,YAAY;EACnE,uDAA+C;EAC/C,oDAA4C,EDlD7C;ECpDC;ID8CF;MC3CE,oDAAsD,EDiDvD,EAAA;EC9CC;IDwCF;MCrCE,oDAAsD,ED2CvD,EAAA;ECxCD;IDkCA;MC/BA,oDAAsD,EDqCrD,EAAA;EClCD;ID4BA;MCxBA,oDAAsD,ED8BrD,EAAA;EC3BD;IDqBA;MCjBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDcA;MCVA,oDAAsD,EDgBrD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;EAHC;IAHF;MCoDE,wDAAgD;MAAG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B;EAC3B,oBAAmB,EACpB;;AAGD;EFhCE,+CAA0C;EAC1C,8CEjB6B;EFkB7B,6CElB6B;EFmB7B,4CEnB6B;EFoB7B,yCEpB6B,EAwD9B;EFlCC;IE0BF;MFvBE,oDAAsD,EE+BvD,EAAA;EF5BC;IEoBF;MFjBE,oDAAsD,EEyBvD,EAAA;EFtBD;IEcA;MFXA,oDAAsD,EEmBrD,EAAA;EFhBD;IEQA;MFJA,oDAAsD,EEYrD,EAAA;EFTD;IECA;MFGA,oDAAsD,EEKrD,EAAA;EFFD;IENA;MFUA,oDAAsD,EEFrD,EAAA;EFKD;IEbA;MFgBA,oDAAsD,EERrD,EAAA;EARD;IFhCE,+CAA0C;IAC1C,8CEjB6B;IFkB7B,6CElB6B;IFmB7B,4CEnB6B;IFoB7B,yCEpB6B;IAqD3B,UAAS;IACT,kBAAiB,EAClB;IFjCD;ME0BF;QFvBE,oDAAsD,EE8BrD,EAAA;IF3BD;MEoBF;QFjBE,oDAAsD,EEwBrD,EAAA;IFrBH;MEcA;QFXA,oDAAsD,EEkBnD,EAAA;IFfH;MEQA;QFJA,oDAAsD,EEWnD,EAAA;IFRH;MECA;QFGA,oDAAsD,EEInD,EAAA;IFDH;MENA;QFUA,oDAAsD,EEHnD,EAAA;IFMH;MEbA;QFgBA,oDAAsD,EETnD,EAAA;;AChDH;EACE,mCAAkC;EAClC,mBAAkB;EAClB,OAAM;EACN,uBAAsB;EACtB,QAAO;EACP,aAAY,EAEb;;AAED;EHDE,yCAA0C;EAC1C,kEGd+C;EHe/C,iEGf+C;EHgB/C,gEGhB+C;EHiB/C,6DGjB+C;EAiB/C,oBAAoB;EACpB,gBAAgB;EAChB,iBAAe;EACf,sCAAsC,EAQvC;EHTC;IGLF;MHQE,oDAAsD,EGMvD,EAAA;EHHC;IGXF;MHcE,oDAAsD,EGAvD,EAAA;EHGD;IGjBA;MHoBA,oDAAsD,EGNrD,EAAA;EHSD;IGvBA;MH2BA,oDAAsD,EGbrD,EAAA;EHgBD;IG9BA;MHkCA,oDAAsD,EGpBrD,EAAA;EHuBD;IGrCA;MHyCA,oDAAsD,EG3BrD,EAAA;EH8BD;IG5CA;MH+CA,oDAAsD,EGjCrD,EAAA;EALC;IATF;MAUI,cAAa,EAIhB,EAAA;;AAED;EHqDE,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AsD,EImDnD,EAAA;IJhDH;MI1DA;QJ6DA,oDAAsD,EI6CnD,EAAA;IA1GH;MJaE,yCAA0C;MAC1C,wCI0FkD;MJzFlD,uCIyFkD;MJxFlD,sCIwFkD;MJvFlD,mCIuFkD,EAC/C;MJtFH;QInBF;UJsBE,oDAAsD,EImFnD,EAAA;MJhFH;QIzBF;UJ4BE,oDAAsD,EI6EnD,EAAA;MJ1EL;QI/BA;UJkCA,oDAAsD,EIuEjD,EAAA;MJpEL;QIrCA;UJyCA,oDAAsD,EIgEjD,EAAA;MJ7DL;QI5CA;UJgDA,oDAAsD,EIyDjD,EAAA;MJtDL;QInDA;UJuDA,oDAAsD,EIkDjD,EAAA;MJ/CL;QI1DA;UJ6DA,oDAAsD,EI4CjD,EAAA;;AC9GL;EACE,mBAAkB;EAClB,aAAY,EAMb;EARD;IAKI,WAAU;IACV,mBAAkB,EACnB;;ACDH,uDAAuD;AACvD;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,+BAA+B;ENQ/B,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EASvB;ENWC;IMjBF;MNoBE,oDAAsD,EMdvD,EAAA;ENiBC;IMvBF;MN0BE,oDAAsD,EMpBvD,EAAA;ENuBD;IM7BA;MNgCA,oDAAsD,EM1BrD,EAAA;EN6BD;IMnCA;MNuCA,oDAAsD,EMjCrD,EAAA;ENoCD;IM1CA;MN8CA,oDAAsD,EMxCrD,EAAA;EN2CD;IMjDA;MNqDA,oDAAsD,EM/CrD,EAAA;ENkDD;IMxDA;MN2DA,oDAAsD,EMrDrD,EAAA;;AAED,uCAAuC;AACvC;EACE,2BAA0B;EAC1B,qBAAqB;ENArB,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiBvB;ENGC;IMRF;MNWE,oDAAsD,EMNvD,EAAA;ENSC;IMdF;MNiBE,oDAAsD,EMZvD,EAAA;ENeD;IMpBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN4CA,oDAAsD,EMvCrD,EAAA;EN0CD;IM/CA;MNkDA,oDAAsD,EM7CrD,EAAA;;AACD,sDAAsD;AACtD;EACE,2BAA0B;EAC1B,qBAAqB;EACrB,gCAAgC;ENRhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAwBvB;ENJC;IMDF;MNIE,oDAAsD,EMCvD,EAAA;ENEC;IMPF;MNUE,oDAAsD,EMLvD,EAAA;ENQD;IMbA;MNgBA,oDAAsD,EMXrD,EAAA;ENcD;IMnBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN2CA,oDAAsD,EMtCrD,EAAA;;AAED,uCAAuC;AAEvC;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,gCAAgC;ENjBhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiCvB;ENbC;IMQF;MNLE,oDAAsD,EMUvD,EAAA;ENPC;IMEF;MNCE,oDAAsD,EMIvD,EAAA;ENDD;IMJA;MNOA,oDAAsD,EMFrD,EAAA;ENKD;IMVA;MNcA,oDAAsD,EMTrD,EAAA;ENYD;IMjBA;MNqBA,oDAAsD,EMhBrD,EAAA;ENmBD;IMxBA;MN4BA,oDAAsD,EMvBrD,EAAA;EN0BD;IM/BA;MNkCA,oDAAsD,EM7BrD,EAAA;;AAED;ENrBE,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB;EAqCtB,2BAA0B;EAE1B,cAAa;EACb,wBAAuB;EACvB,oBAAmB;EACnB,cAAa,EA4Hd;ENlJC;IMeF;MNZE,oDAAsD,EM+IvD,EAAA;EN5IC;IMSF;MNNE,oDAAsD,EMyIvD,EAAA;ENtID;IMGA;MNAA,oDAAsD,EMmIrD,EAAA;ENhID;IMHA;MNOA,oDAAsD,EM4HrD,EAAA;ENzHD;IMVA;MNcA,oDAAsD,EMqHrD,EAAA;ENlHD;IMjBA;MNqBA,oDAAsD,EM8GrD,EAAA;EN3GD;IMxBA;MN2BA,oDAAsD,EMwGrD,EAAA;EAnID;IAWM,mBAAkB,EAKnB;IAhBL;MAaQ,eAAc,EACf;EAdP;IAsBI,YAAW,EAYZ;IAlCH;MAwBM,iBAAgB,EACjB;IAzBL;MA4BM,iBAAgB,EACjB;IA7BL;MAgCM,iBAAgB,EACjB;EAjCL;IA0CI,OAAM;IACN,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,qBAAoB;IACpB,iBAAgB;IAChB,cAAa;IACb,mBAAkB;IAClB,yCAAe;ILxFjB,4BKyF+B;ILzFJ,gBAAgB;IAC3C,0BKwF+B;ILxFN,YAAY;IACpC,yBKuF8B;ILvFN,oBAAoB;IAC1C,uBKsF4B;ILtFN,aAAa;IAClC,sBKqF2B;ILrFN,4BAA4B;IAC7C,kBKoFuB;ILpFN;gEACqC;IAC9D,yCAA0C;IKmFxC,gBAAe,EAChB;EArDH;IAwDI,oBAAmB,EACpB;EAzDH;IA8DI,cAAa;IACb,wBAAuB;IACvB,oBAAmB;IACnB,gBAAe,EAsChB;IAvGH;MAoEM,YAAW;MACX,cAAa;MACb,wBAAuB;MACvB,oBAAmB;MACnB,gBAAe;MACf,6BAA4B,EA6B7B;MAtGL;QA4EQ,aAAY,EAMb;QAlFP;UA+EU,wBAAgB;UAChB,gBAAe,EAChB;MAjFT;QAyFQ,aAAY;QACZ,cAAa;QACb,wBAAuB;QACvB,oBAAmB;QACnB,gBAAe;QACf,uBAAsB,EAOvB;QArGP;UAiGU,mBAAkB;UAClB,6BAA4B;UAC5B,wBAAgB,EACjB;EApGT;IA0GE,aAAY;IACZ,gBAAc,EACb;EA5GH;IAgHI,mCAAkC;IAClC,mBAAkB;IAClB,OAAM;IACN,uBAAsB;IACtB,QAAO;IACP,YAAW;IACX,aAAY;IACZ,sBAAsB;IACtB,oCAAoC,EAMrC;IAJC;MA1HJ;QA2HM,cAAa;QACb,YAAW,EAEd,EAAA;EA9HH;IAiII,iBAAgB,EACjB;;AC/JH;EACI,cAAa;EACb,wBAAuB;EPMzB,yCAA0C;EAC1C,wCONgD;EPOhD,uCOPgD;EPQhD,sCORgD;EPShD,mCOTgD,EACjD;EPUC;IOdF;MPiBE,oDAAsD,EObvD,EAAA;EPgBC;IOpBF;MPuBE,oDAAsD,EOnBvD,EAAA;EPsBD;IO1BA;MP6BA,oDAAsD,EOzBrD,EAAA;EP4BD;IOhCA;MPoCA,oDAAsD,EOhCrD,EAAA;EPmCD;IOvCA;MP2CA,oDAAsD,EOvCrD,EAAA;EP0CD;IO9CA;MPkDA,oDAAsD,EO9CrD,EAAA;EPiDD;IOrDA;MPwDA,oDAAsD,EOpDrD,EAAA;;AAGD;EACE,mBAAkB,EACnB;;AAED;EPHE,+CAA0C;EAC1C,8COGoD;EPFpD,6COEoD;EPDpD,4COCoD;EPApD,yCOAoD,EACrD;EPCC;IOHF;MPME,oDAAsD,EOJvD,EAAA;EPOC;IOTF;MPYE,oDAAsD,EOVvD,EAAA;EPaD;IOfA;MPkBA,oDAAsD,EOhBrD,EAAA;EPmBD;IOrBA;MPyBA,oDAAsD,EOvBrD,EAAA;EP0BD;IO5BA;MPgCA,oDAAsD,EO9BrD,EAAA;EPiCD;IOnCA;MPuCA,oDAAsD,EOrCrD,EAAA;EPwCD;IO1CA;MP6CA,oDAAsD,EO3CrD,EAAA;;AAED;EACE,YAAW;ENzBX,4BM0B6B;EN1BF,gBAAgB;EAC3C,0BMyB6B;ENzBJ,YAAY;EACpC,yBMwB4B;ENxBJ,oBAAoB;EAC1C,uBMuB0B;ENvBJ,aAAa;EAClC,sBMsByB;ENtBJ,4BAA4B;EAC7C,kBMqBqB;ENrBJ;gEACqC;EAC9D,yCAA0C;EMoB1C,gBAAe;EACf,eAAc,EACf;;AAED;EACE,iBAAgB,EACjB;;AAED;EAEE,YAAW,EACZ;;AAED;EAEA,aAAY,EAEX;;AAED;EACE,kDAAkD;EAClD,oDAAoD;EACpD,oDAAmD;EACjD,6CAA6C;EAC7C,2CAA2C;EAC3C,wCAAwC;EACxC,oCAAmC,EACtC;;AAED;EACE,YAAW,EACZ;;AAGD;EP5CE,yCAA0C;EAC1C,wCO4C8C;EP3C9C,uCO2C8C;EP1C9C,sCO0C8C;EPzC9C,mCOyC8C,EAC/C;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCC;IOgCF;MP7BE,oDAAsD,EO+BvD,EAAA;EP5BD;IO0BA;MPvBA,oDAAsD,EOyBrD,EAAA;EPtBD;IOoBA;MPhBA,oDAAsD,EOkBrD,EAAA;EPfD;IOaA;MPTA,oDAAsD,EOWrD,EAAA;EPRD;IOMA;MPFA,oDAAsD,EOIrD,EAAA;EPDD;IODA;MPIA,oDAAsD,EOFrD,EAAA;;AAID;EPlDE,yCAA0C;EAC1C,wCOkD8C;EPjD9C,uCOiD8C;EPhD9C,sCOgD8C;EP/C9C,mCO+C8C,EAC/C;EP9CC;IO4CF;MPzCE,oDAAsD,EO2CvD,EAAA;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCD;IOgCA;MP7BA,oDAAsD,EO+BrD,EAAA;EP5BD;IO0BA;MPtBA,oDAAsD,EOwBrD,EAAA;EPrBD;IOmBA;MPfA,oDAAsD,EOiBrD,EAAA;EPdD;IOYA;MPRA,oDAAsD,EOUrD,EAAA;EPPD;IOKA;MPFA,oDAAsD,EOIrD,EAAA;;AAED;EPtDE,yCAA0C;EAC1C,wCOsD8C;EPrD9C,uCOqD8C;EPpD9C,sCOoD8C;EPnD9C,mCOmD8C,EAC/C;EPlDC;IOgDF;MP7CE,oDAAsD,EO+CvD,EAAA;EP5CC;IO0CF;MPvCE,oDAAsD,EOyCvD,EAAA;EPtCD;IOoCA;MPjCA,oDAAsD,EOmCrD,EAAA;EPhCD;IO8BA;MP1BA,oDAAsD,EO4BrD,EAAA;EPzBD;IOuBA;MPnBA,oDAAsD,EOqBrD,EAAA;EPlBD;IOgBA;MPZA,oDAAsD,EOcrD,EAAA;EPXD;IOSA;MPNA,oDAAsD,EOQrD,EAAA;;AAED;EACE,cAAa;EACb,gBAAe,EAChB;;AAKD;EPlEE,yCAA0C;EAC1C,wCOkE4C;EPjE5C,uCOiE4C;EPhE5C,sCOgE4C;EP/D5C,mCO+D4C,EAC7C;EP9DC;IO4DF;MPzDE,oDAAsD,EO2DvD,EAAA;EPxDC;IOsDF;MPnDE,oDAAsD,EOqDvD,EAAA;EPlDD;IOgDA;MP7CA,oDAAsD,EO+CrD,EAAA;EP5CD;IO0CA;MPtCA,oDAAsD,EOwCrD,EAAA;EPrCD;IOmCA;MP/BA,oDAAsD,EOiCrD,EAAA;EP9BD;IO4BA;MPxBA,oDAAsD,EO0BrD,EAAA;EPvBD;IOqBA;MPlBA,oDAAsD,EOoBrD,EAAA;;AAED;EACA,cAAa,EACZ;;AAED;EP1EE,yCAA0C;EAC1C,wCO0E4C;EPzE5C,uCOyE4C;EPxE5C,sCOwE4C;EPvE5C,mCOuE4C,EAC7C;EPtEC;IOoEF;MPjEE,oDAAsD,EOmEvD,EAAA;EPhEC;IO8DF;MP3DE,oDAAsD,EO6DvD,EAAA;EP1DD;IOwDA;MPrDA,oDAAsD,EOuDrD,EAAA;EPpDD;IOkDA;MP9CA,oDAAsD,EOgDrD,EAAA;EP7CD;IO2CA;MPvCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOoCA;MPhCA,oDAAsD,EOkCrD,EAAA;EP/BD;IO6BA;MP1BA,oDAAsD,EO4BrD,EAAA;;AAED;EP9EE,yCAA0C;EAC1C,wCO8E4C;EP7E5C,uCO6E4C;EP5E5C,sCO4E4C;EP3E5C,mCO2E4C;EAC9C,oBAAoB;EACpB,oBAAmB,EAElB;EP7EC;IOwEF;MPrEE,oDAAsD,EO0EvD,EAAA;EPvEC;IOkEF;MP/DE,oDAAsD,EOoEvD,EAAA;EPjED;IO4DA;MPzDA,oDAAsD,EO8DrD,EAAA;EP3DD;IOsDA;MPlDA,oDAAsD,EOuDrD,EAAA;EPpDD;IO+CA;MP3CA,oDAAsD,EOgDrD,EAAA;EP7CD;IOwCA;MPpCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOiCA;MP9BA,oDAAsD,EOmCrD,EAAA;;AAED;EPrFE,yCAA0C;EAC1C,wCOqF8C;EPpF9C,uCOoF8C;EPnF9C,sCOmF8C;EPlF9C,mCOkF8C,EAC/C;EPjFC;IO+EF;MP5EE,oDAAsD,EO8EvD,EAAA;EP3EC;IOyEF;MPtEE,oDAAsD,EOwEvD,EAAA;EPrED;IOmEA;MPhEA,oDAAsD,EOkErD,EAAA;EP/DD;IO6DA;MPzDA,oDAAsD,EO2DrD,EAAA;EPxDD;IOsDA;MPlDA,oDAAsD,EOoDrD,EAAA;EPjDD;IO+CA;MP3CA,oDAAsD,EO6CrD,EAAA;EP1CD;IOwCA;MPrCA,oDAAsD,EOuCrD,EAAA;;AAED;EACA,qBAAoB,EAEnB;;AC9GD;EAEI,mBAAkB;EAClB,UAAS;EACT,QAAO;EACP,YAAW;EACX,cAAa;EACb,wBAAuB;EACvB,oBAAmB,EASpB;EAjBH;IAWM,YAAW;IACX,gBAAe;IACf,4BAA2B;IAC3B,cAAa;IACb,4CAA2C,EAC5C;;AAhBL;EAoBI,mBAAkB;EAClB,OAAM,EACP;;ACtBH;EAEI,cAAa;EACb,wBAAuB;EACvB,YAAW;ETcb,yCAA0C;EAC1C,wCSdgD;ETehD,uCSfgD;ETgBhD,sCShBgD;ETiBhD,mCSjBgD;EAC9C,iBAAgB;EAChB,oBAAmB,EACpB;ETgBD;ISxBF;MT2BE,oDAAsD,ESnBrD,EAAA;ETsBD;IS9BF;MTiCE,oDAAsD,ESzBrD,EAAA;ET4BH;ISpCA;MTuCA,oDAAsD,ES/BnD,EAAA;ETkCH;IS1CA;MT8CA,oDAAsD,EStCnD,EAAA;ETyCH;ISjDA;MTqDA,oDAAsD,ES7CnD,EAAA;ETgDH;ISxDA;MT4DA,oDAAsD,ESpDnD,EAAA;ETuDH;IS/DA;MTkEA,oDAAsD,ES1DnD,EAAA;;AARH;EAWI,kBAAiB;EACjB,UAAS;EACT,WAAU;EACV,WAAU;EACV,eAAc;EACd,mBAAkB;EAClB,iBAAgB,EACjB;;AAlBH;EAsBI,eAAc,EACf;;AAvBH;EA0BI,4CAA4C;EAC5C,aAAY;ETTd,yCAA0C;EAC1C,wCSSgD;ETRhD,uCSQgD;ETPhD,sCSOgD;ETNhD,mCSMgD;EAC9C,kBAAiB;EACjB,WAAU;EACV,mBAAkB;EAClB,cAAa,EAEd;ETVD;ISxBF;MT2BE,oDAAsD,ESOrD,EAAA;ETJD;IS9BF;MTiCE,oDAAsD,ESCrD,EAAA;ETEH;ISpCA;MTuCA,oDAAsD,ESLnD,EAAA;ETQH;IS1CA;MT8CA,oDAAsD,ESZnD,EAAA;ETeH;ISjDA;MTqDA,oDAAsD,ESnBnD,EAAA;ETsBH;ISxDA;MT4DA,oDAAsD,ES1BnD,EAAA;ET6BH;IS/DA;MTkEA,oDAAsD,EShCnD,EAAA;;AAlCH;ETkBE,yCAA0C;EAC1C,wCSkBgD;ETjBhD,uCSiBgD;EThBhD,sCSgBgD;ETfhD,mCSegD;EAC9C,aAAY;EACZ,YAAW;EACX,cAAa;EACb,8CAA8C,EAC/C;ETlBD;ISxBF;MT2BE,oDAAsD,ESerD,EAAA;ETZD;IS9BF;MTiCE,oDAAsD,ESSrD,EAAA;ETNH;ISpCA;MTuCA,oDAAsD,ESGnD,EAAA;ETAH;IS1CA;MT8CA,oDAAsD,ESJnD,EAAA;ETOH;ISjDA;MTqDA,oDAAsD,ESXnD,EAAA;ETcH;ISxDA;MT4DA,oDAAsD,ESlBnD,EAAA;ETqBH;IS/DA;MTkEA,oDAAsD,ESxBnD,EAAA;;AA1CH;EA+CM,0BAAyB,EAC1B;;AXrBL;EACE,UAAS;EACT,WAAU;EAIV,YAAW;EACX,iBAAe,EAkFhB;EAzFD;IAUI,gDAjCoD;IAkCpD,eAAc;IACd,sBAAqB;IACrB,aAAY;IGvCd,4BHwC+B;IGxCJ,gBAAgB;IAC3C,0BHuC+B;IGvCN,YAAY;IACpC,yBHsC8B;IGtCN,oBAAoB;IAC1C,uBHqC4B;IGrCN,aAAa;IAClC,sBHoC2B;IGpCN,4BAA4B;IAC7C,kBHmCuB;IGnCN;gEACqC;IAC9D,yCAA0C,EHkCvC;EAfL;IAkBI,eAAc,EACf;EAnBH;IAsBI,qDA9CuD;IA+CvD,eAjDqB;IAkDrB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB;IAChB,iBAAgB,EACjB;EA5BH;IA+BI,qDAvDuD;IAwDvD,eA1DqB;IA2DrB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EAEjB;EArCH;IAwCI,qDAhEuD;IAiEvD,eAnEqB;IAoErB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EACjB;EA7CH;IAgDI,qDAxEuD;IAyEvD,eA3EqB;IA4ErB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EACjB;EArDH;IAwDI,gDA/EoD;IAgFpD,eApFoB;IAqFpB,iBAAgB;IAChB,wBAAgB,EACjB;EA5DH;IA+DI,iBAAe,EAChB;EAhEH;IAuEI,aAAY;IACZ,YAAW;IACX,aAAY;IACZ,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,OAAM;IACN,SAAQ;IACR,oBAAmB;IACnB,cAAa;IACb,yCAA0C,EAC3C;EAlFH;IAqFE,mBAAkB,EACjB","file":"main.scss","sourcesContent":["@mixin css-fadein($t) {\n-webkit-animation: fadein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: fadein $t; /* Firefox < 16 */\n    -ms-animation: fadein $t; /* Internet Explorer */\n     -o-animation: fadein $t; /* Opera < 12.1 */\n        animation: fadein $t;\n}\n\n\n@keyframes fadein {\n    from {\n    opacity: 0;\n    }\n    to   {\n    opacity: 1;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n    from {\n      opacity: 0;\n    }\n    to   {\n      opacity: 1;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n\n\n\n\n\n\n\n\n@mixin css-dropin($t) {\n-webkit-animation: dropin $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropin $t; /* Firefox < 16 */\n    -ms-animation: dropin $t; /* Internet Explorer */\n     -o-animation: dropin $t; /* Opera < 12.1 */\n        animation: dropin $t;\n}\n\n\n@keyframes dropin {\n    from {\n      transform: scale(1.2);\n      h1 {\n        opacity: 0.1;\n      }\n    }\n    to   {\n      transform: scale(1);\n      h1 {\n        opacity: 1.0;\n      }\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n\n\n\n@mixin css-dropout($t) {\n-webkit-animation: dropout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropout $t; /* Firefox < 16 */\n    -ms-animation: dropout $t; /* Internet Explorer */\n     -o-animation: dropout $t; /* Opera < 12.1 */\n        animation: dropout $t;\n}\n\n\n@keyframes dropout {\n    from {\n    font-size: 1.5em;\n    }\n    to   {\n    font-size: 2.5em;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n    from {\n      font-size: 1.5em;\n    }\n    to   {\n      font-size: 2.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n\n\n\n\n@mixin css-slidein($t) {\n-webkit-animation: slidein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slidein $t; /* Firefox < 16 */\n    -ms-animation: slidein $t; /* Internet Explorer */\n     -o-animation: slidein $t; /* Opera < 12.1 */\n        animation: slidein $t;\n}\n\n\n@keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n\n\n\n\n\n\n\n@mixin css-slideout($t) {\n-webkit-animation: slideout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slideout $t; /* Firefox < 16 */\n    -ms-animation: slideout $t; /* Internet Explorer */\n     -o-animation: slideout $t; /* Opera < 12.1 */\n        animation: slideout $t;\n}\n\n\n@keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n",".Section {\n  background-color: $section-color;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n\n  h1 {\n    text-align: center;\n  }\n\n  p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center;\n  }\n}\n","$global-p-color: #dec5c5;\n$global-h1-color: #ffffff;\n$global-bg-color: #1b1a1a;\n$global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;\n$global-p-font-stack: 'Questrial', Helvetica, sans-serif;\n$section-color: #dbd7d7;\n$p-section-color: #111111;\n\n@import './helpers/Animation_Mixins.scss';\n@import './helpers/Transform_Mixins.scss';\n@import './helpers/Display.scss';\n@import './helpers/User_Events.scss';\n\n@import './components/Section.scss';\n@import './components/Subsection.scss';\n@import './components/MenuBarIcon.scss';\n@import './components/MenuBar.scss';\n@import './components/Main.scss';\n@import './components/NavBar.scss';\n@import './components/SmoothScroll.scss';\n@import './components/DownArrow.scss';\n@import './components/Page.scss';\n@import './components/Graphs.scss';\n@import './components/About.scss';\n@import './components/TextLayout.scss';\n\n\nbody {\n  margin: 0;\n  padding: 0;\n\n\n\n  width: 100%;\n  overflow:hidden;\n\n  a {\n    font-family: $global-p-font-stack;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    @include css-user-select(none);\n    }\n\n  a:hover {\n    color: #ffecec;\n  }\n\n  h1 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n    font-size: 1.5em;\n  }\n\n  h2 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n\n  }\n\n  h3 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  h4 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  p {\n    font-family: $global-p-font-stack;\n    color: $global-p-color;\n    font-weight: 500;\n    @css-user-select(none);\n  }\n\n  .wrapper {\n    overflow:hidden;\n  }\n\n  @media all and (max-width: 1200px) {\n\n  }\n\n  .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n  }\n\n  .home-graph-options {\n  position: absolute;\n  }\n\n\n}\n","$menu-bar-icon-color: #f7f5f5;\n$transition-time: 0.7s;\n$transition-prop: all;\n$transition-easing: ease;\n$g-time: 0.75s;\n$right-transition: 50px;\n$mobile-right-transition: 50px;\n\n@import '../helpers/Transform_Mixins.scss';\n\n\n.menu-bar-icon {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  border: none;\n  color: $menu-bar-icon-color;\n  background: transparent;\n  outline: none;\n  @include css-user-select(none);\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999;\n\n  @media all and (max-width: 1200px) {\n    z-index: 99999;\n  }\n}\n\n.clicked {\nleft: $right-transition;\n}\n\n.unclicked {\nleft: 0vw;\n}\n\n.menu-bar-icon:hover > div {\n  @include css-transition($transition-prop, 1.1s, $transition-easing);\n  background: #bca293;\n}\n\n.menu-bar-icon div {\n  @include css-transition($transition-prop, 1.5s, $transition-easing);\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px;\n}\n\n.menu-bar-icon:hover > #topBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/\n}\n\n.menu-bar-icon:hover > #bottomBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/\n\n}\n\n.menu-bar-icon:hover > #middleBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/\n}\n\n.clicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x($right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n  }\n  opacity: 0;\n}\n\n.unclicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x(0vw);\n  opacity: 1;\n}\n","$g-time: 0.4s;\n\n@mixin css-linear-gradient($first, $second) {\n  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */\n  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */\n  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */\n  background: linear-gradient($first, $second); /* Standard syntax */\n}\n\n@mixin origin($o) {\n  -webkit-transform-origin: $o;\n  -ms-tranform-origin: $o;\n  -moz-transform-origin: $o;\n  -o-transform-origin: $o;\n  transform-origin: $o;\n}\n\n@mixin css-transition($prop, $time, $easing) {\n  -webkit-transition: $prop 0.5s ease-in-out;\n  -moz-transition: $prop, $time, $easing;\n  -ms-transition: $prop, $time, $easing;\n  -o-transition: $prop, $time, $easing;\n  transition: $prop, $time, $easing;\n\n  @media only screen\nand (min-device-width : 320px)\nand (max-device-width : 568px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n  }\n\n  @media only screen\nand (min-device-width : 414px)\nand (max-device-width : 736px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 375px)\nand (max-device-width : 667px) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1){\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 2) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n}\n\n@mixin css-transform-perspective($p) {\n  -ms-transform: perspective($p); /* IE 9 */\n  -moz-transform: perspective($p);\n  -webkit-transform: perspective($p); /* Safari */\n  -o-transform: perspective($p);\n  transform: perspective($p);\n}\n\n@mixin css-transform-scale($t) {\n  -ms-transform: scale($t); /* IE 9 */\n  -moz-transform: scale($t);\n  -webkit-transform: scale($t); /* Safari */\n  -o-transform: scale($t);\n  transform: scale($t);\n}\n\n@mixin css-transform-translate-x($t) {\n  -ms-transform: translate3D($t, 0, 0); /* IE 9 */\n  -moz-transform: translate3D($t, 0, 0);\n  -webkit-transform: translate3D($t, 0, 0); /* Safari */\n  -o-transform: translate3D($t, 0, 0);\n  transform: translate3D($t, 0, 0);\n\n}\n\n@mixin css-transform-translate-y($t) {\n  -ms-transform: translate3D(0, $t, 0); /* IE 9 */\n  -moz-transform: translate3D(0, $t, 0);\n  -webkit-transform: translate3D(0, $t, 0); /* Safari */\n  -o-transform: translate3D(0, $t, 0);\n  transform: translate3D(0, $t, 0);\n\n}\n\n@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {\n  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */\n  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n}\n\n@mixin css-transform-rotate-and-translate-down($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate($a) {\n  -ms-transform: rotate($a); /* IE 9 */\n  -moz-transform: rotate($a); /* Safari */\n  -webkit-transform: rotate($a); /* Safari */\n  -o-transform: rotate($a);\n  transform: rotate($a);\n}\n\n@mixin css-transform-rotate-x($a) {\n  -ms-transform: rotateX($a); /* IE 9 */\n  -moz-transform: rotateX($a); /* Safari */\n  -webkit-transform: rotateX($a); /* Safari */\n  -o-transform: rotateX($a);\n  transform: rotateX($a);\n}\n\n\n@mixin css-transform-rotate-y($a) {\n  -ms-transform: rotateY($a); /* IE 9 */\n  -moz-transform: rotateY($a); /* Safari */\n  -webkit-transform: rotateY($a); /* Safari */\n  -o-transform: rotateY($a);\n  transform: rotateY($a);\n}\n\n@mixin css-transform-rotate-z($a) {\n  -ms-transform: rotateZ($a); /* IE 9 */\n  -moz-transform: rotateZ($a); /* Safari */\n  -webkit-transform: rotateZ($a); /* Safari */\n  -o-transform: rotateZ($a);\n  transform: rotateZ($a);\n}\n\n@mixin css-transform-squash($a) {\n  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */\n  -moz-transform: scaleY($a) scaleX($a); /* Safari */\n  -webkit-transform: scaleY($a) scaleX($a); /* Safari */\n  -o-transform: scaleY($a) scaleX($a);\n  transform: scaleY($a) scaleX($a);\n}\n\n\n@mixin css-transform-open-book($s, $r, $t) {\n  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */\n  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n}\n\n@mixin css-transform-skew-x($transformation) {\n  -ms-transform: skewX($transformation); /* IE 9 */\n  -moz-transform: skewX($transformation);  /* Safari */\n  -webkit-transform: skewX($transformation);  /* Safari */\n  -o-transform: skewX($transformation);\n  transform: skewX($transformation);\n}\n\n@mixin css-transform-skew-y($transformation) {\n  -ms-transform: skewY($transformation); /* IE 9 */\n  -moz-transform: skewY($transformation);  /* Safari */\n  -webkit-transform: skewY($transformation);  /* Safari */\n  -o-transform: skewY($transformation);\n  transform: skewY($transformation);\n}\n","@mixin css-user-select($n){\n  -webkit-touch-callout: $n; /* iOS Safari */\n  -webkit-user-select: $n; /* Safari */\n   -khtml-user-select: $n; /* Konqueror HTML */\n     -moz-user-select: $n; /* Firefox */\n      -ms-user-select: $n; /* Internet Explorer/Edge */\n          user-select: $n; /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n}\n","$transition-time: 0.2s;\n$transition-prop: transform;\n$transition-easing: ease-in-out;\n$bg-color: transparent;\n$menu-button-color: #e09090;\n\n.menu-bar {\n    @include css-transition(all, $transition-time, $transition-easing);\n    position: fixed;\n    top: 0;\n    height: 100vh;\n    width: 100vw;\n    background: $bg-color;\n    display: flex;\n    flex-flow: column;\n\n    @media all and (max-width: 1200px) {\n    }\n\n    p {\n        @include css-user-select(none);\n        cursor: pointer;\n        font-weight: 400;\n        color: white;\n    }\n\n    p:hover {\n      color: #866363;\n    }\n}\n\n.menu-bar-hidden {\n  @include css-transform-translate-y(50px);\n  opacity: 0.0;\n\n}\n\n.menu-bar-shown {\n  @include css-transform-translate-y(0px);\n  opacity: 1.0;\n}\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n\n.menu-bar-item {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n\n  > p {\n    @include css-transition($transition-prop, $transition-time, $transition-easing);\n    margin: 0;\n    padding-left: 8px;\n  }\n}\n","$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;\n$main-container-color: black;\n$live-stream-text-color: #a29393;\n$transition-time: 0.35s;\n$transition-prop: all;\n$transition-easing: cubic-bezier(.94,.06,.32,.95);\n$right-transition: 100px;\n$mobile-right-transition: 100px;\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw;\n\n}\n\n.main {\n\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow:hidden;\n  /*-webkit-overflow-scrolling: touch;*/\n\n\n  @media all and (max-width: 1200px) {\n    z-index: 9999;\n\n  }\n\n}\n\n.menu-bar-open {\n  @include css-transform-translate-x($right-transition);\n\n}\n\n.menu-bar-close {\n  @include css-transform-translate-x(0vw);\n\n\n}\n","$height: 8vh;\n$text-color: #ac6e6e;\n$hover-color: #ffbb98;\n$text-hover-color: #ffffff;\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: $height;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1;\n  @media all and (max-width: 1200px) {\n    display: none;\n  }\n\n  .nav-bar-item {\n    text-align: center;\n  }\n\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    @include css-transition(all, 0.35s, ease-in-out);\n    cursor: pointer;\n\n    p {\n      @include css-user-select(none);\n      cursor: pointer;\n      font-weight: 400;\n      color: $text-color;\n      @include css-transition(all, 0.35s, ease-in-out);\n    }\n\n\n\n\n    @media all and (max-width: 1200px) {\n      z-index: -1;\n    }\n  }\n\n  .smooth-scroll:hover {\n    background: $hover-color;\n  }\n\n  .smooth-scroll:hover p {\n    color: $text-hover-color;\n  }\n\n\n  $nav-button-color: #e09090;\n\n  .navButton {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: none;\n      margin: 20px 20px;\n      width: 12em;\n      border-radius: 100%;\n      width: 20px;\n      height: 20px;\n      display: flex;\n      justify-content: center;\n      outline: none;\n      background: transparent;\n      border: 2px solid $nav-button-color;\n\n      @media all and (max-width: 1200px) {\n        margin: 20px 20px;\n      }\n\n    p {\n    color: #9a9aa2;\n    padding: 1em;\n    font-weight: 200;\n    text-align: center;\n\n      @media all and (max-width: 1200px) {\n        position: absolute;\n        color: #9a9aa2;\n        margin: 0;\n        margin-left: 3em;\n        left:0;\n        padding: 0;\n      }\n\n    }\n\n\n  }\n\n  .navButton:hover {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: 2px solid $nav-button-color;\n    border-radius: 10%;\n    background: $nav-button-color;\n    cursor: pointer;\n\n    > p {\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n  }\n\n}\n\n.NavBarHidden {\n  @media all and (max-width: 1200px) {\n  }\n}\n",".down-arrow-container {\n  position: absolute;\n  bottom: 10vh;\n\n  .down-arrow {\n    width: 5vw;\n    text-align: center;\n  }\n}\n","$intro-button-color: #ff7970;\n$mobile-width: 800px;\n$transition-duration: 0.75s;\n$transition-prop: all;\n$transition-easing: ease;\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n/*defines the actual leave transition*/\n\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n.page {\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n  transform: translateX(0vh);\n\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n\n  .home-graph-layout {\n    .average-emotion {\n      text-align: center;\n      p {\n        font-size: 2em;\n      }\n\n    }\n\n  }\n\n\n  .home-header {\n    width: 50vw;\n    h1 {\n      text-align: left;\n    }\n\n    h4 {\n      text-align: left;\n    }\n\n    p {\n      text-align: left;\n    }\n  }\n\n  .home-graph-layout {\n    h1 {\n    }\n  }\n\n  .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition(all, 0.2s, ease-in-out);\n    @include css-user-select(none);\n    cursor: pointer;\n  }\n\n  .update-data:hover {\n    background: #957a77;\n  }\n\n\n\n  .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n\n    .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in;\n\n      .title {\n        width: 100vw;\n\n        h1 {\n          @css-user-select(none);\n          cursor: default;\n        }\n      }\n\n      .graph-options {\n\n      }\n\n      .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column;\n\n        p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select(none);\n        }\n      }\n    }\n  }\n\n  p:hover {\n  color: black;\n  cursor:pointer;\n  }\n\n\n  .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/\n\n    @media all and(max-width: $mobile-width) {\n      height: 110vh;\n      width: auto;\n    }\n  }\n\n  .page-bg-image-container {\n    overflow: hidden;\n  }\n}\n","$first-color: #9bb5b5;\n$second-color: #eadab9;\n$blue-color: #637799;\n$red-color: #e0935c;\n$orange-color: #e0935c;\n$yellow-color: #efce69;\n$black-color: #262522;\n$white-color: #f9f6ef;\n\n\n.graph {\n    display: flex;\n    justify-content: center;\n    @include css-transition(all, 0.5s, ease-in-out);\n}\n\n\n.d3container {\n  border-radius: 50%;\n}\n\n.textGroup {\n  @include css-transition(transform, 0.9s ,ease-in-out);\n}\n\n.companyText {\n  fill: white;\n  @include css-user-select(none);\n  cursor: pointer;\n  font-size: 2em;\n}\n\n.companyText:hover {\n  font-size: 2.1em;\n}\n\n.firstWave:hover {\n\n  stroke: red;\n}\n\n.secondWave:hover {\n\nstroke: blue;\n\n}\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n    /*-moz-transition: transform 0.6s ease-out;*/\n    /*-o-transition: transform 0.6s ease-out;*/\n    /*transition: transform 0.6s ease-out;*/\n    -webkit-backface-visibility: hidden;\n}\n\npath:hover {\n  stroke: red;\n}\n\n\n.graph rect {\n  @include css-transition(all, 0.9s ,ease-in-out);\n}\n\n\n\n.LinearReact {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6;\n}\n\n\n\n\npath {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\n.LinearRect:hover {\nfill: #c7bca5;\n}\n\n.kernel {\n@include css-transition(all, 0.9s, ease-in-out);\n}\n\n.kernel:hover + .core {\n@include css-transition(all, 0.5s, ease-in-out);\n/*stroke: #1c1c1c;*/\nstroke-width: 0.0px;\n\n}\n\n.core {\n  @include css-transition(all, 0.5s, ease-in-out);\n}\n\n.shell {\npointer-events: none;\n\n}\n",".about {\n  .about-image-container {\n    position: absolute;\n    top: 25vh;\n    left: 0;\n    width: 100%;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n\n    .about-image {\n      width: 75vw;\n      background: red;\n      filter: brightness(100000%);\n      padding: 20px;\n      background-color: rgba(255, 255, 255, 0.15);\n    }\n  }\n\n  .about-title {\n    position: absolute;\n    top: 0;\n  }\n\n\n}\n",".text-layout {\n  .hover-text-container {\n    display: flex;\n    justify-content: center;\n    width: 100%;\n    @include css-transition(all, 1.5s, ease-in-out);\n    font-size: 1.5em;\n    white-space: nowrap;\n  }\n\n  .average-emotion {\n    background: white;\n    margin: 0;\n    padding: 0;\n    width: 20%;\n    color: #73667c;\n    border-radius: 5px;\n    font-weight: 900;\n  }\n\n\n  .hover-text {\n    color: #db8686;\n  }\n\n  .on {\n    /*@include css-transform-translate-x(0vw);*/\n    opacity: 1.0;\n    @include css-transition(all, 4.5s, ease-in-out);\n    background: white;\n    width: 25%;\n    border-radius: 4px;\n    padding: 10px;\n\n  }\n\n  .off {\n    @include css-transition(all, 4.5s, ease-in-out);\n    opacity: 0.0;\n    width: 100%;\n    padding: 10px;\n    /*@include css-transform-translate-x(-50vw);*/\n  }\n\n\n  .home-graph-layout {\n    .companyText {\n      font-size: 1em !important;\n    }\n\n  }\n}\n"],"sourceRoot":""}]);
+exports.push([module.i, "@keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes dropin {\n  from {\n    font-size: 0em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n  from {\n    font-size: 1em; }\n  to {\n    font-size: 1.5em; } }\n\n@keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n  from {\n    font-size: 1.5em; }\n  to {\n    font-size: 2.5em; } }\n\n@keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n  from {\n    transform: translate3d(0, -120vh, 0); }\n  to {\n    transform: translate3d(0, 0, 0); } }\n\n@keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n  from {\n    transform: translate3d(0, 0, 0); }\n  to {\n    transform: translate3d(0, -120vh, 0); } }\n\n.Section {\n  background-color: #dbd7d7;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center; }\n  .Section h1 {\n    text-align: center; }\n  .Section p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center; }\n\n.menu-bar-icon {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  border: none;\n  color: #f7f5f5;\n  background: transparent;\n  outline: none;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .menu-bar-icon {\n      z-index: 99999; } }\n\n.clicked {\n  left: 50px; }\n\n.unclicked {\n  left: 0vw; }\n\n.menu-bar-icon:hover > div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.1s, ease;\n  -ms-transition: all, 1.1s, ease;\n  -o-transition: all, 1.1s, ease;\n  transition: all, 1.1s, ease;\n  background: #bca293; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon div {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 1.5s, ease;\n  -ms-transition: all, 1.5s, ease;\n  -o-transition: all, 1.5s, ease;\n  transition: all, 1.5s, ease;\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon div {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar-icon:hover > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.4s, ease;\n  -ms-transition: all, 0.4s, ease;\n  -o-transition: all, 0.4s, ease;\n  transition: all, 0.4s, ease;\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-icon:hover > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.clicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n  transform: translate3D(50px, 10px, 0) rotate(45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #topBar {\n      -ms-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, 10px, 0) rotate(45deg);\n      transform: translate3D(50px, 10px, 0) rotate(45deg); } }\n\n.clicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  /* Safari */\n  -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n  transform: translate3D(50px, -10px, 0) rotate(-45deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #bottomBar {\n      -ms-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -webkit-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      /* Safari */\n      -o-transform: translate3D(50px, -10px, 0) rotate(-45deg);\n      transform: translate3D(50px, -10px, 0) rotate(-45deg); } }\n\n.clicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(50px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(50px, 0, 0);\n  -webkit-transform: translate3D(50px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(50px, 0, 0);\n  transform: translate3D(50px, 0, 0);\n  opacity: 0; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .clicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 800px) {\n    .clicked > #middleBar {\n      -ms-transform: translate3D(50px, 0, 0);\n      /* IE 9 */\n      -moz-transform: translate3D(50px, 0, 0);\n      -webkit-transform: translate3D(50px, 0, 0);\n      /* Safari */\n      -o-transform: translate3D(50px, 0, 0);\n      transform: translate3D(50px, 0, 0); } }\n\n.unclicked > #topBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #topBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #bottomBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -webkit-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0px, 0) rotate(0deg);\n  transform: translate3D(0vw, 0px, 0) rotate(0deg); }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #bottomBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.unclicked > #middleBar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.7s, ease;\n  -ms-transition: all, 0.7s, ease;\n  -o-transition: all, 0.7s, ease;\n  transition: all, 0.7s, ease;\n  -ms-transform: scaleY(0) scaleX(0);\n  /* IE 9 */\n  -moz-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -webkit-transform: scaleY(0) scaleX(0);\n  /* Safari */\n  -o-transform: scaleY(0) scaleX(0);\n  transform: scaleY(0) scaleX(0);\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0);\n  opacity: 1; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .unclicked > #middleBar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.menu-bar {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.2s, ease-in-out;\n  -ms-transition: all, 0.2s, ease-in-out;\n  -o-transition: all, 0.2s, ease-in-out;\n  transition: all, 0.2s, ease-in-out;\n  position: fixed;\n  top: 0;\n  height: 100vh;\n  width: 100vw;\n  background: transparent;\n  display: flex;\n  flex-flow: column; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar p {\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer;\n    font-weight: 400;\n    color: white; }\n  .menu-bar p:hover {\n    color: #866363; }\n\n.menu-bar-hidden {\n  -ms-transform: translate3D(0, 50px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 50px, 0);\n  -webkit-transform: translate3D(0, 50px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 50px, 0);\n  transform: translate3D(0, 50px, 0);\n  opacity: 0.0; }\n\n.menu-bar-shown {\n  -ms-transform: translate3D(0, 0px, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0, 0px, 0);\n  -webkit-transform: translate3D(0, 0px, 0);\n  /* Safari */\n  -o-transform: translate3D(0, 0px, 0);\n  transform: translate3D(0, 0px, 0);\n  opacity: 1.0; }\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center; }\n\n.menu-bar-item {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.2s, ease-in-out;\n  -ms-transition: transform, 0.2s, ease-in-out;\n  -o-transition: transform, 0.2s, ease-in-out;\n  transition: transform, 0.2s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .menu-bar-item {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .menu-bar-item > p {\n    -webkit-transition: transform 0.5s ease-in-out;\n    -moz-transition: transform, 0.2s, ease-in-out;\n    -ms-transition: transform, 0.2s, ease-in-out;\n    -o-transition: transform, 0.2s, ease-in-out;\n    transition: transform, 0.2s, ease-in-out;\n    margin: 0;\n    padding-left: 8px; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .menu-bar-item > p {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw; }\n\n.main {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -ms-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  -o-transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  transition: all, 0.35s, cubic-bezier(0.94, 0.06, 0.32, 0.95);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow: hidden;\n  /*-webkit-overflow-scrolling: touch;*/ }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .main {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media all and (max-width: 1200px) {\n    .main {\n      z-index: 9999; } }\n\n.menu-bar-open {\n  -ms-transform: translate3D(100px, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(100px, 0, 0);\n  -webkit-transform: translate3D(100px, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(100px, 0, 0);\n  transform: translate3D(100px, 0, 0); }\n\n.menu-bar-close {\n  -ms-transform: translate3D(0vw, 0, 0);\n  /* IE 9 */\n  -moz-transform: translate3D(0vw, 0, 0);\n  -webkit-transform: translate3D(0vw, 0, 0);\n  /* Safari */\n  -o-transform: translate3D(0vw, 0, 0);\n  transform: translate3D(0vw, 0, 0); }\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: 8vh;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1; }\n  @media all and (max-width: 1200px) {\n    .NavBar {\n      display: none; } }\n  .NavBar .nav-bar-item {\n    text-align: center; }\n  .NavBar .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.35s, ease-in-out;\n    -ms-transition: all, 0.35s, ease-in-out;\n    -o-transition: all, 0.35s, ease-in-out;\n    transition: all, 0.35s, ease-in-out;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .smooth-scroll {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .smooth-scroll p {\n      -webkit-touch-callout: none;\n      /* iOS Safari */\n      -webkit-user-select: none;\n      /* Safari */\n      -khtml-user-select: none;\n      /* Konqueror HTML */\n      -moz-user-select: none;\n      /* Firefox */\n      -ms-user-select: none;\n      /* Internet Explorer/Edge */\n      user-select: none;\n      /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n      -webkit-tap-highlight-color: transparent;\n      cursor: pointer;\n      font-weight: 400;\n      color: #ac6e6e;\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.35s, ease-in-out;\n      -ms-transition: all, 0.35s, ease-in-out;\n      -o-transition: all, 0.35s, ease-in-out;\n      transition: all, 0.35s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .smooth-scroll p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .smooth-scroll {\n        z-index: -1; } }\n  .NavBar .smooth-scroll:hover {\n    background: #ffbb98; }\n  .NavBar .smooth-scroll:hover p {\n    color: #ffffff; }\n  .NavBar .navButton {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: none;\n    margin: 20px 20px;\n    width: 12em;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    display: flex;\n    justify-content: center;\n    outline: none;\n    background: transparent;\n    border: 2px solid #e09090; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media all and (max-width: 1200px) {\n      .NavBar .navButton {\n        margin: 20px 20px; } }\n    .NavBar .navButton p {\n      color: #9a9aa2;\n      padding: 1em;\n      font-weight: 200;\n      text-align: center; }\n      @media all and (max-width: 1200px) {\n        .NavBar .navButton p {\n          position: absolute;\n          color: #9a9aa2;\n          margin: 0;\n          margin-left: 3em;\n          left: 0;\n          padding: 0; } }\n  .NavBar .navButton:hover {\n    -webkit-transition: all 0.5s ease-in-out;\n    -moz-transition: all, 0.5s, ease-in-out;\n    -ms-transition: all, 0.5s, ease-in-out;\n    -o-transition: all, 0.5s, ease-in-out;\n    transition: all, 0.5s, ease-in-out;\n    border: 2px solid #e09090;\n    border-radius: 10%;\n    background: #e09090;\n    cursor: pointer; }\n    @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n      .NavBar .navButton:hover {\n        -webkit-transition: -webkit-transform 0.4s ease-out; } }\n    .NavBar .navButton:hover > p {\n      -webkit-transition: all 0.5s ease-in-out;\n      -moz-transition: all, 0.5s, ease-in-out;\n      -ms-transition: all, 0.5s, ease-in-out;\n      -o-transition: all, 0.5s, ease-in-out;\n      transition: all, 0.5s, ease-in-out; }\n      @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n        .NavBar .navButton:hover > p {\n          -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.down-arrow-container {\n  position: absolute;\n  bottom: 10vh; }\n  .down-arrow-container .down-arrow {\n    width: 5vw;\n    text-align: center; }\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-enter.on-enter-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n/*defines the actual leave transition*/\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .on-leave.on-leave-active {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.page {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.75s, ease;\n  -ms-transition: all, 0.75s, ease;\n  -o-transition: all, 0.75s, ease;\n  transition: all, 0.75s, ease;\n  transform: translateX(0vh);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .page {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  .page .home-graph-layout .average-emotion {\n    text-align: center; }\n    .page .home-graph-layout .average-emotion p {\n      font-size: 2em; }\n  .page .home-header {\n    width: 50vw; }\n    .page .home-header h1 {\n      text-align: left; }\n    .page .home-header h4 {\n      text-align: left; }\n    .page .home-header p {\n      text-align: left; }\n  .page .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition (all, 0.2s, ease-in-out);\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent;\n    cursor: pointer; }\n  .page .update-data:hover {\n    background: #957a77; }\n  .page .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap; }\n    .page .header .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in; }\n      .page .header .header-box .title {\n        width: 100vw; }\n        .page .header .header-box .title h1 {\n          @css-user-select (none);\n          cursor: default; }\n      .page .header .header-box .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column; }\n        .page .header .header-box .subtitle p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select (none); }\n  .page p:hover {\n    color: black;\n    cursor: pointer; }\n  .page .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/ }\n    @media all and (max-width: 800px) {\n      .page .page-bg-image {\n        height: 110vh;\n        width: auto; } }\n  .page .page-bg-image-container {\n    overflow: hidden; }\n\n.graph {\n  display: flex;\n  justify-content: center;\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.d3container {\n  border-radius: 50%; }\n\n.textGroup {\n  -webkit-transition: transform 0.5s ease-in-out;\n  -moz-transition: transform, 0.9s, ease-in-out;\n  -ms-transition: transform, 0.9s, ease-in-out;\n  -o-transition: transform, 0.9s, ease-in-out;\n  transition: transform, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .textGroup {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.companyText {\n  fill: white;\n  -webkit-touch-callout: none;\n  /* iOS Safari */\n  -webkit-user-select: none;\n  /* Safari */\n  -khtml-user-select: none;\n  /* Konqueror HTML */\n  -moz-user-select: none;\n  /* Firefox */\n  -ms-user-select: none;\n  /* Internet Explorer/Edge */\n  user-select: none;\n  /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: transparent;\n  cursor: pointer;\n  font-size: 2em; }\n\n.companyText:hover {\n  font-size: 2.1em; }\n\n.firstWave:hover {\n  stroke: red; }\n\n.secondWave:hover {\n  stroke: blue; }\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n  /*-moz-transition: transform 0.6s ease-out;*/\n  /*-o-transition: transform 0.6s ease-out;*/\n  /*transition: transform 0.6s ease-out;*/\n  -webkit-backface-visibility: hidden; }\n\npath:hover {\n  stroke: red; }\n\n.graph rect {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .graph rect {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearReact {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .LinearReact {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .dots {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6; }\n\npath {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    path {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.LinearRect:hover {\n  fill: #c7bca5; }\n\n.kernel {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.9s, ease-in-out;\n  -ms-transition: all, 0.9s, ease-in-out;\n  -o-transition: all, 0.9s, ease-in-out;\n  transition: all, 0.9s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.kernel:hover + .core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out;\n  /*stroke: #1c1c1c;*/\n  stroke-width: 0.0px; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .kernel:hover + .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.core {\n  -webkit-transition: all 0.5s ease-in-out;\n  -moz-transition: all, 0.5s, ease-in-out;\n  -ms-transition: all, 0.5s, ease-in-out;\n  -o-transition: all, 0.5s, ease-in-out;\n  transition: all, 0.5s, ease-in-out; }\n  @media only screen and (min-device-width: 320px) and (max-device-width: 568px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {\n    .core {\n      -webkit-transition: -webkit-transform 0.4s ease-out; } }\n\n.shell {\n  pointer-events: none; }\n\nbody {\n  margin: 0;\n  padding: 0;\n  width: 100%;\n  overflow: hidden; }\n  body a {\n    font-family: \"Open Sans\", Helvetica, sans-serif;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    -webkit-touch-callout: none;\n    /* iOS Safari */\n    -webkit-user-select: none;\n    /* Safari */\n    -khtml-user-select: none;\n    /* Konqueror HTML */\n    -moz-user-select: none;\n    /* Firefox */\n    -ms-user-select: none;\n    /* Internet Explorer/Edge */\n    user-select: none;\n    /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n    -webkit-tap-highlight-color: transparent; }\n  body a:hover {\n    color: #ffecec; }\n  body h1 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none);\n    font-size: 1.5em; }\n  body h2 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h3 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body h4 {\n    font-family: \"Cambay\", Futura, Helvetica, sans-serif;\n    color: #ffffff;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select (none); }\n  body p {\n    font-family: \"Open Sans\", Helvetica, sans-serif;\n    color: #dec5c5;\n    font-weight: 500;\n    @css-user-select (none); }\n  body .wrapper {\n    overflow: hidden; }\n  body .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: transparent; }\n  body .home-graph-options {\n    position: absolute; }\n", "", {"version":3,"sources":["/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/helpers/_Animation_Mixins.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_Section.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/main.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_MenuBarIcon.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/helpers/_Transform_Mixins.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/helpers/_User_Events.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_MenuBar.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_Main.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_NavBar.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_DownArrow.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_Page.scss","/Users/Hunter/Documents/College/Year 3/Spring 2017/Big Data/Informant/app/scss/components/_Graphs.scss"],"names":[],"mappings":"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EAAA;ECmCD;IDpDA;MCuDA,oDAAsD,EDtCrD,EAAA;EAHC;IAdF;MAeI,eAAc,EAEjB,EAAA;;AAED;EACA,WA1BuB,EA2BtB;;AAED;EACA,UAAS,EACR;;AAED;ECpBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAqCtB,oBAAmB,EACpB;ECjBC;IDcF;MCXE,oDAAsD,EDcvD,EAAA;ECXC;IDQF;MCLE,oDAAsD,EDQvD,EAAA;ECLD;IDEA;MCCA,oDAAsD,EDErD,EAAA;ECCD;IDJA;MCQA,oDAAsD,EDLrD,EAAA;ECQD;IDXA;MCeA,oDAAsD,EDZrD,EAAA;ECeD;IDlBA;MCsBA,oDAAsD,EDnBrD,EAAA;ECsBD;IDzBA;MC4BA,oDAAsD,EDzBrD,EAAA;;AAED;ECzBE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA0CtB,YAAW;EACX,YAAW;EACX,oBAAmB;EACnB,gBAAe,EAChB;ECzBC;IDmBF;MChBE,oDAAsD,EDsBvD,EAAA;ECnBC;IDaF;MCVE,oDAAsD,EDgBvD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;ECPD;IDCA;MCGA,oDAAsD,EDGrD,EAAA;ECAD;IDNA;MCUA,oDAAsD,EDJrD,EAAA;ECOD;IDbA;MCiBA,oDAAsD,EDXrD,EAAA;ECcD;IDpBA;MCuBA,oDAAsD,EDjBrD,EAAA;;AAED;ECjCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAkDtB,gEAAgE;EAChE,kEAAkE,EACnE;EC/BC;ID2BF;MCxBE,oDAAsD,ED4BvD,EAAA;ECzBC;IDqBF;MClBE,oDAAsD,EDsBvD,EAAA;ECnBD;IDeA;MCZA,oDAAsD,EDgBrD,EAAA;ECbD;IDSA;MCLA,oDAAsD,EDSrD,EAAA;ECND;IDEA;MCEA,oDAAsD,EDErD,EAAA;ECCD;IDLA;MCSA,oDAAsD,EDLrD,EAAA;ECQD;IDZA;MCeA,oDAAsD,EDXrD,EAAA;;AAED;ECvCE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EAwDtB,gEAAgE;EAChE,kEAAkE,EAEnE;ECtCC;IDiCF;MC9BE,oDAAsD,EDmCvD,EAAA;EChCC;ID2BF;MCxBE,oDAAsD,ED6BvD,EAAA;EC1BD;IDqBA;MClBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDeA;MCXA,oDAAsD,EDgBrD,EAAA;ECbD;IDQA;MCJA,oDAAsD,EDSrD,EAAA;ECND;IDCA;MCGA,oDAAsD,EDErD,EAAA;ECCD;IDNA;MCSA,oDAAsD,EDJrD,EAAA;;AAED;EC9CE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;EA+DtB,8CAA8C;EAC9C,qCAAqC,EACtC;EC5CC;IDwCF;MCrCE,oDAAsD,EDyCvD,EAAA;ECtCC;IDkCF;MC/BE,oDAAsD,EDmCvD,EAAA;EChCD;ID4BA;MCzBA,oDAAsD,ED6BrD,EAAA;EC1BD;IDsBA;MClBA,oDAAsD,EDsBrD,EAAA;ECnBD;IDeA;MCXA,oDAAsD,EDerD,EAAA;ECZD;IDQA;MCJA,oDAAsD,EDQrD,EAAA;ECLD;IDCA;MCEA,oDAAsD,EDErD,EAAA;;AAED;ECpDE,yCAA0C;EAC1C,iCDhBsB;ECiBtB,gCDjBsB;ECkBtB,+BDlBsB;ECmBtB,4BDnBsB;ECuHtB,wDAAgD;EAAG,UAAU;EAC7D,yDAAiD;EAAG,YAAY;EAChE,4DAAoD;EAAG,YAAY;EACnE,uDAA+C;EAC/C,oDAA4C,EDlD7C;ECpDC;ID8CF;MC3CE,oDAAsD,EDiDvD,EAAA;EC9CC;IDwCF;MCrCE,oDAAsD,ED2CvD,EAAA;ECxCD;IDkCA;MC/BA,oDAAsD,EDqCrD,EAAA;EClCD;ID4BA;MCxBA,oDAAsD,ED8BrD,EAAA;EC3BD;IDqBA;MCjBA,oDAAsD,EDuBrD,EAAA;ECpBD;IDcA;MCVA,oDAAsD,EDgBrD,EAAA;ECbD;IDOA;MCJA,oDAAsD,EDUrD,EAAA;EAHC;IAHF;MCoDE,wDAAgD;MAAG,UAAU;MAC7D,yDAAiD;MAAG,YAAY;MAChE,4DAAoD;MAA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,8CEjB6B;EFkB7B,6CElB6B;EFmB7B,4CEnB6B;EFoB7B,yCEpB6B,EAwD9B;EFlCC;IE0BF;MFvBE,oDAAsD,EE+BvD,EAAA;EF5BC;IEoBF;MFjBE,oDAAsD,EEyBvD,EAAA;EFtBD;IEcA;MFXA,oDAAsD,EEmBrD,EAAA;EFhBD;IEQA;MFJA,oDAAsD,EEYrD,EAAA;EFTD;IECA;MFGA,oDAAsD,EEKrD,EAAA;EFFD;IENA;MFUA,oDAAsD,EEFrD,EAAA;EFKD;IEbA;MFgBA,oDAAsD,EERrD,EAAA;EARD;IFhCE,+CAA0C;IAC1C,8CEjB6B;IFkB7B,6CElB6B;IFmB7B,4CEnB6B;IFoB7B,yCEpB6B;IAqD3B,UAAS;IACT,kBAAiB,EAClB;IFjCD;ME0BF;QFvBE,oDAAsD,EE8BrD,EAAA;IF3BD;MEoBF;QFjBE,oDAAsD,EEwBrD,EAAA;IFrBH;MEcA;QFXA,oDAAsD,EEkBnD,EAAA;IFfH;MEQA;QFJA,oDAAsD,EEWnD,EAAA;IFRH;MECA;QFGA,oDAAsD,EEInD,EAAA;IFDH;MENA;QFUA,oDAAsD,EEHnD,EAAA;IFMH;MEbA;QFgBA,oDAAsD,EETnD,EAAA;;AChDH;EACE,mCAAkC;EAClC,mBAAkB;EAClB,OAAM;EACN,uBAAsB;EACtB,QAAO;EACP,aAAY,EAEb;;AAED;EHDE,yCAA0C;EAC1C,kEGd+C;EHe/C,iEGf+C;EHgB/C,gEGhB+C;EHiB/C,6DGjB+C;EAiB/C,oBAAoB;EACpB,gBAAgB;EAChB,iBAAe;EACf,sCAAsC,EAQvC;EHTC;IGLF;MHQE,oDAAsD,EGMvD,EAAA;EHHC;IGXF;MHcE,oDAAsD,EGAvD,EAAA;EHGD;IGjBA;MHoBA,oDAAsD,EGNrD,EAAA;EHSD;IGvBA;MH2BA,oDAAsD,EGbrD,EAAA;EHgBD;IG9BA;MHkCA,oDAAsD,EGpBrD,EAAA;EHuBD;IGrCA;MHyCA,oDAAsD,EG3BrD,EAAA;EH8BD;IG5CA;MH+CA,oDAAsD,EGjCrD,EAAA;EALC;IATF;MAUI,cAAa,EAIhB,EAAA;;AAED;EHqDE,wCAAoC;EAAE,UAAU;EAChD,yCAAqC;EACrC,4CAAwC;EA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nD,EAAA;IA1GH;MJaE,yCAA0C;MAC1C,wCI0FkD;MJzFlD,uCIyFkD;MJxFlD,sCIwFkD;MJvFlD,mCIuFkD,EAC/C;MJtFH;QInBF;UJsBE,oDAAsD,EImFnD,EAAA;MJhFH;QIzBF;UJ4BE,oDAAsD,EI6EnD,EAAA;MJ1EL;QI/BA;UJkCA,oDAAsD,EIuEjD,EAAA;MJpEL;QIrCA;UJyCA,oDAAsD,EIgEjD,EAAA;MJ7DL;QI5CA;UJgDA,oDAAsD,EIyDjD,EAAA;MJtDL;QInDA;UJuDA,oDAAsD,EIkDjD,EAAA;MJ/CL;QI1DA;UJ6DA,oDAAsD,EI4CjD,EAAA;;AC9GL;EACE,mBAAkB;EAClB,aAAY,EAMb;EARD;IAKI,WAAU;IACV,mBAAkB,EACnB;;ACDH,uDAAuD;AACvD;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,+BAA+B;ENQ/B,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EASvB;ENWC;IMjBF;MNoBE,oDAAsD,EMdvD,EAAA;ENiBC;IMvBF;MN0BE,oDAAsD,EMpBvD,EAAA;ENuBD;IM7BA;MNgCA,oDAAsD,EM1BrD,EAAA;EN6BD;IMnCA;MNuCA,oDAAsD,EMjCrD,EAAA;ENoCD;IM1CA;MN8CA,oDAAsD,EMxCrD,EAAA;EN2CD;IMjDA;MNqDA,oDAAsD,EM/CrD,EAAA;ENkDD;IMxDA;MN2DA,oDAAsD,EMrDrD,EAAA;;AAED,uCAAuC;AACvC;EACE,2BAA0B;EAC1B,qBAAqB;ENArB,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiBvB;ENGC;IMRF;MNWE,oDAAsD,EMNvD,EAAA;ENSC;IMdF;MNiBE,oDAAsD,EMZvD,EAAA;ENeD;IMpBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN4CA,oDAAsD,EMvCrD,EAAA;EN0CD;IM/CA;MNkDA,oDAAsD,EM7CrD,EAAA;;AACD,sDAAsD;AACtD;EACE,2BAA0B;EAC1B,qBAAqB;EACrB,gCAAgC;ENRhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAwBvB;ENJC;IMDF;MNIE,oDAAsD,EMCvD,EAAA;ENEC;IMPF;MNUE,oDAAsD,EMLvD,EAAA;ENQD;IMbA;MNgBA,oDAAsD,EMXrD,EAAA;ENcD;IMnBA;MNuBA,oDAAsD,EMlBrD,EAAA;ENqBD;IM1BA;MN8BA,oDAAsD,EMzBrD,EAAA;EN4BD;IMjCA;MNqCA,oDAAsD,EMhCrD,EAAA;ENmCD;IMxCA;MN2CA,oDAAsD,EMtCrD,EAAA;;AAED,uCAAuC;AAEvC;EACE,8BAA6B;EAC7B,qBAAqB;EACrB,gCAAgC;ENjBhC,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB,EAiCvB;ENbC;IMQF;MNLE,oDAAsD,EMUvD,EAAA;ENPC;IMEF;MNCE,oDAAsD,EMIvD,EAAA;ENDD;IMJA;MNOA,oDAAsD,EMFrD,EAAA;ENKD;IMVA;MNcA,oDAAsD,EMTrD,EAAA;ENYD;IMjBA;MNqBA,oDAAsD,EMhBrD,EAAA;ENmBD;IMxBA;MN4BA,oDAAsD,EMvBrD,EAAA;EN0BD;IM/BA;MNkCA,oDAAsD,EM7BrD,EAAA;;AAED;ENrBE,yCAA0C;EAC1C,kCMfsB;ENgBtB,iCMhBsB;ENiBtB,gCMjBsB;ENkBtB,6BMlBsB;EAqCtB,2BAA0B;EAE1B,cAAa;EACb,wBAAuB;EACvB,oBAAmB;EACnB,cAAa,EA4Hd;ENlJC;IMeF;MNZE,oDAAsD,EM+IvD,EAAA;EN5IC;IMSF;MNNE,oDAAsD,EMyIvD,EAAA;ENtID;IMGA;MNAA,oDAAsD,EMmIrD,EAAA;ENhID;IMHA;MNOA,oDAAsD,EM4HrD,EAAA;ENzHD;IMVA;MNcA,oDAAsD,EMqHrD,EAAA;ENlHD;IMjBA;MNqBA,oDAAsD,EM8GrD,EAAA;EN3GD;IMxBA;MN2BA,oDAAsD,EMwGrD,EAAA;EAnID;IAWM,mBAAkB,EAKnB;IAhBL;MAaQ,eAAc,EACf;EAdP;IAsBI,YAAW,EAYZ;IAlCH;MAwBM,iBAAgB,EACjB;IAzBL;MA4BM,iBAAgB,EACjB;IA7BL;MAgCM,iBAAgB,EACjB;EAjCL;IA0CI,OAAM;IACN,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,qBAAoB;IACpB,iBAAgB;IAChB,cAAa;IACb,mBAAkB;IAClB,yCAAe;ILxFjB,4BKyF+B;ILzFJ,gBAAgB;IAC3C,0BKwF+B;ILxFN,YAAY;IACpC,yBKuF8B;ILvFN,oBAAoB;IAC1C,uBKsF4B;ILtFN,aAAa;IAClC,sBKqF2B;ILrFN,4BAA4B;IAC7C,kBKoFuB;ILpFN;gEACqC;IAC9D,yCAA0C;IKmFxC,gBAAe,EAChB;EArDH;IAwDI,oBAAmB,EACpB;EAzDH;IA8DI,cAAa;IACb,wBAAuB;IACvB,oBAAmB;IACnB,gBAAe,EAsChB;IAvGH;MAoEM,YAAW;MACX,cAAa;MACb,wBAAuB;MACvB,oBAAmB;MACnB,gBAAe;MACf,6BAA4B,EA6B7B;MAtGL;QA4EQ,aAAY,EAMb;QAlFP;UA+EU,wBAAgB;UAChB,gBAAe,EAChB;MAjFT;QAyFQ,aAAY;QACZ,cAAa;QACb,wBAAuB;QACvB,oBAAmB;QACnB,gBAAe;QACf,uBAAsB,EAOvB;QArGP;UAiGU,mBAAkB;UAClB,6BAA4B;UAC5B,wBAAgB,EACjB;EApGT;IA0GE,aAAY;IACZ,gBAAc,EACb;EA5GH;IAgHI,mCAAkC;IAClC,mBAAkB;IAClB,OAAM;IACN,uBAAsB;IACtB,QAAO;IACP,YAAW;IACX,aAAY;IACZ,sBAAsB;IACtB,oCAAoC,EAMrC;IAJC;MA1HJ;QA2HM,cAAa;QACb,YAAW,EAEd,EAAA;EA9HH;IAiII,iBAAgB,EACjB;;AC/JH;EACI,cAAa;EACb,wBAAuB;EPMzB,yCAA0C;EAC1C,wCONgD;EPOhD,uCOPgD;EPQhD,sCORgD;EPShD,mCOTgD,EACjD;EPUC;IOdF;MPiBE,oDAAsD,EObvD,EAAA;EPgBC;IOpBF;MPuBE,oDAAsD,EOnBvD,EAAA;EPsBD;IO1BA;MP6BA,oDAAsD,EOzBrD,EAAA;EP4BD;IOhCA;MPoCA,oDAAsD,EOhCrD,EAAA;EPmCD;IOvCA;MP2CA,oDAAsD,EOvCrD,EAAA;EP0CD;IO9CA;MPkDA,oDAAsD,EO9CrD,EAAA;EPiDD;IOrDA;MPwDA,oDAAsD,EOpDrD,EAAA;;AAGD;EACE,mBAAkB,EACnB;;AAED;EPHE,+CAA0C;EAC1C,8COGoD;EPFpD,6COEoD;EPDpD,4COCoD;EPApD,yCOAoD,EACrD;EPCC;IOHF;MPME,oDAAsD,EOJvD,EAAA;EPOC;IOTF;MPYE,oDAAsD,EOVvD,EAAA;EPaD;IOfA;MPkBA,oDAAsD,EOhBrD,EAAA;EPmBD;IOrBA;MPyBA,oDAAsD,EOvBrD,EAAA;EP0BD;IO5BA;MPgCA,oDAAsD,EO9BrD,EAAA;EPiCD;IOnCA;MPuCA,oDAAsD,EOrCrD,EAAA;EPwCD;IO1CA;MP6CA,oDAAsD,EO3CrD,EAAA;;AAED;EACE,YAAW;ENzBX,4BM0B6B;EN1BF,gBAAgB;EAC3C,0BMyB6B;ENzBJ,YAAY;EACpC,yBMwB4B;ENxBJ,oBAAoB;EAC1C,uBMuB0B;ENvBJ,aAAa;EAClC,sBMsByB;ENtBJ,4BAA4B;EAC7C,kBMqBqB;ENrBJ;gEACqC;EAC9D,yCAA0C;EMoB1C,gBAAe;EACf,eAAc,EACf;;AAED;EACE,iBAAgB,EACjB;;AAED;EAEE,YAAW,EACZ;;AAED;EAEA,aAAY,EAEX;;AAED;EACE,kDAAkD;EAClD,oDAAoD;EACpD,oDAAmD;EACjD,6CAA6C;EAC7C,2CAA2C;EAC3C,wCAAwC;EACxC,oCAAmC,EACtC;;AAED;EACE,YAAW,EACZ;;AAGD;EP5CE,yCAA0C;EAC1C,wCO4C8C;EP3C9C,uCO2C8C;EP1C9C,sCO0C8C;EPzC9C,mCOyC8C,EAC/C;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCC;IOgCF;MP7BE,oDAAsD,EO+BvD,EAAA;EP5BD;IO0BA;MPvBA,oDAAsD,EOyBrD,EAAA;EPtBD;IOoBA;MPhBA,oDAAsD,EOkBrD,EAAA;EPfD;IOaA;MPTA,oDAAsD,EOWrD,EAAA;EPRD;IOMA;MPFA,oDAAsD,EOIrD,EAAA;EPDD;IODA;MPIA,oDAAsD,EOFrD,EAAA;;AAID;EPlDE,yCAA0C;EAC1C,wCOkD8C;EPjD9C,uCOiD8C;EPhD9C,sCOgD8C;EP/C9C,mCO+C8C,EAC/C;EP9CC;IO4CF;MPzCE,oDAAsD,EO2CvD,EAAA;EPxCC;IOsCF;MPnCE,oDAAsD,EOqCvD,EAAA;EPlCD;IOgCA;MP7BA,oDAAsD,EO+BrD,EAAA;EP5BD;IO0BA;MPtBA,oDAAsD,EOwBrD,EAAA;EPrBD;IOmBA;MPfA,oDAAsD,EOiBrD,EAAA;EPdD;IOYA;MPRA,oDAAsD,EOUrD,EAAA;EPPD;IOKA;MPFA,oDAAsD,EOIrD,EAAA;;AAED;EPtDE,yCAA0C;EAC1C,wCOsD8C;EPrD9C,uCOqD8C;EPpD9C,sCOoD8C;EPnD9C,mCOmD8C,EAC/C;EPlDC;IOgDF;MP7CE,oDAAsD,EO+CvD,EAAA;EP5CC;IO0CF;MPvCE,oDAAsD,EOyCvD,EAAA;EPtCD;IOoCA;MPjCA,oDAAsD,EOmCrD,EAAA;EPhCD;IO8BA;MP1BA,oDAAsD,EO4BrD,EAAA;EPzBD;IOuBA;MPnBA,oDAAsD,EOqBrD,EAAA;EPlBD;IOgBA;MPZA,oDAAsD,EOcrD,EAAA;EPXD;IOSA;MPNA,oDAAsD,EOQrD,EAAA;;AAED;EACE,cAAa;EACb,gBAAe,EAChB;;AAKD;EPlEE,yCAA0C;EAC1C,wCOkE4C;EPjE5C,uCOiE4C;EPhE5C,sCOgE4C;EP/D5C,mCO+D4C,EAC7C;EP9DC;IO4DF;MPzDE,oDAAsD,EO2DvD,EAAA;EPxDC;IOsDF;MPnDE,oDAAsD,EOqDvD,EAAA;EPlDD;IOgDA;MP7CA,oDAAsD,EO+CrD,EAAA;EP5CD;IO0CA;MPtCA,oDAAsD,EOwCrD,EAAA;EPrCD;IOmCA;MP/BA,oDAAsD,EOiCrD,EAAA;EP9BD;IO4BA;MPxBA,oDAAsD,EO0BrD,EAAA;EPvBD;IOqBA;MPlBA,oDAAsD,EOoBrD,EAAA;;AAED;EACA,cAAa,EACZ;;AAED;EP1EE,yCAA0C;EAC1C,wCO0E4C;EPzE5C,uCOyE4C;EPxE5C,sCOwE4C;EPvE5C,mCOuE4C,EAC7C;EPtEC;IOoEF;MPjEE,oDAAsD,EOmEvD,EAAA;EPhEC;IO8DF;MP3DE,oDAAsD,EO6DvD,EAAA;EP1DD;IOwDA;MPrDA,oDAAsD,EOuDrD,EAAA;EPpDD;IOkDA;MP9CA,oDAAsD,EOgDrD,EAAA;EP7CD;IO2CA;MPvCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOoCA;MPhCA,oDAAsD,EOkCrD,EAAA;EP/BD;IO6BA;MP1BA,oDAAsD,EO4BrD,EAAA;;AAED;EP9EE,yCAA0C;EAC1C,wCO8E4C;EP7E5C,uCO6E4C;EP5E5C,sCO4E4C;EP3E5C,mCO2E4C;EAC9C,oBAAoB;EACpB,oBAAmB,EAElB;EP7EC;IOwEF;MPrEE,oDAAsD,EO0EvD,EAAA;EPvEC;IOkEF;MP/DE,oDAAsD,EOoEvD,EAAA;EPjED;IO4DA;MPzDA,oDAAsD,EO8DrD,EAAA;EP3DD;IOsDA;MPlDA,oDAAsD,EOuDrD,EAAA;EPpDD;IO+CA;MP3CA,oDAAsD,EOgDrD,EAAA;EP7CD;IOwCA;MPpCA,oDAAsD,EOyCrD,EAAA;EPtCD;IOiCA;MP9BA,oDAAsD,EOmCrD,EAAA;;AAED;EPrFE,yCAA0C;EAC1C,wCOqF8C;EPpF9C,uCOoF8C;EPnF9C,sCOmF8C;EPlF9C,mCOkF8C,EAC/C;EPjFC;IO+EF;MP5EE,oDAAsD,EO8EvD,EAAA;EP3EC;IOyEF;MPtEE,oDAAsD,EOwEvD,EAAA;EPrED;IOmEA;MPhEA,oDAAsD,EOkErD,EAAA;EP/DD;IO6DA;MPzDA,oDAAsD,EO2DrD,EAAA;EPxDD;IOsDA;MPlDA,oDAAsD,EOoDrD,EAAA;EPjDD;IO+CA;MP3CA,oDAAsD,EO6CrD,EAAA;EP1CD;IOwCA;MPrCA,oDAAsD,EOuCrD,EAAA;;AAED;EACA,qBAAoB,EAEnB;;ATrFD;EACE,UAAS;EACT,WAAU;EAIV,YAAW;EACX,iBAAe,EAkFhB;EAzFD;IAUI,gDA/BoD;IAgCpD,eAAc;IACd,sBAAqB;IACrB,aAAY;IGrCd,4BHsC+B;IGtCJ,gBAAgB;IAC3C,0BHqC+B;IGrCN,YAAY;IACpC,yBHoC8B;IGpCN,oBAAoB;IAC1C,uBHmC4B;IGnCN,aAAa;IAClC,sBHkC2B;IGlCN,4BAA4B;IAC7C,kBHiCuB;IGjCN;gEACqC;IAC9D,yCAA0C,EHgCvC;EAfL;IAkBI,eAAc,EACf;EAnBH;IAsBI,qDA5CuD;IA6CvD,eA/CqB;IAgDrB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB;IAChB,iBAAgB,EACjB;EA5BH;IA+BI,qDArDuD;IAsDvD,eAxDqB;IAyDrB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EAEjB;EArCH;IAwCI,qDA9DuD;IA+DvD,eAjEqB;IAkErB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EACjB;EA7CH;IAgDI,qDAtEuD;IAuEvD,eAzEqB;IA0ErB,mBAAkB;IAClB,iBAAgB;IAChB,wBAAgB,EACjB;EArDH;IAwDI,gDA7EoD;IA8EpD,eAlFoB;IAmFpB,iBAAgB;IAChB,wBAAgB,EACjB;EA5DH;IA+DI,iBAAe,EAChB;EAhEH;IAuEI,aAAY;IACZ,YAAW;IACX,aAAY;IACZ,gBAAe;IACf,oBAAmB;IACnB,aAAY;IACZ,OAAM;IACN,SAAQ;IACR,oBAAmB;IACnB,cAAa;IACb,yCAA0C,EAC3C;EAlFH;IAqFE,mBAAkB,EACjB","file":"main.scss","sourcesContent":["@mixin css-fadein($t) {\n-webkit-animation: fadein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: fadein $t; /* Firefox < 16 */\n    -ms-animation: fadein $t; /* Internet Explorer */\n     -o-animation: fadein $t; /* Opera < 12.1 */\n        animation: fadein $t;\n}\n\n\n@keyframes fadein {\n    from {\n    opacity: 0;\n    }\n    to   {\n    opacity: 1;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes fadein {\n    from {\n      opacity: 0;\n    }\n    to   {\n      opacity: 1;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes fadein {\n    from { opacity: 0; }\n    to   { opacity: 1; }\n}\n\n\n\n\n\n\n\n\n\n@mixin css-dropin($t) {\n-webkit-animation: dropin $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropin $t; /* Firefox < 16 */\n    -ms-animation: dropin $t; /* Internet Explorer */\n     -o-animation: dropin $t; /* Opera < 12.1 */\n        animation: dropin $t;\n}\n\n\n@keyframes dropin {\n    from {\n    font-size: 0em;\n    }\n    to   {\n    font-size: 1.5em;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropin {\n    from { font-size: 1em; }\n    to   { font-size: 1.5em; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropin {\n    from {\n      font-size: 1em;\n    }\n    to   {\n      font-size: 1.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropin {\n    from { font-size: 1em; }\n    to   { font-size: 1.5em; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropin {\n    from { font-size: 1em; }\n    to   { font-size: 1.5em; }\n}\n\n\n\n\n@mixin css-dropout($t) {\n-webkit-animation: dropout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: dropout $t; /* Firefox < 16 */\n    -ms-animation: dropout $t; /* Internet Explorer */\n     -o-animation: dropout $t; /* Opera < 12.1 */\n        animation: dropout $t;\n}\n\n\n@keyframes dropout {\n    from {\n    font-size: 1.5em;\n    }\n    to   {\n    font-size: 2.5em;\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes dropout {\n    from {\n      font-size: 1.5em;\n    }\n    to   {\n      font-size: 2.5em;\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes dropout {\n    from { font-size: 1.5em; }\n    to   { font-size: 2.5em; }\n}\n\n\n\n\n\n@mixin css-slidein($t) {\n-webkit-animation: slidein $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slidein $t; /* Firefox < 16 */\n    -ms-animation: slidein $t; /* Internet Explorer */\n     -o-animation: slidein $t; /* Opera < 12.1 */\n        animation: slidein $t;\n}\n\n\n@keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slidein {\n    from {\n      transform: translate3d(0, -120vh, 0);\n    }\n    to   {\n      transform: translate3d(0, 0, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slidein {\n    from { transform: translate3d(0, -120vh, 0); }\n    to   { transform: translate3d(0, 0, 0); }\n}\n\n\n\n\n\n\n\n\n@mixin css-slideout($t) {\n-webkit-animation: slideout $t; /* Safari, Chrome and Opera > 12.1 */\n   -moz-animation: slideout $t; /* Firefox < 16 */\n    -ms-animation: slideout $t; /* Internet Explorer */\n     -o-animation: slideout $t; /* Opera < 12.1 */\n        animation: slideout $t;\n}\n\n\n@keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Firefox < 16 */\n@-moz-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Safari, Chrome and Opera > 12.1 */\n@-webkit-keyframes slideout {\n    from {\n      transform: translate3d(0, 0, 0);\n    }\n    to   {\n      transform: translate3d(0, -120vh, 0);\n    }\n}\n\n/* Internet Explorer */\n@-ms-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n\n/* Opera < 12.1 */\n@-o-keyframes slideout {\n    from { transform: translate3d(0, 0, 0); }\n    to   { transform: translate3d(0, -120vh, 0); }\n}\n",".Section {\n  background-color: $section-color;\n  margin: 0;\n  width: 100%;\n  height: 150vh;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n\n  h1 {\n    text-align: center;\n  }\n\n  p {\n    font-family: 'Montserrat', Futura, Helvetica, sans-serif;\n    color: #9a8383;\n    font-weight: 100;\n    width: 100%;\n    text-align: center;\n  }\n}\n","$global-p-color: #dec5c5;\n$global-h1-color: #ffffff;\n$global-bg-color: #1b1a1a;\n$global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;\n$global-p-font-stack: 'Open Sans', Helvetica, sans-serif;\n$section-color: #dbd7d7;\n$p-section-color: #111111;\n\n@import './helpers/Animation_Mixins.scss';\n@import './helpers/Transform_Mixins.scss';\n@import './helpers/Display.scss';\n@import './helpers/User_Events.scss';\n\n@import './components/Section.scss';\n@import './components/Subsection.scss';\n@import './components/MenuBarIcon.scss';\n@import './components/MenuBar.scss';\n@import './components/Main.scss';\n@import './components/NavBar.scss';\n@import './components/SmoothScroll.scss';\n@import './components/DownArrow.scss';\n@import './components/Page.scss';\n@import './components/Graphs.scss';\n\n\nbody {\n  margin: 0;\n  padding: 0;\n\n\n\n  width: 100%;\n  overflow:hidden;\n\n  a {\n    font-family: $global-p-font-stack;\n    color: #a79191;\n    text-decoration: none;\n    margin: 10px;\n    @include css-user-select(none);\n    }\n\n  a:hover {\n    color: #ffecec;\n  }\n\n  h1 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n    font-size: 1.5em;\n  }\n\n  h2 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n\n  }\n\n  h3 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  h4 {\n    font-family: $global-font-stack;\n    color: $global-h1-color;\n    text-align: center;\n    font-weight: 300;\n    @css-user-select(none);\n  }\n\n  p {\n    font-family: $global-p-font-stack;\n    color: $global-p-color;\n    font-weight: 500;\n    @css-user-select(none);\n  }\n\n  .wrapper {\n    overflow:hidden;\n  }\n\n  @media all and (max-width: 1200px) {\n\n  }\n\n  .updateButton {\n    border: none;\n    width: 10vw;\n    height: 10vh;\n    position: fixed;\n    background: #ff7970;\n    color: white;\n    top: 0;\n    right: 0;\n    z-index: 9999999999;\n    outline: none;\n    -webkit-tap-highlight-color: rgba(0,0,0,0);\n  }\n\n  .home-graph-options {\n  position: absolute;\n  }\n\n\n}\n","$menu-bar-icon-color: #f7f5f5;\n$transition-time: 0.7s;\n$transition-prop: all;\n$transition-easing: ease;\n$g-time: 0.75s;\n$right-transition: 50px;\n$mobile-right-transition: 50px;\n\n@import '../helpers/Transform_Mixins.scss';\n\n\n.menu-bar-icon {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  border: none;\n  color: $menu-bar-icon-color;\n  background: transparent;\n  outline: none;\n  @include css-user-select(none);\n  position: fixed;\n  margin: 20px 20px;\n  cursor: pointer;\n  top: 0;\n  display: block;\n  z-index: 999;\n\n  @media all and (max-width: 1200px) {\n    z-index: 99999;\n  }\n}\n\n.clicked {\nleft: $right-transition;\n}\n\n.unclicked {\nleft: 0vw;\n}\n\n.menu-bar-icon:hover > div {\n  @include css-transition($transition-prop, 1.1s, $transition-easing);\n  background: #bca293;\n}\n\n.menu-bar-icon div {\n  @include css-transition($transition-prop, 1.5s, $transition-easing);\n  width: 30px;\n  height: 5px;\n  background: #1c1c1c;\n  margin-top: 5px;\n}\n\n.menu-bar-icon:hover > #topBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/\n}\n\n.menu-bar-icon:hover > #bottomBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transition(all, $transition-time, ease-in-out);*/\n  /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/\n\n}\n\n.menu-bar-icon:hover > #middleBar {\n  @include css-transition($transition-prop, $g-time, $transition-easing);\n  /*@include css-transform-translate-x(-50px);*/\n  /*@include css-transform-squash(0);*/\n}\n\n.clicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-down-and-right(45deg, 10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-rotate-and-translate-up-and-right(-45deg, -10px, $mobile-right-transition);\n  }\n}\n\n.clicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x($right-transition);\n  @media all and (max-width: 800px) {\n    @include css-transform-translate-x($mobile-right-transition);\n  }\n  opacity: 0;\n}\n\n.unclicked > #topBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-down-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #bottomBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-rotate-and-translate-up-and-right(0deg, 0px, 0vw);\n}\n\n.unclicked > #middleBar {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  @include css-transform-squash(0);\n  @include css-transform-translate-x(0vw);\n  opacity: 1;\n}\n","$g-time: 0.4s;\n\n@mixin css-linear-gradient($first, $second) {\n  background: -webkit-linear-gradient($first, $second); /* For Safari 5.1 to 6.0 */\n  background: -o-linear-gradient($first, $second); /* For Opera 11.1 to 12.0 */\n  background: -moz-linear-gradient($first, $second); /* For Firefox 3.6 to 15 */\n  background: linear-gradient($first, $second); /* Standard syntax */\n}\n\n@mixin origin($o) {\n  -webkit-transform-origin: $o;\n  -ms-tranform-origin: $o;\n  -moz-transform-origin: $o;\n  -o-transform-origin: $o;\n  transform-origin: $o;\n}\n\n@mixin css-transition($prop, $time, $easing) {\n  -webkit-transition: $prop 0.5s ease-in-out;\n  -moz-transition: $prop, $time, $easing;\n  -ms-transition: $prop, $time, $easing;\n  -o-transition: $prop, $time, $easing;\n  transition: $prop, $time, $easing;\n\n  @media only screen\nand (min-device-width : 320px)\nand (max-device-width : 568px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n  }\n\n  @media only screen\nand (min-device-width : 414px)\nand (max-device-width : 736px) {\n  -webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 375px)\nand (max-device-width : 667px) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 1){\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)\nand (-webkit-min-device-pixel-ratio: 2) {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n@media only screen\nand (min-device-width : 768px)\nand (max-device-width : 1024px)  {\n-webkit-transition: -webkit-transform $g-time ease-out;\n}\n\n}\n\n@mixin css-transform-perspective($p) {\n  -ms-transform: perspective($p); /* IE 9 */\n  -moz-transform: perspective($p);\n  -webkit-transform: perspective($p); /* Safari */\n  -o-transform: perspective($p);\n  transform: perspective($p);\n}\n\n@mixin css-transform-scale($t) {\n  -ms-transform: scale($t); /* IE 9 */\n  -moz-transform: scale($t);\n  -webkit-transform: scale($t); /* Safari */\n  -o-transform: scale($t);\n  transform: scale($t);\n}\n\n@mixin css-transform-translate-x($t) {\n  -ms-transform: translate3D($t, 0, 0); /* IE 9 */\n  -moz-transform: translate3D($t, 0, 0);\n  -webkit-transform: translate3D($t, 0, 0); /* Safari */\n  -o-transform: translate3D($t, 0, 0);\n  transform: translate3D($t, 0, 0);\n\n}\n\n@mixin css-transform-translate-y($t) {\n  -ms-transform: translate3D(0, $t, 0); /* IE 9 */\n  -moz-transform: translate3D(0, $t, 0);\n  -webkit-transform: translate3D(0, $t, 0); /* Safari */\n  -o-transform: translate3D(0, $t, 0);\n  transform: translate3D(0, $t, 0);\n\n}\n\n@mixin css-transform-scale-translateX-translateY($s, $tx, $ty) {\n  -ms-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0); /* IE 9 */\n  -moz-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -webkit-transform: scale($s) translate3D($tx, 0, 0), translate3D(0, $ty, 0); /* Safari */\n  -o-transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n  transform: scale($s) translate3D($tx, 0, 0) translate3D(0, $ty, 0);\n}\n\n@mixin css-transform-rotate-and-translate-down($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-down-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up-and-right($a, $b, $c) {\n  -ms-transform: translate3D($c, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D($c, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D($c, $b, 0) rotate($a) ;\n  transform: translate3D($c, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate-and-translate-up($a, $b) {\n  -ms-transform: translate3D(0, $b, 0) rotate($a) ; /* IE 9 */\n  -moz-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -webkit-transform: translate3D(0, $b, 0) rotate($a) ; /* Safari */\n  -o-transform: translate3D(0, $b, 0) rotate($a) ;\n  transform: translate3D(0, $b, 0) rotate($a) ;\n}\n\n@mixin css-transform-rotate($a) {\n  -ms-transform: rotate($a); /* IE 9 */\n  -moz-transform: rotate($a); /* Safari */\n  -webkit-transform: rotate($a); /* Safari */\n  -o-transform: rotate($a);\n  transform: rotate($a);\n}\n\n@mixin css-transform-rotate-x($a) {\n  -ms-transform: rotateX($a); /* IE 9 */\n  -moz-transform: rotateX($a); /* Safari */\n  -webkit-transform: rotateX($a); /* Safari */\n  -o-transform: rotateX($a);\n  transform: rotateX($a);\n}\n\n\n@mixin css-transform-rotate-y($a) {\n  -ms-transform: rotateY($a); /* IE 9 */\n  -moz-transform: rotateY($a); /* Safari */\n  -webkit-transform: rotateY($a); /* Safari */\n  -o-transform: rotateY($a);\n  transform: rotateY($a);\n}\n\n@mixin css-transform-rotate-z($a) {\n  -ms-transform: rotateZ($a); /* IE 9 */\n  -moz-transform: rotateZ($a); /* Safari */\n  -webkit-transform: rotateZ($a); /* Safari */\n  -o-transform: rotateZ($a);\n  transform: rotateZ($a);\n}\n\n@mixin css-transform-squash($a) {\n  -ms-transform: scaleY($a) scaleX($a); /* IE 9 */\n  -moz-transform: scaleY($a) scaleX($a); /* Safari */\n  -webkit-transform: scaleY($a) scaleX($a); /* Safari */\n  -o-transform: scaleY($a) scaleX($a);\n  transform: scaleY($a) scaleX($a);\n}\n\n\n@mixin css-transform-open-book($s, $r, $t) {\n  -ms-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* IE 9 */\n  -moz-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -webkit-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important; /* Safari */\n  -o-transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n  transform: scale($s) rotateY($r) translate3D($t, 0, 0) !important;\n}\n\n@mixin css-transform-skew-x($transformation) {\n  -ms-transform: skewX($transformation); /* IE 9 */\n  -moz-transform: skewX($transformation);  /* Safari */\n  -webkit-transform: skewX($transformation);  /* Safari */\n  -o-transform: skewX($transformation);\n  transform: skewX($transformation);\n}\n\n@mixin css-transform-skew-y($transformation) {\n  -ms-transform: skewY($transformation); /* IE 9 */\n  -moz-transform: skewY($transformation);  /* Safari */\n  -webkit-transform: skewY($transformation);  /* Safari */\n  -o-transform: skewY($transformation);\n  transform: skewY($transformation);\n}\n","@mixin css-user-select($n){\n  -webkit-touch-callout: $n; /* iOS Safari */\n  -webkit-user-select: $n; /* Safari */\n   -khtml-user-select: $n; /* Konqueror HTML */\n     -moz-user-select: $n; /* Firefox */\n      -ms-user-select: $n; /* Internet Explorer/Edge */\n          user-select: $n; /* Non-prefixed version, currently\n                                supported by Chrome and Opera */\n  -webkit-tap-highlight-color: rgba(0,0,0,0);\n}\n","$transition-time: 0.2s;\n$transition-prop: transform;\n$transition-easing: ease-in-out;\n$bg-color: transparent;\n$menu-button-color: #e09090;\n\n.menu-bar {\n    @include css-transition(all, $transition-time, $transition-easing);\n    position: fixed;\n    top: 0;\n    height: 100vh;\n    width: 100vw;\n    background: $bg-color;\n    display: flex;\n    flex-flow: column;\n\n    @media all and (max-width: 1200px) {\n    }\n\n    p {\n        @include css-user-select(none);\n        cursor: pointer;\n        font-weight: 400;\n        color: white;\n    }\n\n    p:hover {\n      color: #866363;\n    }\n}\n\n.menu-bar-hidden {\n  @include css-transform-translate-y(50px);\n  opacity: 0.0;\n\n}\n\n.menu-bar-shown {\n  @include css-transform-translate-y(0px);\n  opacity: 1.0;\n}\n\n.menu-bar-content {\n  flex: 1;\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n}\n\n\n.menu-bar-item {\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n\n  > p {\n    @include css-transition($transition-prop, $transition-time, $transition-easing);\n    margin: 0;\n    padding-left: 8px;\n  }\n}\n","$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;\n$main-container-color: black;\n$live-stream-text-color: #a29393;\n$transition-time: 0.35s;\n$transition-prop: all;\n$transition-easing: cubic-bezier(.94,.06,.32,.95);\n$right-transition: 100px;\n$mobile-right-transition: 100px;\n\n.bg-image {\n  background-position: center center;\n  position: absolute;\n  top: 0;\n  background-size: cover;\n  left: 0;\n  width: 110vw;\n\n}\n\n.main {\n\n  @include css-transition($transition-prop, $transition-time, $transition-easing);\n  /*position: fixed;*/\n  /*width: 100%;*/\n  overflow:hidden;\n  /*-webkit-overflow-scrolling: touch;*/\n\n\n  @media all and (max-width: 1200px) {\n    z-index: 9999;\n\n  }\n\n}\n\n.menu-bar-open {\n  @include css-transform-translate-x($right-transition);\n\n}\n\n.menu-bar-close {\n  @include css-transform-translate-x(0vw);\n\n\n}\n","$height: 8vh;\n$text-color: #ac6e6e;\n$hover-color: #ffbb98;\n$text-hover-color: #ffffff;\n\n.NavBar {\n  top: 0;\n  position: fixed;\n  width: 100vw;\n  height: $height;\n  display: flex;\n  left: 0;\n  z-index: 9999;\n  background: #f1f1f1;\n  @media all and (max-width: 1200px) {\n    display: none;\n  }\n\n  .nav-bar-item {\n    text-align: center;\n  }\n\n\n  .smooth-scroll {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    position: relative;\n    top: 0;\n    width: 100%;\n    height: 8vh;\n    background: #f1f1f1;\n    z-index: 9999;\n    @include css-transition(all, 0.35s, ease-in-out);\n    cursor: pointer;\n\n    p {\n      @include css-user-select(none);\n      cursor: pointer;\n      font-weight: 400;\n      color: $text-color;\n      @include css-transition(all, 0.35s, ease-in-out);\n    }\n\n\n\n\n    @media all and (max-width: 1200px) {\n      z-index: -1;\n    }\n  }\n\n  .smooth-scroll:hover {\n    background: $hover-color;\n  }\n\n  .smooth-scroll:hover p {\n    color: $text-hover-color;\n  }\n\n\n  $nav-button-color: #e09090;\n\n  .navButton {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: none;\n      margin: 20px 20px;\n      width: 12em;\n      border-radius: 100%;\n      width: 20px;\n      height: 20px;\n      display: flex;\n      justify-content: center;\n      outline: none;\n      background: transparent;\n      border: 2px solid $nav-button-color;\n\n      @media all and (max-width: 1200px) {\n        margin: 20px 20px;\n      }\n\n    p {\n    color: #9a9aa2;\n    padding: 1em;\n    font-weight: 200;\n    text-align: center;\n\n      @media all and (max-width: 1200px) {\n        position: absolute;\n        color: #9a9aa2;\n        margin: 0;\n        margin-left: 3em;\n        left:0;\n        padding: 0;\n      }\n\n    }\n\n\n  }\n\n  .navButton:hover {\n    @include css-transition(all, 0.5s, ease-in-out);\n    border: 2px solid $nav-button-color;\n    border-radius: 10%;\n    background: $nav-button-color;\n    cursor: pointer;\n\n    > p {\n      @include css-transition(all, 0.5s, ease-in-out);\n    }\n  }\n\n}\n\n.NavBarHidden {\n  @media all and (max-width: 1200px) {\n  }\n}\n",".down-arrow-container {\n  position: absolute;\n  bottom: 10vh;\n\n  .down-arrow {\n    width: 5vw;\n    text-align: center;\n  }\n}\n","$intro-button-color: #ff7970;\n$mobile-width: 800px;\n$transition-duration: 0.75s;\n$transition-prop: all;\n$transition-easing: ease;\n\n/*defines the beginning state of the enter transition*/\n.on-enter {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropin(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n\n/*defines the actual enter transition*/\n.on-enter.on-enter-active {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n\n}\n/*defines the beginning state of the leave transitio*/\n.on-leave {\n  transform: translateX(0vh);\n  /*font-size: 1.0em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n/*defines the actual leave transition*/\n\n.on-leave.on-leave-active {\n  transform: translateX(-250vh);\n  /*font-size: 0.1em;*/\n  /*@include css-dropout(0.75s);*/\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n}\n\n.page {\n  @include css-transition($transition-prop, $transition-duration, $transition-easing);\n  transform: translateX(0vh);\n\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 100vh;\n\n  .home-graph-layout {\n    .average-emotion {\n      text-align: center;\n      p {\n        font-size: 2em;\n      }\n\n    }\n\n  }\n\n\n  .home-header {\n    width: 50vw;\n    h1 {\n      text-align: left;\n    }\n\n    h4 {\n      text-align: left;\n    }\n\n    p {\n      text-align: left;\n    }\n  }\n\n  .home-graph-layout {\n    h1 {\n    }\n  }\n\n  .update-data {\n    top: 0;\n    margin-top: 1vh;\n    background: #36363d;\n    color: white;\n    font-family: 'Rubik';\n    font-size: 0.5em;\n    padding: 10px;\n    border-radius: 5px;\n    @css-transition(all, 0.2s, ease-in-out);\n    @include css-user-select(none);\n    cursor: pointer;\n  }\n\n  .update-data:hover {\n    background: #957a77;\n  }\n\n\n\n  .header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    flex-wrap: wrap;\n\n    .header-box {\n      width: 50vw;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      flex-wrap: wrap;\n      transition: all 0.2s ease-in;\n\n      .title {\n        width: 100vw;\n\n        h1 {\n          @css-user-select(none);\n          cursor: default;\n        }\n      }\n\n      .graph-options {\n\n      }\n\n      .subtitle {\n        width: 100vw;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        flex-wrap: wrap;\n        flex-direction: column;\n\n        p {\n          text-align: center;\n          transition: all 0.2s ease-in;\n          @css-user-select(none);\n        }\n      }\n    }\n  }\n\n  p:hover {\n  color: black;\n  cursor:pointer;\n  }\n\n\n  .page-bg-image {\n    background-position: center center;\n    position: absolute;\n    top: 0;\n    background-size: cover;\n    left: 0;\n    z-index: -1;\n    width: 110vw;\n    /*filter: blur(5px);*/\n    /*margin: -20px -20px -20px -20px;*/\n\n    @media all and(max-width: $mobile-width) {\n      height: 110vh;\n      width: auto;\n    }\n  }\n\n  .page-bg-image-container {\n    overflow: hidden;\n  }\n}\n","$first-color: #9bb5b5;\n$second-color: #eadab9;\n$blue-color: #637799;\n$red-color: #e0935c;\n$orange-color: #e0935c;\n$yellow-color: #efce69;\n$black-color: #262522;\n$white-color: #f9f6ef;\n\n\n.graph {\n    display: flex;\n    justify-content: center;\n    @include css-transition(all, 0.5s, ease-in-out);\n}\n\n\n.d3container {\n  border-radius: 50%;\n}\n\n.textGroup {\n  @include css-transition(transform, 0.9s ,ease-in-out);\n}\n\n.companyText {\n  fill: white;\n  @include css-user-select(none);\n  cursor: pointer;\n  font-size: 2em;\n}\n\n.companyText:hover {\n  font-size: 2.1em;\n}\n\n.firstWave:hover {\n\n  stroke: red;\n}\n\n.secondWave:hover {\n\nstroke: blue;\n\n}\n\npath {\n  /*@include css-transition(d, 0.9s ,ease-in-out);*/\n  /*-webkit-transition: -webkit-transform 0.5s ease;*/\n  -webkit-transition: -webkit-transform 0.6s ease-out;\n    /*-moz-transition: transform 0.6s ease-out;*/\n    /*-o-transition: transform 0.6s ease-out;*/\n    /*transition: transform 0.6s ease-out;*/\n    -webkit-backface-visibility: hidden;\n}\n\npath:hover {\n  stroke: red;\n}\n\n\n.graph rect {\n  @include css-transition(all, 0.9s ,ease-in-out);\n}\n\n\n\n.LinearReact {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots {\n  @include css-transition(all, 0.9s, ease-in-out);\n}\n\n.dots:hover {\n  fill: #e3a6a6;\n  stroke: #e3a6a6;\n}\n\n\n\n\npath {\n@include css-transition(all, 0.5s, ease-in-out);\n}\n\n.LinearRect:hover {\nfill: #c7bca5;\n}\n\n.kernel {\n@include css-transition(all, 0.9s, ease-in-out);\n}\n\n.kernel:hover + .core {\n@include css-transition(all, 0.5s, ease-in-out);\n/*stroke: #1c1c1c;*/\nstroke-width: 0.0px;\n\n}\n\n.core {\n  @include css-transition(all, 0.5s, ease-in-out);\n}\n\n.shell {\npointer-events: none;\n\n}\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 222 */
+/* 221 */
 /***/ (function(module, exports) {
 
 /*
@@ -41583,7 +41540,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 223 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41594,7 +41551,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = addClass;
 
-var _hasClass = __webpack_require__(224);
+var _hasClass = __webpack_require__(223);
 
 var _hasClass2 = _interopRequireDefault(_hasClass);
 
@@ -41606,7 +41563,7 @@ function addClass(element, className) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 224 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41622,7 +41579,7 @@ function hasClass(element, className) {
 module.exports = exports["default"];
 
 /***/ }),
-/* 225 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41633,7 +41590,7 @@ module.exports = function removeClass(element, className) {
 };
 
 /***/ }),
-/* 226 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41749,7 +41706,7 @@ function getTransitionProperties() {
 }
 
 /***/ }),
-/* 227 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41808,19 +41765,19 @@ exports.default = compatRaf;
 module.exports = exports['default'];
 
 /***/ }),
+/* 227 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+module.exports = __webpack_require__(228);
+
+
+/***/ }),
 /* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 module.exports = __webpack_require__(229);
-
-
-/***/ }),
-/* 229 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-module.exports = __webpack_require__(230);
 
 /**
  * Exports parser
@@ -41832,7 +41789,7 @@ module.exports.parser = __webpack_require__(30);
 
 
 /***/ }),
-/* 230 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -41844,7 +41801,7 @@ var Emitter = __webpack_require__(64);
 var debug = __webpack_require__(44)('engine.io-client:socket');
 var index = __webpack_require__(122);
 var parser = __webpack_require__(30);
-var parseuri = __webpack_require__(128);
+var parseuri = __webpack_require__(127);
 var parsejson = __webpack_require__(275);
 var parseqs = __webpack_require__(70);
 
@@ -42577,7 +42534,7 @@ Socket.prototype.filterUpgrades = function (upgrades) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 231 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {
@@ -42815,7 +42772,7 @@ JSONPPolling.prototype.doWrite = function (data, fn) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 232 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -43246,7 +43203,7 @@ function unloadHandler () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 233 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/**
@@ -43257,13 +43214,13 @@ var Transport = __webpack_require__(62);
 var parser = __webpack_require__(30);
 var parseqs = __webpack_require__(70);
 var inherit = __webpack_require__(43);
-var yeast = __webpack_require__(187);
+var yeast = __webpack_require__(186);
 var debug = __webpack_require__(44)('engine.io-client:websocket');
 var BrowserWebSocket = global.WebSocket || global.MozWebSocket;
 var NodeWebSocket;
 if (typeof window === 'undefined') {
   try {
-    NodeWebSocket = __webpack_require__(393);
+    NodeWebSocket = __webpack_require__(394);
   } catch (e) { }
 }
 
@@ -43538,7 +43495,7 @@ WS.prototype.check = function () {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 234 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -43554,7 +43511,7 @@ exports.coerce = coerce;
 exports.disable = disable;
 exports.enable = enable;
 exports.enabled = enabled;
-exports.humanize = __webpack_require__(125);
+exports.humanize = __webpack_require__(234);
 
 /**
  * The currently active debug mode names, and names to skip.
@@ -43740,6 +43697,161 @@ function enabled(name) {
 function coerce(val) {
   if (val instanceof Error) return val.stack || val.message;
   return val;
+}
+
+
+/***/ }),
+/* 234 */
+/***/ (function(module, exports) {
+
+/**
+ * Helpers.
+ */
+
+var s = 1000
+var m = s * 60
+var h = m * 60
+var d = h * 24
+var y = d * 365.25
+
+/**
+ * Parse or format the given `val`.
+ *
+ * Options:
+ *
+ *  - `long` verbose formatting [false]
+ *
+ * @param {String|Number} val
+ * @param {Object} options
+ * @throws {Error} throw an error if val is not a non-empty string or a number
+ * @return {String|Number}
+ * @api public
+ */
+
+module.exports = function (val, options) {
+  options = options || {}
+  var type = typeof val
+  if (type === 'string' && val.length > 0) {
+    return parse(val)
+  } else if (type === 'number' && isNaN(val) === false) {
+    return options.long ?
+			fmtLong(val) :
+			fmtShort(val)
+  }
+  throw new Error('val is not a non-empty string or a valid number. val=' + JSON.stringify(val))
+}
+
+/**
+ * Parse the given `str` and return milliseconds.
+ *
+ * @param {String} str
+ * @return {Number}
+ * @api private
+ */
+
+function parse(str) {
+  str = String(str)
+  if (str.length > 10000) {
+    return
+  }
+  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str)
+  if (!match) {
+    return
+  }
+  var n = parseFloat(match[1])
+  var type = (match[2] || 'ms').toLowerCase()
+  switch (type) {
+    case 'years':
+    case 'year':
+    case 'yrs':
+    case 'yr':
+    case 'y':
+      return n * y
+    case 'days':
+    case 'day':
+    case 'd':
+      return n * d
+    case 'hours':
+    case 'hour':
+    case 'hrs':
+    case 'hr':
+    case 'h':
+      return n * h
+    case 'minutes':
+    case 'minute':
+    case 'mins':
+    case 'min':
+    case 'm':
+      return n * m
+    case 'seconds':
+    case 'second':
+    case 'secs':
+    case 'sec':
+    case 's':
+      return n * s
+    case 'milliseconds':
+    case 'millisecond':
+    case 'msecs':
+    case 'msec':
+    case 'ms':
+      return n
+    default:
+      return undefined
+  }
+}
+
+/**
+ * Short format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function fmtShort(ms) {
+  if (ms >= d) {
+    return Math.round(ms / d) + 'd'
+  }
+  if (ms >= h) {
+    return Math.round(ms / h) + 'h'
+  }
+  if (ms >= m) {
+    return Math.round(ms / m) + 'm'
+  }
+  if (ms >= s) {
+    return Math.round(ms / s) + 's'
+  }
+  return ms + 'ms'
+}
+
+/**
+ * Long format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function fmtLong(ms) {
+  return plural(ms, d, 'day') ||
+    plural(ms, h, 'hour') ||
+    plural(ms, m, 'minute') ||
+    plural(ms, s, 'second') ||
+    ms + ' ms'
+}
+
+/**
+ * Pluralization helper.
+ */
+
+function plural(ms, n, name) {
+  if (ms < n) {
+    return
+  }
+  if (ms < n * 1.5) {
+    return Math.floor(ms / n) + ' ' + name
+  }
+  return Math.ceil(ms / n) + ' ' + name + 's'
 }
 
 
@@ -45525,7 +45637,7 @@ module.exports = function isPrimitive(value) {
 ;(function () {
   // Detect the `define` function exposed by asynchronous module loaders. The
   // strict `define` check is necessary for compatibility with `r.js`.
-  var isLoader = "function" === "function" && __webpack_require__(185);
+  var isLoader = "function" === "function" && __webpack_require__(184);
 
   // A set of types used to distinguish objects from primitives.
   var objectTypes = {
@@ -46425,7 +46537,7 @@ module.exports = function isPrimitive(value) {
   }
 }).call(this);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)(module), __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185)(module), __webpack_require__(8)))
 
 /***/ }),
 /* 271 */
@@ -46508,8 +46620,8 @@ module.exports = function hasSymbols() {
 
 var defineProperties = __webpack_require__(108);
 
-var implementation = __webpack_require__(126);
-var getPolyfill = __webpack_require__(127);
+var implementation = __webpack_require__(125);
+var getPolyfill = __webpack_require__(126);
 var shim = __webpack_require__(274);
 
 var polyfill = getPolyfill();
@@ -46531,7 +46643,7 @@ module.exports = polyfill;
 
 
 var define = __webpack_require__(108);
-var getPolyfill = __webpack_require__(127);
+var getPolyfill = __webpack_require__(126);
 
 module.exports = function shimAssign() {
 	var polyfill = getPolyfill();
@@ -46600,8 +46712,8 @@ module.exports = function parsejson(data) {
 
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(72);
-  var warning = __webpack_require__(130);
-  var ReactPropTypesSecret = __webpack_require__(129);
+  var warning = __webpack_require__(129);
+  var ReactPropTypesSecret = __webpack_require__(128);
   var loggedTypeFailures = {};
 }
 
@@ -46730,9 +46842,9 @@ module.exports = function() {
 
 var emptyFunction = __webpack_require__(71);
 var invariant = __webpack_require__(72);
-var warning = __webpack_require__(130);
+var warning = __webpack_require__(129);
 
-var ReactPropTypesSecret = __webpack_require__(129);
+var ReactPropTypesSecret = __webpack_require__(128);
 var checkPropTypes = __webpack_require__(276);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
@@ -47207,7 +47319,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
 var stringify = __webpack_require__(281);
 var parse = __webpack_require__(280);
-var formats = __webpack_require__(131);
+var formats = __webpack_require__(130);
 
 module.exports = {
     formats: formats,
@@ -47223,7 +47335,7 @@ module.exports = {
 "use strict";
 
 
-var utils = __webpack_require__(132);
+var utils = __webpack_require__(131);
 
 var has = Object.prototype.hasOwnProperty;
 
@@ -47397,8 +47509,8 @@ module.exports = function (str, opts) {
 "use strict";
 
 
-var utils = __webpack_require__(132);
-var formats = __webpack_require__(131);
+var utils = __webpack_require__(131);
+var formats = __webpack_require__(130);
 
 var arrayPrefixGenerators = {
     brackets: function brackets(prefix) { // eslint-disable-line func-name-matching
@@ -49879,7 +49991,7 @@ var util = module.exports = {
 
 "use strict";
 
-var strictUriEncode = __webpack_require__(387);
+var strictUriEncode = __webpack_require__(388);
 var objectAssign = __webpack_require__(23);
 
 function encoderForArrayFormat(opts) {
@@ -49945,11 +50057,13 @@ function parserForArrayFormat(opts) {
 		case 'bracket':
 			return function (key, value, accumulator) {
 				result = /(\[\])$/.exec(key);
-
 				key = key.replace(/\[\]$/, '');
 
-				if (!result || accumulator[key] === undefined) {
+				if (!result) {
 					accumulator[key] = value;
+					return;
+				} else if (accumulator[key] === undefined) {
+					accumulator[key] = [value];
 					return;
 				}
 
@@ -50134,8 +50248,8 @@ module.exports = anim
 /* 289 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Element = __webpack_require__(133)
-var mapValues = __webpack_require__(135)
+var Element = __webpack_require__(132)
+var mapValues = __webpack_require__(134)
 
 var mixin = {
   componentWillMount: function () {
@@ -50143,8 +50257,10 @@ var mixin = {
     this.animateFauxDOMUntil = 0
   },
   connectFauxDOM: function (node, name) {
-    this.connectedFauxDOM[name] = typeof node !== 'string' ? node : new Element(node)
-    setTimeout(this.drawFauxDOM.bind(this))
+    if (!this.connectedFauxDOM[name]) {
+      this.connectedFauxDOM[name] = typeof node !== 'string' ? node : new Element(node)
+      setTimeout(this.drawFauxDOM)
+    }
     return this.connectedFauxDOM[name]
   },
   drawFauxDOM: function () {
@@ -50206,7 +50322,7 @@ module.exports = isUndefined
 /* 293 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var camelCase = __webpack_require__(134)
+var camelCase = __webpack_require__(133)
 
 function styleCamelCase (name) {
   var camel = camelCase(name)
@@ -50236,9 +50352,9 @@ module.exports = styleCamelCase
 
 
 var React       = __webpack_require__(1);
-var urllite     = __webpack_require__(391);
+var urllite     = __webpack_require__(392);
 var Environment = __webpack_require__(36);
-var HashEnvironment = __webpack_require__(139);
+var HashEnvironment = __webpack_require__(138);
 var assign      = Object.assign || __webpack_require__(23);
 var omit        = __webpack_require__(48);
 
@@ -50382,7 +50498,7 @@ module.exports = CaptureClicks;
 
 
 var React             = __webpack_require__(1);
-var NavigatableMixin  = __webpack_require__(136);
+var NavigatableMixin  = __webpack_require__(135);
 var Environment       = __webpack_require__(36);
 var assign            = Object.assign || __webpack_require__(23);
 var omit              = __webpack_require__(48);
@@ -50536,8 +50652,8 @@ module.exports = {
 
 
 var React                     = __webpack_require__(1);
-var RouterMixin               = __webpack_require__(138);
-var RouteRenderingMixin       = __webpack_require__(137);
+var RouterMixin               = __webpack_require__(137);
+var RouteRenderingMixin       = __webpack_require__(136);
 var assign                    = Object.assign || __webpack_require__(23);
 var omit                      = __webpack_require__(48);
 
@@ -50716,8 +50832,8 @@ module.exports = PathnameEnvironment;
 "use strict";
 
 
-var URLPattern = __webpack_require__(184);
-var invariant = __webpack_require__(140);
+var URLPattern = __webpack_require__(183);
+var invariant = __webpack_require__(139);
 var warning = __webpack_require__(301);
 var React = __webpack_require__(1);
 var assign = Object.assign || __webpack_require__(23);
@@ -50937,7 +51053,7 @@ module.exports = warning;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_create_react_class__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(140);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -50969,7 +51085,7 @@ var IndexLink = __WEBPACK_IMPORTED_MODULE_1_create_react_class___default()({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__routerWarning__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Redirect__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Redirect__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__InternalPropTypes__ = __webpack_require__(37);
 
 
@@ -51137,11 +51253,11 @@ var Route = __WEBPACK_IMPORTED_MODULE_0_create_react_class___default()({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_create_react_class___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_create_react_class__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__InternalPropTypes__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__RouterContext__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__RouteUtils__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__RouterUtils__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__RouterUtils__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__routerWarning__ = __webpack_require__(33);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -51518,7 +51634,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory__ = __webpack_require__(263);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(145);
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createBrowserHistory___default.a));
@@ -51606,7 +51722,7 @@ function computeChangedRoutes(prevState, nextState) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AsyncUtils__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PromiseUtils__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PromiseUtils__ = __webpack_require__(141);
 
 
 
@@ -51677,7 +51793,7 @@ function getRouteParams(route, params) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory__ = __webpack_require__(264);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createRouterHistory__ = __webpack_require__(145);
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__createRouterHistory__["a" /* default */])(__WEBPACK_IMPORTED_MODULE_0_history_lib_createHashHistory___default.a));
@@ -51844,10 +51960,10 @@ function isActive(_ref, indexOnly, currentLocation, routes, params) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_history_lib_Actions___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_history_lib_Actions__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(146);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__RouteUtils__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__RouterUtils__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__RouterUtils__ = __webpack_require__(143);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -51911,7 +52027,7 @@ function match(_ref, callback) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__AsyncUtils__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PromiseUtils__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PromiseUtils__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PatternUtils__ = __webpack_require__(32);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__routerWarning__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__RouteUtils__ = __webpack_require__(24);
@@ -52245,19 +52361,19 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _addClass = __webpack_require__(223);
+var _addClass = __webpack_require__(222);
 
 var _addClass2 = _interopRequireDefault(_addClass);
 
-var _removeClass = __webpack_require__(225);
+var _removeClass = __webpack_require__(224);
 
 var _removeClass2 = _interopRequireDefault(_removeClass);
 
-var _requestAnimationFrame = __webpack_require__(227);
+var _requestAnimationFrame = __webpack_require__(226);
 
 var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 
-var _properties = __webpack_require__(226);
+var _properties = __webpack_require__(225);
 
 var _react = __webpack_require__(1);
 
@@ -52269,7 +52385,7 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _reactDom = __webpack_require__(61);
 
-var _PropTypes = __webpack_require__(149);
+var _PropTypes = __webpack_require__(148);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52480,7 +52596,7 @@ exports.__esModule = true;
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-var _chainFunction = __webpack_require__(214);
+var _chainFunction = __webpack_require__(213);
 
 var _chainFunction2 = _interopRequireDefault(_chainFunction);
 
@@ -53306,7 +53422,7 @@ module.exports = BeforeInputEventPlugin;
 
 
 
-var CSSProperty = __webpack_require__(150);
+var CSSProperty = __webpack_require__(149);
 var ExecutionEnvironment = __webpack_require__(6);
 var ReactPerf = __webpack_require__(13);
 
@@ -53496,7 +53612,7 @@ var SyntheticEvent = __webpack_require__(28);
 
 var getEventTarget = __webpack_require__(89);
 var isEventSupported = __webpack_require__(92);
-var isTextInputElement = __webpack_require__(177);
+var isTextInputElement = __webpack_require__(176);
 var keyOf = __webpack_require__(21);
 
 var topLevelTypes = EventConstants.topLevelTypes;
@@ -54159,7 +54275,7 @@ module.exports = EnterLeaveEventPlugin;
 
 
 var EventConstants = __webpack_require__(18);
-var ReactErrorUtils = __webpack_require__(164);
+var ReactErrorUtils = __webpack_require__(163);
 
 var invariant = __webpack_require__(2);
 var warning = __webpack_require__(4);
@@ -54371,7 +54487,7 @@ module.exports = EventPluginUtils;
 var PooledClass = __webpack_require__(25);
 
 var assign = __webpack_require__(3);
-var getTextContentAccessor = __webpack_require__(176);
+var getTextContentAccessor = __webpack_require__(175);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -54843,7 +54959,7 @@ var ReactDOM = __webpack_require__(82);
 var CSSCore = __webpack_require__(236);
 var ReactTransitionEvents = __webpack_require__(359);
 
-var onlyChild = __webpack_require__(178);
+var onlyChild = __webpack_require__(177);
 
 // We don't remove the element from the DOM until we receive an animationend or
 // transitionend event. If the user screws up and forgets to add an animation
@@ -55500,7 +55616,7 @@ var ReactCompositeComponentMixin = {
           // This is intentionally an invariant that gets caught. It's the same
           // behavior as without this statement except with a better message.
           !(typeof propTypes[propName] === 'function') ? process.env.NODE_ENV !== 'production' ? invariant(false, '%s: %s type `%s` is invalid; it must be a function, usually ' + 'from React.PropTypes.', componentName || 'React class', ReactPropTypeLocationNames[location], propName) : invariant(false) : undefined;
-          error = propTypes[propName](props, propName, componentName, location);
+          error = propTypes[propName](props, propName, componentName, location, null, 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED');
         } catch (ex) {
           error = ex;
         }
@@ -55906,7 +56022,7 @@ var ReactComponentBrowserEnvironment = __webpack_require__(80);
 var ReactDOMButton = __webpack_require__(337);
 var ReactDOMInput = __webpack_require__(340);
 var ReactDOMOption = __webpack_require__(341);
-var ReactDOMSelect = __webpack_require__(157);
+var ReactDOMSelect = __webpack_require__(156);
 var ReactDOMTextarea = __webpack_require__(344);
 var ReactMount = __webpack_require__(7);
 var ReactMultiChild = __webpack_require__(351);
@@ -56864,7 +56980,7 @@ module.exports = ReactDOMComponent;
 
 
 var ReactElement = __webpack_require__(12);
-var ReactElementValidator = __webpack_require__(161);
+var ReactElementValidator = __webpack_require__(160);
 
 var mapObject = __webpack_require__(246);
 
@@ -57206,8 +57322,8 @@ module.exports = ReactDOMInput;
 
 
 
-var ReactChildren = __webpack_require__(153);
-var ReactDOMSelect = __webpack_require__(157);
+var ReactChildren = __webpack_require__(152);
+var ReactDOMSelect = __webpack_require__(156);
 
 var assign = __webpack_require__(3);
 var warning = __webpack_require__(4);
@@ -57305,7 +57421,7 @@ module.exports = ReactDOMOption;
 var ExecutionEnvironment = __webpack_require__(6);
 
 var getNodeForCharacterOffset = __webpack_require__(377);
-var getTextContentAccessor = __webpack_require__(176);
+var getTextContentAccessor = __webpack_require__(175);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -57520,7 +57636,7 @@ module.exports = ReactDOMSelection;
 
 
 
-var ReactDefaultInjection = __webpack_require__(160);
+var ReactDefaultInjection = __webpack_require__(159);
 var ReactServerRendering = __webpack_require__(356);
 var ReactVersion = __webpack_require__(85);
 
@@ -58386,12 +58502,12 @@ module.exports = ReactEventListener;
 var DOMProperty = __webpack_require__(26);
 var EventPluginHub = __webpack_require__(38);
 var ReactComponentEnvironment = __webpack_require__(81);
-var ReactClass = __webpack_require__(154);
-var ReactEmptyComponent = __webpack_require__(162);
+var ReactClass = __webpack_require__(153);
+var ReactEmptyComponent = __webpack_require__(161);
 var ReactBrowserEventEmitter = __webpack_require__(52);
-var ReactNativeComponent = __webpack_require__(168);
+var ReactNativeComponent = __webpack_require__(167);
 var ReactPerf = __webpack_require__(13);
-var ReactRootIndex = __webpack_require__(171);
+var ReactRootIndex = __webpack_require__(170);
 var ReactUpdates = __webpack_require__(15);
 
 var ReactInjection = {
@@ -58427,17 +58543,17 @@ module.exports = ReactInjection;
 
 
 
-var ReactChildren = __webpack_require__(153);
-var ReactComponent = __webpack_require__(155);
-var ReactClass = __webpack_require__(154);
+var ReactChildren = __webpack_require__(152);
+var ReactComponent = __webpack_require__(154);
+var ReactClass = __webpack_require__(153);
 var ReactDOMFactories = __webpack_require__(339);
 var ReactElement = __webpack_require__(12);
-var ReactElementValidator = __webpack_require__(161);
-var ReactPropTypes = __webpack_require__(170);
+var ReactElementValidator = __webpack_require__(160);
+var ReactPropTypes = __webpack_require__(169);
 var ReactVersion = __webpack_require__(85);
 
 var assign = __webpack_require__(3);
-var onlyChild = __webpack_require__(178);
+var onlyChild = __webpack_require__(177);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
@@ -58510,13 +58626,13 @@ module.exports = React;
 
 
 var ReactComponentEnvironment = __webpack_require__(81);
-var ReactMultiChildUpdateTypes = __webpack_require__(167);
+var ReactMultiChildUpdateTypes = __webpack_require__(166);
 
 var ReactCurrentOwner = __webpack_require__(19);
 var ReactReconciler = __webpack_require__(27);
 var ReactChildReconciler = __webpack_require__(335);
 
-var flattenChildren = __webpack_require__(174);
+var flattenChildren = __webpack_require__(173);
 
 /**
  * Updating children of a component may trigger recursive updates. The depth is
@@ -59113,8 +59229,8 @@ module.exports = ReactOwner;
 var CallbackQueue = __webpack_require__(77);
 var PooledClass = __webpack_require__(25);
 var ReactBrowserEventEmitter = __webpack_require__(52);
-var ReactDOMFeatureFlags = __webpack_require__(156);
-var ReactInputSelection = __webpack_require__(165);
+var ReactDOMFeatureFlags = __webpack_require__(155);
+var ReactInputSelection = __webpack_require__(164);
 var Transaction = __webpack_require__(56);
 
 var assign = __webpack_require__(3);
@@ -59379,10 +59495,10 @@ module.exports = ReactServerBatchingStrategy;
  */
 
 
-var ReactDefaultBatchingStrategy = __webpack_require__(159);
+var ReactDefaultBatchingStrategy = __webpack_require__(158);
 var ReactElement = __webpack_require__(12);
 var ReactInstanceHandles = __webpack_require__(34);
-var ReactMarkupChecksum = __webpack_require__(166);
+var ReactMarkupChecksum = __webpack_require__(165);
 var ReactServerBatchingStrategy = __webpack_require__(355);
 var ReactServerRenderingTransaction = __webpack_require__(357);
 var ReactUpdates = __webpack_require__(15);
@@ -59563,7 +59679,7 @@ module.exports = ReactServerRenderingTransaction;
 
 
 
-var flattenChildren = __webpack_require__(174);
+var flattenChildren = __webpack_require__(173);
 
 var ReactTransitionChildMapping = {
   /**
@@ -60128,11 +60244,11 @@ module.exports = SVGDOMPropertyConfig;
 var EventConstants = __webpack_require__(18);
 var EventPropagators = __webpack_require__(39);
 var ExecutionEnvironment = __webpack_require__(6);
-var ReactInputSelection = __webpack_require__(165);
+var ReactInputSelection = __webpack_require__(164);
 var SyntheticEvent = __webpack_require__(28);
 
 var getActiveElement = __webpack_require__(115);
-var isTextInputElement = __webpack_require__(177);
+var isTextInputElement = __webpack_require__(176);
 var keyOf = __webpack_require__(21);
 var shallowEqual = __webpack_require__(117);
 
@@ -61432,7 +61548,7 @@ module.exports = adler32;
 
 
 
-var CSSProperty = __webpack_require__(150);
+var CSSProperty = __webpack_require__(149);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
 
@@ -61780,7 +61896,7 @@ module.exports = ReactMount.renderSubtreeIntoContainer;
  * Module dependencies.
  */
 
-var parseuri = __webpack_require__(128);
+var parseuri = __webpack_require__(127);
 var debug = __webpack_require__(60)('socket.io-client:url');
 
 /**
@@ -61870,7 +61986,7 @@ exports.coerce = coerce;
 exports.disable = disable;
 exports.enable = enable;
 exports.enabled = enabled;
-exports.humanize = __webpack_require__(125);
+exports.humanize = __webpack_require__(382);
 
 /**
  * The currently active debug mode names, and names to skip.
@@ -62061,6 +62177,161 @@ function coerce(val) {
 
 /***/ }),
 /* 382 */
+/***/ (function(module, exports) {
+
+/**
+ * Helpers.
+ */
+
+var s = 1000
+var m = s * 60
+var h = m * 60
+var d = h * 24
+var y = d * 365.25
+
+/**
+ * Parse or format the given `val`.
+ *
+ * Options:
+ *
+ *  - `long` verbose formatting [false]
+ *
+ * @param {String|Number} val
+ * @param {Object} options
+ * @throws {Error} throw an error if val is not a non-empty string or a number
+ * @return {String|Number}
+ * @api public
+ */
+
+module.exports = function (val, options) {
+  options = options || {}
+  var type = typeof val
+  if (type === 'string' && val.length > 0) {
+    return parse(val)
+  } else if (type === 'number' && isNaN(val) === false) {
+    return options.long ?
+			fmtLong(val) :
+			fmtShort(val)
+  }
+  throw new Error('val is not a non-empty string or a valid number. val=' + JSON.stringify(val))
+}
+
+/**
+ * Parse the given `str` and return milliseconds.
+ *
+ * @param {String} str
+ * @return {Number}
+ * @api private
+ */
+
+function parse(str) {
+  str = String(str)
+  if (str.length > 10000) {
+    return
+  }
+  var match = /^((?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|years?|yrs?|y)?$/i.exec(str)
+  if (!match) {
+    return
+  }
+  var n = parseFloat(match[1])
+  var type = (match[2] || 'ms').toLowerCase()
+  switch (type) {
+    case 'years':
+    case 'year':
+    case 'yrs':
+    case 'yr':
+    case 'y':
+      return n * y
+    case 'days':
+    case 'day':
+    case 'd':
+      return n * d
+    case 'hours':
+    case 'hour':
+    case 'hrs':
+    case 'hr':
+    case 'h':
+      return n * h
+    case 'minutes':
+    case 'minute':
+    case 'mins':
+    case 'min':
+    case 'm':
+      return n * m
+    case 'seconds':
+    case 'second':
+    case 'secs':
+    case 'sec':
+    case 's':
+      return n * s
+    case 'milliseconds':
+    case 'millisecond':
+    case 'msecs':
+    case 'msec':
+    case 'ms':
+      return n
+    default:
+      return undefined
+  }
+}
+
+/**
+ * Short format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function fmtShort(ms) {
+  if (ms >= d) {
+    return Math.round(ms / d) + 'd'
+  }
+  if (ms >= h) {
+    return Math.round(ms / h) + 'h'
+  }
+  if (ms >= m) {
+    return Math.round(ms / m) + 'm'
+  }
+  if (ms >= s) {
+    return Math.round(ms / s) + 's'
+  }
+  return ms + 'ms'
+}
+
+/**
+ * Long format for `ms`.
+ *
+ * @param {Number} ms
+ * @return {String}
+ * @api private
+ */
+
+function fmtLong(ms) {
+  return plural(ms, d, 'day') ||
+    plural(ms, h, 'hour') ||
+    plural(ms, m, 'minute') ||
+    plural(ms, s, 'second') ||
+    ms + ' ms'
+}
+
+/**
+ * Pluralization helper.
+ */
+
+function plural(ms, n, name) {
+  if (ms < n) {
+    return
+  }
+  if (ms < n * 1.5) {
+    return Math.floor(ms / n) + ' ' + name
+  }
+  return Math.ceil(ms / n) + ' ' + name + 's'
+}
+
+
+/***/ }),
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/*global Blob,File*/
@@ -62069,8 +62340,8 @@ function coerce(val) {
  * Module requirements
  */
 
-var isArray = __webpack_require__(385);
-var isBuf = __webpack_require__(183);
+var isArray = __webpack_require__(386);
+var isBuf = __webpack_require__(182);
 
 /**
  * Replaces every Buffer | ArrayBuffer in packet with a numbered placeholder.
@@ -62208,7 +62479,7 @@ exports.removeBlobs = function(data, callback) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)))
 
 /***/ }),
-/* 383 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -62218,7 +62489,7 @@ exports.removeBlobs = function(data, callback) {
  * Expose `debug()` as the module.
  */
 
-exports = module.exports = __webpack_require__(384);
+exports = module.exports = __webpack_require__(385);
 exports.log = log;
 exports.formatArgs = formatArgs;
 exports.save = save;
@@ -62382,7 +62653,7 @@ function localstorage(){
 
 
 /***/ }),
-/* 384 */
+/* 385 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -62398,7 +62669,7 @@ exports.coerce = coerce;
 exports.disable = disable;
 exports.enable = enable;
 exports.enabled = enabled;
-exports.humanize = __webpack_require__(386);
+exports.humanize = __webpack_require__(387);
 
 /**
  * The currently active debug mode names, and names to skip.
@@ -62585,7 +62856,7 @@ function coerce(val) {
 
 
 /***/ }),
-/* 385 */
+/* 386 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -62594,7 +62865,7 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 386 */
+/* 387 */
 /***/ (function(module, exports) {
 
 /**
@@ -62725,7 +62996,7 @@ function plural(ms, n, name) {
 
 
 /***/ }),
-/* 387 */
+/* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -62738,7 +63009,7 @@ module.exports = function (str) {
 
 
 /***/ }),
-/* 388 */
+/* 389 */
 /***/ (function(module, exports) {
 
 
@@ -62850,7 +63121,7 @@ module.exports.stringify = stringify;
 module.exports.normalize = normalize;
 
 /***/ }),
-/* 389 */
+/* 390 */
 /***/ (function(module, exports) {
 
 /*
@@ -63102,7 +63373,7 @@ function updateLink(linkElement, obj) {
 
 
 /***/ }),
-/* 390 */
+/* 391 */
 /***/ (function(module, exports) {
 
 module.exports = toArray
@@ -63121,7 +63392,7 @@ function toArray(list, index) {
 
 
 /***/ }),
-/* 391 */
+/* 392 */
 /***/ (function(module, exports) {
 
 (function() {
@@ -63192,7 +63463,7 @@ function toArray(list, index) {
 
 
 /***/ }),
-/* 392 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module, global) {var __WEBPACK_AMD_DEFINE_RESULT__;/*! https://mths.be/wtf8 v1.0.0 by @mathias */
@@ -63429,10 +63700,10 @@ function toArray(list, index) {
 
 }(this));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(186)(module), __webpack_require__(8)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(185)(module), __webpack_require__(8)))
 
 /***/ }),
-/* 393 */
+/* 394 */
 /***/ (function(module, exports) {
 
 /* (ignored) */

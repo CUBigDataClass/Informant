@@ -67,9 +67,6 @@ module.exports = {
           },
           {
               from: './app/stream.js'
-          },
-          {
-              from: './app/python.json'
           }
       ]),
       HTMLWebpackPluginConfig,

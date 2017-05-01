@@ -77,7 +77,7 @@ class PageLayout extends React.Component {
     socket.on('amazonTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/amazon' == this.props.pageName) {
+      if('/amazon' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -94,7 +94,7 @@ class PageLayout extends React.Component {
     socket.on('appleTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/apple' == this.props.pageName) {
+      if('/apple' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -111,7 +111,7 @@ class PageLayout extends React.Component {
     socket.on('facebookTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/facebook' == this.props.pageName) {
+      if('/facebook' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -129,7 +129,7 @@ class PageLayout extends React.Component {
     socket.on('googleTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/google' == this.props.pageName) {
+      if('/google' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -146,7 +146,7 @@ class PageLayout extends React.Component {
     socket.on('lyftTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/lyft' == this.props.pageName) {
+      if('/lyft' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -163,7 +163,7 @@ class PageLayout extends React.Component {
     socket.on('microsoftTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/microsoft' == this.props.pageName) {
+      if('/microsoft' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -180,7 +180,7 @@ class PageLayout extends React.Component {
     socket.on('twitterTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/twitter' == this.props.pageName) {
+      if('/twitter' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
       self.setState((prevState, props) => {
@@ -197,7 +197,7 @@ class PageLayout extends React.Component {
     socket.on('uberTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
       var emotionAverage = 'amused';
-      if('/uber' == this.props.pageName) {
+      if('/uber' == self.props.pageName) {
         emotionAverage = self.findEmotion(tweetObj.average);
       }
 

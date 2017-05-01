@@ -90,8 +90,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -113,8 +112,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -136,8 +134,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -160,8 +157,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -183,8 +179,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -206,8 +201,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -229,8 +223,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });
@@ -251,8 +244,7 @@ class PageLayout extends React.Component {
         } else {
           return {
             tweet: tweetObj.text + " ",
-            data: newData,
-            emotionAverage: emotionAverage
+            data: newData
           }
         }
         });

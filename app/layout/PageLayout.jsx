@@ -31,11 +31,11 @@ class PageLayout extends React.Component {
     this.findEmotion = this.findEmotion.bind(this);
   }
   updateData() {
-    console.log("this pages name is " + this.props.pageName);
+    console.log(this.props.pageName);
     this.setState((prevState, props) => {
           const avg = Math.random() * 2 - 1;
-          var emotionAverage = 'amused';
-          if('/uber' == this.props.pageName) {
+          var emotionAverage = 'Amused';
+          if('/uber' === this.props.pageName) {
             emotionAverage = this.findEmotion(avg);
           }
           return {
@@ -76,139 +76,185 @@ class PageLayout extends React.Component {
 
     socket.on('amazonTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/amazon' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[0] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/amazon' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
     socket.on('appleTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/apple' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[1] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/apple' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
     socket.on('facebookTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/facebook' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[2] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/facebook' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
 
     socket.on('googleTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/google' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[3] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/google' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
     socket.on('lyftTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/lyft' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[4] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/lyft' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
     socket.on('microsoftTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/microsoft' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[5] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/microsoft' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
     socket.on('twitterTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/twitter' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
+
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[6] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/twitter' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
 
     socket.on('uberTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      var emotionAverage = 'amused';
-      if('/uber' == self.props.pageName) {
-        emotionAverage = self.findEmotion(tweetObj.average);
-      }
-
       self.setState((prevState, props) => {
-          var newData = prevState.data;
-          newData[7] = 15*(tweetObj.score + 1);
+        var newData = prevState.data;
+        newData[4] = 15*(tweetObj.score + 1);
+        var emotionAverage = 'amused';
+        if('/uber' === self.props.pageName) {
           return {
-          tweet: tweetObj.text + " ",
-          data: newData,
-          emotionAverage: emotionAverage
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: self.findEmotion(tweetObj.average)
           }
+        } else {
+          return {
+            tweet: tweetObj.text + " ",
+            data: newData,
+            emotionAverage: emotionAverage
+          }
+        }
         });
       });
   }

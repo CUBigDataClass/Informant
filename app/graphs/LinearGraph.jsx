@@ -29,8 +29,6 @@ var LinearGraph = React.createClass({
 
     const emojis = this.props.emojis;
 
-    var palette = ['#edc2c2','#D2BBA0','#F8FCDA','#edc2c2','#D5896F','#A49E8D','#7A5C58','#969A97', '#D2BBA0', '#edc2c2'];
-
 
     //Width and height
     var w = 500;
@@ -58,8 +56,10 @@ var LinearGraph = React.createClass({
        .attr("y", '250')
        .attr("rx", '4')
        .attr("ry", '4')
-       .attr("stroke", function(d, i) {
-         return palette[i];
+       .attr('fill', function(d, i) {
+         const hex = (i*11).toString(12);
+        //  return '#' + hex + hex + hex;
+        return 'white';
        })
        .attr("width", function(d, i) {
          return '4.0';
@@ -70,7 +70,8 @@ var LinearGraph = React.createClass({
        .attr('transform', function(d, i){
          return 'translate(0, 50) rotate(' + (i*(360.0/data.length)) + ' 250 200)';
        })
-       .style('stroke-width', '5px')
+       .style('stroke',color)
+       .style('stroke-width', '0px')
 
 
 
@@ -95,8 +96,6 @@ var LinearGraph = React.createClass({
          const y = Y(d, i);
          return {x,y};
        })
-
-
 
        var newRects = svg.selectAll("g")
         .data(data)
@@ -140,7 +139,7 @@ var LinearGraph = React.createClass({
       .append("g")
       .classed("textGroup", true)
       .attr('transform', function(d, i){
-        return 'translate(' + (250 - 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+        return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
       })
       .append('text')
       .html(function(d, i) {

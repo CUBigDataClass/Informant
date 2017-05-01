@@ -205,6 +205,28 @@ var WaveGraph = React.createClass({
        });
 
 
+       wave
+       .append("g")
+       .classed("textGroup", true)
+       .attr('transform', function(d, i){
+         return 'translate(' + (250 + 7.5*d.x) + ',' + (250 + 7.5*d.y) + ')';
+       })
+       .append('text')
+       .html(function(d, i) {
+         return emojis[i];
+       })
+       .attr('font-family', 'Futura')
+       .attr('font-size', '15px')
+       .attr('fill', 'white')
+       .classed('companyText', true)
+       .on('mouseover', function(d, i){
+         return self.props.hoverHandler(i);
+       })
+       .on('mouseout', function(d, i){
+         return self.props.hoverHandler(i);
+       });
+
+
 
 
       const finalChart = faux.toReact();

@@ -18,8 +18,7 @@ import Lyft from './pages/Lyft.jsx';
 import Microsoft from './pages/Microsoft.jsx';
 import Twitter from './pages/Twitter.jsx';
 import Uber from './pages/Uber.jsx';
-import About from './pages/About.jsx';
-// import globalStyles from './assets/styles/_Fonts.scss';
+import globalStyles from './assets/styles/_Fonts.scss';
 
 
 
@@ -54,7 +53,6 @@ ReactDOM.render(
       <Route path="lyft" component={Lyft}/>
       <Route path="twitter" component={Twitter}/>
       <Route path="microsoft" component={Microsoft}/>
-      <Route path="about" component={About}/>
     </Route>
   </Router>
   ,

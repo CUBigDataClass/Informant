@@ -10,7 +10,7 @@ class Lyft extends React.Component {
       <div>
         <PageLayout
           title={'Lyft'}
-          description={'Lyft drivers, am I right?'}
+          description={'Opinions on Lyft?'}
           />
       </div>
     );

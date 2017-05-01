@@ -13,15 +13,11 @@ class HomeGraphLayout extends Component {
 
     this.state = {
       data: [5, 6, 8, 1, 11, 14, 5, 6],
-      averages: [0, 0, 0, 0, 0, 0, 0, 0],
       tweet: "loading...",
-      graphType: 'pie',
-      tweetCount: 0,
-      average: 0
+      graphType: 'pie'
     }
 
     this.updateData = this.updateData.bind(this);
-    this.calculateAvg = this.calculateAvg.bind(this);
   }
   updateData() {
     this.setState((prevState, props) => {
@@ -35,17 +31,12 @@ class HomeGraphLayout extends Component {
     var self = this;
     socket.on('amazonTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      const num = 15;
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[0] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[0] = tweetObj.average;
-
+          newData[0] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -55,14 +46,10 @@ class HomeGraphLayout extends Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[1] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[0] = tweetObj.average;
-
+          newData[1] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -72,14 +59,10 @@ class HomeGraphLayout extends Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[2] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[1] = tweetObj.average;
-
+          newData[2] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -90,14 +73,10 @@ class HomeGraphLayout extends Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[3] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[2] = tweetObj.average;
-
+          newData[3] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -107,14 +86,10 @@ class HomeGraphLayout extends Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[4] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[3] = tweetObj.average;
-
+          newData[4] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -124,14 +99,10 @@ class HomeGraphLayout extends Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[5] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[4] = tweetObj.average;
-
+          newData[5] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -140,14 +111,10 @@ class HomeGraphLayout extends Component {
       var tweetObj = JSON.parse(tweet);
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[6] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[5] = tweetObj.average;
-
+          newData[6] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
@@ -157,25 +124,13 @@ class HomeGraphLayout extends Component {
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
-          newData[7] = num*(tweetObj.score + 1);
-          var newAverages = prevState.averages;
-          newAverages[6] = tweetObj.average;
-
-
+          newData[7] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
-          data: newData,
-          average: this.calculateAvg(newAverages)
+          data: newData
           }
         });
       });
-  }
-  calculateAvg(averages) {
-    var average = 0;
-    for(var i = 0; i < Companies.length; i++) {
-      average += averages[i];
-    }
-    return average;
   }
   render() {
     const companies = Companies.map((section, i) => {
@@ -202,9 +157,6 @@ class HomeGraphLayout extends Component {
 
     return (
       <div className='home-graph-layout'>
-        <div className='average-emotion'>
-          <p>{this.state.average}</p>
-        </div>
         <h1>
           {this.state.tweet}
         </h1>

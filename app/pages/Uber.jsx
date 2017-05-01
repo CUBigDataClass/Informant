@@ -10,7 +10,7 @@ class Uber extends React.Component {
       <div>
         <PageLayout
           title={'Uber'}
-          description={'This is how people feel about modern-day taxi services.'}
+          description={'What are feeling about Uber?'}
           />
       </div>
     );

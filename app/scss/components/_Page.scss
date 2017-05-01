@@ -1,45 +1,37 @@
 $intro-button-color: #ff7970;
 $mobile-width: 800px;
-$transition-duration: 0.75s;
+$transition-duration: 0.5s;
 $transition-prop: all;
 $transition-easing: ease;
 
-/*defines the beginning state of the enter transition*/
+
 .on-enter {
-  transform: translateY(-100vh);
-  /*font-size: 0.1em;*/
-  /*@include css-dropin(0.75s);*/
-  @include css-transition($transition-prop, $transition-duration, $transition-easing);
-
-}
-
-/*defines the actual enter transition*/
-.on-enter.on-enter-active {
   transform: translateY(0vh);
-  /*font-size: 1.0em;*/
+  @include css-dropin(0.75s);
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 
 }
-/*defines the beginning state of the leave transitio*/
+
+.on-enter-active {
+  transform: translateY(0vh);
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
+
+}
+
 .on-leave {
   transform: translateY(0vh);
-  /*font-size: 1.0em;*/
   /*@include css-dropout(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 }
 
-/*defines the actual leave transition*/
-
-.on-leave.on-leave-active {
+.on-leave-active {
   transform: translateY(-100vh);
-  /*font-size: 0.1em;*/
   /*@include css-dropout(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 }
 
 .page {
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
-  transform: translateY(0vh);
 
   display: flex;
   justify-content: center;
@@ -48,18 +40,13 @@ $transition-easing: ease;
   flex-wrap: wrap;
 
 
-  .home-header {
-    width: 50vw;
-    h1 {
-      text-align: left;
-    }
-
-    h4 {
-      text-align: left;
-    }
+  .home-description {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
 
     p {
-      text-align: left;
+        width: 20%;
     }
   }
 
@@ -111,23 +98,36 @@ $transition-easing: ease;
         }
       }
 
+      .hover-text {
+        color: #db8686;
+      }
+
+      .on {
+        /*@include css-transform-translate-x(0vw);*/
+        opacity: 1.0;
+        @include css-transition(all, 4.5s, ease-in-out);
+      }
+
+      .off {
+        @include css-transition(all, 4.5s, ease-in-out);
+        opacity: 0.0;
+        /*@include css-transform-translate-x(-50vw);*/
+      }
+
       .graph-options {
 
       }
 
       .subtitle {
         width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: column;
 
         p {
           text-align: center;
           transition: all 0.2s ease-in;
           @css-user-select(none);
         }
+
+
       }
     }
   }

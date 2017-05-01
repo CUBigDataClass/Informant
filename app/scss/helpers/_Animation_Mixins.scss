@@ -63,27 +63,17 @@
 
 @keyframes dropin {
     from {
-      transform: scale(1.2);
-      h1 {
-        opacity: 0.1;
-      }
+    font-size: 0em;
     }
     to   {
-      transform: scale(1);
-      h1 {
-        opacity: 1.0;
-      }
+    font-size: 1.5em;
     }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes dropin {
-    from {
-      font-size: 1em;
-    }
-    to   {
-      font-size: 1.5em;
-    }
+    from { font-size: 1em; }
+    to   { font-size: 1.5em; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
@@ -98,22 +88,14 @@
 
 /* Internet Explorer */
 @-ms-keyframes dropin {
-    from {
-      font-size: 1em;
-    }
-    to   {
-      font-size: 1.5em;
-    }
+    from { font-size: 1em; }
+    to   { font-size: 1.5em; }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes dropin {
-    from {
-      font-size: 1em;
-    }
-    to   {
-      font-size: 1.5em;
-    }
+    from { font-size: 1em; }
+    to   { font-size: 1.5em; }
 }
 
 

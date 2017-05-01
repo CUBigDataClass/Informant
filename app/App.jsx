@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import MenuBar from './components/MenuBar.jsx';
 import MenuBarIcon from './components/MenuBarIcon.jsx';
 var SmoothScroll = require('./components/SmoothScroll.js');
+var favicon = require('./assets/images/favicon.ico');
 import Companies from './info/companies.json';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -68,8 +69,8 @@ class App extends Component {
           <ReactCSSTransitionGroup
           component="div"
           transitionName={"on"}
-          transitionEnterTimeout={0}
-          transitionLeaveTimeout={0}>
+          transitionEnterTimeout={1000}
+          transitionLeaveTimeout={1000}>
           {this.props.children ?
             React.cloneElement(this.props.children, {
               key: this.props.location.pathname

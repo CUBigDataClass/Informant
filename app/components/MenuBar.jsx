@@ -1,24 +1,26 @@
 import React from 'react';
 import SmoothScroll from './SmoothScroll';
+import {Link} from 'react-router';
+
 
 class MenuBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      MenuBarStyle: 'MenuBar'
+      MenuBarStyle: 'menu-bar menu-bar-hidden'
     }
   }
   componentWillReceiveProps(props) {
     if(!props.open) {
       this.setState((prevState, props) => {
         return {
-          MenuBarStyle: 'MenuBar MenuBarHidden'
+          MenuBarStyle: 'menu-bar menu-bar-hidden'
         }
       });
     } else {
       this.setState((prevState, props) => {
         return {
-          MenuBarStyle: 'MenuBar'
+          MenuBarStyle: 'menu-bar menu-bar-shown'
         }
       });
     }
@@ -28,14 +30,29 @@ class MenuBar extends React.Component {
 
     return (
       <div className={this.state.MenuBarStyle}>
-          {this.props.companies.map((v, i) => (
-            <div onMouseDown={this.props.closeMenuBar}>
-              <SmoothScroll className={'menu-bar-item'} key={i} type={'menuButton'} section={self.props.infos[i].title} text={self.props.infos[i].title}>
-              </SmoothScroll>
-            </div>)
+        <Link to={'home'}>
+          <div onMouseUp={this.props.closeMenuBar} className={'menu-bar-content'}>
+            <SmoothScroll className={'menu-bar-item'} section={'home'} text={'Home'}>
+            </SmoothScroll>
+          </div>
+        </Link>
+
+        <Link to={'about'}>
+          <div onMouseUp={this.props.closeMenuBar} className={'menu-bar-content'}>
+            <SmoothScroll className={'menu-bar-item'} section={'about'} text={'About'}>
+            </SmoothScroll>
+          </div>
+        </Link>
+
+          {this.props.names.map((v, i) => (
+            <Link to={this.props.names[i].title.toLowerCase()}>
+              <div onMouseUp={this.props.closeMenuBar} className={'menu-bar-content'}>
+                <SmoothScroll className={'menu-bar-item'} key={i} section={self.props.names[i].title} text={self.props.names[i].title}>
+                </SmoothScroll>
+              </div>
+            </Link>)
             )
           }
-
       </div>
     );
   }

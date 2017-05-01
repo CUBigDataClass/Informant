@@ -49,7 +49,7 @@ module.exports = {
       },
       {
         // Copy images to the images folder in dev
-        test: /\.(svg|ico|png|jpg|jpeg)$/,
+        test: /\.(svg|ico|png|jpg|jpeg|eot|ttf|woff|woff2)$/,
         loader: 'file-loader?name=app/assets/images/[name].[ext]'
       }
     ]

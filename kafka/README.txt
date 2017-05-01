@@ -1,6 +1,19 @@
 Basic Kafka tutorial -> https://kafka.apache.org/quickstart
 
-To start kafka through the kafka source file, go to the kafka directory and follow the steps:
+There are two kafka files that run kafka - runKafka.sh and stopKafka.sh
+
+Put both of these files in the directory where Kafka is located, and run:
+
+./runKafka.sh 
+
+To start kafka, and run:
+
+./stopKafka.sh
+
+To stop the kafka server
+
+
+To start kafka manually through the kafka source file, go to the kafka directory and follow the steps:
 
 *You may have to run these commands in two seperate terminals
 

@@ -3,13 +3,13 @@ $transition-time: 0.7s;
 $transition-prop: all;
 $transition-easing: ease;
 $g-time: 0.75s;
-$right-transition: 25vw;
-$mobile-right-transition: 75vw;
+$right-transition: 50px;
+$mobile-right-transition: 50px;
 
 @import '../helpers/Transform_Mixins.scss';
 
 
-.MenuBarIcon {
+.menu-bar-icon {
   @include css-transition($transition-prop, $transition-time, $transition-easing);
   border: none;
   color: $menu-bar-icon-color;
@@ -20,20 +20,28 @@ $mobile-right-transition: 75vw;
   margin: 20px 20px;
   cursor: pointer;
   top: 0;
-  z-index: -10;
   display: block;
+  z-index: 999;
 
   @media all and (max-width: 1200px) {
     z-index: 99999;
   }
 }
 
-.MenuBarIcon:hover > div {
+.clicked {
+left: $right-transition;
+}
+
+.unclicked {
+left: 0vw;
+}
+
+.menu-bar-icon:hover > div {
   @include css-transition($transition-prop, 1.1s, $transition-easing);
   background: #bca293;
 }
 
-.MenuBarIcon div {
+.menu-bar-icon div {
   @include css-transition($transition-prop, 1.5s, $transition-easing);
   width: 30px;
   height: 5px;
@@ -41,20 +49,20 @@ $mobile-right-transition: 75vw;
   margin-top: 5px;
 }
 
-.MenuBarIcon:hover > #topBar {
+.menu-bar-icon:hover > #topBar {
   @include css-transition($transition-prop, $g-time, $transition-easing);
   /*@include css-transition(all, $transition-time, ease-in-out);*/
   /*@include css-transform-rotate-and-translate-down(45deg, 10px);*/
 }
 
-.MenuBarIcon:hover > #bottomBar {
+.menu-bar-icon:hover > #bottomBar {
   @include css-transition($transition-prop, $g-time, $transition-easing);
   /*@include css-transition(all, $transition-time, ease-in-out);*/
   /*@include css-transform-rotate-and-translate-up(-45deg, -10px);*/
 
 }
 
-.MenuBarIcon:hover > #middleBar {
+.menu-bar-icon:hover > #middleBar {
   @include css-transition($transition-prop, $g-time, $transition-easing);
   /*@include css-transform-translate-x(-50px);*/
   /*@include css-transform-squash(0);*/

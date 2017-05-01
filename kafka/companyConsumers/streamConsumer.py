@@ -16,6 +16,6 @@ if __name__ == "__main__":
         i = 0
 	print "Starting Consumer"
         for msg in consumer:
-                print msg[6]
+                #print msg[6]
                 message = str(msg[6]).encode('utf-8')
                 sock.sendto(message, server_address)

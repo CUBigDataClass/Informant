@@ -1,96 +1,56 @@
 $transition-time: 0.2s;
 $transition-prop: transform;
 $transition-easing: ease-in-out;
-$bg-color: #7a6772;
+$bg-color: #1b1a1a;
 $menu-button-color: #e09090;
 
-.MenuBar {
+.menu-bar {
     @include css-transition(all, $transition-time, $transition-easing);
     position: fixed;
     top: 0;
     height: 100vh;
-    left: 0;
     width: 100vw;
     background: $bg-color;
+    display: flex;
+    flex-flow: column;
 
     @media all and (max-width: 1200px) {
     }
 
     p {
-        z-index: 999999;
-        color: white;
-        font-weight: 900px;
-        padding: 5vh;
-        margin-bottom: 5vh;
         @include css-user-select(none);
         cursor: pointer;
+        font-weight: 400;
+        color: #866363;
     }
 
-    .smooth-scroll {
-      display: block;
-      position: relative;
-      top: 0;
-      width: 100vw;
-      height: 5vh;
-      background: transparent;
-      z-index: 9999;
+    p:hover {
+      color: white;
     }
 }
 
-.MenuBarHidden {
+.menu-bar-hidden {
+  @include css-transform-translate-y(50px);
+}
 
-  @media all and (min-width: 1200px) {
+.menu-bar-shown {
+  @include css-transform-translate-y(0px);
+}
 
-  }
+.menu-bar-content {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 
 .menu-bar-item {
-  text-align: left;
-}
-
-
-.menuButton {
-  @include css-transition(all, 0.5s, ease-in-out);
-  border: none;
-    margin: 20px 20px;
-    width: 60px;
-    border-radius: 100%;
-    width: 20px;
-    height: 20px;
-    display: block;
-    outline: none;
-    background: transparent;
-    border: 2px solid $menu-button-color;
-
-    @media all and (max-width: 1200px) {
-    }
-
-  p {
-    color: #9a9aa2;
-    padding: 0px;
-    font-weight: 200;
-    margin: 0;
-    padding-left: 50px;
-    text-align: center;
-    white-space: nowrap;
-
-    @media all and (max-width: 1200px) {
-    }
-
-  }
-
-
-}
-
-.menuButton:hover {
-  @include css-transition(all, 0.5s, ease-in-out);
-  border: 2px solid $menu-button-color;
-  border-radius: 10%;
-  background: $menu-button-color;
-  cursor: pointer;
+  @include css-transition($transition-prop, $transition-time, $transition-easing);
 
   > p {
-    @include css-transition(all, 0.5s, ease-in-out);
+    @include css-transition($transition-prop, $transition-time, $transition-easing);
+    margin: 0;
+    padding-left: 8px;
   }
 }

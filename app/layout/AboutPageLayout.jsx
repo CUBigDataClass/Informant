@@ -1,10 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
 import TextLayout from './TextLayout.jsx';
-var io = require('socket.io-client');
-import Emojis from '../info/emojis.json';
-
-const emotions = ['Ecstatic','Joyous','Optimistic','Happy','Amused','Good','Indifferent','Awful','Enraged','Furious'];
 
 class AboutPageLayout extends React.Component {
   render() {

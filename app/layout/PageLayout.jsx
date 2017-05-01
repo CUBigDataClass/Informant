@@ -31,6 +31,7 @@ class PageLayout extends React.Component {
     this.findEmotion = this.findEmotion.bind(this);
   }
   updateData() {
+
     this.setState((prevState, props) => {
           const avg = Math.random() * 2 - 1;
           return {
@@ -198,19 +199,19 @@ class PageLayout extends React.Component {
   }
   render() {
 
-    //<div onMouseDown={this.updateData} className='update-data'>Update Data</div>
+
     return (
       <div className='page'>
         <TextLayout
           title={this.props.title}
           description={this.props.description}
           hoverTextStyle={this.state.hoverTextStyle}
-          percentage={this.state.percentage}
+          percentage={Math.trunc(100 * this.state.percentage) / 100}
           emotionLabel={this.state.emotionLabel}
           average={this.state.emotionAverage}
         />
       <div className='graph-options'>
-
+        <div onMouseDown={this.updateData} className='update-data'>Update Data</div>
       <div onMouseDown={this.changeToPie} className='update-data'>Pie Graph</div>
       <div onMouseDown={this.changeToLinear} className='update-data'>Linear Graph</div>
       <div onMouseDown={this.changeToWave} className='update-data'>Wave Graph</div>

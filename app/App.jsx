@@ -13,11 +13,73 @@ class App extends Component {
     this.state = {
       open: false,
       MenuBarIconStyle: 'menu-bar-icon',
-      slideContentState: 'main menu-bar-close'
+      slideContentState: 'main menu-bar-close',
+      amazonData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      appleData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      facebookData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      googleData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      lyftData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      microsoftData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      twitterData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      uberData: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     };
     this.togglePanel = this.togglePanel.bind(this);
     this.closeMenuBar = this.closeMenuBar.bind(this);
     this.slideContent = this.slideContent.bind(this);
+    this.updateData = this.updateData.bind(this);
+  }
+  updateData(company, emotion, score) {
+    var newData = this.state.data[0];
+
+    if(company == "Amazon") {
+        newData = this.state.amazonData;
+        newData[emotion] = score;
+        this.setState({
+            amazonData: newData
+          });
+    } else if(company == "Apple") {
+        newData = this.state.appleData;
+        newData[emotion] = score;
+        this.setState({
+            appleData: newData
+          });
+    } else if(company == "Facebook") {
+        newData = this.state.facebookData;
+        newData[emotion] = score;
+        this.setState({
+            facebookData: newData
+          });
+    } else if(company == "Google") {
+        newData = this.state.googleData;
+        newData[emotion] = score;
+        this.setState({
+            googleData: newData
+          });
+    } else if(company == "Lyft") {
+        newData = this.state.lyftData;
+        newData[emotion] = score;
+        this.setState({
+            lyftData: newData
+          });
+    } else if(company == "Microsoft") {
+        newData = this.state.microsoftData;
+        newData[emotion] = score;
+        this.setState({
+            microsoftData: newData
+          });
+    } else if(company == "Twitter") {
+        newData = this.state.twitterData;
+        newData[emotion] = score;
+        this.setState({
+            twitterData: newData
+          });
+    } else if(company == "Uber") {
+        newData = this.state.uberData;
+        newData[emotion] = score;
+        this.setState({
+            uberData: newData
+          });
+    }
   }
   togglePanel() {
     this.slideContent();
@@ -73,7 +135,8 @@ class App extends Component {
           transitionLeaveTimeout={0}>
           {this.props.children ?
             React.cloneElement(this.props.children, {
-              key: this.props.location.pathname
+              key: this.props.location.pathname,
+              updateData: this.updateData
             }) :
             null}
         </ReactCSSTransitionGroup>

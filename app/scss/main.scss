@@ -30,20 +30,32 @@ body {
   margin: 0;
   padding: 0;
 
-  .profile-pic-container {
-    width: 100%;
+  .profile-container {
+    width: 100vw;
     position: absolute;
     left: 0;
+    bottom: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
 
   .profile-pic {
     border-radius: 100%;
-width: 25%;
-margin: 50px;
+    width: 150px;
+    margin: 20px;
+
+    p {
+      text-align: center;
+    }
   }
 
   width: 100%;

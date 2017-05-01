@@ -9,7 +9,7 @@ class Amazon extends React.Component {
       <div>
         <PageLayout
           title={'Amazon'}
-          description={'Opinions on Amazon Go?'}
+          description={'Amazon must feel proud.'}
           />
       </div>
     );

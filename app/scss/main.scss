@@ -2,7 +2,7 @@ $global-p-color: #dec5c5;
 $global-h1-color: #ffffff;
 $global-bg-color: #1b1a1a;
 $global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;
-$global-p-font-stack: 'Open Sans', Helvetica, sans-serif;
+$global-p-font-stack: 'Questrial', Helvetica, sans-serif;
 $section-color: #dbd7d7;
 $p-section-color: #111111;
 
@@ -21,6 +21,8 @@ $p-section-color: #111111;
 @import './components/DownArrow.scss';
 @import './components/Page.scss';
 @import './components/Graphs.scss';
+@import './components/About.scss';
+@import './components/TextLayout.scss';
 
 
 body {

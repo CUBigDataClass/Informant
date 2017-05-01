@@ -31,7 +31,6 @@ var params = { track: companies,  language: 'en'};
 client.stream('statuses/filter',params, function(stream){
   //streamHandler(stream,io);
   stream.on('data', function(event) {
-    console.log(event.text)
     io.emit('tweet', event.text);
   });
 });

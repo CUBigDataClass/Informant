@@ -79,7 +79,7 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[0] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/amazon' === self.props.pageName) {
           return {
@@ -101,7 +101,7 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[1] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/apple' === self.props.pageName) {
           return {
@@ -123,7 +123,7 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[2] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/facebook' === self.props.pageName) {
           return {
@@ -146,7 +146,7 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[3] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/google' === self.props.pageName) {
           return {
@@ -190,7 +190,7 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[5] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/microsoft' === self.props.pageName) {
           return {
@@ -212,7 +212,7 @@ class PageLayout extends React.Component {
 
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[6] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/twitter' === self.props.pageName) {
           return {
@@ -233,7 +233,7 @@ class PageLayout extends React.Component {
       var tweetObj = JSON.parse(tweet);
       self.setState((prevState, props) => {
         var newData = prevState.data;
-        newData[4] = 15*(tweetObj.score + 1);
+        newData[7] = 15*(tweetObj.score + 1);
         var emotionAverage = 'amused';
         if('/uber' === self.props.pageName) {
           return {

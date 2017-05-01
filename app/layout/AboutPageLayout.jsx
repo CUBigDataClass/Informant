@@ -15,7 +15,7 @@ class AboutPageLayout extends React.Component {
           <h3>{this.props.description}</h3>
         </div>
         <div className='page-bg-image-container'>
-          <img className='page-bg-image' src={require('../assets/images/mountains.jpg')} />
+
         </div>
         <div className='down-arrow-container'>
           <Link to='amazon'>

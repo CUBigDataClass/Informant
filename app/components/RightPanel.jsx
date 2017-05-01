@@ -16,7 +16,7 @@ class RightPanel extends React.Component {
         <Logo showLogo={showLogo}/>
         <div className={'panelStories'}>
         <h3>Informant is a <i>social metrics dashboard</i>.</h3>
-        <h3>It visualizes the general mood of the public on top companies.</h3>
+        <h3></h3>
 
         <h4>Wave</h4>
         <p>The wave graph illustrates a subtle relation to immediate neighboring companies. It draws out the relational aspect of popular sentiment by depicting fluctuations as smooth waves of propagation.</p>

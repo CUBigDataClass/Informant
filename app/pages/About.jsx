@@ -10,10 +10,14 @@ class About extends React.Component {
       <div className='about'>
         <AboutPageLayout
           title={'About'}
-          description={'Our Tech Stack.'}
+          description={'About Us.'}
           />
         <div className='about-image-container'>
-          <img className='about-image' src={require('../assets/images/tech_stack.png')}/>
+          <h1>Informant</h1>
+          <h2>A social metrics dashboard.</h2>
+          <p>A project based out of Boulder, CO, Informant is a tool that visualizes the general mood of the public on top companies.</p>
+          <p>Fluctuations in public sentiment are realized through Informant.</p>
+          <p>Informant serves a dual purpose as a stock market assistant tool and as an ongoing narrative, streaming realtime emotion into an immediate and concise visualization.</p>
         </div>
 
       </div>

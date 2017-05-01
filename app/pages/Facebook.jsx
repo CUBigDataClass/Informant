@@ -11,6 +11,7 @@ class Facebook extends React.Component {
         <PageLayout
           title={'Facebook'}
           description={"What's up with Facebook?"}
+          pageName={this.props.pageName}
           />
       </div>
     );

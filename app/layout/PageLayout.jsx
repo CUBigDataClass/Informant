@@ -31,12 +31,16 @@ class PageLayout extends React.Component {
     this.findEmotion = this.findEmotion.bind(this);
   }
   updateData() {
-
+    console.log("this pages name is " + this.props.pageName);
     this.setState((prevState, props) => {
           const avg = Math.random() * 2 - 1;
+          var emotionAverage = 'amused';
+          if('/uber' == this.props.pageName) {
+            emotionAverage = this.findEmotion(avg);
+          }
           return {
             data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10)),
-            emotionAverage: this.findEmotion(avg)
+            emotionAverage: emotionAverage
           }
         });
   }
@@ -72,42 +76,51 @@ class PageLayout extends React.Component {
 
     socket.on('amazonTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-      console.log(tweetObj);
+      var emotionAverage = 'amused';
+      if('/amazon' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[0] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
 
     socket.on('appleTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-
+      var emotionAverage = 'amused';
+      if('/apple' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[1] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
 
     socket.on('facebookTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-
+      var emotionAverage = 'amused';
+      if('/facebook' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[2] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
@@ -115,61 +128,78 @@ class PageLayout extends React.Component {
 
     socket.on('googleTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-
+      var emotionAverage = 'amused';
+      if('/google' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[3] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
 
     socket.on('lyftTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-
+      var emotionAverage = 'amused';
+      if('/lyft' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[4] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
 
     socket.on('microsoftTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
-
+      var emotionAverage = 'amused';
+      if('/microsoft' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[5] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
 
     socket.on('twitterTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
+      var emotionAverage = 'amused';
+      if('/twitter' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
       self.setState((prevState, props) => {
           var newData = prevState.data;
           newData[6] = 15*(tweetObj.score + 1);
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
 
     socket.on('uberTweet', function (tweet) {
       var tweetObj = JSON.parse(tweet);
+      var emotionAverage = 'amused';
+      if('/uber' == this.props.pageName) {
+        emotionAverage = self.findEmotion(tweetObj.average);
+      }
 
       self.setState((prevState, props) => {
           var newData = prevState.data;
@@ -177,7 +207,7 @@ class PageLayout extends React.Component {
           return {
           tweet: tweetObj.text + " ",
           data: newData,
-          emotionAverage: self.findEmotion(tweetObj.average)
+          emotionAverage: emotionAverage
           }
         });
       });
@@ -242,7 +272,7 @@ class PageLayout extends React.Component {
           <Link to='twitter'>
             Twitter
           </Link>
-          <Link to='Uber'>
+          <Link to='uber'>
             Uber
           </Link>
         </div>

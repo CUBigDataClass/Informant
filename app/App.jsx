@@ -136,6 +136,7 @@ class App extends Component {
           {this.props.children ?
             React.cloneElement(this.props.children, {
               key: this.props.location.pathname,
+              pageName: this.props.location.pathname,
               updateData: this.updateData
             }) :
             null}

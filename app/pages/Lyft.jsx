@@ -11,6 +11,7 @@ class Lyft extends React.Component {
         <PageLayout
           title={'Lyft'}
           description={'Lyft drivers, am I right?'}
+          pageName={this.props.pageName}
           />
       </div>
     );

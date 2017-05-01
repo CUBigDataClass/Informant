@@ -31,7 +31,7 @@ class AboutPageLayout extends React.Component {
           <Link to='twitter'>
             Twitter
           </Link>
-          <Link to='Uber'>
+          <Link to='uber'>
             Uber
           </Link>
         </div>

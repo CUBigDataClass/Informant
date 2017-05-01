@@ -3,11 +3,11 @@ $mobile-width: 800px;
 $transition-duration: 0.75s;
 $transition-prop: all;
 $transition-easing: ease;
+$transition-distance: -250vh;
 
 /*defines the beginning state of the enter transition*/
 .on-enter {
-  transform: translateX(-250vh);
-  /*font-size: 0.1em;*/
+  transform: translateX($transition-distance);
   /*@include css-dropin(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 
@@ -16,14 +16,12 @@ $transition-easing: ease;
 /*defines the actual enter transition*/
 .on-enter.on-enter-active {
   transform: translateX(0vh);
-  /*font-size: 1.0em;*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 
 }
 /*defines the beginning state of the leave transitio*/
 .on-leave {
   transform: translateX(0vh);
-  /*font-size: 1.0em;*/
   /*@include css-dropout(0.75s);*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 }
@@ -31,16 +29,21 @@ $transition-easing: ease;
 /*defines the actual leave transition*/
 
 .on-leave.on-leave-active {
-  transform: translateX(-250vh);
+  transform: translateX($transition-distance);
   /*font-size: 0.1em;*/
   /*@include css-dropout(0.75s);*/
+  @include css-transition($transition-prop, $transition-duration, $transition-easing);
+}
+
+.on-leave-active {
+  transform: translateX(0vh);
+  /*font-size: 0.1em;*/
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
 }
 
 .page {
   @include css-transition($transition-prop, $transition-duration, $transition-easing);
   transform: translateX(0vh);
-
 
   .current-tweet-container {
     width: 100vw;

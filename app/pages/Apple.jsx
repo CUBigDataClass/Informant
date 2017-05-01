@@ -11,6 +11,7 @@ class Apple extends React.Component {
         <PageLayout
           title={'Apple'}
           description={"When's the new Macbook Pro coming out?"}
+          pageName={this.props.pageName}
           />
       </div>
     );

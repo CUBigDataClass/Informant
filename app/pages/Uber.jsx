@@ -11,6 +11,7 @@ class Uber extends React.Component {
         <PageLayout
           title={'Uber'}
           description={'This is how people feel about modern-day taxi services.'}
+          pageName={this.props.pageName}
           />
       </div>
     );

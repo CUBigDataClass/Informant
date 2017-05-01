@@ -11,6 +11,7 @@ class Twitter extends React.Component {
         <PageLayout
           title={'Twitter'}
           description={'What are people feeling about Twitter?'}
+          pageName={this.props.pageName}
           />
       </div>
     );

@@ -12,6 +12,7 @@ class Google extends React.Component {
         <HomePageLayout
           title={'Top Companies'}
           description={'We are visualizing the general mood of the public on top companies.'}
+          pageName={this.props.pageName}
           />
       </div>
     );

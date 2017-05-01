@@ -38,6 +38,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include css-transition(all, 0.5s, ease-in-out);
   }
 
   .profile {
@@ -45,6 +46,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    @include css-transition($transition-prop, $transition-duration, $transition-easing);
   }
 
 
@@ -52,6 +54,7 @@ body {
     border-radius: 100%;
     width: 150px;
     margin: 20px;
+    @include css-transition($transition-prop, $transition-duration, $transition-easing);
 
     p {
       text-align: center;

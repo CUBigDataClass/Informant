@@ -11,6 +11,7 @@ class Google extends React.Component {
         <PageLayout
           title={'Google'}
           description={"What's up with Google?"}
+          pageName={this.props.pageName}
           />
       </div>
     );

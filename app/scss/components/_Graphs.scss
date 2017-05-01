@@ -6,12 +6,17 @@ $orange-color: #e0935c;
 $yellow-color: #efce69;
 $black-color: #262522;
 $white-color: #f9f6ef;
+$prop: all;
+$duration: 0.5s;
+$easing: ease-in-out;
+$text-duration: 0.9s;
+
 
 
 .graph {
     display: flex;
     justify-content: center;
-    @include css-transition(all, 0.5s, ease-in-out);
+    @include css-transition($prop, $duration, $easing);
 }
 
 
@@ -20,7 +25,7 @@ $white-color: #f9f6ef;
 }
 
 .textGroup {
-  @include css-transition(transform, 0.9s ,ease-in-out);
+  @include css-transition(transform, $text-duration, $easing);
 }
 
 .companyText {
@@ -46,7 +51,7 @@ stroke: blue;
 }
 
 path {
-  /*@include css-transition(d, 0.9s ,ease-in-out);*/
+  /*@include css-transition(d, $duration, $easing);*/
   /*-webkit-transition: -webkit-transform 0.5s ease;*/
   -webkit-transition: -webkit-transform 0.6s ease-out;
     /*-moz-transition: transform 0.6s ease-out;*/
@@ -61,17 +66,17 @@ path:hover {
 
 
 .graph rect {
-  @include css-transition(all, 0.9s ,ease-in-out);
+  @include css-transition($prop, $duration, $easing);
 }
 
 
 
 .LinearReact {
-  @include css-transition(all, 0.9s, ease-in-out);
+  @include css-transition($prop, $duration, $easing);
 }
 
 .dots {
-  @include css-transition(all, 0.9s, ease-in-out);
+  @include css-transition($prop, $duration, $easing);
 }
 
 .dots:hover {
@@ -83,7 +88,7 @@ path:hover {
 
 
 path {
-@include css-transition(all, 0.5s, ease-in-out);
+@include css-transition($prop, $duration, $easing);
 }
 
 .LinearRect:hover {
@@ -91,18 +96,18 @@ fill: #c7bca5;
 }
 
 .kernel {
-@include css-transition(all, 0.9s, ease-in-out);
+@include css-transition($prop, $duration, $easing);
 }
 
 .kernel:hover + .core {
-@include css-transition(all, 0.5s, ease-in-out);
+@include css-transition($prop, $duration, $easing);
 /*stroke: #1c1c1c;*/
 stroke-width: 0.0px;
 
 }
 
 .core {
-  @include css-transition(all, 0.5s, ease-in-out);
+  @include css-transition($prop, $duration, $easing);
 }
 
 .shell {

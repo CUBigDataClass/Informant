@@ -1,0 +1,52 @@
+.text-layout {
+  .hover-text-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @include css-transition(all, 1.5s, ease-in-out);
+    font-size: 1.5em;
+    white-space: nowrap;
+  }
+
+  .average-emotion {
+    background: white;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    color: #73667c;
+    border-radius: 5px;
+    font-weight: 900;
+  }
+
+
+  .hover-text {
+    color: #db8686;
+  }
+
+  .on {
+    /*@include css-transform-translate-x(0vw);*/
+    opacity: 1.0;
+    @include css-transition(all, 4.5s, ease-in-out);
+    background: white;
+    width: 25%;
+    border-radius: 4px;
+    padding: 10px;
+
+  }
+
+  .off {
+    @include css-transition(all, 4.5s, ease-in-out);
+    opacity: 0.0;
+    width: 100%;
+    padding: 10px;
+    /*@include css-transform-translate-x(-50vw);*/
+  }
+
+
+  .home-graph-layout {
+    .companyText {
+      font-size: 1em !important;
+    }
+
+  }
+}

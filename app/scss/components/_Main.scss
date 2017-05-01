@@ -1,0 +1,32 @@
+$live-stream-font-stack: 'Open Sans', Futura, Helvetica, sans-serif;
+$main-container-color: #f7f5f5;
+$live-stream-text-color: #a29393;
+$transition-time: 0.35s;
+$transition-prop: all;
+$transition-easing: cubic-bezier(.94,.06,.32,.95);
+$right-transition: 100px;
+$mobile-right-transition: 100px;
+
+.main {
+  background: $main-container-color;
+  @include css-transition($transition-prop, $transition-time, $transition-easing);
+  position: relative;
+  width: 100%;
+  overflow:hidden;
+  /*-webkit-overflow-scrolling: touch;*/
+
+  @media all and (max-width: 1200px) {
+    z-index: 9999;
+  }
+
+}
+
+.menu-bar-open {
+  @include css-transform-translate-x($right-transition);
+
+}
+
+.menu-bar-close {
+  @include css-transform-translate-x(0vw);
+
+}

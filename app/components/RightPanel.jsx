@@ -17,7 +17,7 @@ class RightPanel extends React.Component {
         <div className={'panelStories'}>
         <h3>Informant is a <i>social metrics dashboard</i>.</h3>
         <h3>It visualizes the general mood of the public on top companies.</h3>
-        <p>Informant aggregates social media data and produces a measure on online company sentiment and reputation. In tracking the state in real-time, Informant is able to give a clear picture of 'vox populi' opinions, whether they be spikes or smooth waves. Informant is meant as a stock market assistant tool, but also as an on-going narrative, visually analyzing real-time data into an immediate and concise scroll story.</p>
+
         <h4>Wave</h4>
         <p>The wave graph illustrates a subtle relation to immediate neighboring companies. It draws out the relational aspect of popular sentiment by depicting fluctuations as smooth waves of propagation.</p>
         <h4>Fragment</h4>

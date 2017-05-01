@@ -1,84 +1,83 @@
 import React, {Component} from 'react';
-import MainContainer from './components/MainContainer.jsx';
-import SectionsData from './info/companies.json';
-var SmoothScroll = require('./components/SmoothScroll.js');
 import MenuBar from './components/MenuBar.jsx';
 import MenuBarIcon from './components/MenuBarIcon.jsx';
-var io = require('socket.io-client');
+var SmoothScroll = require('./components/SmoothScroll.js');
+import Companies from './info/companies.json';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    const N = SectionsData.length;
-    const companies = SectionsData.map((section, i) => {
-      return section.title;
-    });
+
+
     this.state = {
-      companies: companies,
-      infos: 'loading...',
       open: false,
-      MenuBarIconStyle: 'MenuBarIcon',
-      data: [
-        5, 6, 8, 1, 11, 14,
-        5, 6, 8, 1
-      ]
+      MenuBarIconStyle: 'menu-bar-icon',
+      slideContentState: 'main menu-bar-close'
     };
     this.togglePanel = this.togglePanel.bind(this);
     this.closeMenuBar = this.closeMenuBar.bind(this);
-    this.updateData = this.updateData.bind(this);
-
-  }
-  updateData() {
-    this.setState((prevState, props) => {
-          return {
-            data : prevState.data.map((i) => Math.floor(Math.random() * 20 + 10))
-          }
-        });
+    this.slideContent = this.slideContent.bind(this);
   }
   togglePanel() {
+    this.slideContent();
     this.setState((prevState, props) => {
           return {
             open : !prevState.open
           }
         });
+
   }
   closeMenuBar() {
+    this.slideContent();
     this.setState({
       open: false
-    })
+    });
+
   }
-  componentDidMount() {
-    // Initialize socket.io
-    var socket = io.connect();
-
-    // On tweet event emission...
-    socket.on('tweet', function (tweetData) {
-
+  slideContent() {
     this.setState((prevState, props) => {
-        return {
-        tweet: tweetData.text + " " + tweetData.user.followers_count * 0.0015 + 20,
-        data: prevState.data.map((i) => Math.floor(Math.random() * tweetData.user.followers_count * 0.0015 + 20))
-        }
-      });
+          var newState;
+          console.log(prevState.slideContentState);
+          if(prevState.slideContentState == 'main menu-bar-close') {
+            newState = 'main menu-bar-open';
+          } else {
+            newState = 'main menu-bar-close';
+          }
+          return {
+            slideContentState : newState
+          }
     });
-
-    this.setState({
-      infos: SectionsData
-    });
+  }
+  componentWillUpdate() {
+    if(this.state.open) {
+      this.state.slideContentState = 'main menu-bar-open';
+    } else {
+      this.state.slideContentState = 'main menu-bar-close';
+    }
   }
   render() {
-    var self = this;
-
+    const companies = Companies.map((section, i) => {
+      return section.title;
+    });
     return (
       <div>
-      <button className={'updateButton'} onMouseDown={this.updateData}>Update Data!</button>
-      <div className={'wrapper'}>
-
-          <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
-          <MenuBar infos={this.state.infos} companies={this.state.companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
-          <MainContainer data={this.state.data} infos={this.state.infos} companies={this.state.companies} togglePanel={this.togglePanel} open={this.state.open}/>
-      </div>
-    </div>);
+        <MenuBar names={Companies} open={this.state.open} closeMenuBar={this.closeMenuBar}/>
+        <MenuBarIcon togglePanel={this.togglePanel} open={this.state.open}/>
+        <div className={this.state.slideContentState}>
+          <ReactCSSTransitionGroup
+          component="div"
+          transitionName={"on"}
+          transitionEnterTimeout={0}
+          transitionLeaveTimeout={0}>
+          {this.props.children ?
+            React.cloneElement(this.props.children, {
+              key: this.props.location.pathname
+            }) :
+            null}
+        </ReactCSSTransitionGroup>
+        </div>
+      </div>);
   }
 }
 

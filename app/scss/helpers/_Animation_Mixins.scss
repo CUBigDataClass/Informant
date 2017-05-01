@@ -8,8 +8,12 @@
 
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+    opacity: 0;
+    }
+    to   {
+    opacity: 1;
+    }
 }
 
 /* Firefox < 16 */
@@ -20,8 +24,12 @@
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+    from {
+      opacity: 0;
+    }
+    to   {
+      opacity: 1;
+    }
 }
 
 /* Internet Explorer */
@@ -34,4 +42,228 @@
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+@mixin css-dropin($t) {
+-webkit-animation: dropin $t; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: dropin $t; /* Firefox < 16 */
+    -ms-animation: dropin $t; /* Internet Explorer */
+     -o-animation: dropin $t; /* Opera < 12.1 */
+        animation: dropin $t;
+}
+
+
+@keyframes dropin {
+    from {
+      transform: scale(1.2);
+      h1 {
+        opacity: 0.1;
+      }
+    }
+    to   {
+      transform: scale(1);
+      h1 {
+        opacity: 1.0;
+      }
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes dropin {
+    from {
+      font-size: 1em;
+    }
+    to   {
+      font-size: 1.5em;
+    }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes dropin {
+    from {
+      font-size: 1em;
+    }
+    to   {
+      font-size: 1.5em;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes dropin {
+    from {
+      font-size: 1em;
+    }
+    to   {
+      font-size: 1.5em;
+    }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes dropin {
+    from {
+      font-size: 1em;
+    }
+    to   {
+      font-size: 1.5em;
+    }
+}
+
+
+
+
+@mixin css-dropout($t) {
+-webkit-animation: dropout $t; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: dropout $t; /* Firefox < 16 */
+    -ms-animation: dropout $t; /* Internet Explorer */
+     -o-animation: dropout $t; /* Opera < 12.1 */
+        animation: dropout $t;
+}
+
+
+@keyframes dropout {
+    from {
+    font-size: 1.5em;
+    }
+    to   {
+    font-size: 2.5em;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes dropout {
+    from { font-size: 1.5em; }
+    to   { font-size: 2.5em; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes dropout {
+    from {
+      font-size: 1.5em;
+    }
+    to   {
+      font-size: 2.5em;
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes dropout {
+    from { font-size: 1.5em; }
+    to   { font-size: 2.5em; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes dropout {
+    from { font-size: 1.5em; }
+    to   { font-size: 2.5em; }
+}
+
+
+
+
+
+@mixin css-slidein($t) {
+-webkit-animation: slidein $t; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: slidein $t; /* Firefox < 16 */
+    -ms-animation: slidein $t; /* Internet Explorer */
+     -o-animation: slidein $t; /* Opera < 12.1 */
+        animation: slidein $t;
+}
+
+
+@keyframes slidein {
+    from {
+      transform: translate3d(0, -120vh, 0);
+    }
+    to   {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slidein {
+    from { transform: translate3d(0, -120vh, 0); }
+    to   { transform: translate3d(0, 0, 0); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slidein {
+    from {
+      transform: translate3d(0, -120vh, 0);
+    }
+    to   {
+      transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slidein {
+    from { transform: translate3d(0, -120vh, 0); }
+    to   { transform: translate3d(0, 0, 0); }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slidein {
+    from { transform: translate3d(0, -120vh, 0); }
+    to   { transform: translate3d(0, 0, 0); }
+}
+
+
+
+
+
+
+
+
+@mixin css-slideout($t) {
+-webkit-animation: slideout $t; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: slideout $t; /* Firefox < 16 */
+    -ms-animation: slideout $t; /* Internet Explorer */
+     -o-animation: slideout $t; /* Opera < 12.1 */
+        animation: slideout $t;
+}
+
+
+@keyframes slideout {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to   {
+      transform: translate3d(0, -120vh, 0);
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes slideout {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(0, -120vh, 0); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes slideout {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to   {
+      transform: translate3d(0, -120vh, 0);
+    }
+}
+
+/* Internet Explorer */
+@-ms-keyframes slideout {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(0, -120vh, 0); }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes slideout {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(0, -120vh, 0); }
 }

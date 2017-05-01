@@ -1,8 +1,10 @@
-$global-p-color: #111111;
-$global-h1-color: #ca9191;
-$global-bg-color: #f1f1f1;
-$global-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
-$global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
+$global-p-color: #dec5c5;
+$global-h1-color: #ffffff;
+$global-bg-color: #1b1a1a;
+$global-font-stack: 'Cambay', Futura, Helvetica, sans-serif;
+$global-p-font-stack: 'Questrial', Helvetica, sans-serif;
+$section-color: #dbd7d7;
+$p-section-color: #111111;
 
 @import './helpers/Animation_Mixins.scss';
 @import './helpers/Transform_Mixins.scss';
@@ -13,38 +15,82 @@ $global-p-font-stack: 'Montserrat', Futura, Helvetica, sans-serif;
 @import './components/Subsection.scss';
 @import './components/MenuBarIcon.scss';
 @import './components/MenuBar.scss';
-@import './components/MainContainer.scss';
+@import './components/Main.scss';
 @import './components/NavBar.scss';
+@import './components/SmoothScroll.scss';
+@import './components/DownArrow.scss';
+@import './components/Page.scss';
+@import './components/Graphs.scss';
+@import './components/About.scss';
+@import './components/TextLayout.scss';
 
-@import './components/companies/Company.scss';
-@import './components/_Graphs.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto'); // Import Google Fonts
+
 
 body {
   margin: 0;
   padding: 0;
   background: $global-bg-color;
-  @include css-fadein(3s);
+
   width: 100%;
-  overflow-x:hidden;
+  overflow:hidden;
 
+  a {
+    font-family: $global-p-font-stack;
+    color: #a79191;
+    text-decoration: none;
+    margin: 10px;
+    @include css-user-select(none);
+    }
 
+  a:hover {
+    color: #ffecec;
+  }
 
   h1 {
     font-family: $global-font-stack;
     color: $global-h1-color;
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
+    @css-user-select(none);
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-family: $global-font-stack;
+    color: $global-h1-color;
+    text-align: center;
+    font-weight: 300;
+    @css-user-select(none);
+
+  }
+
+  h3 {
+    font-family: $global-font-stack;
+    color: $global-h1-color;
+    text-align: center;
+    font-weight: 300;
+    @css-user-select(none);
+  }
+
+  h4 {
+    font-family: $global-font-stack;
+    color: $global-h1-color;
+    text-align: center;
+    font-weight: 300;
+    @css-user-select(none);
   }
 
   p {
     font-family: $global-p-font-stack;
     color: $global-p-color;
-    font-weight: 200;
+    font-weight: 500;
+    @css-user-select(none);
   }
 
   .wrapper {
-    overflow-x:hidden;
-
+    overflow:hidden;
   }
 
   @media all and (max-width: 1200px) {
@@ -64,4 +110,7 @@ body {
     outline: none;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
+
+
+
 }

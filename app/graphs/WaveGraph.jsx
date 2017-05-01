@@ -109,7 +109,7 @@ var WaveGraph = React.createClass({
       .attr("class", "link")
       .attr('stroke', color)
       .attr('fill', 'none')
-      .attr('stroke-width', '2px')
+      .attr('stroke-width', '5px')
       .classed('firstWave', true)
 
       //second wave

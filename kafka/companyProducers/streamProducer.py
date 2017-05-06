@@ -16,7 +16,6 @@ class tweetHandler(object):
 	def on_tweet(self,*args):
 	     tweet = args[0]
 	     producer.send('tweetReader',tweet)
-	     print tweet
 
 tweetHandler()
 #Run stream.js in one terminal : node stream.js

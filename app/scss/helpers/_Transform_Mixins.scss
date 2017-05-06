@@ -16,11 +16,11 @@ $g-time: 0.4s;
 }
 
 @mixin css-transition($prop, $time, $easing) {
-  -webkit-transition: $prop 0.5s ease-in-out;
-  -moz-transition: $prop, $time, $easing;
-  -ms-transition: $prop, $time, $easing;
-  -o-transition: $prop, $time, $easing;
-  transition: $prop, $time, $easing;
+  -webkit-transition: $prop $time $easing;
+  -moz-transition: $prop $time $easing;
+  -ms-transition: $prop $time $easing;
+  -o-transition: $prop $time $easing;
+  transition: $prop $time $easing;
 
   @media only screen
 and (min-device-width : 320px)
